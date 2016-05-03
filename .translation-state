@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "bd6a830380bd91f497bf5db7f0364457467d5b8e",
-  "LastTranslatedCommit": "8af1316ad585d39ab123d995b20654c18ebd48e8",
+  "LastTranslatedCommit": "908ec0f31bf8dcbcacd3ee7337064654db30b609",
   "Items": {
     "c1e15c9548e46cbbff7810e63478074ceeb06152": {
       "FileHash": "c1e15c9548e46cbbff7810e63478074ceeb06152",
@@ -11186,14 +11186,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": null,
-      "TargetFilePath": null,
-      "HandbackFilePath": null,
-      "HandbackFileCommit": null,
-      "HandbackDateTime": "0001-01-01T00:00:00",
+      "TargetFileCommit": "908ec0f31bf8dcbcacd3ee7337064654db30b609",
+      "TargetFilePath": "MIMDocs\\PlanDesign\\topology-considerations.md",
+      "HandbackFilePath": "ol-handback\\Microsoft\\MIMDocs-pr.es-es\\master\\topology-considerations.d6cd599c7ba227a86e53f481eef3d2a96ce028cd.es-es.xlf",
+      "HandbackFileCommit": "757c6fe70e2b1aa8bb10604a93686649c415620b",
+      "HandbackDateTime": "2016-05-03T18:07:19.3515807Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "UpdatedDateTime": "2016-05-03T18:07:19.3515807Z",
       "ArchiveFilePath": "ol-handoff\\Microsoft\\MIMDocs-pr.es-es\\master\\archive\\topology-considerations.d6cd599c7ba227a86e53f481eef3d2a96ce028cd.es-es.xlf",
       "ArchiveFileCommit": "84a3091c7edd81e5831ab0e5367c5ce172cee7c6",
       "ArchiveFileDateTime": "2016-04-16T01:11:54.8139546Z",

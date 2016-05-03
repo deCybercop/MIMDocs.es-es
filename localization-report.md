@@ -5,11 +5,11 @@
  -------- | ----- 
  Total Files | 283
 [ Handoff Failed Files ](#handoff-failed-list)| 0
-[ Handoff Success Files ](#handoff-success-list)| 151
+[ Handoff Success Files ](#handoff-success-list)| 150
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 0
 [ Handback Failed Files ](#handback-failed-list)| 0
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 17
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 18
 [ In Sync Handback Files ](#insync-handback-success-list)| 9
 [ Ignored Files ](#ignored-list)| 106
 
@@ -163,7 +163,6 @@
  [MIMDocs\PlanDesign\media\150x150.png](https://github.com/Microsoft/MIMDocs-pr/blob/bd6a830380bd91f497bf5db7f0364457467d5b8e/MIMDocs/PlanDesign/media/150x150.png) | HandedOffSuccess | [Details](#84421bf7f4ba657e685239fb27f4798a46485f71223)
  [MIMDocs\PlanDesign\media\MIM-topo-multitier.png](https://github.com/Microsoft/MIMDocs-pr/blob/90bc65826ae511cf50473ee95c73edf2b719b231/MIMDocs/PlanDesign/media/MIM-topo-multitier.png) | HandedOffSuccess | [Details](#ff89d0e903b04df6182700b474bc3aef1b0ba24d225)
  [MIMDocs\PlanDesign\media\MIM-topo-multitier-multiservice.png](https://github.com/Microsoft/MIMDocs-pr/blob/90bc65826ae511cf50473ee95c73edf2b719b231/MIMDocs/PlanDesign/media/MIM-topo-multitier-multiservice.png) | HandedOffSuccess | [Details](#c465fc00bd089b73b86daa72968dd67dab832aee224)
- [MIMDocs\PlanDesign\topology-considerations.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/PlanDesign/topology-considerations.md) | HandedOffSuccess | [Details](#e33a08d77a0b5c422cdbc8c19516b55df980a2c6228)
  [MIMDocs\Troubleshoot\media\150x150.png](https://github.com/Microsoft/MIMDocs-pr/blob/bd6a830380bd91f497bf5db7f0364457467d5b8e/MIMDocs/Troubleshoot/media/150x150.png) | HandedOffSuccess | [Details](#84421bf7f4ba657e685239fb27f4798a46485f71270)
  [MIMDocs\Understand\media\150x150.png](https://github.com/Microsoft/MIMDocs-pr/blob/bd6a830380bd91f497bf5db7f0364457467d5b8e/MIMDocs/Understand/media/150x150.png) | HandedOffSuccess | [Details](#84421bf7f4ba657e685239fb27f4798a46485f71275)
  [MIMDocs\Understand\media\MIM-Hybrid-downloadReportAgent.jpg](https://github.com/Microsoft/MIMDocs-pr/blob/00d53f5d2d0cf5766279b4a19047f30398f421f9/MIMDocs/Understand/media/MIM-Hybrid-downloadReportAgent.jpg) | HandedOffSuccess | [Details](#7c71abe1409d6676539927896ab4415a043d4340276)
@@ -192,6 +191,7 @@
  [MIMDocs\DeployUse\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/4426a38419725d2b4f0e3d2b997f1c876a817f2f/MIMDocs/DeployUse/TOC.md) | OutofSyncHandedBackSuccess | [Details](#2a5810d92b29e1200c68aacdcf180229eae342cd71)
  [MIMDocs\PlanDesign\capacity-planning-guide.md](https://github.com/Microsoft/MIMDocs-pr/blob/ca7fdef81eb8a68aff46df528e1989f019f5d2a4/MIMDocs/PlanDesign/capacity-planning-guide.md) | OutofSyncHandedBackSuccess | [Details](#71a7b21f31391344437e1c799a5444af816d5336220)
  [MIMDocs\PlanDesign\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/4426a38419725d2b4f0e3d2b997f1c876a817f2f/MIMDocs/PlanDesign/TOC.md) | OutofSyncHandedBackSuccess | [Details](#e6ac8e7f786ea4cd7696361d045dc8ce298ae133227)
+ [MIMDocs\PlanDesign\topology-considerations.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/PlanDesign/topology-considerations.md) | OutofSyncHandedBackSuccess | [Details](#e33a08d77a0b5c422cdbc8c19516b55df980a2c6228)
  [MIMDocs\toc.md](https://github.com/Microsoft/MIMDocs-pr/blob/4426a38419725d2b4f0e3d2b997f1c876a817f2f/MIMDocs/toc.md) | OutofSyncHandedBackSuccess | [Details](#6381d8816a5d3acc8ee03ca699d93fa111182048267)
  [MIMDocs\Understand\identity-manager-hybrid-reporting-azure.md](https://github.com/Microsoft/MIMDocs-pr/blob/ca7fdef81eb8a68aff46df528e1989f019f5d2a4/MIMDocs/Understand/identity-manager-hybrid-reporting-azure.md) | OutofSyncHandedBackSuccess | [Details](#525ca91e695ecfb05d65c531d6c236993b20139c273)
  [MIMDocs\Understand\microsoft-identity-manager-2016.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/Understand/microsoft-identity-manager-2016.md) | OutofSyncHandedBackSuccess | [Details](#df2f52159b6ff77dd9b28bb934795c685a72210d279)
@@ -3239,7 +3239,7 @@
 * [Back to Top](#report-top)
 
 ##### <a name='e33a08d77a0b5c422cdbc8c19516b55df980a2c6228'></a> Source: [MIMDocs\PlanDesign\topology-considerations.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/PlanDesign/topology-considerations.md)
-* Status: HandedOffSuccess
+* Status: OutofSyncHandedBackSuccess
 * Target File: 
 * Handoff File: [topology-considerations.d6cd599c7ba227a86e53f481eef3d2a96ce028cd.es-es.xlf](https://github.com/Microsoft/EM.handoff/blob/484a3de98c811c090218305893ed2722f2f590e5/ol-handoff/Microsoft/MIMDocs-pr.es-es/master/topology-considerations.d6cd599c7ba227a86e53f481eef3d2a96ce028cd.es-es.xlf)
 * Handoff Datetime: 2016-04-18 17:23:04
@@ -3248,6 +3248,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [MIMDocs\PlanDesign\topology-considerations.md](https://github.com/Microsoft/MIMDocs-pr.es-es/blob/908ec0f31bf8dcbcacd3ee7337064654db30b609/MIMDocs/PlanDesign/topology-considerations.md)
+* Current Handback File: [topology-considerations.d6cd599c7ba227a86e53f481eef3d2a96ce028cd.es-es.xlf](https://github.com/Microsoft/EM.handback/blob/757c6fe70e2b1aa8bb10604a93686649c415620b/ol-handback/Microsoft/MIMDocs-pr.es-es/master/topology-considerations.d6cd599c7ba227a86e53f481eef3d2a96ce028cd.es-es.xlf)
+* Current Handback Datetime: 2016-05-03 18:07:19
 * [Back to Top](#report-top)
 
 ##### <a name='c4f8acfe4371db3a1b2bf7b01f3aaef8d2b4ae2c229'></a> Source: [MIMDocs\reference\assign-smartcard-to-request.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd6a830380bd91f497bf5db7f0364457467d5b8e/MIMDocs/reference/assign-smartcard-to-request.md)
