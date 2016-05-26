@@ -60,12 +60,12 @@ El servicio de notificación de cambio de contraseña (PCNS) es un servicio que 
 
 13. Cuando aparezca la pantalla de instalación finalizada correctamente, haga clic en **Finalizar**.
 
-14. Reinicie el equipo para que surtan efecto los cambios de configuración realizados en el servicio de notificación de cambio de contraseña de MIM. Puede hacer clic en **Sí** en el menú emergente que aparece o puede reiniciar más tarde.
+14. Reinicie el equipo para que surtan efecto los cambios de configuración realizados en el servicio de notificación de cambio de contraseña de MIM. Puede hacer clic en **Sí** en la ventana emergente que aparece o puede reiniciar más tarde.
 
 ## Configuración del servicio de notificación de cambio de contraseña
 Cuando vuelva a conectarse al servidor de controlador de dominio como administrador de dominio, vaya a *C:\Program Files\Microsoft Password Change Notification.* Ejecute *pcnscfg.exe*.
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=Apr16_HO3-->
 
 

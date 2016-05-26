@@ -26,9 +26,9 @@ ms.suite: ems
 ---
 
 # Inscripción de tarjetas inteligentes para usuarios que no son administradores
-Si un usuario no es un administrador local en su equipo, no podrá inscribir una tarjeta inteligente en sus propios equipos de forma predeterminada. El siguiente procedimiento permite evitar esta limitación.
+Si un usuario no es un administrador local en su equipo, no podrá inscribir una tarjeta inteligente en sus propios equipos de manera predeterminada. El siguiente procedimiento permite evitar esta limitación.
 
-## Habilitar renovación de tarjetas inteligentes para usuarios que no son administradores en el Administrador de certificados de MIM 2016
+## Habilitar la renovación de tarjetas inteligentes para usuarios que no son administradores en el Administrador de certificados de MIM 2016
 
 1.  **Desempaquetar el archivo appx**
 
@@ -70,7 +70,7 @@ Si un usuario no es un administrador local en su equipo, no podrá inscribir una
 
     `makeappx pack /l /d .\appx /p <app package name>.appx`
 
-    s`igntool sign /f <path\>mysign.pfx /p <pfx password> /fd "sha256" <app package name>.appx`
+    p`igntool sign /f <path\>mysign.pfx /p <pfx password> /fd "sha256" <app package name>.appx`
 
 4.  Duplique la plantilla de perfil y agregue la clave de administración inicial para configurar el servidor MIM:
 
@@ -101,6 +101,6 @@ Si un usuario no es un administrador local en su equipo, no podrá inscribir una
 8.  **Inicie la aplicación CM e inscriba una tarjeta inteligente virtual**
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=Apr16_HO3-->
 
 
