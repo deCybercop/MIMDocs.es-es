@@ -27,38 +27,36 @@ ms.suite: ems
 
 # Instalación de MIM 2016: sincronizar Active Directory y el servicio MIM
 
->[!div class="step-by-step"]
+>[!div class="step-by-step"] [« Servicio y portal de MIM](install-mim-service-portal.md)
 
 > [!NOTE]
-> « Servicio y portal de MIM Este tutorial usa los valores y nombres de ejemplo de una empresa llamada Contoso. Reemplácelos con sus propios valores.
-> - Por ejemplo:
+> Este tutorial usa los valores y nombres de ejemplo de una empresa llamada Contoso. Reemplácelos con sus propios valores. Por ejemplo:
 > - Nombre del controlador de dominio: **mimservername**
 > - Nombre de dominio: **contoso**
+> - Contraseña: **Pass@word1**
 
-Contraseña: **Pass@word1**  De manera predeterminada, el servicio de sincronización de MIM no tiene ningún conector configurado. El primer paso suele consistir en usar el servicio de sincronización de MIM para rellenar la base de datos del servicio MIM con cuentas de Active Directory existentes.
+De manera predeterminada, el servicio de sincronización de MIM no tiene ningún conector configurado.  El primer paso suele consistir en usar el servicio de sincronización de MIM para rellenar la base de datos del servicio MIM con cuentas de Active Directory existentes. Para ello, usará la aplicación del Servicio de sincronización de MIM.
 
-## Para ello, usará la aplicación del Servicio de sincronización de MIM.
-Creación del agente de administración de MIM El agente de administración (MA) de MIM es un conector entre la sincronización de MIM y el servicio MIM.
+## Creación del agente de administración de MIM
+El agente de administración (MA) de MIM es un conector entre la sincronización de MIM y el servicio MIM. Para crear este conector, use el Asistente para crear el agente de administración.
 
-Para crear este conector, use el Asistente para crear el agente de administración. Al configurar un agente de administración de MIM, debe especificar una cuenta de usuario.
+Al configurar un agente de administración de MIM, debe especificar una cuenta de usuario. Este documento usa **MIMMA** como nombre para esta cuenta.
 
-> Este documento usa **MIMMA** como nombre para esta cuenta.
+> [!NOTE] La cuenta que use para el agente de administración de MIM debe ser la misma que la que haya especificado durante la instalación del Servicio MIM.
 
-###La cuenta que use para el agente de administración de MIM debe ser la misma que la que haya especificado durante la instalación del Servicio MIM.
+###Para crear el MA de MIM
 
-1.  Para crear el MA de MIM
+1.  Abra el Synchronization Service Manager.
 
-2.  Abra el Synchronization Service Manager.
+2.  Para abrir el Asistente para creación de agentes de administración, haga clic en **Crear** en el menú **Acciones**.
 
-3.  Para abrir el Asistente para creación de agentes de administración, haga clic en **Crear** en el menú **Acciones**.
-
-    -   En la página **Create Management Agent** (Crear agente de administración), proporcione la siguiente configuración y después haga clic en **Siguiente**.
+3.  En la página **Create Management Agent** (Crear agente de administración), proporcione la siguiente configuración y después haga clic en **Siguiente**.
 
     -   Agente de administración para: agente de administración del servicio MIM
 
-4.  Nombre: MIMMA
+    -   Nombre: MIMMA
 
-    -   En la página **Conectar a base de datos**, proporcione la siguiente configuración y después haga clic en **Siguiente**.
+4.  En la página **Conectar a base de datos**, proporcione la siguiente configuración y después haga clic en **Siguiente**.
 
     -   Servidor: localhost
 
@@ -72,9 +70,9 @@ Para crear este conector, use el Asistente para crear el agente de administraci�
 
     -   Contraseña: Pass@word
 
-5.  Dominio: contoso
+    -   Dominio: contoso
 
-    -   En la página **Selected Object Types** (Tipos de objetos seleccionados), compruebe que estén seleccionados los tipos de objeto de esta lista y después haga clic en **Siguiente**.
+5.  En la página **Selected Object Types** (Tipos de objetos seleccionados), compruebe que estén seleccionados los tipos de objeto de esta lista y después haga clic en **Siguiente**.
 
     -   ExpectedRuleEntry
 
@@ -84,288 +82,324 @@ Para crear este conector, use el Asistente para crear el agente de administraci�
 
     -   Person
 
-6.  Grupo
+    -   Grupo
 
-7.  En la página **Atributos seleccionados**, compruebe que estén seleccionados todos los atributos de la lista y después haga clic en **Siguiente**.
+6.  En la página **Atributos seleccionados**, compruebe que estén seleccionados todos los atributos de la lista y después haga clic en **Siguiente**.
 
-8.  En la página **Configure Connector Filter** (Configurar filtro de conector), haga clic en **Siguiente**.
+7.  En la página **Configure Connector Filter** (Configurar filtro de conector), haga clic en **Siguiente**.
 
-    - En la página **Configure Object Type Mappings** (Configurar asignaciones de tipo de objeto), agregue la siguiente asignación y después haga clic en **Siguiente**.
+8.  En la página **Configure Object Type Mappings** (Configurar asignaciones de tipo de objeto), agregue la siguiente asignación y después haga clic en **Siguiente**.
+
     - Seleccione **Persona** en la lista **Tipo de objeto de origen de datos**.
     - Haga clic en **Agregar asignación** para abrir el cuadro de diálogo Asignación.
     - Seleccione **persona** en la lista **Tipo de objeto de metaverso**.
+    - Haga clic en **Aceptar** para cerrar el cuadro de diálogo Asignación.
 
-9.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo Asignación.
+9.  En la página **Configure Attribute Flow** (Configurar el flujo de atributos), aplique las siguientes asignaciones de flujo de atributos y luego haga clic en **Siguiente**.
 
-    | **En la página **Configure Attribute Flow** (Configurar el flujo de atributos), aplique las siguientes asignaciones de flujo de atributos y luego haga clic en **Siguiente**.** | **Dirección del flujo** | **Atributo de origen de datos** |
+    | **Atributo de origen de datos** | **Dirección del flujo** | **Atributo de metaverso** |
     |-|-|-|
-    |Atributo de metaverso|Importe|Importe|
-    |accountName|Importe|Importe|
-    |company|Importe|Importe|
-    |displayName|Importe|Importe|
-    |employeeID|Importe|Importe|
-    |employeeTipo|Importe|Importe|
-    |firstName|Importe|Importe|
-    |lastName|Importe|Importe|
-    |Manager|Importe|Importe|
-    |objectSid|Exportar|Exportar|
-    |accountName|Exportar|Exportar|
-    |company|Exportar|Exportar|
-    |displayName|Exportar|Exportar|
-    |dominio|Exportar|Exportar|
-    |employeeID|Exportar|Exportar|
-    |employeeTipo|Exportar|Exportar|
-    |firstName|Exportar|Exportar|
-    |lastName|Exportar|Exportar|
-    |manager|Exportar|Exportar|
+    | AccountName | Exportar | accountName |
+    | DisplayName | Exportar | displayName |
+    | Dominio | Exportar | dominio |
+    | EmployeeID | Exportar | employeeID |
+    | EmployeeTipo | Exportar | employeeTipo |
+    | Correo electrónico | Exportar | mail |
+    | Nombre | Exportar | firstName |
+    | Apellidos | Exportar | lastName |
+    | ObjectSID | Exportar | objectSid |
 
-10.  objectSid
+10.  Seleccione **Persona** como tipo de objeto de origen de datos.
 
-    -   Seleccione **Persona** como tipo de objeto de origen de datos.
+    -   Seleccione **Persona** como tipo de objeto de metaverso.
 
-    -   En la página **Configure Deprovisioning** (Configurar el desaprovisionamiento), haga clic en **Siguiente**.
+    -   Seleccione **Directa** como tipo de asignación.
 
-    -   Para crear al agente de administración, haga clic en **Finalizar** en la página **Configure Extensions** (Configurar extensiones).
+    -   Por cada fila de la tabla anterior, realice los siguientes pasos:
 
-        -   Creación del agente de administración de Active Directory
+        -   Seleccione la **dirección del flujo** que se muestra para esa fila en la tabla.
 
-        -   El agente de administración de Active Directory es un conector de servicios de dominio de Active Directory.
+        -   Seleccione el **atributo Origen de datos** que se muestra para esa fila en la tabla.
 
-        -   Para crear este conector, use el Asistente para crear el agente de administración.
+        -   Seleccione el **atributo Metaverso** que se muestra para esa fila en la tabla.
 
-        -   Para abrir el Asistente para creación de agentes de administración, haga clic en **Crear** en el menú **Acciones**.
+        -   Para aplicar la asignación de flujo, haga clic en **Nuevo**.
 
-    -   En la página **Create Management Agent** (Crear agente de administración), proporcione la siguiente configuración y después haga clic en **Siguiente**:
+    -   Seleccione **Grupo** como el tipo de origen de datos y como el tipo de objeto de metaverso.
 
-    -   Agente de administración para: Servicios de dominio de Active Directory
+    -   Seleccione **Directa** como tipo de asignación.
 
-    -   Nombre: ADMA
+    -   Por cada fila de la siguiente tabla, realice estos pasos:
 
-        -   En la página **Connect to Active Directory Forest** (Conectar con el bosque de Active Directory), proporcione la siguiente configuración y después haga clic en **Siguiente**:
+        -   Seleccione la **dirección del flujo** que se muestra para esa fila en la tabla.
 
-        -   Nombre de bosque: contoso.local
+        -   Seleccione el **atributo Origen de datos** que se muestra para esa fila en la tabla.
 
-        -   Nombre de usuario: administrador
+        -   Seleccione el **atributo Metaverso** que se muestra para esa fila en la tabla.
 
-        -   Contraseña: &lt;la contraseña de la cuenta&gt;
+        -   Para aplicar la asignación de flujo, haga clic en **Nuevo**.
 
-    Dominio: contoso
+    | **Atributo de origen de datos** | **Dirección del flujo** | **Atributo de metaverso** |
+    |-|-|-|
+    | AccountName | Exportar | accountName |
+    | DisplayName | Exportar | displayName |
+    | Dominio | Exportar | dominio |
+    | Correo electrónico | Exportar | mail |
+    | MailNickName | Exportar | mailNickName |
+    | Miembro | Exportar | miembro |
+    | ObjectSID | Exportar | objectSid |
+    | Ámbito | Exportar | ámbito |
+    | Tipo | Exportar | tipo |
+    | MiembroshipAddWorkflow | Exportar | membershipAddWorkflow |
+    | MiembroshipLocked | Exportar | membershipLocked |
+    | DisplayName | Importe | displayName |
+    | Ámbito | Importe | ámbito |
+    | Tipo | Importe | tipo |
+    | Miembro | Importe | miembro |
+    | AccountName | Importe | accountName |
+    | DisplayedOwner | Importe | displayedOwner |
+    | MailNickName | Importe | mailNickName |
 
-11.  En la página **Configure Directory Partitions** (Configurar particiones de directorio), proporcione la siguiente configuración y después haga clic en **Siguiente**:
 
-12.  En la lista **Select directory partitions** (Seleccionar particiones de directorio), seleccione **DC=CONTOSO, DC=local**.
+11.  En la página **Configure Deprovisioning** (Configurar el desaprovisionamiento), haga clic en **Siguiente**.
 
-## Para abrir el cuadro de diálogo de selección de contenedores, haga clic en **Containers** (Contenedores).
-Si desea cambiar el contenedor para que solo MIM administre objetos en un determinado contenedor, haga clic en el nodo **DC=CONTOSO, DC=local** y, a continuación, en el nodo del contenedor correspondiente. Para cerrar el cuadro de diálogo de selección de contenedores, haga clic en **Aceptar**.
+12.  Para crear al agente de administración, haga clic en **Finalizar** en la página **Configure Extensions** (Configurar extensiones).
 
-1. En la página **Configure Provisioning Hierarchy** (Configurar jerarquía de aprovisionamiento), haga clic en **Siguiente**.
+## Creación del agente de administración de Active Directory
+El agente de administración de Active Directory es un conector de servicios de dominio de Active Directory. Para crear este conector, use el Asistente para crear el agente de administración.
 
-2. En la página **Select Object Types** (Seleccionar tipos de objeto), proporcione la siguiente configuración y después haga clic en **Siguiente**.
+1. Para abrir el Asistente para creación de agentes de administración, haga clic en **Crear** en el menú **Acciones**.
+
+2. En la página **Create Management Agent** (Crear agente de administración), proporcione la siguiente configuración y después haga clic en **Siguiente**:
+
+    - Agente de administración para: Servicios de dominio de Active Directory
+    - Nombre: ADMA
+
+3. En la página **Connect to Active Directory Forest** (Conectar con el bosque de Active Directory), proporcione la siguiente configuración y después haga clic en **Siguiente**:
+
+    - Nombre de bosque: contoso.local
+    - Nombre de usuario: administrador
+    - Contraseña: &lt;la contraseña de la cuenta&gt;
+    - Dominio: contoso
+
+4. En la página **Configure Directory Partitions** (Configurar particiones de directorio), proporcione la siguiente configuración y después haga clic en **Siguiente**:
+
+    - En la lista **Select directory partitions** (Seleccionar particiones de directorio), seleccione **DC=CONTOSO, DC=local**.
+
+    - Para abrir el cuadro de diálogo de selección de contenedores, haga clic en **Containers** (Contenedores).
+
+    - Si desea cambiar el contenedor para que solo MIM administre objetos en un determinado contenedor, haga clic en el nodo **DC=CONTOSO, DC=local** y, a continuación, en el nodo del contenedor correspondiente.
+
+    - Para cerrar el cuadro de diálogo de selección de contenedores, haga clic en **Aceptar**.
+
+5. En la página **Configure Provisioning Hierarchy** (Configurar jerarquía de aprovisionamiento), haga clic en **Siguiente**.
+
+6. En la página **Select Object Types** (Seleccionar tipos de objeto), proporcione la siguiente configuración y después haga clic en **Siguiente**.
 
     - En la lista **Tipos de objeto**, seleccione el **usuario** y el **grupo**.
-    - En la página **Seleccionar atributos**, proporcione la siguiente configuración y después haga clic en **Siguiente**.
 
-3. Seleccione **Mostrar todos**.
+7. En la página **Seleccionar atributos**, proporcione la siguiente configuración y después haga clic en **Siguiente**.
 
-    - En la lista **Atributos**, seleccione los siguientes atributos:
-    - company
-    - displayName&gt;
-    - employeeID
+    - Seleccione **Mostrar todos**.
 
-4. employeeTipo
+8. En la lista **Atributos**, seleccione los siguientes atributos:
 
-    - givenName
-
-    - groupTipo
-
-    - manager
-
-    - managedBy
-
-5. miembro
-
-6. objectSid
-
-    - sAMAccountName
-
-7. sAMAccountTipo
-
-    - sn
-
-8. unicodePwd
-
+    -   company
+    -   displayName
+    -   employeeID
+    -   employeeTipo
+    -   givenName
+    -   groupTipo
+    -   manager
+    -   managedBy
+    -   miembro
+    -   objectSid
+    -   sAMAccountName
+    -   sAMAccountTipo
+    -   sn
+    -   unicodePwd
     -   userAccountControl
-    -   En la página **Configure Connector Filter** (Configurar filtro de conector), haga clic en **Siguiente**.
-    -   En la página **Configure Join and Projection Rules** (Configurar reglas de unión y proyección), haga clic en **Siguiente**.
-    -   En la página **Configure Attribute Flow** (Configurar el flujo de atributos), haga clic en **Siguiente**.
-    -   En la página **Configure Deprovisioning** (Configurar el desaprovisionamiento), haga clic en **Siguiente**.
-    -   En la página **Configure Extensions** (Configurar extensiones), haga clic en **Finalizar**.
-    -   Crear perfiles de ejecución
-    -   Cree perfiles de ejecución para los conectores ADMA y MIMMA.
-    -   Crear perfiles de ejecución para el conector ADMA
-    -   Esta tabla muestra los cinco perfiles de ejecución que va a crear para el conector ADMA:
-    -   Nombre
-    -   Tipo
-    -   Perfil1
-    -   Importación completa (solo copia intermedia)
-    -   Perfil2
 
-9. Sincronización completa
+9. En la página **Configure Connector Filter** (Configurar filtro de conector), haga clic en **Siguiente**.
 
-10. Perfil3
+10. En la página **Configure Join and Projection Rules** (Configurar reglas de unión y proyección), haga clic en **Siguiente**.
 
-11. Importación diferencial (solo copia intermedia)
+11. En la página **Configure Attribute Flow** (Configurar el flujo de atributos), haga clic en **Siguiente**.
 
-12. Perfil4
+12. En la página **Configure Deprovisioning** (Configurar el desaprovisionamiento), haga clic en **Siguiente**.
 
-13. Sincronización delta
+13. En la página **Configure Extensions** (Configurar extensiones), haga clic en **Finalizar**.
 
 
-## Perfil5
+## Crear perfiles de ejecución
 
-Exportar
+Cree perfiles de ejecución para los conectores ADMA y MIMMA.
 
-### Para crear perfiles de ejecución para el conector ADMA:
+### Crear perfiles de ejecución para el conector ADMA
 
-Abra Synchronization Service Manager y haga clic en **Management Agents** (Agentes de administración), en el menú **Herramientas**.
+Esta tabla muestra los cinco perfiles de ejecución que va a crear para el conector ADMA:
 
-| En la lista **Management Agents** (Agentes de administración), seleccione **ADMA**. | Para abrir el cuadro de diálogo de Configure Run Profiles for (Configurar perfiles de ejecución para), haga clic en **Configure Run Profiles** (Configurar perfiles de ejecución), en el menú **Acciones**. |
-| ---- | ---- |
-| Siga, en cada perfil de ejecución de la tabla, los pasos que se indican a continuación: | Para abrir el Asistente para Configure Run Profile (Configurar perfiles de ejecución), haga clic en **Nuevo perfil**. |
-| En el cuadro **Nombre**, escriba el nombre de perfil que se muestra en la tabla y haga clic en **Siguiente**. | En la lista **Tipo**, seleccione el tipo de paso que se muestra en la tabla y después haga clic en **Siguiente**. |
-| Haga clic en **Finalizar** para crear el perfil de ejecución. | Para cerrar el cuadro de diálogo Configure Run Profiles (Configurar perfiles de ejecución), haga clic en **Aceptar**. |
-| Crear perfiles de ejecución para el conector MIMMA | En esta tabla se muestran los cinco perfiles de ejecución del conector MIMMA que coinciden: |
 | Nombre | Tipo |
+| ---- | ---- |
+| Perfil1 | Importación completa (solo copia intermedia) |
+| Perfil2 | Sincronización completa |
+| Perfil3 | Importación diferencial (solo copia intermedia) |
+| Perfil4 | Sincronización delta |
+| Perfil5 | Exportar |
 
-Perfil1
+Para crear perfiles de ejecución para el conector ADMA:
 
-1. Importación completa (solo copia intermedia)
+1. Abra Synchronization Service Manager y haga clic en **Management Agents** (Agentes de administración), en el menú **Herramientas**.
 
-2. Perfil2
+2. En la lista **Management Agents** (Agentes de administración), seleccione **ADMA**.
 
-3. Sincronización completa
+3. Para abrir el cuadro de diálogo de Configure Run Profiles for (Configurar perfiles de ejecución para), haga clic en **Configure Run Profiles** (Configurar perfiles de ejecución), en el menú **Acciones**.
 
-4. Perfil3
+4. Siga, en cada perfil de ejecución de la tabla, los pasos que se indican a continuación:
 
-    - Importación diferencial (solo copia intermedia)
+    - Para abrir el Asistente para Configure Run Profile (Configurar perfiles de ejecución), haga clic en **Nuevo perfil**.
 
-    - Perfil4
+    - En el cuadro **Nombre**, escriba el nombre de perfil que se muestra en la tabla y haga clic en **Siguiente**.
 
-    - Sincronización delta
+    - En la lista **Tipo**, seleccione el tipo de paso que se muestra en la tabla y después haga clic en **Siguiente**.
 
-    - Perfil5
+    - Haga clic en **Finalizar** para crear el perfil de ejecución.
 
-5. Exportar
+5. Para cerrar el cuadro de diálogo Configure Run Profiles (Configurar perfiles de ejecución), haga clic en **Aceptar**.
 
-### Para crear perfiles de ejecución para el conector MIMMA:
+### Crear perfiles de ejecución para el conector MIMMA
 
-Abra Synchronization Service Manager y haga clic en **Management Agents** (Agentes de administración), en el menú **Herramientas**.
+En esta tabla se muestran los cinco perfiles de ejecución del conector MIMMA que coinciden:
 
-| En la lista **Management Agents** (Agentes de administración), seleccione **MIMMA**. | Para abrir el cuadro de diálogo de Configure Run Profiles for (Configurar perfiles de ejecución para), haga clic en **Configure Run Profiles** (Configurar perfiles de ejecución), en el menú **Acciones**. |
+| Nombre | Tipo |
 | -------- | -------- |
-| Siga, en cada perfil de ejecución de la tabla, los pasos que se indican a continuación: | Para abrir el Asistente para Configure Run Profile (Configurar perfiles de ejecución), haga clic en **Nuevo perfil**. |
-| En el cuadro **Nombre**, escriba el nombre de perfil que se muestra en la tabla y haga clic en **Siguiente**. | En la lista **Tipo**, seleccione el tipo de paso que se muestra en la tabla y después haga clic en **Siguiente**. |
-| Haga clic en **Finalizar** para crear el perfil de ejecución. | Para cerrar el cuadro de diálogo Configure Run Profiles (Configurar perfiles de ejecución), haga clic en **Aceptar**. |
-| Configurar el Servicio MIM | Mediante el portal de MIM, creará la regla de sincronización de entrada de usuario de AD para el servicio MIM. |
-| Para crear la regla de sincronización de entrada de usuario de AD: | En la barra de navegación de la página principal del portal de MIM, haga clic en **Administración**. |
+| Perfil1 | Importación completa (solo copia intermedia) |
+| Perfil2 | Sincronización completa |
+| Perfil3 | Importación diferencial (solo copia intermedia) |
+| Perfil4 | Sincronización delta |
+| Perfil5 | Exportar |
 
-Para abrir la página Reglas de sincronización, haga clic en **Reglas de sincronización**.
+Para crear perfiles de ejecución para el conector MIMMA:
 
-1. Para abrir el Asistente para creación de reglas de sincronización, haga clic en **Nueva** en la barra de herramientas.
+1. Abra Synchronization Service Manager y haga clic en **Management Agents** (Agentes de administración), en el menú **Herramientas**.
 
-2. En la pestaña **General**, proporcione la siguiente información y después haga clic en **Siguiente**:
+2. En la lista **Management Agents** (Agentes de administración), seleccione **MIMMA**.
 
-3. Nombre para mostrar: Regla de sincronización de entrada de usuario de AD
+3. Para abrir el cuadro de diálogo de Configure Run Profiles for (Configurar perfiles de ejecución para), haga clic en **Configure Run Profiles** (Configurar perfiles de ejecución), en el menú **Acciones**.
 
-4. Dirección del flujo de datos: Entrante
+4. Siga, en cada perfil de ejecución de la tabla, los pasos que se indican a continuación:
 
-    - En la pestaña **Ámbito**, proporcione la siguiente información y después haga clic en **Siguiente**:
+    - Para abrir el Asistente para Configure Run Profile (Configurar perfiles de ejecución), haga clic en **Nuevo perfil**.
 
-    - Tipo de recurso de metaverso: person
+    - En el cuadro **Nombre**, escriba el nombre de perfil que se muestra en la tabla y haga clic en **Siguiente**.
 
-    - Sistema externo: ADMA
+    - En la lista **Tipo**, seleccione el tipo de paso que se muestra en la tabla y después haga clic en **Siguiente**.
 
-    - Tipo de recurso de sistema externo: persona
+    - Haga clic en **Finalizar** para crear el perfil de ejecución.
 
-5. En la pestaña **Relación**, proporcione la siguiente información y después haga clic en **Siguiente**:
+5. Para cerrar el cuadro de diálogo Configure Run Profiles (Configurar perfiles de ejecución), haga clic en **Aceptar**.
 
-## Para configurar Criterios de relación, seleccione **ObjectSID** en las listas MetaverseObject:person(Attribute) y ConnectedSystemObject:person (Attribute).
+## Configurar el Servicio MIM
 
-Seleccione **Create Resource in MIM** (Crear recurso en MIM).
+Mediante el portal de MIM, creará la regla de sincronización de entrada de usuario de AD para el servicio MIM.
 
-En la página **Inbound Attribute Flow** (Flujo del atributo entrante), proporcione la siguiente información y después haga clic en **Siguiente**:
+Para crear la regla de sincronización de entrada de usuario de AD:
 
-1. Regla de flujo
+1. En la barra de navegación de la página principal del portal de MIM, haga clic en **Administración**.
 
-2. Origen
+2. Para abrir la página Reglas de sincronización, haga clic en **Reglas de sincronización**.
 
-3. Destination
+3. Para abrir el Asistente para creación de reglas de sincronización, haga clic en **Nueva** en la barra de herramientas.
 
-4. Regla 1
+4. En la pestaña **General**, proporcione la siguiente información y después haga clic en **Siguiente**:
 
-    -   samAccountName
-    -   f
+    -   Nombre para mostrar: Regla de sincronización de entrada de usuario de AD
+    -   Dirección del flujo de datos: Entrante
 
-5. Regla 2
+5. En la pestaña **Ámbito**, proporcione la siguiente información y después haga clic en **Siguiente**:
 
-    -   displayName
-    -   displayName
-    -   Regla 3
+    -   Tipo de recurso de metaverso: person
+    -   Sistema externo: ADMA
+    -   Tipo de recurso de sistema externo: persona
 
-6. EmployeeTipo
+6. En la pestaña **Relación**, proporcione la siguiente información y después haga clic en **Siguiente**:
 
-    -   EmployeeTipo
+    -   Para configurar Criterios de relación, seleccione **ObjectSID** en las listas MetaverseObject:person(Attribute) y ConnectedSystemObject:person (Attribute).
 
-    -   Regla 4
+    -   Seleccione **Create Resource in MIM** (Crear recurso en MIM).
 
-7. givenName
+7. En la página **Inbound Attribute Flow** (Flujo del atributo entrante), proporcione la siguiente información y después haga clic en **Siguiente**:
 
-    | givenName | Regla 5 | sn |
+    | Regla de flujo | Origen | Destination |
     |-|-|-|
-    |lastName|Regla 6|Manager|
-    |manager|Regla 7|objectSID|
-    |ObjectSID|Regla 8|"Contoso"|
-    |dominio|Por cada fila de esta tabla, realice los pasos siguientes:|Para abrir el cuadro de diálogo de Definición de flujo, haga clic en **Nuevo flujo de atributo**.|
-    |En la pestaña **Origen**, seleccione el atributo que se muestra para esa fila en la tabla.|En la pestaña **Destino**, seleccione el atributo que se muestra para esa fila en la tabla.|Para aplicar la configuración de flujo de atributo, haga clic en **Aceptar**.|
-    |En la pestaña **Resumen**, haga clic en **Enviar**.|Inicializar el entorno de pruebas|Debe realizar cuatro pasos antes de probar la configuración de MIM con datos de AD:|
-    |Habilitación del aprovisionamiento|Abra el Synchronization Service Manager.|Para abrir el cuadro de diálogo Opciones, haga clic en **Opciones** en el menú **Herramientas**.|
-    |Seleccione **Enable Synchronization Rule Provisioning** (Habilitar aprovisionamiento de reglas de sincronización).|Para cerrar el cuadro de diálogo Opciones, haga clic en **Aceptar**.|Inicialización del MIMMA|
+    |Regla 1|samAccountName|f|
+    |Regla 2|displayName|displayName|
+    |Regla 3|EmployeeTipo|EmployeeTipo|
+    |Regla 4|givenName|givenName|
+    |Regla 5|sn|lastName|
+    |Regla 6|Manager|manager|
+    |Regla 7|objectSID|ObjectSID|
+    |Regla 8|"Contoso"|dominio|
 
-    Ejecute un ciclo de sincronización completo en este conector.
+    Por cada fila de esta tabla, realice los pasos siguientes:
 
-    - El ciclo completo consta de los siguientes perfiles de ejecución:
+    - Para abrir el cuadro de diálogo de Definición de flujo, haga clic en **Nuevo flujo de atributo**.
 
-    - Importación completa
+    - En la pestaña **Origen**, seleccione el atributo que se muestra para esa fila en la tabla.
 
-    - Sincronización completa
+    - En la pestaña **Destino**, seleccione el atributo que se muestra para esa fila en la tabla.
 
-    - Exportar
+    - Para aplicar la configuración de flujo de atributo, haga clic en **Aceptar**.
 
-8. Importación diferencial
+8. En la pestaña **Resumen**, haga clic en **Enviar**.
 
-## Siga estos pasos para ejecutar cada uno de los cuatro perfiles de ejecución.
-Abra Synchronization Service Manager y haga clic en **Management Agents** (Agentes de administración), en el menú **Herramientas**.
+## Inicializar el entorno de pruebas
+Debe realizar cuatro pasos antes de probar la configuración de MIM con datos de AD:
 
-### En la lista **Management Agents** (Agentes de administración), seleccione **MIMMA**.
+### Habilitación del aprovisionamiento
 
-1. Para abrir el cuadro de diálogo Run Management Agent (Ejecutar agente de administración), haga clic en **Ejecutar** en el menú **Acciones**.
+1. Abra el Synchronization Service Manager.
 
-2. Siga, en cada perfil de ejecución de la tabla anterior, los pasos que se indican a continuación:
+2. Para abrir el cuadro de diálogo Opciones, haga clic en **Opciones** en el menú **Herramientas**.
+
+3. Seleccione **Enable Synchronization Rule Provisioning** (Habilitar aprovisionamiento de reglas de sincronización).
+
+4. Para cerrar el cuadro de diálogo Opciones, haga clic en **Aceptar**.
+
+### Inicialización del MIMMA
+
+Ejecute un ciclo de sincronización completo en este conector. El ciclo completo consta de los siguientes perfiles de ejecución:
+
+- Importación completa
+- Sincronización completa
+- Exportar
+- Importación diferencial
+
+Siga estos pasos para ejecutar cada uno de los cuatro perfiles de ejecución.
+
+1. Abra Synchronization Service Manager y haga clic en **Management Agents** (Agentes de administración), en el menú **Herramientas**.
+
+2. En la lista **Management Agents** (Agentes de administración), seleccione **MIMMA**.
 
 3. Para abrir el cuadro de diálogo Run Management Agent (Ejecutar agente de administración), haga clic en **Ejecutar** en el menú **Acciones**.
 
-4. En la lista **Run profiles** (Perfiles de ejecución), seleccione aquel que quiere configurar.
+4. Siga, en cada perfil de ejecución de la tabla anterior, los pasos que se indican a continuación:
 
-### Para iniciar el perfil de ejecución, haga clic en **Aceptar**.
+    - Para abrir el cuadro de diálogo Run Management Agent (Ejecutar agente de administración), haga clic en **Ejecutar** en el menú **Acciones**.
 
-Configurar la prioridad del flujo de atributos Durante la inicialización del conector de MIM, las reglas de sincronización configuradas se han introducido en el metaverso.
+    - En la lista **Run profiles** (Perfiles de ejecución), seleccione aquel que quiere configurar.
 
-- Ajuste la prioridad del flujo de atributos para los atributos aportados por este conector con el fin de asegurarse de que los atributos que ya estén en AD puedan introducirse en el metaverso y más adelante en la base de datos del Servicio MIM.
-- Inicialización del ADMA
-- Para inicializar el conector de Active Directory, debe ejecutar una importación completa y una sincronización completa en él.
-- La importación completa trae los objetos existentes desde AD hasta el espacio del conector.
+    - Para iniciar el perfil de ejecución, haga clic en **Aceptar**.
 
-La sincronización completa actualiza las reglas de sincronización para que coincidan con las del conector de MIM.
+#### Configurar la prioridad del flujo de atributos
+
+Durante la inicialización del conector de MIM, las reglas de sincronización configuradas se han introducido en el metaverso.
+
+Ajuste la prioridad del flujo de atributos para los atributos aportados por este conector con el fin de asegurarse de que los atributos que ya estén en AD puedan introducirse en el metaverso y más adelante en la base de datos del Servicio MIM.
+
+### Inicialización del ADMA
+
+Para inicializar el conector de Active Directory, debe ejecutar una importación completa y una sincronización completa en él. La importación completa trae los objetos existentes desde AD hasta el espacio del conector. La sincronización completa actualiza las reglas de sincronización para que coincidan con las del conector de MIM.
 
 1. Abra Synchronization Service Manager y haga clic en **Management Agents** (Agentes de administración), en el menú **Herramientas**.
 
@@ -381,15 +415,15 @@ La sincronización completa actualiza las reglas de sincronización para que coi
 
     - Para iniciar el perfil de ejecución, haga clic en **Aceptar**.
 
-#### Rellenar la base de datos del Servicio MIM
+### Rellenar la base de datos del Servicio MIM
 
-Para rellenar la base de datos del Servicio MIM con los objetos, debe ejecutar un ciclo de sincronización en el conector MIMMA.
+Para rellenar la base de datos del Servicio MIM con los objetos, debe ejecutar un ciclo de sincronización en el conector MIMMA. El ciclo consiste en:
 
-El ciclo consiste en:
+- Exportar
+- Importación completa
+- Sincronización completa
 
-### Exportar
-
-Importación completa Sincronización completa Siga estos pasos para ejecutar cada uno de los tres perfiles de ejecución.
+Siga estos pasos para ejecutar cada uno de los tres perfiles de ejecución.
 
 1. Abra Synchronization Service Manager y haga clic en **Management Agents** (Agentes de administración) en el menú **Herramientas**.
 
@@ -400,36 +434,12 @@ Importación completa Sincronización completa Siga estos pasos para ejecutar ca
 4. Siga, en cada perfil de ejecución de la tabla anterior, los pasos que se indican a continuación:
 
     - Haga clic en **Ejecutar** en el menú **Acciones** para abrir el cuadro de diálogo Run Management Agent (Ejecutar agente de administración).
-
     - Seleccione el perfil de ejecución que quiera ejecutar en la lista **Run profiles** (Perfiles de ejecución).
-
     - Haga clic en **Aceptar** para iniciar el perfil de ejecución.
 
-### [!div class="step-by-step"]
-
-« Servicio y portal de MIM The cycle consists of:
-
-- Export
-- Full Import
-- Full Synchronization
-
-Follow these steps to run each of the three run profiles.
-
-1. Open the Synchronization Service Manager and click <bpt id="p1">**</bpt>Management Agents<ept id="p1">**</ept> on the <bpt id="p2">**</bpt>Tools<ept id="p2">**</ept> menu.
-
-2. Select <bpt id="p1">**</bpt>MIMMA<ept id="p1">**</ept> in the <bpt id="p2">**</bpt>Management Agents<ept id="p2">**</ept> list.
-
-3. Click <bpt id="p1">**</bpt>Run<ept id="p1">**</ept>  on the <bpt id="p2">**</bpt>Actions<ept id="p2">**</ept> menu to open the Run Management Agent dialog box.
-
-4. For each run profile listed above, complete the following steps:
-
-    - Click <bpt id="p1">**</bpt>Run<ept id="p1">**</ept> on the <bpt id="p2">**</bpt>Actions<ept id="p2">**</ept> menu to open the Run Management Agent dialog box.
-    - Select the run profile you want to run from the <bpt id="p1">**</bpt>Run profiles<ept id="p1">**</ept> list.
-    - Click <bpt id="p1">**</bpt>OK<ept id="p1">**</ept> to start the run profile.
-
->[!div class="step-by-step"] <bpt id="p1">[</bpt>« MIM Service and Portal<ept id="p1">](install-mim-service-portal.md)</ept>
+>[!div class="step-by-step"] [« Servicio y portal de MIM](install-mim-service-portal.md)
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Jun16_HO1-->
 
 
