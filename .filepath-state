@@ -69,9 +69,6 @@
   "f4e94980c6a03b08221fd46e19c421cce226086d": [
     "MIMDocs\\DeployUse\\install-mim-sync-ad-service.md"
   ],
-  "74c61573d520f7ce6969dedefe3d484cdb2e434c": [
-    "MIMDocs\\DeployUse\\install-mim-sync-ad-service.md"
-  ],
   "b69ea20f375869d4ad08987a08aba05913fd1db1": [
     "MIMDocs\\DeployUse\\prepare-server-exchange.md"
   ],
@@ -85,9 +82,6 @@
     "MIMDocs\\DeployUse\\prepare-server-ws2012r2.md"
   ],
   "285205578983eca4189da7ac0fdf0a9ee52b3bc6": [
-    "MIMDocs\\index.md"
-  ],
-  "49841c26e9ecf9d5ea3642e5d9a80883a50eaa18": [
     "MIMDocs\\index.md"
   ]
 }
