@@ -3,7 +3,7 @@ asset_id: 90d66a75-a7ec-4fa1-911c-cce683908838
 layout: HubPage
 
 title: Documentación de Microsoft Identity Manager
-description: "Documentación técnica de Microsoft Intune: Administración de dispositivos y aplicaciones móviles"
+description: Documentación técnica de Microsoft Intune: Administración de dispositivos y aplicaciones móviles
 keywords: intune documentation, MDM documentation, Mobile Device Management Documentation, Mobile Device and Application Management Documentation
 author: msstevenpo
 manager: stevenpo
@@ -21,7 +21,7 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
     <section id="hero-content">
       <h1>Documentación de Microsoft Identity Manager</h1>
       <h2>Microsoft Identity Manager (MIM) proporciona identidad local &amp; funcionalidades de administración de acceso que incluyen sincronización de identidades, frustración de robo de identidades, etc.</h2>
-      <h3>¿No conoce MIM? <a href="http://www.microsoft.com/en-us/server-cloud/products/microsoft-identity-manager/" target="\_blank">Visite la página del producto &rarr;</a></h3>     
+      <h3>¿No conoce MIM? <a href="http://go.microsoft.com/fwlink/?LinkId=816853" target="\_blank">Visite la página del producto &rarr;</a></h3>     
     </section>
     <aside class="alert section-border">
       <p>¿Listo para entrar en materia?</p>
@@ -140,6 +140,6 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
 </article>
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO4-->
 
 
