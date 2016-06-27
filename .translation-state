@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "8b4fd86aa60d2c472af838990e0217b38f87e3d3",
-  "LastTranslatedCommit": "0d175d3900e11fa48e2db454d9ce6fee50381731",
+  "LastTranslatedCommit": "ebef196f49693ff806eea54827d07a665195765f",
   "Items": {
     "c1e15c9548e46cbbff7810e63478074ceeb06152": {
       "FileHash": "c1e15c9548e46cbbff7810e63478074ceeb06152",
@@ -13840,7 +13840,7 @@
       "TargetFilePath": "MIMDocs\\DeployUse\\install-mim-service-portal.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\MIMDocs-pr.es-es\\master\\install-mim-service-portal.bc0a636322f2b40d28e326917fd5d60c15ff855e.es-es.xlf",
       "HandbackFileCommit": "a5db5c636dfab4c83325c78c30b8ba3fc69153bf",
-      "HandbackDateTime": "2016-06-27T18:35:17.1294077Z",
+      "HandbackDateTime": "2016-06-27T18:46:32.8157721Z",
       "HandbackException": {
         "internal_error_code": "handback_transformer_version_mismatch_with_handoff_transformer_version",
         "internal_error_message": "Can’t handback because handoff is based on outdated transformer with tool-version 1.0-4f63239, a newer handoff is generated based on updated transformer with tool-version 1.0-db30baf.",
@@ -13850,7 +13850,7 @@
         "stack_trace": null,
         "extended_information": null
       },
-      "HandbackFailureTimes": 1,
+      "HandbackFailureTimes": 2,
       "UpdatedDateTime": "2016-05-26T11:10:20.3171532Z",
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
@@ -13883,7 +13883,7 @@
       "TargetFilePath": "MIMDocs\\DeployUse\\install-mim-sync.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\MIMDocs-pr.es-es\\master\\install-mim-sync.187fbc84d7198ab90d1445b38ea0a3044b228547.es-es.xlf",
       "HandbackFileCommit": "a5db5c636dfab4c83325c78c30b8ba3fc69153bf",
-      "HandbackDateTime": "2016-06-27T18:35:17.1294077Z",
+      "HandbackDateTime": "2016-06-27T18:46:32.8157721Z",
       "HandbackException": {
         "internal_error_code": "handback_transformer_version_mismatch_with_handoff_transformer_version",
         "internal_error_message": "Can’t handback because handoff is based on outdated transformer with tool-version 1.0-4f63239, a newer handoff is generated based on updated transformer with tool-version 1.0-db30baf.",
@@ -13893,7 +13893,7 @@
         "stack_trace": null,
         "extended_information": null
       },
-      "HandbackFailureTimes": 1,
+      "HandbackFailureTimes": 2,
       "UpdatedDateTime": "2016-05-26T11:10:20.3171532Z",
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
@@ -13996,7 +13996,7 @@
       "TargetFilePath": "MIMDocs\\DeployUse\\prepare-server-exchange.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\MIMDocs-pr.es-es\\master\\prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.es-es.xlf",
       "HandbackFileCommit": "a5db5c636dfab4c83325c78c30b8ba3fc69153bf",
-      "HandbackDateTime": "2016-06-27T18:35:17.1294077Z",
+      "HandbackDateTime": "2016-06-27T18:46:32.8157721Z",
       "HandbackException": {
         "internal_error_code": "handback_transformer_version_mismatch_with_handoff_transformer_version",
         "internal_error_message": "Can’t handback because handoff is based on outdated transformer with tool-version 1.0-4f63239, a newer handoff is generated based on updated transformer with tool-version 1.0-db30baf.",
@@ -14006,7 +14006,7 @@
         "stack_trace": null,
         "extended_information": null
       },
-      "HandbackFailureTimes": 1,
+      "HandbackFailureTimes": 2,
       "UpdatedDateTime": "2016-05-26T11:10:20.3171532Z",
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
@@ -14039,7 +14039,7 @@
       "TargetFilePath": "MIMDocs\\DeployUse\\prepare-server-sharepoint.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\MIMDocs-pr.es-es\\master\\prepare-server-sharepoint.ea9bf41d1869c4bf8841649fee7599cbc80b640e.es-es.xlf",
       "HandbackFileCommit": "a5db5c636dfab4c83325c78c30b8ba3fc69153bf",
-      "HandbackDateTime": "2016-06-27T18:35:17.1294077Z",
+      "HandbackDateTime": "2016-06-27T18:46:32.8157721Z",
       "HandbackException": {
         "internal_error_code": "handback_transformer_version_mismatch_with_handoff_transformer_version",
         "internal_error_message": "Can’t handback because handoff is based on outdated transformer with tool-version 1.0-4f63239, a newer handoff is generated based on updated transformer with tool-version 1.0-db30baf.",
@@ -14049,7 +14049,7 @@
         "stack_trace": null,
         "extended_information": null
       },
-      "HandbackFailureTimes": 1,
+      "HandbackFailureTimes": 2,
       "UpdatedDateTime": "2016-05-26T11:10:20.3171532Z",
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
@@ -14082,7 +14082,7 @@
       "TargetFilePath": "MIMDocs\\DeployUse\\prepare-server-sql2014.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\MIMDocs-pr.es-es\\master\\prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.es-es.xlf",
       "HandbackFileCommit": "a5db5c636dfab4c83325c78c30b8ba3fc69153bf",
-      "HandbackDateTime": "2016-06-27T18:35:17.1294077Z",
+      "HandbackDateTime": "2016-06-27T18:46:32.8157721Z",
       "HandbackException": {
         "internal_error_code": "handback_transformer_version_mismatch_with_handoff_transformer_version",
         "internal_error_message": "Can’t handback because handoff is based on outdated transformer with tool-version 1.0-4f63239, a newer handoff is generated based on updated transformer with tool-version 1.0-db30baf.",
@@ -14092,7 +14092,7 @@
         "stack_trace": null,
         "extended_information": null
       },
-      "HandbackFailureTimes": 1,
+      "HandbackFailureTimes": 2,
       "UpdatedDateTime": "2016-05-26T11:10:20.3171532Z",
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
@@ -14510,7 +14510,7 @@
       "TargetFilePath": "MIMDocs\\DeployUse\\prepare-server-ws2012r2.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\MIMDocs-pr.es-es\\master\\prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.es-es.xlf",
       "HandbackFileCommit": "a5db5c636dfab4c83325c78c30b8ba3fc69153bf",
-      "HandbackDateTime": "2016-06-27T18:35:17.1294077Z",
+      "HandbackDateTime": "2016-06-27T18:46:32.8157721Z",
       "HandbackException": {
         "internal_error_code": "handback_transformer_version_mismatch_with_handoff_transformer_version",
         "internal_error_message": "Can’t handback because handoff is based on outdated transformer with tool-version 1.0-4f63239, a newer handoff is generated based on updated transformer with tool-version 1.0-db30baf.",
@@ -14520,7 +14520,7 @@
         "stack_trace": null,
         "extended_information": null
       },
-      "HandbackFailureTimes": 1,
+      "HandbackFailureTimes": 2,
       "UpdatedDateTime": "2016-05-26T11:10:20.3171532Z",
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
