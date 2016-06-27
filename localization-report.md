@@ -9,8 +9,8 @@
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 0
 [ Handback Failed Files ](#handback-failed-list)| 0
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 29
-[ In Sync Handback Files ](#insync-handback-success-list)| 0
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 23
+[ In Sync Handback Files ](#insync-handback-success-list)| 6
 [ Ignored Files ](#ignored-list)| 110
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -196,15 +196,9 @@
  [MIMDocs\DeployUse\certificate-manager-for-non-administrators.md](https://github.com/Microsoft/MIMDocs-pr/blob/875ed6b96929822ac166a4a262cc8547a4ea3b2a/MIMDocs/DeployUse/certificate-manager-for-non-administrators.md) | OutofSyncHandedBackSuccess | [Details](#50c0edd60abfa6550cb5a873d32a842e8c0998116)
  [MIMDocs\DeployUse\certificate-manager-for-software-certificates.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/certificate-manager-for-software-certificates.md) | OutofSyncHandedBackSuccess | [Details](#6b58093744656b9bfa62c1cfcab340ea88e6e1687)
  [MIMDocs\DeployUse\deploying-mim-password-change-notification-service-on-domain-controller.md](https://github.com/Microsoft/MIMDocs-pr/blob/875ed6b96929822ac166a4a262cc8547a4ea3b2a/MIMDocs/DeployUse/deploying-mim-password-change-notification-service-on-domain-controller.md) | OutofSyncHandedBackSuccess | [Details](#85e83b85f047ca2c2648b42ec68b832caae645ee8)
- [MIMDocs\DeployUse\install-mim-service-portal.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/install-mim-service-portal.md) | OutofSyncHandedBackSuccess | [Details](#eb2af412d9638035de591197fa191e990ade0ca110)
- [MIMDocs\DeployUse\install-mim-sync.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/install-mim-sync.md) | OutofSyncHandedBackSuccess | [Details](#8a99b3a291d2b145f453732a72244c43f9c535d612)
  [MIMDocs\DeployUse\install-mim-sync-ad-service.md](https://github.com/Microsoft/MIMDocs-pr/blob/8fd779bcc4d41b6e67d0fa31aa0f37c4ea2b410a/MIMDocs/DeployUse/install-mim-sync-ad-service.md) | OutofSyncHandedBackSuccess | [Details](#f4e94980c6a03b08221fd46e19c421cce226086d11)
  [MIMDocs\DeployUse\microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md](https://github.com/Microsoft/MIMDocs-pr/blob/7e61e201b277a2e8ec9fee785e9e34fca3b1cb29/MIMDocs/DeployUse/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md) | OutofSyncHandedBackSuccess | [Details](#24a7bf5bfb0a7450becd08be6743ed7ab175555965)
  [MIMDocs\DeployUse\microsoft-identity-manager-deploy.md](https://github.com/Microsoft/MIMDocs-pr/blob/ca7fdef81eb8a68aff46df528e1989f019f5d2a4/MIMDocs/DeployUse/microsoft-identity-manager-deploy.md) | OutofSyncHandedBackSuccess | [Details](#a56ead9777f1dad1aa0d214a506cf1242f51e16766)
- [MIMDocs\DeployUse\prepare-server-exchange.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/prepare-server-exchange.md) | OutofSyncHandedBackSuccess | [Details](#b69ea20f375869d4ad08987a08aba05913fd1db167)
- [MIMDocs\DeployUse\prepare-server-sharepoint.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/prepare-server-sharepoint.md) | OutofSyncHandedBackSuccess | [Details](#4333d587041fcfa24620812872e312c6e9dc97d868)
- [MIMDocs\DeployUse\prepare-server-sql2014.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/prepare-server-sql2014.md) | OutofSyncHandedBackSuccess | [Details](#2c0ff0bdbba4bcf979def8d5c7aa381947d6cc8769)
- [MIMDocs\DeployUse\prepare-server-ws2012r2.md](https://github.com/Microsoft/MIMDocs-pr/blob/af9f7f75f19bb29f2e29577c787252f6b7fabb7d/MIMDocs/DeployUse/prepare-server-ws2012r2.md) | OutofSyncHandedBackSuccess | [Details](#cd4ac84af4e5416512cf546a5d23b342ebe13c3970)
  [MIMDocs\DeployUse\preparing-domain.md](https://github.com/Microsoft/MIMDocs-pr/blob/b2578d50f855486183ae182330bacb688011c273/MIMDocs/DeployUse/preparing-domain.md) | OutofSyncHandedBackSuccess | [Details](#b84a6c7c7b53a122eefc3846ba93b92b34edb6ce71)
  [MIMDocs\DeployUse\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/8d151e15ea35fbaf14e8b55697f3fad9858d2aed/MIMDocs/DeployUse/TOC.md) | OutofSyncHandedBackSuccess | [Details](#15f742d950ce73c665c5c7c1644a23153d6aa36372)
  [MIMDocs\DeployUse\working-with-identity-manager-hybrid-reporting.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/working-with-identity-manager-hybrid-reporting.md) | OutofSyncHandedBackSuccess | [Details](#e2d0bd6120628d4fd2a14718fc205cde976c778573)
@@ -224,6 +218,14 @@
  [MIMDocs\Understand\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/8d151e15ea35fbaf14e8b55697f3fad9858d2aed/MIMDocs/Understand/TOC.md) | OutofSyncHandedBackSuccess | [Details](#0a32b3c5b574f121bcd34d97a9430d0dfd553ca8301)
 
 ## <a name='insync-handback-success-list'></a> In Sync Handback File Success List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [MIMDocs\DeployUse\install-mim-service-portal.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/install-mim-service-portal.md) | InSyncHandedBackSuccess | [Details](#eb2af412d9638035de591197fa191e990ade0ca110)
+ [MIMDocs\DeployUse\install-mim-sync.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/install-mim-sync.md) | InSyncHandedBackSuccess | [Details](#8a99b3a291d2b145f453732a72244c43f9c535d612)
+ [MIMDocs\DeployUse\prepare-server-exchange.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/prepare-server-exchange.md) | InSyncHandedBackSuccess | [Details](#b69ea20f375869d4ad08987a08aba05913fd1db167)
+ [MIMDocs\DeployUse\prepare-server-sharepoint.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/prepare-server-sharepoint.md) | InSyncHandedBackSuccess | [Details](#4333d587041fcfa24620812872e312c6e9dc97d868)
+ [MIMDocs\DeployUse\prepare-server-sql2014.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/prepare-server-sql2014.md) | InSyncHandedBackSuccess | [Details](#2c0ff0bdbba4bcf979def8d5c7aa381947d6cc8769)
+ [MIMDocs\DeployUse\prepare-server-ws2012r2.md](https://github.com/Microsoft/MIMDocs-pr/blob/af9f7f75f19bb29f2e29577c787252f6b7fabb7d/MIMDocs/DeployUse/prepare-server-ws2012r2.md) | InSyncHandedBackSuccess | [Details](#cd4ac84af4e5416512cf546a5d23b342ebe13c3970)
 
 ## <a name='ignored-list'></a> Ignored File List
  Source File | Status | Details 
@@ -461,7 +463,7 @@
 * [Back to Top](#report-top)
 
 ##### <a name='eb2af412d9638035de591197fa191e990ade0ca110'></a> Source: [MIMDocs\DeployUse\install-mim-service-portal.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/install-mim-service-portal.md)
-* Status: OutofSyncHandedBackSuccess
+* Status: InSyncHandedBackSuccess
 * Target File: [MIMDocs\DeployUse\install-mim-service-portal.md](https://github.com/Microsoft/MIMDocs-pr.es-es/blob/290a3526689722269721f6c616948c2360d18cc9/MIMDocs/DeployUse/install-mim-service-portal.md)
 * Handoff File: [install-mim-service-portal.bc0a636322f2b40d28e326917fd5d60c15ff855e.es-es.xlf](https://github.com/Microsoft/EM.handoff/blob/76f55dc2fdb1cefc203fff4ecda6c1cabe482fc8/ol-handoff/Microsoft/MIMDocs-pr.es-es/master/install-mim-service-portal.bc0a636322f2b40d28e326917fd5d60c15ff855e.es-es.xlf)
 * Handoff Datetime: 2016-06-27 09:04:30
@@ -469,11 +471,12 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [install-mim-service-portal.bc0a636322f2b40d28e326917fd5d60c15ff855e.es-es.xlf](https://github.com/Microsoft/EM.handback/blob/a5db5c636dfab4c83325c78c30b8ba3fc69153bf/ol-handback/Microsoft/MIMDocs-pr.es-es/master/install-mim-service-portal.bc0a636322f2b40d28e326917fd5d60c15ff855e.es-es.xlf)
-* Handback Datetime: 2016-05-26 11:10:20
+* Handback Datetime: 2016-06-27 18:35:17
+* Handback Error: [handback_transformer_version_mismatch_with_handoff_transformer_version](#eb2af412d9638035de591197fa191e990ade0ca110handback_transformer_version_mismatch_with_handoff_transformer_version)
 * [Back to Top](#report-top)
 
 ##### <a name='8a99b3a291d2b145f453732a72244c43f9c535d612'></a> Source: [MIMDocs\DeployUse\install-mim-sync.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/install-mim-sync.md)
-* Status: OutofSyncHandedBackSuccess
+* Status: InSyncHandedBackSuccess
 * Target File: [MIMDocs\DeployUse\install-mim-sync.md](https://github.com/Microsoft/MIMDocs-pr.es-es/blob/290a3526689722269721f6c616948c2360d18cc9/MIMDocs/DeployUse/install-mim-sync.md)
 * Handoff File: [install-mim-sync.187fbc84d7198ab90d1445b38ea0a3044b228547.es-es.xlf](https://github.com/Microsoft/EM.handoff/blob/76f55dc2fdb1cefc203fff4ecda6c1cabe482fc8/ol-handoff/Microsoft/MIMDocs-pr.es-es/master/install-mim-sync.187fbc84d7198ab90d1445b38ea0a3044b228547.es-es.xlf)
 * Handoff Datetime: 2016-06-27 09:04:30
@@ -481,7 +484,8 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [install-mim-sync.187fbc84d7198ab90d1445b38ea0a3044b228547.es-es.xlf](https://github.com/Microsoft/EM.handback/blob/a5db5c636dfab4c83325c78c30b8ba3fc69153bf/ol-handback/Microsoft/MIMDocs-pr.es-es/master/install-mim-sync.187fbc84d7198ab90d1445b38ea0a3044b228547.es-es.xlf)
-* Handback Datetime: 2016-05-26 11:10:20
+* Handback Datetime: 2016-06-27 18:35:17
+* Handback Error: [handback_transformer_version_mismatch_with_handoff_transformer_version](#8a99b3a291d2b145f453732a72244c43f9c535d612handback_transformer_version_mismatch_with_handoff_transformer_version)
 * [Back to Top](#report-top)
 
 ##### <a name='f4e94980c6a03b08221fd46e19c421cce226086d11'></a> Source: [MIMDocs\DeployUse\install-mim-sync-ad-service.md](https://github.com/Microsoft/MIMDocs-pr/blob/8fd779bcc4d41b6e67d0fa31aa0f37c4ea2b410a/MIMDocs/DeployUse/install-mim-sync-ad-service.md)
@@ -1196,7 +1200,7 @@
 * [Back to Top](#report-top)
 
 ##### <a name='b69ea20f375869d4ad08987a08aba05913fd1db167'></a> Source: [MIMDocs\DeployUse\prepare-server-exchange.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/prepare-server-exchange.md)
-* Status: OutofSyncHandedBackSuccess
+* Status: InSyncHandedBackSuccess
 * Target File: [MIMDocs\DeployUse\prepare-server-exchange.md](https://github.com/Microsoft/MIMDocs-pr.es-es/blob/290a3526689722269721f6c616948c2360d18cc9/MIMDocs/DeployUse/prepare-server-exchange.md)
 * Handoff File: [prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.es-es.xlf](https://github.com/Microsoft/EM.handoff/blob/76f55dc2fdb1cefc203fff4ecda6c1cabe482fc8/ol-handoff/Microsoft/MIMDocs-pr.es-es/master/prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.es-es.xlf)
 * Handoff Datetime: 2016-06-27 09:04:30
@@ -1204,11 +1208,12 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.es-es.xlf](https://github.com/Microsoft/EM.handback/blob/a5db5c636dfab4c83325c78c30b8ba3fc69153bf/ol-handback/Microsoft/MIMDocs-pr.es-es/master/prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.es-es.xlf)
-* Handback Datetime: 2016-05-26 11:10:20
+* Handback Datetime: 2016-06-27 18:35:17
+* Handback Error: [handback_transformer_version_mismatch_with_handoff_transformer_version](#b69ea20f375869d4ad08987a08aba05913fd1db167handback_transformer_version_mismatch_with_handoff_transformer_version)
 * [Back to Top](#report-top)
 
 ##### <a name='4333d587041fcfa24620812872e312c6e9dc97d868'></a> Source: [MIMDocs\DeployUse\prepare-server-sharepoint.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/prepare-server-sharepoint.md)
-* Status: OutofSyncHandedBackSuccess
+* Status: InSyncHandedBackSuccess
 * Target File: [MIMDocs\DeployUse\prepare-server-sharepoint.md](https://github.com/Microsoft/MIMDocs-pr.es-es/blob/290a3526689722269721f6c616948c2360d18cc9/MIMDocs/DeployUse/prepare-server-sharepoint.md)
 * Handoff File: [prepare-server-sharepoint.ea9bf41d1869c4bf8841649fee7599cbc80b640e.es-es.xlf](https://github.com/Microsoft/EM.handoff/blob/76f55dc2fdb1cefc203fff4ecda6c1cabe482fc8/ol-handoff/Microsoft/MIMDocs-pr.es-es/master/prepare-server-sharepoint.ea9bf41d1869c4bf8841649fee7599cbc80b640e.es-es.xlf)
 * Handoff Datetime: 2016-06-27 09:04:30
@@ -1216,11 +1221,12 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [prepare-server-sharepoint.ea9bf41d1869c4bf8841649fee7599cbc80b640e.es-es.xlf](https://github.com/Microsoft/EM.handback/blob/a5db5c636dfab4c83325c78c30b8ba3fc69153bf/ol-handback/Microsoft/MIMDocs-pr.es-es/master/prepare-server-sharepoint.ea9bf41d1869c4bf8841649fee7599cbc80b640e.es-es.xlf)
-* Handback Datetime: 2016-05-26 11:10:20
+* Handback Datetime: 2016-06-27 18:35:17
+* Handback Error: [handback_transformer_version_mismatch_with_handoff_transformer_version](#4333d587041fcfa24620812872e312c6e9dc97d868handback_transformer_version_mismatch_with_handoff_transformer_version)
 * [Back to Top](#report-top)
 
 ##### <a name='2c0ff0bdbba4bcf979def8d5c7aa381947d6cc8769'></a> Source: [MIMDocs\DeployUse\prepare-server-sql2014.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/prepare-server-sql2014.md)
-* Status: OutofSyncHandedBackSuccess
+* Status: InSyncHandedBackSuccess
 * Target File: [MIMDocs\DeployUse\prepare-server-sql2014.md](https://github.com/Microsoft/MIMDocs-pr.es-es/blob/290a3526689722269721f6c616948c2360d18cc9/MIMDocs/DeployUse/prepare-server-sql2014.md)
 * Handoff File: [prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.es-es.xlf](https://github.com/Microsoft/EM.handoff/blob/76f55dc2fdb1cefc203fff4ecda6c1cabe482fc8/ol-handoff/Microsoft/MIMDocs-pr.es-es/master/prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.es-es.xlf)
 * Handoff Datetime: 2016-06-27 09:04:30
@@ -1228,11 +1234,12 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.es-es.xlf](https://github.com/Microsoft/EM.handback/blob/a5db5c636dfab4c83325c78c30b8ba3fc69153bf/ol-handback/Microsoft/MIMDocs-pr.es-es/master/prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.es-es.xlf)
-* Handback Datetime: 2016-05-26 11:10:20
+* Handback Datetime: 2016-06-27 18:35:17
+* Handback Error: [handback_transformer_version_mismatch_with_handoff_transformer_version](#2c0ff0bdbba4bcf979def8d5c7aa381947d6cc8769handback_transformer_version_mismatch_with_handoff_transformer_version)
 * [Back to Top](#report-top)
 
 ##### <a name='cd4ac84af4e5416512cf546a5d23b342ebe13c3970'></a> Source: [MIMDocs\DeployUse\prepare-server-ws2012r2.md](https://github.com/Microsoft/MIMDocs-pr/blob/af9f7f75f19bb29f2e29577c787252f6b7fabb7d/MIMDocs/DeployUse/prepare-server-ws2012r2.md)
-* Status: OutofSyncHandedBackSuccess
+* Status: InSyncHandedBackSuccess
 * Target File: [MIMDocs\DeployUse\prepare-server-ws2012r2.md](https://github.com/Microsoft/MIMDocs-pr.es-es/blob/290a3526689722269721f6c616948c2360d18cc9/MIMDocs/DeployUse/prepare-server-ws2012r2.md)
 * Handoff File: [prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.es-es.xlf](https://github.com/Microsoft/EM.handoff/blob/76f55dc2fdb1cefc203fff4ecda6c1cabe482fc8/ol-handoff/Microsoft/MIMDocs-pr.es-es/master/prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.es-es.xlf)
 * Handoff Datetime: 2016-06-27 09:04:30
@@ -1240,7 +1247,8 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.es-es.xlf](https://github.com/Microsoft/EM.handback/blob/a5db5c636dfab4c83325c78c30b8ba3fc69153bf/ol-handback/Microsoft/MIMDocs-pr.es-es/master/prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.es-es.xlf)
-* Handback Datetime: 2016-05-26 11:10:20
+* Handback Datetime: 2016-06-27 18:35:17
+* Handback Error: [handback_transformer_version_mismatch_with_handoff_transformer_version](#cd4ac84af4e5416512cf546a5d23b342ebe13c3970handback_transformer_version_mismatch_with_handoff_transformer_version)
 * [Back to Top](#report-top)
 
 ##### <a name='b84a6c7c7b53a122eefc3846ba93b92b34edb6ce71'></a> Source: [MIMDocs\DeployUse\preparing-domain.md](https://github.com/Microsoft/MIMDocs-pr/blob/b2578d50f855486183ae182330bacb688011c273/MIMDocs/DeployUse/preparing-domain.md)
@@ -4152,5 +4160,41 @@
 
 
 ## Error Details
+##### <a name='eb2af412d9638035de591197fa191e990ade0ca110handback_transformer_version_mismatch_with_handoff_transformer_version'></a> Source: [MIMDocs\DeployUse\install-mim-service-portal.md](#eb2af412d9638035de591197fa191e990ade0ca110)
+* Error Code: handback_transformer_version_mismatch_with_handoff_transformer_version
+* Error Message: Can’t handback because handoff is based on outdated transformer with tool-version 1.0-4f63239, a newer handoff is generated based on updated transformer with tool-version 1.0-db30baf.
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_transformer_version_mismatch_with_handoff_transformer_version","internal_error_message":"Can’t handback because handoff is based on outdated transformer with tool-version 1.0-4f63239, a newer handoff is generated based on updated transformer with tool-version 1.0-db30baf.","internal_error_retriable":false,"exception_message":"Can’t handback because handoff is based on outdated transformer with tool-version 1.0-4f63239, a newer handoff is generated based on updated transformer with tool-version 1.0-db30baf.","exception_type":"Microsoft.OpenLocalization.Common.ErrorHandling.OpenLocalizationException","stack_trace":null,"extended_information":null}
+
+##### <a name='8a99b3a291d2b145f453732a72244c43f9c535d612handback_transformer_version_mismatch_with_handoff_transformer_version'></a> Source: [MIMDocs\DeployUse\install-mim-sync.md](#8a99b3a291d2b145f453732a72244c43f9c535d612)
+* Error Code: handback_transformer_version_mismatch_with_handoff_transformer_version
+* Error Message: Can’t handback because handoff is based on outdated transformer with tool-version 1.0-4f63239, a newer handoff is generated based on updated transformer with tool-version 1.0-db30baf.
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_transformer_version_mismatch_with_handoff_transformer_version","internal_error_message":"Can’t handback because handoff is based on outdated transformer with tool-version 1.0-4f63239, a newer handoff is generated based on updated transformer with tool-version 1.0-db30baf.","internal_error_retriable":false,"exception_message":"Can’t handback because handoff is based on outdated transformer with tool-version 1.0-4f63239, a newer handoff is generated based on updated transformer with tool-version 1.0-db30baf.","exception_type":"Microsoft.OpenLocalization.Common.ErrorHandling.OpenLocalizationException","stack_trace":null,"extended_information":null}
+
+##### <a name='b69ea20f375869d4ad08987a08aba05913fd1db167handback_transformer_version_mismatch_with_handoff_transformer_version'></a> Source: [MIMDocs\DeployUse\prepare-server-exchange.md](#b69ea20f375869d4ad08987a08aba05913fd1db167)
+* Error Code: handback_transformer_version_mismatch_with_handoff_transformer_version
+* Error Message: Can’t handback because handoff is based on outdated transformer with tool-version 1.0-4f63239, a newer handoff is generated based on updated transformer with tool-version 1.0-db30baf.
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_transformer_version_mismatch_with_handoff_transformer_version","internal_error_message":"Can’t handback because handoff is based on outdated transformer with tool-version 1.0-4f63239, a newer handoff is generated based on updated transformer with tool-version 1.0-db30baf.","internal_error_retriable":false,"exception_message":"Can’t handback because handoff is based on outdated transformer with tool-version 1.0-4f63239, a newer handoff is generated based on updated transformer with tool-version 1.0-db30baf.","exception_type":"Microsoft.OpenLocalization.Common.ErrorHandling.OpenLocalizationException","stack_trace":null,"extended_information":null}
+
+##### <a name='4333d587041fcfa24620812872e312c6e9dc97d868handback_transformer_version_mismatch_with_handoff_transformer_version'></a> Source: [MIMDocs\DeployUse\prepare-server-sharepoint.md](#4333d587041fcfa24620812872e312c6e9dc97d868)
+* Error Code: handback_transformer_version_mismatch_with_handoff_transformer_version
+* Error Message: Can’t handback because handoff is based on outdated transformer with tool-version 1.0-4f63239, a newer handoff is generated based on updated transformer with tool-version 1.0-db30baf.
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_transformer_version_mismatch_with_handoff_transformer_version","internal_error_message":"Can’t handback because handoff is based on outdated transformer with tool-version 1.0-4f63239, a newer handoff is generated based on updated transformer with tool-version 1.0-db30baf.","internal_error_retriable":false,"exception_message":"Can’t handback because handoff is based on outdated transformer with tool-version 1.0-4f63239, a newer handoff is generated based on updated transformer with tool-version 1.0-db30baf.","exception_type":"Microsoft.OpenLocalization.Common.ErrorHandling.OpenLocalizationException","stack_trace":null,"extended_information":null}
+
+##### <a name='2c0ff0bdbba4bcf979def8d5c7aa381947d6cc8769handback_transformer_version_mismatch_with_handoff_transformer_version'></a> Source: [MIMDocs\DeployUse\prepare-server-sql2014.md](#2c0ff0bdbba4bcf979def8d5c7aa381947d6cc8769)
+* Error Code: handback_transformer_version_mismatch_with_handoff_transformer_version
+* Error Message: Can’t handback because handoff is based on outdated transformer with tool-version 1.0-4f63239, a newer handoff is generated based on updated transformer with tool-version 1.0-db30baf.
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_transformer_version_mismatch_with_handoff_transformer_version","internal_error_message":"Can’t handback because handoff is based on outdated transformer with tool-version 1.0-4f63239, a newer handoff is generated based on updated transformer with tool-version 1.0-db30baf.","internal_error_retriable":false,"exception_message":"Can’t handback because handoff is based on outdated transformer with tool-version 1.0-4f63239, a newer handoff is generated based on updated transformer with tool-version 1.0-db30baf.","exception_type":"Microsoft.OpenLocalization.Common.ErrorHandling.OpenLocalizationException","stack_trace":null,"extended_information":null}
+
+##### <a name='cd4ac84af4e5416512cf546a5d23b342ebe13c3970handback_transformer_version_mismatch_with_handoff_transformer_version'></a> Source: [MIMDocs\DeployUse\prepare-server-ws2012r2.md](#cd4ac84af4e5416512cf546a5d23b342ebe13c3970)
+* Error Code: handback_transformer_version_mismatch_with_handoff_transformer_version
+* Error Message: Can’t handback because handoff is based on outdated transformer with tool-version 1.0-4f63239, a newer handoff is generated based on updated transformer with tool-version 1.0-db30baf.
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_transformer_version_mismatch_with_handoff_transformer_version","internal_error_message":"Can’t handback because handoff is based on outdated transformer with tool-version 1.0-4f63239, a newer handoff is generated based on updated transformer with tool-version 1.0-db30baf.","internal_error_retriable":false,"exception_message":"Can’t handback because handoff is based on outdated transformer with tool-version 1.0-4f63239, a newer handoff is generated based on updated transformer with tool-version 1.0-db30baf.","exception_type":"Microsoft.OpenLocalization.Common.ErrorHandling.OpenLocalizationException","stack_trace":null,"extended_information":null}
+
 
 Generated by OpenLocalization.
