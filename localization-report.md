@@ -471,7 +471,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [install-mim-service-portal.bc0a636322f2b40d28e326917fd5d60c15ff855e.es-es.xlf](https://github.com/Microsoft/EM.handback/blob/a5db5c636dfab4c83325c78c30b8ba3fc69153bf/ol-handback/Microsoft/MIMDocs-pr.es-es/master/install-mim-service-portal.bc0a636322f2b40d28e326917fd5d60c15ff855e.es-es.xlf)
-* Handback Datetime: 2016-06-27 18:46:32
+* Handback Datetime: 2016-06-27 19:17:16
 * Handback Error: [handback_transformer_version_mismatch_with_handoff_transformer_version](#eb2af412d9638035de591197fa191e990ade0ca110handback_transformer_version_mismatch_with_handoff_transformer_version)
 * [Back to Top](#report-top)
 
@@ -484,7 +484,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [install-mim-sync.187fbc84d7198ab90d1445b38ea0a3044b228547.es-es.xlf](https://github.com/Microsoft/EM.handback/blob/a5db5c636dfab4c83325c78c30b8ba3fc69153bf/ol-handback/Microsoft/MIMDocs-pr.es-es/master/install-mim-sync.187fbc84d7198ab90d1445b38ea0a3044b228547.es-es.xlf)
-* Handback Datetime: 2016-06-27 18:46:32
+* Handback Datetime: 2016-06-27 19:17:16
 * Handback Error: [handback_transformer_version_mismatch_with_handoff_transformer_version](#8a99b3a291d2b145f453732a72244c43f9c535d612handback_transformer_version_mismatch_with_handoff_transformer_version)
 * [Back to Top](#report-top)
 
@@ -1208,7 +1208,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.es-es.xlf](https://github.com/Microsoft/EM.handback/blob/a5db5c636dfab4c83325c78c30b8ba3fc69153bf/ol-handback/Microsoft/MIMDocs-pr.es-es/master/prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.es-es.xlf)
-* Handback Datetime: 2016-06-27 18:46:32
+* Handback Datetime: 2016-06-27 19:17:16
 * Handback Error: [handback_transformer_version_mismatch_with_handoff_transformer_version](#b69ea20f375869d4ad08987a08aba05913fd1db167handback_transformer_version_mismatch_with_handoff_transformer_version)
 * [Back to Top](#report-top)
 
@@ -1221,7 +1221,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [prepare-server-sharepoint.ea9bf41d1869c4bf8841649fee7599cbc80b640e.es-es.xlf](https://github.com/Microsoft/EM.handback/blob/a5db5c636dfab4c83325c78c30b8ba3fc69153bf/ol-handback/Microsoft/MIMDocs-pr.es-es/master/prepare-server-sharepoint.ea9bf41d1869c4bf8841649fee7599cbc80b640e.es-es.xlf)
-* Handback Datetime: 2016-06-27 18:46:32
+* Handback Datetime: 2016-06-27 19:17:16
 * Handback Error: [handback_transformer_version_mismatch_with_handoff_transformer_version](#4333d587041fcfa24620812872e312c6e9dc97d868handback_transformer_version_mismatch_with_handoff_transformer_version)
 * [Back to Top](#report-top)
 
@@ -1234,7 +1234,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.es-es.xlf](https://github.com/Microsoft/EM.handback/blob/a5db5c636dfab4c83325c78c30b8ba3fc69153bf/ol-handback/Microsoft/MIMDocs-pr.es-es/master/prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.es-es.xlf)
-* Handback Datetime: 2016-06-27 18:46:32
+* Handback Datetime: 2016-06-27 19:17:16
 * Handback Error: [handback_transformer_version_mismatch_with_handoff_transformer_version](#2c0ff0bdbba4bcf979def8d5c7aa381947d6cc8769handback_transformer_version_mismatch_with_handoff_transformer_version)
 * [Back to Top](#report-top)
 
@@ -1247,7 +1247,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.es-es.xlf](https://github.com/Microsoft/EM.handback/blob/a5db5c636dfab4c83325c78c30b8ba3fc69153bf/ol-handback/Microsoft/MIMDocs-pr.es-es/master/prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.es-es.xlf)
-* Handback Datetime: 2016-06-27 18:46:32
+* Handback Datetime: 2016-06-27 19:17:16
 * Handback Error: [handback_transformer_version_mismatch_with_handoff_transformer_version](#cd4ac84af4e5416512cf546a5d23b342ebe13c3970handback_transformer_version_mismatch_with_handoff_transformer_version)
 * [Back to Top](#report-top)
 
