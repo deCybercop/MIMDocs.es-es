@@ -36,10 +36,6 @@
     "MIMDocs\\GetStarted\\TOC.md",
     "MIMDocs\\Troubleshoot\\TOC.md"
   ],
-  "3036877a4f389967e58c7aa350a9c1fa54ecb5a4": [
-    "MIMDocs\\GetStarted\\TOC.md",
-    "MIMDocs\\Troubleshoot\\TOC.md"
-  ],
   "12f245624e644b12825239e378a26752f7a86846": [
     "MIMDocs\\microsoft-identity-manager-2016-release-notes.md"
   ],
@@ -95,9 +91,6 @@
     "MIMDocs\\DeployUse\\prepare-server-exchange.md"
   ],
   "b144f28b41eb8e02afa44495c0019ccc81022005": [
-    "MIMDocs\\DeployUse\\prepare-server-sharepoint.md"
-  ],
-  "4333d587041fcfa24620812872e312c6e9dc97d8": [
     "MIMDocs\\DeployUse\\prepare-server-sharepoint.md"
   ],
   "2c0ff0bdbba4bcf979def8d5c7aa381947d6cc87": [
