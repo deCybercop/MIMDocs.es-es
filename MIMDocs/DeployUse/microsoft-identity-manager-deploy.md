@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Implementación de MIM 2016 | Microsoft Identity Manager
-description: Obtenga la lista completa de los pasos necesarios para implementar Microsoft Identity Manager 2016, desde la preparación del entorno hasta la configuración de los portales.
-keywords:
+title: "Implementación de MIM 2016 | Microsoft Identity Manager"
+description: "Obtenga la lista completa de los pasos necesarios para implementar Microsoft Identity Manager 2016, desde la preparación del entorno hasta la configuración de los portales."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ca7fdef81eb8a68aff46df528e1989f019f5d2a4
+ms.openlocfilehash: a56ead9777f1dad1aa0d214a506cf1242f51e167
+
 
 ---
 
@@ -55,6 +49,7 @@ Una vez que haya configurado el dominio y el servidor, ya está listo para insta
 - [Sincronización de las bases de datos de Active Directory y del Servicio MIM](install-mim-sync-ad-service.md)
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 
