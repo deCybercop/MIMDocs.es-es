@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Creación de certificados de software | Microsoft Identity Manager
-description: Descubra cómo usar el Administrador de certificados para crear y renovar certificados de software con las plantillas de perfil.
-keywords:
+title: "Creación de certificados de software | Microsoft Identity Manager"
+description: "Descubra cómo usar el Administrador de certificados para crear y renovar certificados de software con las plantillas de perfil."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda
+ms.openlocfilehash: 6b58093744656b9bfa62c1cfcab340ea88e6e168
+
 
 ---
 
@@ -82,7 +76,7 @@ Para inscribir y renovar certificados de software no necesita ser un administrad
 
 1.  Inicie sesión en el portal de CM como usuario con privilegios administrativos.
 
-2.  Vaya a **Administración &gt; Administrar plantillas de perfil** y asegúrese de que esté marcada la casilla situada junto a **Plantilla del perfil de inicio de sesión de la tarjeta inteligente de ejemplo de MIM CM** ; después, haga clic en **Copiar una plantilla de perfil seleccionada**.
+2.  Vaya a **Administración &gt; Administrar plantillas de perfil** y asegúrese de que esté marcada la casilla situada junto a **Plantilla del perfil de inicio de sesión de la tarjeta inteligente de ejemplo de MIM CM** y, después, haga clic en **Copiar una plantilla de perfil seleccionada**.
 
 3.  Escriba el nombre de la plantilla de perfil y haga clic en **Aceptar**.
 
@@ -103,6 +97,7 @@ Para inscribir y renovar certificados de software no necesita ser un administrad
 11. Si usa el CM de tarjeta inteligente virtual, debe deshabilitar los elementos de recopilación de datos porque no funciona con la recopilación de datos activada. Deshabilite los elementos de recopilación de datos de cada una de las directivas haciendo clic en la directiva en el panel izquierdo, marcando después la casilla situada junto a **Elemento de datos de ejemplo** y haciendo clic después en **Eliminar elementos de recopilación de datos**. A continuación, haga clic en **Aceptar**.
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
