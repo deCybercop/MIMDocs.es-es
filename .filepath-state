@@ -60,12 +60,6 @@
   "5247cce895344ac6148b735fe550eb16c39103c7": [
     "MIMDocs\\Understand\\microsoft-identity-manager-2016.md"
   ],
-  "d6aaf5372efe39da005d05e8a0f2ea80ad303658": [
-    "MIMDocs\\Understand\\microsoft-identity-manager-2016.md"
-  ],
-  "df2f52159b6ff77dd9b28bb934795c685a72210d": [
-    "MIMDocs\\Understand\\microsoft-identity-manager-2016.md"
-  ],
   "0a32b3c5b574f121bcd34d97a9430d0dfd553ca8": [
     "MIMDocs\\Understand\\TOC.md"
   ],
@@ -130,9 +124,6 @@
     "MIMDocs\\pam\\principles-of-operation.md"
   ],
   "959c92f2e98fe712703ca23d3e38cdec6a8b85dc": [
-    "MIMDocs\\pam\\privileged-identity-management-for-active-directory-domain-services.md"
-  ],
-  "2ed625fd9450bebbcb63aab7bad4a727c8b7ee02": [
     "MIMDocs\\pam\\privileged-identity-management-for-active-directory-domain-services.md"
   ],
   "7d6888ad4d694ad0ed746598563de32d7c363936": [
