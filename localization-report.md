@@ -3482,9 +3482,9 @@
 * Archive Datetime: 2016-07-08 23:13:53
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\PlanDesign\TOC.md](https://github.com/Microsoft/MIMDocs-pr.es-es/blob/5a7dd5edac4243156c2b169361b657fbbaf1ad46/MIMDocs/PlanDesign/TOC.md)
-* Current Handback File: [TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.es-es.xlf](https://github.com/Microsoft/EM.handback/blob/05a8b04b7be7a2d9ff3a060a865c50313a593331/ol-handback/Microsoft/MIMDocs-pr.es-es/master/TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.es-es.xlf)
-* Current Handback Datetime: 2016-05-20 15:00:07
+* Current Target File: [MIMDocs\PlanDesign\TOC.md](https://github.com/Microsoft/MIMDocs-pr.es-es/blob/6677460ada863af79f1045c92b1476074deef83e/MIMDocs/PlanDesign/TOC.md)
+* Current Handback File: [TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.es-es.xlf](https://github.com/Microsoft/EM.handback/blob/ca0834b5d21a8987e82747d454c82f9d47fe8757/ol-handback/Microsoft/MIMDocs-pr.es-es/master/TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.es-es.xlf)
+* Current Handback Datetime: 2016-07-12 13:29:41
 * [Back to Top](#report-top)
 
 ##### <a name='e33a08d77a0b5c422cdbc8c19516b55df980a2c6249'></a> Source: [MIMDocs\PlanDesign\topology-considerations.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/PlanDesign/topology-considerations.md)
