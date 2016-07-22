@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Consideraciones de topología para la implementación de MIM | Microsoft Identity Manager
-description: Conozca los componentes de MIM 2016 y reciba sugerencias acerca de cómo implementarlas en su entorno.
-keywords:
+title: "Consideraciones de topología para la implementación de MIM | Microsoft Identity Manager"
+description: "Conozca los componentes de MIM 2016 y reciba sugerencias acerca de cómo implementarlas en su entorno."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c023d147d0fcc1525fefbe866c952e217f7bee6b
+ms.openlocfilehash: e33a08d77a0b5c422cdbc8c19516b55df980a2c6
+
 
 ---
 
@@ -71,6 +65,7 @@ Los equipos en los que se ejecuta SQL Server y que hospedan MIM Synchronization 
 - Puede descargar el documento [Forefront Identity Manager (FIM) 2010 Capactity Planning Guide](http://go.microsoft.com/fwlink/?LinkId=200180) (Guía de planeación de la capacidad de Forefront Identity Manager 2010 [FIM]); en él se ofrecen más detalles sobre la compilación de prueba y los resultados de pruebas de rendimiento.
 
 
-<!--HONumber=Apr16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

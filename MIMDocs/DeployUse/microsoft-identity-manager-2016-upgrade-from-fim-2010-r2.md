@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Actualización desde Forefront Identity Manager 2010 R2 | Microsoft Identity Manager
-description: Obtenga información acerca de cómo actualizar los componentes de FIM 2010 R2 para instalar después los nuevos en MIM 2016.
-keywords:
+title: "Actualización desde Forefront Identity Manager 2010 R2 | Microsoft Identity Manager"
+description: "Obtenga información acerca de cómo actualizar los componentes de FIM 2010 R2 para instalar después los nuevos en MIM 2016."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 05/13/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 7e61e201b277a2e8ec9fee785e9e34fca3b1cb29
+ms.openlocfilehash: 24a7bf5bfb0a7450becd08be6743ed7ab1755559
+
 
 ---
 
@@ -207,6 +201,7 @@ Esta guía asume que ya ha configurado lo siguiente:
 Nota: Si las extensiones y los complementos de FIM están actualmente implementados en los equipos de los usuarios para SSPR, no configure las nuevas puertas de teléfono de MFA para el restablecimiento de contraseñas mientras no se hayan actualizado todos los complementos y extensiones de FIM a MIM 2016.  Dado que los complementos y las extensiones de FIM 2010 y de FIM 2010 R2 no reconocen las nuevas puertas, se generará un error y no podrá finalizar el restablecimiento de las contraseñas.
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

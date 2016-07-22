@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Trabajo con el autoservicio de restablecimiento de contraseña | Microsoft Identity Manager
-description: Consulte las novedades del autoservicio de restablecimiento de contraseña en MIM 2016, incluido el funcionamiento de SSPR con la autenticación multifactor. 
-keywords:
+title: "Trabajo con el autoservicio de restablecimiento de contraseña | Microsoft Identity Manager"
+description: "Consulte las novedades del autoservicio de restablecimiento de contraseña en MIM 2016, incluido el funcionamiento de SSPR con la autenticación multifactor."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda
+ms.openlocfilehash: 3a4350e54383dc1098c778090bb29b435082045f
+
 
 ---
 
@@ -50,7 +44,7 @@ En esta sección se supone que ha descargado e implementado Microsoft Identity M
 
 -   Servicio de sincronización de MIM 2016 instalado y en ejecución en un servidor que esté unido al dominio de AD.
 
--   El servicio y portal de MIM 2016, incluido el portal de autoservicio de registro y el de autoservicio de restablecimiento de contraseña, instalados y en ejecución en un servidor (podría estar ubicado en el mismo servidor que el servicio de sincronización).
+-   El servicio &amp; y portal de MIM 2016, incluido el portal de autoservicio de registro y el de autoservicio de restablecimiento de contraseña, instalados y en ejecución en un servidor (podría estar ubicado en el mismo servidor que el servicio de sincronización)
 
 -   El servicio de sincronización de MIM debe estar configurado para la sincronización de identidades de AD-MIM. Esto incluye lo siguiente:
 
@@ -60,7 +54,7 @@ En esta sección se supone que ha descargado e implementado Microsoft Identity M
 
     -   Configurar reglas de sincronización en el portal de MIM que permitan la sincronización de datos de usuario y faciliten las actividades de sincronización del servicio MIM.
 
--   Los complementos y extensiones de MIM 2016, incluido el cliente integrado de inicio de sesión de Windows para autoservicio de restablecimiento de contraseña, están implementados en el servidor o en un equipo cliente distinto.
+-   Los complementos y extensiones de MIM 2016 &amp;, incluido el cliente integrado de inicio de sesión de Windows para autoservicio de restablecimiento de contraseña, implementados en el servidor o en un equipo cliente distinto.
 
 ## Preparación de MIM para que funcione con la autenticación multifactor
 Configure MIM Sync para que admita la funcionalidad de restablecimiento de contraseña y desbloqueo de cuenta. Para obtener más información, consulte los artículos [Installing the FIM Add-ins nd Extensions](https://technet.microsoft.com/library/ff512688%28v=ws.10%29.aspx) (Instalación de complementos y extensiones de FIM), [Installing FIM SSPR](https://technet.microsoft.com/library/hh322891%28v=ws.10%29.aspx) (Instalación de FIM SSPR), [SSPR Authentication Gates](https://technet.microsoft.com/library/jj134288%28v=ws.10%29.aspx) (Puertas de autenticación de SSPR) y [la guía del laboratorio de pruebas de SSPR](https://technet.microsoft.com/library/hh826057%28v=ws.10%29.aspx).
@@ -211,6 +205,7 @@ Al instalar las extensiones y complementos de MIM en un equipo unido a un domini
     ![Imagen de restablecimiento de contraseña del Asistente para inicio de sesión de MIM](media/MIM-SSPR-PR1.JPG)
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

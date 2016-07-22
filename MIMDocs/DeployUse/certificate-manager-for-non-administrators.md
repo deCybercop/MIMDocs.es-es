@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Inscripción de tarjetas inteligentes para usuarios que no son administradores | Microsoft Identity Manager
-description: Descubra cómo inscribir tarjetas inteligentes para los usuarios que no disponen de acceso de administrador a sus equipos para que puedan usar el Administrador de certificados.
-keywords:
+title: "Inscripción de tarjetas inteligentes para usuarios que no son administradores | Microsoft Identity Manager"
+description: "Descubra cómo inscribir tarjetas inteligentes para los usuarios que no disponen de acceso de administrador a sus equipos para que puedan usar el Administrador de certificados."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 875ed6b96929822ac166a4a262cc8547a4ea3b2a
+ms.openlocfilehash: 50c0edd60abfa6550cb5a873d32a842e8c099811
+
 
 ---
 
@@ -48,7 +42,7 @@ Si un usuario no es un administrador local en su equipo, no podrá inscribir una
 
     Edite el archivo custom.data y modifique lo siguiente:
 
-    1.  En el elemento &lt;NonAdmin&gt;, cambie el valor del atributo Valor a "True".
+    1.  En el elemento &lt;NonAdmin&gt;, cambie el valor del atributo Valor a "True"
 
     2.  Guarde el archivo y salga del editor
 
@@ -56,7 +50,7 @@ Si un usuario no es un administrador local en su equipo, no podrá inscribir una
 
     4.  Edite el archivo denominado AppxManifest.xml
 
-    5.  En el elemento &lt;Identity&gt;, modifique el valor del atributo Publicador para que sea el Firmante que aparece en el certificado de firma, como, por ejemplo, "CN = ABCD"
+    5.  En el elemento &lt;Identity&gt;, modifique el valor del atributo Publicador para que sea el firmante que aparece en el certificado de firma, como, por ejemplo, "CN = ABCD"
 
         El firmante aquí debe ser el mismo que el del certificado de firma que se utiliza para firmar la aplicación.
 
@@ -76,7 +70,7 @@ Si un usuario no es un administrador local en su equipo, no podrá inscribir una
 
     1.  Inicie sesión en el portal de CM como usuario con privilegios administrativos.
 
-    2.  Vaya a **Administración** &gt; **Administrar plantillas de perfil** y asegúrese de que esté marcada la casilla situada junto a la plantilla del perfil que creó; después, haga clic en Copiar una plantilla de perfil seleccionada.
+    2.  Vaya a **Administración** &gt; **Administrar plantillas de perfil** y asegúrese de que esté marcada la casilla situada junto a la plantilla del perfil que ha creado; después, haga clic en Copiar una plantilla de perfil seleccionada.
 
     3.  Escriba el nombre de la plantilla de perfil, agregue "nonAdmin" y haga clic en **Aceptar**.
 
@@ -101,6 +95,7 @@ Si un usuario no es un administrador local en su equipo, no podrá inscribir una
 8.  **Inicie la aplicación CM e inscriba una tarjeta inteligente virtual**
 
 
-<!--HONumber=Apr16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
