@@ -11,7 +11,7 @@
 ### [Definición de roles](defining-roles-for-pam.md)
 ### [Alta disponibilidad y recuperación ante desastres](high-availability-disaster-recovery-considerations-bastion-environment.md)
 ### [Requisitos de hardware y de software para SharePoint 2013](hardware-software-requirements.md)
-## [Implementación de MIM para Privileged Access Management](configuring-mim-environment-for-pam.md)
+## [Configuración de MIM para Privileged Access Management](configuring-mim-environment-for-pam.md)
 ### [Paso 1: dominio CORP](step-1-prepare-corp-domain.md)
 ### [Paso 2: controlador de dominio PRIV](step-2-prepare-priv-domain-controller.md)
 ### [Paso 3: servidor PAM](step-3-prepare-pam-server.md)
@@ -23,6 +23,6 @@
 # [Referencia para desarrolladores](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO3-->
 
 

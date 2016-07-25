@@ -1,10 +1,10 @@
 ---
-title: Configurar el entorno de MIM para Privileged Access Management | Microsoft Identity Manager
-description: 
+title: "Implementación y configuración de PAM | Microsoft Identity Manager"
+description: "La guía de instalación y MIM, y su configuración para Privileged Access Management."
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/15/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -12,13 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: c4ca5b58-ad0c-48af-a9eb-b71b22d0c67c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.sourcegitcommit: 9cf126d898c93faf89d7119136cce4e4963bb63d
-ms.openlocfilehash: c9f2cf2ba1f42ea1513ae38d8089839d85ae5553
+translationtype: Human Translation
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 4b4953089cb676baae97988f380debbfefcd1083
 
 
 ---
 
-# Configurar el entorno de MIM para Privileged Access Management
+# Configuración del entorno MIM para Privileged Access Management
 Se deben completar siete pasos al configurar el entorno para el acceso entre bosques, instalar y configurar Active Directory y Microsoft Identity Manager y demostrar una solicitud de acceso de Just-In-Time.
 
 Estos pasos aparecen de forma que pueda empezar desde cero y crear un entorno de pruebas. Si está aplicando PAM en un entorno existente, puede usar sus propios controladores de dominio o cuentas de usuario en lugar de crear unas nuevas para que coincidan con los ejemplos.
@@ -37,10 +38,11 @@ Estos pasos aparecen de forma que pueda empezar desde cero y crear un entorno de
 
 7.  Demostrar la solicitud, la recepción y el uso de acceso elevado con privilegios a un recurso protegido.
 
->[!div class="step-by-step"] [Inicio »](step-1-prepare-corp-domain.md)
+>[!div class="step-by-step"]
+[Inicio »](step-1-prepare-corp-domain.md)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO3-->
 
 

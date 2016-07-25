@@ -1,10 +1,10 @@
 ---
-title: "Uso de Azure MFA para la activación | Microsoft Identity Manager"
-description: 
+title: "Uso de Azure MFA para la activación de PAM | Microsoft Identity Manager"
+description: Configure Azure MFA como segunda capa de seguridad si sus usuarios activan roles en Privileged Access Management.
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/17/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: d6f6927eec479c705fd9ef7f33fafdeec05857e0
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 518a7e165946049745c8eea15ecb61866d6f9c04
 
 
 ---
@@ -70,7 +70,7 @@ A continuación, se generará un archivo que incluye el material de autenticaci�
 
 7.  Copie el archivo ZIP resultante en cada sistema donde esté instalado el servicio de MIM. 
 
->[!NOTE] 
+>[!NOTE]
 > El archivo ZIP contiene material de claves que se usa para autenticar el servicio Azure MFA.
 
 ## Configuración del servicio MIM para Azure MFA
@@ -99,7 +99,7 @@ A continuación, se generará un archivo que incluye el material de autenticaci�
 
 11.  Guarde y sobrescriba el archivo **MfaSettings.xml** en la carpeta del servicio MIM `C:\\Program Files\\Microsoft Forefront Identity Manager\\2010\\Service`. 
 
-> [!NOTE] 
+> [!NOTE]
 > Al final del proceso, asegúrese de que el archivo **MfaSettings.xml**, o cualquier copia de este o del archivo ZIP, no se pueda leer públicamente.
 
 ## Configuración de usuarios de PAM para Azure MFA
@@ -151,6 +151,6 @@ Para obtener más información sobre las llamadas telefónicas con errores (even
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

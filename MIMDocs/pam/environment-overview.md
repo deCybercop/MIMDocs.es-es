@@ -1,10 +1,10 @@
 ---
-title: "Introducción al entorno | Microsoft Identity Manager"
-description: 
+title: "Introducción al entorno de PAM | Microsoft Identity Manager"
+description: "Averigüe qué cantidad y configuración de máquinas virtuales se requiere para implementar correctamente Privileged Access Management."
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/14/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -12,15 +12,16 @@ ms.technology: active-directory-domain-services
 ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
-ms.sourcegitcommit: b8af77d2354428da19d91d5f02b490012835f544
-ms.openlocfilehash: a01cb2e1df52f3157b3d84a4eab837cececfbe1b
+translationtype: Human Translation
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 3057618c609ed251efe1f6cc6b2d3694ac61eafd
 
 
 ---
 
 # Introducción al entorno
 
-PAM funciona con máquinas virtuales (VM) con unidades independientes que están conectadas entre sí en una red compartida. Estas máquinas virtuales pueden hospedarse en Windows 8.1, Windows Server 2012 R2 o en otras plataformas de sistema operativo.
+Privileged Access Management funciona con máquinas virtuales (VM) con unidades independientes que están conectadas entre sí en una red compartida. Estas máquinas virtuales pueden hospedarse en Windows 8.1, Windows Server 2012 R2 o en otras plataformas de sistema operativo.
 
 ![Servidores de PAM: relaciones y plataformas compatibles: diagrama](media/pam-test-lab-architecture.png)
 
@@ -33,6 +34,6 @@ Las unidades donde se almacenarán las imágenes de disco de máquina virtual ne
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,10 +1,10 @@
 ---
-title: "Inscripción de tarjetas inteligentes para usuarios que no son administradores | Microsoft Identity Manager"
+title: "Autoservicio de renovación de tarjetas inteligentes | Microsoft Identity Manager"
 description: "Descubra cómo inscribir tarjetas inteligentes para los usuarios que no disponen de acceso de administrador a sus equipos para que puedan usar el Administrador de certificados."
 keywords: 
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 875ed6b96929822ac166a4a262cc8547a4ea3b2a
-ms.openlocfilehash: 50c0edd60abfa6550cb5a873d32a842e8c099811
+ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
+ms.openlocfilehash: 2fddede481b5ba677d0d463be4b14cda4b463865
 
 
 ---
@@ -96,6 +96,6 @@ Si un usuario no es un administrador local en su equipo, no podrá inscribir una
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

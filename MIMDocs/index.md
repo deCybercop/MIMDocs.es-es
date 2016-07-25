@@ -1,26 +1,29 @@
 ---
 asset_id: 90d66a75-a7ec-4fa1-911c-cce683908838
 layout: HubPage
-
-title: "Documentación de Microsoft Identity Manager"
-description: "Documentación técnica de Microsoft Intune: Administración de dispositivos y aplicaciones móviles"
-keywords: intune documentation, MDM documentation, Mobile Device Management Documentation, Mobile Device and Application Management Documentation
-author: msstevenpo
-manager: stevenpo
-ms.date: 04/28/2016
+title: "Documentación de Identity Manager | Microsoft Docs"
+description: "Documentación técnica de Microsoft Identity Manager: administración de identidad y acceso local"
+keywords: "documentación de identity manager, microsoft identity manager, MIM"
+author: kgremban
+manager: femila
+ms.date: 07/21/2016
 ms.topic: hubpage
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.suite: ems
 ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
+translationtype: Human Translation
+ms.sourcegitcommit: 455a24d3008a2ef54e1229100e7150a1090c9b2e
+ms.openlocfilehash: 0ccbac817271b01e38bfb3e84fa5fc7ece787299
+
 
 ---
-# Documentación de Microsoft Identity Management
+# Documentación de Identity Management
 <article id="main">
     <section id="hero-content">
-      <h1>Documentación de Microsoft Identity Manager</h1>
-      <h2>Microsoft Identity Manager (MIM) proporciona identidad local &amp; funcionalidades de administración de acceso que incluyen sincronización de identidades, frustración de robo de identidades, etc.</h2>
+      <h1>Documentación de Identity Manager</h1>
+      <h2>Obtenga información sobre cómo configurar la administración de identidad local con Microsoft Identity Manager. En los tutoriales se muestra cómo configurar la sincronización de identidades o la protección contra el robo de identidad, entre otros aspectos.</h2>
       <h3>¿No conoce MIM? <a href="http://go.microsoft.com/fwlink/?LinkId=816853" target="\_blank">Visite la página del producto &rarr;</a></h3>     
     </section>
     <aside class="alert section-border">
@@ -41,6 +44,7 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
         </ul>
         <ul class="column column-half">
           <li><a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">Implementar software de MIM en un servidor nuevo</a></li>
+          <li><a href="/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services">Información sobre Privileged Access Management</a></li>
         </ul>
       </div>
     </section>
@@ -140,6 +144,7 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
 </article>
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jul16_HO3-->
 
 

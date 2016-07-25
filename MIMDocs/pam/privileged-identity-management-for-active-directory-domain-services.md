@@ -1,10 +1,10 @@
 ---
-title: Privileged Access Management para los Servicios de dominio de Active Directory | Microsoft Identity Manager
-description: 
+title: "¿Qué es PAM para AD DS? | Microsoft Identity Manager"
+description: "Obtenga información sobre Privileged Access Management y descubra cómo puede ayudarle a administrar y proteger su entorno de Active Directory."
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/13/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: cf3796f7-bc68-4cf7-b887-c5b14e855297
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: 959c92f2e98fe712703ca23d3e38cdec6a8b85dc
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: bbc5c6760bc035d57f9d76d102246abbfe298e8b
 
 
 ---
@@ -22,7 +22,7 @@ ms.openlocfilehash: 959c92f2e98fe712703ca23d3e38cdec6a8b85dc
 # Privileged Access Management para los Servicios de dominio de Active Directory
 Privileged Access Management (PAM) es una solución basada en Microsoft Identity Manager (MIM), Windows Server 2012 R2 y Windows Server Technical Preview. Ayuda a las organizaciones a restringir el acceso con privilegios en un entorno de Active Directory existente.
 
-> [!NOTE] 
+> [!NOTE]
 > PAM es una instancia de [Privileged Identity Management](https://azure.microsoft.com/documentation/articles/active-directory-privileged-identity-management-configure/) (PIM) que se implementa mediante Microsoft Identity Manager (MIM).
 
 Privileged Access Management cumple dos objetivos:
@@ -95,6 +95,6 @@ Este flujo de trabajo está pensado específicamente para estas cuentas administ
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,10 +1,10 @@
 ---
-title: Modelo de niveles para el particionamiento de los privilegios administrativos | Microsoft Identity Manager
-description: 
+title: Modelo de niveles del entorno PAM | Microsoft Identity Manager
+description: "Obtenga información sobre el modelo de niveles que aísla el sistema según la vulnerabilidad y el riesgo."
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/14/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: 509c05bbda5f0a0b936518fb023000771c45d4f7
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 1a750bedee2aac667c84113d2d08daa20428c260
 
 
 ---
@@ -44,7 +44,7 @@ Se deben aplicar restricciones de inicio de sesión para garantizar que las cuen
 - Los administradores de dominio (nivel 0) no pueden iniciar sesión en servidores empresariales (nivel 1) ni en estaciones de trabajo de usuario estándar (nivel 2).
 - Los administradores de servidor (nivel 1) no pueden iniciar sesión en estaciones de trabajo de usuario estándar (nivel 2).
 
->[!NOTE] 
+>[!NOTE]
 > Los administradores de servidor no deben estar en el grupo de administradores de dominio. El personal que tiene responsabilidades de administración tanto de controladores de dominio como de servidores empresariales debe tener cuentas independientes.
 
 Las restricciones de inicio de sesión se pueden aplicar con lo siguiente:
@@ -62,6 +62,6 @@ En el siguiente artículo, [Planificación de un entorno bastión](planning-bast
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 
