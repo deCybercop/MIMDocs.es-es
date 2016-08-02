@@ -13,8 +13,8 @@ ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: b4b3f4c0605fabc7166e8ff8309078f80461301e
+ms.sourcegitcommit: 9b5b7460e6307ab38b1b9356a638eb0200fd97d1
+ms.openlocfilehash: 009091a65dba31de2066e45930e438442fcd89a0
 
 
 ---
@@ -93,7 +93,7 @@ Para realizar la activación, solicite acceso con privilegios mediante el portal
 8. En la pestaña de la izquierda, haga clic en **Activar**. Seleccione el **rol de PAM** y haga clic en **Activar**.
 
 > [!Note]
-> En este entorno también puede aprender a desarrollar aplicaciones que usan la API de REST de PAM, que se describe en [Privileged Access Management REST API Reference (Referencia de la API de REST de Privileged Access Management)](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference.md).
+> En este entorno también puede aprender a desarrollar aplicaciones que usan la API de REST de PAM, que se describe en [Privileged Access Management REST API Reference](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference) (Referencia de la API de REST de Privileged Access Management).
 
 ## Resumen
 Una vez que haya completado los pasos de este tutorial, habrá mostrado un escenario de Privileged Access Management en el que los privilegios de usuario se elevan durante un período limitado de tiempo, lo que permite al usuario acceder a recursos protegidos con una cuenta con privilegios independiente. Desde el momento en que finalice la sesión de elevación, la cuenta con privilegios no podrá acceder al recurso protegido. El administrador de PAM es quien decide qué grupos de seguridad representan roles con privilegios. Una vez que los derechos de acceso se migran al sistema de Privileged Access Management, el acceso que anteriormente era posible con la cuenta de usuario original ahora solo es posible si se inicia sesión con una cuenta con privilegios especial que se obtiene previa solicitud. Como resultado, las pertenencias a grupos para grupos con muchos privilegios están en vigor durante un período de tiempo limitado.
@@ -103,6 +103,6 @@ Una vez que haya completado los pasos de este tutorial, habrá mostrado un escen
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

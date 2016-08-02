@@ -12,18 +12,19 @@ ms.technology: active-directory-domain-services
 ms.assetid: cf3796f7-bc68-4cf7-b887-c5b14e855297
 ms.reviewer: mwahl
 ms.suite: ems
-experimental: true
 experiment_id: kgremban_images
 translationtype: Human Translation
 ms.sourcegitcommit: e695dd47e4bd31c4004c7d0d9ec76498d52fb56a
-ms.openlocfilehash: b46c2b50873023d504fb7b440a1d4e40e8fa3ac7
+ms.openlocfilehash: 82c97351f66558c3270821f786560ef4b3e0c473
 
 ---
 
 # Privileged Access Management para los Servicios de dominio de Active Directory
-Privileged Access Management (PAM) es una solución que ayuda a las organizaciones a restringir el acceso con privilegios en un entorno existente de Active Directory.
+Privileged Access Management (PAM) ayuda a las organizaciones a restringir el acceso con privilegios en un entorno existente de Active Directory.
 
-Privileged Access Management cumple dos objetivos:
+![Pasos de PAM: preparación, protección, funcionamiento, supervisión: diagrama](media/MIM_PIM_SetupProcess.png)
+
+Al concentrarse en un ciclo de preparación, protección y supervisión del entorno Privileged Access Management logra dos objetivos:
 
 - Vuelve a establecer el control sobre el entorno de Active Directory en peligro al mantener un entorno bastión independiente que se conoce por no verse afectado por los ataques malintencionados.  
 - Aísla el uso de cuentas con privilegios para reducir el riesgo de que roben dichas credenciales.
@@ -43,7 +44,6 @@ PAM se basa en el principio de la administración Just-In-Time, que se relaciona
 
 La configuración y el funcionamiento de PAM consta de cuatro pasos.
 
-![Pasos de PAM: preparación, protección, funcionamiento, supervisión: diagrama](media/MIM_PIM_SetupProcess.png)
 
 1.  **Preparación**: identifique los grupos del bosque existente que tengan privilegios importantes. Vuelva a crear estos grupos sin miembros en el bosque bastión.
 
