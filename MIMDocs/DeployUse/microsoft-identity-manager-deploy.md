@@ -4,7 +4,7 @@ description: "Obtenga la lista completa de los pasos necesarios para implementar
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 08/11/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: db062cf8dafe0b480db06cd8d913583c5b709246
+ms.sourcegitcommit: 406269e3c8dc3137c2dcd625c50c6cf4eb126d86
+ms.openlocfilehash: 74d7bfd1e0c89c880b2b6a06756f84ad63d3a8cc
 
 
 ---
@@ -25,11 +25,9 @@ Los artículos de esta sección proporcionan instrucciones paso a paso para impl
 > [!NOTE]
 > La topología de implementación descrita en esta sección está pensada solo para la iniciación y el aprendizaje de MIM.  La [guía de planeación de la capacidad](/microsoft-identity-manager/plan-design/capacity-planning-guide) proporciona más información sobre topologías para implementaciones de producción.  Se recomienda revisar esa documentación antes de implementar MIM en un entorno o uso de producción.
 
-<!---
-Comment: Restore after PAM content is included
+El escenario de administración de acceso con privilegios se implementa de forma diferente que en los demás escenarios de MIM, ya que requiere un entorno de bosque bastión dedicado.  Para saber más sobre la implementación de MIM para Privileged Identity Management, vea [Getting Started with Privileged Access Management](/microsoft-identity-manager/pam/privileged-access-management-get-started) (Introducción a Privileged Access Management).
 
-The privileged access management scenario is deployed differently than other MIM scenarios, as it requires a dedicated bastion forest environment.  If you want to learn more about deploying MIM for Privileged Identity Management, see [Getting Started with Privileged Access Management](privileged-access-management-get-started.md).
---->
+El proceso de implementación de MIM 2016 es muy similar al proceso de su predecesor, FIM 2010 R2. Si quiere echar un vistazo a la documentación de FIM, vea la [Guía de implementación de Forefront Identity Manager 2010 R2](https://technet.microsoft.com/library/jj134310).
 
 ## Primero: preparación de un dominio
 MIM funciona con Active Directory (AD); siga estos pasos para configurar el controlador de dominio de AD.
@@ -37,7 +35,7 @@ MIM funciona con Active Directory (AD); siga estos pasos para configurar el cont
 
 ## Segundo: preparación de un servidor de administración de identidades
 Una vez que el dominio está activado y configurado, prepare el servidor de administración de identidad corporativa. Esto incluye la configuración de los siguientes elementos:
-- [Windows Server 2012 R2](prepare-server-ws2012r2.md)
+- [Windows Server 2012 R2](prepare-server-ws2012r2.md)
 - [SQL Server 2014](prepare-server-sql2014.md)
 - [SharePoint](prepare-server-sharepoint.md)
 - [Exchange Server](prepare-server-exchange.md) (opcional)
@@ -50,6 +48,6 @@ Una vez que haya configurado el dominio y el servidor, ya está listo para insta
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO2-->
 
 
