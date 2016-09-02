@@ -4,7 +4,7 @@ description: "Comience a utilizar los componentes de MIM 2016 instalando y confi
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 08/11/2016
 ms.topic: get-started-article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: 2dfc89d32ef3b615201f1eb57ed3b8f5daed513e
+ms.sourcegitcommit: 739797502e09c2b92e35767e2c943308cd1de5c9
+ms.openlocfilehash: ba399da1431ea1d2d1633d0469e054ffd89f1d34
 
 
 ---
@@ -53,7 +53,7 @@ Antes de instalar los componentes de Microsoft Identity Manager 2016, configure 
 
     ![Imagen de instalación personalizada](media/MIM-Install2.png)
 
-6.  En la pantalla de configuración de la base de datos de sincronización, seleccione:
+6.  En la pantalla de configuración de la base de datos del servicio de sincronización, seleccione:
 
     1.  El SQL Server se encuentra en: **Este equipo**.
 
@@ -71,7 +71,7 @@ Antes de instalar los componentes de Microsoft Identity Manager 2016, configure 
 
     ![Imagen de cuenta de servicio](media/MIM-Install4.png)
 
-8.  Proporcione al instalador del Servicio de sincronización de MIM los grupos de seguridad pertinentes:
+8.  Proporcione al instalador del servicio de sincronización de MIM los grupos de seguridad pertinentes:
 
     1. Administrador = *contoso\MIMSyncAdmins*
 
@@ -91,7 +91,7 @@ Antes de instalar los componentes de Microsoft Identity Manager 2016, configure 
 
     1. Puede que se muestre una advertencia relacionada con la cuenta del Servicio de sincronización de MIM. Si se muestra, haga clic en **Aceptar**.
 
-    2. Se instalará MIM Sync.
+    2. Se instalará el servicio de sincronización de MIM.
 
     3. Se mostrará un aviso sobre la creación de una copia de seguridad de la clave de cifrado. Haga clic en **Aceptar** y seleccione una carpeta para almacenar la copia de seguridad de la clave de cifrado.
 
@@ -107,6 +107,6 @@ Antes de instalar los componentes de Microsoft Identity Manager 2016, configure 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO2-->
 
 
