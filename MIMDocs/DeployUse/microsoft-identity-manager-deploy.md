@@ -4,7 +4,7 @@ description: "Obtenga la lista completa de los pasos necesarios para implementar
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 08/11/2016
+ms.date: 09/07/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 406269e3c8dc3137c2dcd625c50c6cf4eb126d86
-ms.openlocfilehash: 74d7bfd1e0c89c880b2b6a06756f84ad63d3a8cc
+ms.sourcegitcommit: 40dbec941eb2f0b1a01de0f47d44e01717aaca21
+ms.openlocfilehash: 77dae279f9078c55abf342a8956aaf77c62773d5
 
 
 ---
@@ -25,7 +25,7 @@ Los artículos de esta sección proporcionan instrucciones paso a paso para impl
 > [!NOTE]
 > La topología de implementación descrita en esta sección está pensada solo para la iniciación y el aprendizaje de MIM.  La [guía de planeación de la capacidad](/microsoft-identity-manager/plan-design/capacity-planning-guide) proporciona más información sobre topologías para implementaciones de producción.  Se recomienda revisar esa documentación antes de implementar MIM en un entorno o uso de producción.
 
-El escenario de administración de acceso con privilegios se implementa de forma diferente que en los demás escenarios de MIM, ya que requiere un entorno de bosque bastión dedicado.  Para saber más sobre la implementación de MIM para Privileged Identity Management, vea [Getting Started with Privileged Access Management](/microsoft-identity-manager/pam/privileged-access-management-get-started) (Introducción a Privileged Access Management).
+El escenario de administración de acceso con privilegios se implementa de forma diferente que en los demás escenarios de MIM, ya que requiere un entorno de bosque bastión dedicado.  Para saber más sobre la implementación de MIM para Privileged Identity Management, consulte [Configuración del entorno MIM para Privileged Access Management](/microsoft-identity-manager/pam/configuring-mim-environment-for-pam).
 
 El proceso de implementación de MIM 2016 es muy similar al proceso de su predecesor, FIM 2010 R2. Si quiere echar un vistazo a la documentación de FIM, vea la [Guía de implementación de Forefront Identity Manager 2010 R2](https://technet.microsoft.com/library/jj134310).
 
@@ -48,6 +48,6 @@ Una vez que haya configurado el dominio y el servidor, ya está listo para insta
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Sep16_HO2-->
 
 
