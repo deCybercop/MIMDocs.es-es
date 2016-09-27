@@ -4,7 +4,7 @@ description:
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/14/2016
+ms.date: 09/16/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b8af77d2354428da19d91d5f02b490012835f544
-ms.openlocfilehash: 0ed48d43825e1a876c4d96cafcb6c17cac26610f
+ms.sourcegitcommit: 9eefdf21d0cab3f7c488a66cbb3984d40498f4ef
+ms.openlocfilehash: fc4161f98d4367a2124e6253fe11dd1f2712d614
 
 
 ---
@@ -43,7 +43,7 @@ Según el [modelo de niveles](tier-model-for-partitioning-administrative-privile
 
 El bosque *CORP* de producción debería confiar en el bosque *PRIV* administrativo, pero no al revés. Puede tratarse de una confianza de dominio o una confianza de bosque. No es necesario que el dominio del bosque administrativo confíe en los bosques y dominios administrados para poder administrar Active Directory; sin embargo, algunas aplicaciones adicionales podrían requerir una relación de confianza bidireccional, validación de la seguridad y prueba.
 
-Se debe usar la autenticación selectiva para garantizar que las cuentas en el bosque administrativo solo usan los hosts de producción adecuados. Para mantener los controladores de dominio y delegar derechos en Active Directory, normalmente se requiere otorgar el derecho "Se permite el inicio de sesión" de los controladores de dominio a las cuentas de administración designadas de nivel 0 en el bosque administrativo. Vea [Configuring Selective Authentication Settings (Configuración de la autenticación selectiva)](http://technet.microsoft.com/library/cc755844.aspx) para obtener más información.
+Se debe usar la autenticación selectiva para garantizar que las cuentas en el bosque administrativo solo usan los hosts de producción adecuados. Para mantener los controladores de dominio y delegar derechos en Active Directory, normalmente se requiere otorgar el derecho "Se permite el inicio de sesión" de los controladores de dominio a las cuentas de administración designadas de nivel 0 en el bosque administrativo. Consulte [Configuring Selective Authentication Settings (Configuración de la autenticación selectiva)](http://technet.microsoft.com/library/cc816580.aspx) para obtener más información.
 
 ## Mantener una separación lógica
 
@@ -149,7 +149,7 @@ MIM usa cmdlets de PowerShell para establecer la confianza entre los dominios AD
 
 Cuando la topología de Active Directory existente cambia, los cmdlets `Test-PAMTrust`, `Test-PAMDomainConfiguration`, `Remove-PAMTrust` y `Remove-PAMDomainConfiguration` se pueden usar para actualizar las relaciones de confianza.
 
-### Establecer la confianza para cada bosque
+## Establecer la confianza para cada bosque
 
 El cmdlet `New-PAMTrust` se debe ejecutar una vez para cada bosque existente. Se invoca en el equipo del Servicio MIM en el dominio administrativo. Los parámetros para este comando son el nombre de dominio del dominio principal del bosque existente y la credencial de un administrador de ese dominio.
 
@@ -159,11 +159,11 @@ New-PAMTrust -SourceForest "contoso.local" -Credentials (get-credential)
 
 Después de establecer la confianza, configure cada dominio para habilitar la administración desde el entorno bastión, tal como se describe en la siguiente sección.
 
-### Habilitar la administración de cada dominio
+## Habilitar la administración de cada dominio
 
 Existen siete requisitos para habilitar la administración para un dominio existente.
 
-#### 1. Un grupo de seguridad en el dominio local
+### 1. Un grupo de seguridad en el dominio local
 
 En el dominio existente, debe haber un grupo cuyo nombre sea el nombre de dominio de NetBIOS, seguido de tres signos de dólar, por ejemplo, *CONTOSO$$$*. El ámbito del grupo debe ser *local de dominio* y el tipo de grupo debe ser *Seguridad*. Esto es necesario para los grupos que se creen en el bosque administrativo dedicado con el mismo identificador de seguridad que los grupos de este dominio. Cree este grupo con el siguiente comando de PowerShell, que un administrador del dominio existente puede realizar y ejecutar en una estación de trabajo unida al dominio existente:
 
@@ -171,7 +171,7 @@ En el dominio existente, debe haber un grupo cuyo nombre sea el nombre de domini
 New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -SamAccountName 'CONTOSO$$$'
 ```
 
-#### 2. Auditoría de aciertos y errores
+### 2. Auditoría de aciertos y errores
 
 La configuración de la directiva de grupo en el controlador de dominio para auditoría debe incluir la auditoría de operaciones realizadas correctamente y operaciones erróneas para Auditar la administración de cuentas y Auditar el acceso del servidor de directorio. Esto se puede realizar con la Consola de administración de directivas de grupo, que un administrador del dominio existente puede realizar y ejecutar en una estación de trabajo unida al dominio existente:
 
@@ -201,7 +201,7 @@ La configuración de la directiva de grupo en el controlador de dominio para aud
 
 El mensaje “La actualización de la directiva de equipo se completó correctamente.” debe aparecer después de unos minutos.
 
-#### 3. Permitir conexiones a la autoridad de seguridad local
+### 3. Permitir conexiones a la autoridad de seguridad local
 
 Los controladores de dominio deben permitir conexiones de RPC sobre TCP/IP para la 	Autoridad de seguridad local (LSA) desde el entorno bastión. En versiones anteriores de Windows Server, la compatibilidad de TCP/IP en LSA debe estar habilitada en el registro:
 
@@ -209,7 +209,7 @@ Los controladores de dominio deben permitir conexiones de RPC sobre TCP/IP para 
 New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipClientSupport -PropertyType DWORD -Value 1
 ```
 
-#### 4. Crear la configuración de dominio de PAM
+### 4. Crear la configuración de dominio de PAM
 
 El cmdlet `New-PAMDomainConfiguration` se debe ejecutar en el equipo de Servicio MIM en el dominio administrativo. Los parámetros para este comando son el nombre de dominio del dominio existente y la credencial de un administrador de ese dominio.
 
@@ -217,7 +217,7 @@ El cmdlet `New-PAMDomainConfiguration` se debe ejecutar en el equipo de Servicio
  New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials (get-credential)
 ```
 
-#### 5. Conceder permisos de lectura a las cuentas
+### 5. Conceder permisos de lectura a las cuentas
 
 Las cuentas del bosque bastión que se usan para establecer roles (administradores que usan el cmdlet `New-PAMUser` y `New-PAMGroup` ), así como la cuenta que usa el servicio de supervisión de MIM, necesitan permisos de lectura en ese dominio.
 
@@ -239,11 +239,11 @@ Los pasos siguientes habilitan el acceso de lectura para el usuario *PRIV\admini
 
 18. Cierre Usuarios y equipos de Active Directory.
 
-#### 6. Una cuenta de emergencia
+### 6. Una cuenta de emergencia
 
 Si el objetivo del proyecto de Privileged Access Management es disminuir la cantidad de cuentas con privilegios de administrador de dominio asignados permanentemente al dominio, debe existir una cuenta *de emergencia* en el dominio, en caso de que, más adelante, se genere un problema con la relación de confianza. En cada dominio deben existir cuentas para el acceso de emergencia al bosque de producción y solo deberían tener acceso a los controladores de dominio. En el caso de las organizaciones con varios sitios, es posible que se requieran cuentas adicionales para redundancia.
 
-#### 7. Actualizar los permisos en el entorno bastión
+### 7. Actualizar los permisos en el entorno bastión
 
 Revise los permisos en el objeto *AdminSDHolder* del contenedor Sistema de ese dominio. El objeto *AdminSDHolder* tiene una lista de control de acceso (ACL) que se usa para controlar los permisos de las entidades de seguridad que son miembros de los grupos de Active Directory con privilegios integrados. Observe que si se realizaron cambios en los permisos predeterminados que pudieran afectar a los usuarios con privilegios administrativos en el dominio, debido a que esos permisos no se aplicarán a los usuarios con cuentas en el entorno bastión.
 
@@ -253,6 +253,6 @@ El próximo paso es definir los roles de PAM, mediante la asociación de los usu
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Sep16_HO3-->
 
 
