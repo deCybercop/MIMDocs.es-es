@@ -6,7 +6,6 @@ author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
@@ -19,7 +18,7 @@ ms.openlocfilehash: 9a2fafa86c5c928339ff8d7ad1593472046ccb98
 
 ---
 
-# Paso 1: preparar el host y el dominio CORP
+# <a name="step-1-prepare-the-host-and-the-corp-domain"></a>Paso 1: preparar el host y el dominio CORP
 
 >[!div class="step-by-step"]
 [Paso 2 »](step-2-prepare-priv-domain-controller.md)
@@ -29,11 +28,11 @@ En este paso se realizará la preparación para hospedar el entorno bastión. En
 
 Si ya tiene un dominio de Active Directory (AD) existente con un controlador de dominio con Windows Server 2012 R2 o posterior en el que es administrador de dominio, puede usar ese dominio en su lugar.  
 
-## Preparación del controlador de dominio CORP
+## <a name="prepare-the-corp-domain-controller"></a>Preparación del controlador de dominio CORP
 
 En esta sección se explica cómo configurar un controlador de dominio para un dominio CORP. En el dominio CORP, el entorno bastión administra los usuarios administrativos. El nombre DNS (Sistema de nombres de dominio) del dominio CORP usado en este ejemplo es *contoso.local*.
 
-### Instalación de Windows Server
+### <a name="install-windows-server"></a>Instalación de Windows Server
 
 Instale Windows Server 2012 R2 o Windows Server 2016 Technical Preview 4 o posterior en una máquina virtual para crear un equipo denominado *CORPDC*.
 
@@ -47,7 +46,7 @@ Instale Windows Server 2012 R2 o Windows Server 2016 Technical Preview 4 o poste
 
 5. Una vez reiniciado el servidor, inicie sesión como administrador. Vaya al Panel de control. Configure el equipo para que compruebe si hay actualizaciones e instale todas las necesarias. Reinicie el servidor.
 
-### Adición de roles para establecer un controlador de dominio
+### <a name="add-roles-to-establish-a-domain-controller"></a>Adición de roles para establecer un controlador de dominio
 
 En esta sección se agregarán Servicios de dominio de Active Directory (AD DS), los roles de servidor DNS y servidor de archivos (parte de la sección Servicios de archivos y almacenamiento) y se promoverá este servidor a controlador de dominio del nuevo bosque contoso.local.
 
@@ -72,7 +71,7 @@ En esta sección se agregarán Servicios de dominio de Active Directory (AD DS),
 
 4. Una vez reiniciado el servidor, inicie sesión en CORPDC como administrador del dominio. Suele ser el usuario CONTOSO\\Administrador, que tendrá la contraseña que se creó al instalar Windows en CORPDC.
 
-### Crear un grupo
+### <a name="create-a-group"></a>Crear un grupo
 
 Si no existe uno, cree un grupo para que Active Directory lo audite. El nombre del grupo debe ser el nombre del dominio NetBIOS seguido por tres signos de dólar, por ejemplo, *CONTOSO$$$*.
 
@@ -90,7 +89,7 @@ Inicie sesión en un controlador de dominio como administrador de dominio y real
 
 En algunos casos puede que ya exista el grupo. Esto es normal si el dominio también se usó en escenarios de migración de AD.
 
-### Creación de usuarios y grupos adicionales para fines demostrativos
+### <a name="create-additional-users-and-groups-for-demonstration-purposes"></a>Creación de usuarios y grupos adicionales para fines demostrativos
 
 Si creó un nuevo dominio CORP, entonces debería crear usuarios y grupos adicionales para ilustrar el escenario PAM. El usuario y el grupo para fines demostrativos no deben ser administradores de dominio ni estar controlados por la configuración de adminSDHolder en AD.
 
@@ -119,7 +118,7 @@ Ahora se va a crear un grupo de seguridad denominado *CorpAdmins* y un usuario d
   Set-ADUser –identity Jen –Enabled 1 -DisplayName "Jen"
   ```
 
-### Configuración de la auditoría
+### <a name="configure-auditing"></a>Configuración de la auditoría
 
 Para establecer la configuración PAM en los bosques existentes, tiene que habilitar las auditorías en ellos.  
 
@@ -147,7 +146,7 @@ Inicie sesión en un controlador de dominio como administrador de dominio y real
 
 Transcurridos unos minutos, debería aparecer el mensaje **La actualización de la directiva de equipo se completó correctamente**.
 
-### Configuración del registro
+### <a name="configure-registry-settings"></a>Configuración del registro
 
 En esta sección se configurarán los valores del Registro necesarios para la migración del historial de SID, que se usará para la creación del grupo de Privileged Access Management.
 
@@ -163,14 +162,14 @@ En esta sección se configurarán los valores del Registro necesarios para la mi
 
 Con esto se reiniciará el controlador de dominio, CORPDC. Para obtener más información sobre la configuración del Registro, consulte [Cómo solucionar problemas de la migración de sIDHistory entre bosques con ADMTv2](http://support.microsoft.com/kb/322970).
 
-## Preparación de una estación de trabajo y un recurso CORP
+## <a name="prepare-a-corp-workstation-and-resource"></a>Preparación de una estación de trabajo y un recurso CORP
 
 Si aún no dispone de un equipo de estación de trabajo unido al dominio, siga estas instrucciones para preparar uno.  
 
 > [!NOTE]
 > Si ya dispone de una estación de trabajo unida al dominio, vaya a [Creación de un recurso para fines demostrativos](#create-a-resource-for-demonstration-purposes).
 
-### Instalación de Windows 8.1 o Windows 10 Enterprise como una máquina virtual
+### <a name="install-windows-81-or-windows-10-enterprise-as-a-vm"></a>Instalación de Windows 8.1 o Windows 10 Enterprise como una máquina virtual
 
 En otra máquina virtual nueva sin ningún software instalado, instale Windows 8.1 Enterprise o Windows 10 Enterprise para crear un equipo *CORPWKSTN*.
 
@@ -182,7 +181,7 @@ En otra máquina virtual nueva sin ningún software instalado, instale Windows 8
 
 4. Mediante el Panel de control, una el equipo CORPWKSTN al dominio contoso.local. Tendrá que proporcionar las credenciales de administrador del dominio Contoso. Cuando se complete, reinicie el equipo CORPWKSTN.
 
-### Creación de un recurso para fines demostrativos
+### <a name="create-a-resource-for-demonstration-purposes"></a>Creación de un recurso para fines demostrativos
 
 Se necesita un recurso para ilustrar el control de acceso basado en grupos de seguridad con PAM.  Si aún no dispone de uno, puede usar una carpeta de archivos con fines demostrativos.  Esta usará los objetos de AD "Jen" y "CorpAdmins" que creó en el dominio contoso.local.
 
@@ -215,6 +214,6 @@ En el siguiente paso, se preparará el controlador de dominio PRIV.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 
