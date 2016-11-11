@@ -6,7 +6,7 @@ description: "Documentación técnica de Microsoft Identity Manager: administrac
 keywords: "documentación de identity manager, microsoft identity manager, MIM"
 author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 10/25/2016
 ms.topic: hubpage
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -14,8 +14,8 @@ ms.technology: security
 ms.suite: ems
 ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
 translationtype: Human Translation
-ms.sourcegitcommit: 455a24d3008a2ef54e1229100e7150a1090c9b2e
-ms.openlocfilehash: 0ccbac817271b01e38bfb3e84fa5fc7ece787299
+ms.sourcegitcommit: 584efc6cc60eebe69fb32e7a0bdff25f568eee7f
+ms.openlocfilehash: b857664f1065f975e6d7e95508928b679548b52c
 
 
 ---
@@ -31,20 +31,17 @@ ms.openlocfilehash: 0ccbac817271b01e38bfb3e84fa5fc7ece787299
       <ol class="action-list">
         <li><a href="https://www.microsoft.com/evalcenter/evaluate-microsoft-identity-manager-2016" target="\_blank" class="button-bordered button-translucent">Comenzar la evaluación gratuita</a></li>
       </ol>
-      <ol class="action-list">
-        <li><a href="http://connect.microsoft.com/site1164/Downloads/DownloadDetails.aspx?DownloadID=61395" target="\_blank" class="button-bordered button-translucent">Vista previa de las próximas características</a></li>
-      </ol>
     </aside>
     <section id="featured" class="container">
       <h2 class="section-heading"><span class="icon icon-warning"></span> Contenido destacado</h2>
       <div class="features row">
         <ul class="column column-half">
-          <li><a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">¿Qué es Microsoft Identity Manager?</a></li>
-          <li><a href="/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference">Referencia de la API de REST de Privileged Identity Management</a></li>
+          <li><mark><b>NUEVO</b></mark><a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016-sp1-release-notes">Microsoft Identity Manager 2016 Service Pack 1</a></li>
+          <li><a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">Implementar software de MIM en un servidor nuevo</a></li>
         </ul>
         <ul class="column column-half">
-          <li><a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">Implementar software de MIM en un servidor nuevo</a></li>
-          <li><a href="/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services">Información sobre Privileged Access Management</a></li>
+          <li><a href="/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference">Referencia de la API de REST de Privileged Identity Management</a></li>
+          <li><a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">Información general de MIM 2016</a></li>
         </ul>
       </div>
     </section>
@@ -133,6 +130,11 @@ ms.openlocfilehash: 0ccbac817271b01e38bfb3e84fa5fc7ece787299
             <li><a href="/microsoft-identity-manager/reference/certificate-management-rest-api-reference">Referencia de API de REST de administración de certificados</a></li>
           </ul>
         </div>
+        <div class="resource-list row">
+          <ul class="column-half">
+            <li><a href="https://technet.microsoft.com/library/mt604080.aspx">Cmdlet de Privileged Access Management</a></li>
+          </ul>
+        </div>
       </section>
     </div>
     <aside class="alert alert-social">
@@ -145,6 +147,6 @@ ms.openlocfilehash: 0ccbac817271b01e38bfb3e84fa5fc7ece787299
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Oct16_HO4-->
 
 
