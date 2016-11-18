@@ -1,27 +1,27 @@
 ---
-title: "Notificaciones de cambio de contraseña | Microsoft Identity Manager"
+title: "Notificaciones de cambio de contraseña | Microsoft Docs"
 description: "Obtenga los pasos para instalar y configurar el servicio de notificación de cambio de contraseña de MIM en el controlador de dominio."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 97edae12-6f86-4f9f-8620-a95a096e482a
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: e25f4b3a60f2c432cd33c8f84c750110cbe605ee
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: c608fabc662c74e560878773842e0236c9824daa
 
 
 ---
 
-# Implementación del servicio de notificación de cambio de contraseña de MIM en un controlador de dominio
+# <a name="deploy-the-mim-password-change-notification-service-on-a-domain-controller"></a>Implementación del servicio de notificación de cambio de contraseña de MIM en un controlador de dominio
 
-## Instalación del servicio de notificación de cambio de contraseña
+## <a name="install-the-password-change-notification-service"></a>Instalación del servicio de notificación de cambio de contraseña
 El servicio de notificación de cambio de contraseña (PCNS) es un servicio que se instala en los controladores de dominio y permite que MIM sincronice las contraseñas con otros sistemas, como un servidor de directorio de otro proveedor. Para la sincronización de contraseña, instale PCNS en cada servidor de controlador de dominio.
 
 1.  Inicie sesión como administrador de dominio en un servidor que ejecute en Windows Server con el rol de Servicios de dominio de Active Directory.
@@ -56,11 +56,11 @@ El servicio de notificación de cambio de contraseña (PCNS) es un servicio que 
 
 14. Reinicie el equipo para que surtan efecto los cambios de configuración realizados en el servicio de notificación de cambio de contraseña de MIM. Puede hacer clic en **Sí** en la ventana emergente que aparece o puede reiniciar más tarde.
 
-## Configuración del servicio de notificación de cambio de contraseña
+## <a name="configuring-the-password-change-notification-service"></a>Configuración del servicio de notificación de cambio de contraseña
 Cuando vuelva a conectarse al servidor de controlador de dominio como administrador de dominio, vaya a *C:\Program Files\Microsoft Password Change Notification.* Ejecute *pcnscfg.exe*.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

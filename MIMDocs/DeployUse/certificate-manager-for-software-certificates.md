@@ -1,28 +1,28 @@
 ---
-title: "Creación de certificados de software | Microsoft Identity Manager"
+title: "Creación de certificados de software | Microsoft Docs"
 description: "Descubra cómo usar el Administrador de certificados para crear y renovar certificados de software con las plantillas de perfil."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: d5c8fc4f9a3eaab95441f7a915f7e02d55042ae9
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 31385a18c0b93e5ceaf78a2b6b8d5bed5aac224a
 
 
 ---
 
-# Creación de certificados de software con el Administrador de certificados
+# <a name="create-software-certificates-with-certificate-manager"></a>Creación de certificados de software con el Administrador de certificados
 Para inscribir y renovar certificados de software no necesita ser un administrador ni tener una tarjeta inteligente virtual. Debe saber que en algún momento se le pedirá que permita una operación de certificado, algo que es normal.
 
-## Creación de un plantilla de perfil de certificado de software en el Administrador de certificados de MIM 2016
+## <a name="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager"></a>Creación de un plantilla de perfil de certificado de software en el Administrador de certificados de MIM 2016
 
 1.  Cree una plantilla para el certificado que solicitará para la tarjeta inteligente virtual. Abra MMC.
 
@@ -72,7 +72,7 @@ Para inscribir y renovar certificados de software no necesita ser un administrad
 
     10. En la lista, seleccione la plantilla que acaba de crear (**Plantilla de certificado archivado**) y, a continuación, haga clic en **Aceptar**.
 
-## Crear la plantilla de perfil
+## <a name="create-the-profile-template"></a>Crear la plantilla de perfil
 
 1.  Inicie sesión en el portal de CM como usuario con privilegios administrativos.
 
@@ -98,6 +98,6 @@ Para inscribir y renovar certificados de software no necesita ser un administrad
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

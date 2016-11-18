@@ -1,27 +1,27 @@
 ---
-title: "Creación de informes híbridos en Azure | Microsoft Identity Manager"
+title: "Creación de informes híbridos en Azure | Microsoft Docs"
 description: "Descubra cómo combinar datos locales y en la nube en informes híbridos en Azure, y cómo administrar y ver estos informes."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: 0a104a5f79dd48cb2dfc3d739e3ce8dcbd236c0f
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: ff0469da204a9bfa861273d66b04f5da51557c99
 
 
 ---
 
-# Trabajar con la creación de informes híbrida de Identity Manager
+# <a name="working-with-identity-manager-hybrid-reporting"></a>Trabajar con la creación de informes híbrida de Identity Manager
 
-## Informes híbridos disponibles
+## <a name="available-hybrid-reports"></a>Informes híbridos disponibles
 Los tres primeros informes de Microsoft Identity Manager (MIM) disponibles en Azure AD son **Actividad de restablecimiento de contraseña**, **Registro para el restablecimiento de contraseña** y **Actividad de los grupos de autoservicio**.
 
 -   El informe de Actividad de restablecimiento de contraseña muestra cada instancia en la que un usuario restableció la contraseña mediante el autoservicio de restablecimiento de contraseña (SSPR) y proporciona las puertas o **Métodos** usados para la autenticación.
@@ -38,7 +38,7 @@ Los tres primeros informes de Microsoft Identity Manager (MIM) disponibles en Az
 >
 > Si quiere desinstalar los informes híbridos, desinstale el agente MIMreportingAgent.msi.
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 1.  Instale Microsoft Identity Manager 2016 incluyendo el Servicio MIM.
 
@@ -46,7 +46,7 @@ Los tres primeros informes de Microsoft Identity Manager (MIM) disponibles en Az
 
 3.  Asegúrese de tener conectividad a Internet saliente desde el servidor de Microsoft Identity Manager hasta Azure.
 
-## Instalación de Informes de Microsoft Identity Manager en Azure AD
+## <a name="install-microsoft-identity-manager-reporting-in-azure-ad"></a>Instalación de Informes de Microsoft Identity Manager en Azure AD
 Una vez que se ha instalado el agente de informes, los datos de actividad de Microsoft Identity Manager se exportan de MIM al registro de eventos de Windows. El agente de informes de MIM procesa los eventos y los carga en Azure. En Azure los eventos se analizan, descifran y filtran para los informes requeridos.
 
 1.  Instale Microsoft Identity Manager 2016.
@@ -75,7 +75,7 @@ Una vez que se ha instalado el agente de informes, los datos de actividad de Mic
 
     Puede crear datos de informes mediante el Portal de autoservicio de restablecimiento de contraseña de Microsoft Identity Manager para restablecer la contraseña de un usuario. Asegúrese de que el restablecimiento de la contraseña se completó correctamente y compruebe después que los datos se muestran en el portal de administración de Azure AD.
 
-## Vista de informes híbridos en el Portal de Azure clásico
+## <a name="view-hybrid-reports-in-the-azure-classic-portal"></a>Vista de informes híbridos en el Portal de Azure clásico
 
 1.  Inicie sesión en el [Portal de Azure clásico](https://manage.windowsazure.com/) con su cuenta de administrador global del inquilino.
 
@@ -90,19 +90,19 @@ Una vez que se ha instalado el agente de informes, los datos de actividad de Mic
 > [!WARNING]
 > Puede que tarden un poco en mostrarse los datos de Microsoft Identity Manager en Azure AD.
 
-## Detención de la creación de informes híbridos
+## <a name="stop-creating-hybrid-reports"></a>Detención de la creación de informes híbridos
 Si quiere que se dejen de cargar datos de informes de Microsoft Identity Manager en Azure Active Directory, desinstale el agente de informes híbridos. Mediante la herramienta **Agregar o quitar programas**, desinstale la herramienta de creación de informes híbridos de Microsoft Identity Manager.
 
-## Eventos de Windows empleados para la creación de informes híbridos
+## <a name="windows-events-used-for-hybrid-reporting"></a>Eventos de Windows empleados para la creación de informes híbridos
 Los eventos generados por Microsoft Identity Manager se guardan en el registro de eventos de Windows y pueden verse en el Visor de eventos, en Registros de aplicaciones y servicios-&gt; **Registro de solicitudes de Identity Manager**. Cada solicitud de MIM se exporta como un evento en el Registro de eventos de Windows en la estructura de JSON. Esto se puede exportar a su SIEM.
 
 |Tipo de evento|ID|Detalles del evento|
 |--------------|------|-----------------|
 |Información de|4121|Datos de evento de MIM que incluyen todos los datos de solicitud.|
-|Información de|4137|Extensión 4121 de evento de MIM, en caso de que haya demasiados datos para un evento único. El encabezado de este evento tiene el siguiente formato: `"Request: <GUID> , message <xxx> out of <xxx>`|
+|Información de|4137|Extensión 4121 de evento de MIM, en caso de que haya demasiados datos para un evento único. El encabezado de este evento tiene la siguiente forma: `"Request: <GUID> , message <xxx> out of <xxx>`|
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 
