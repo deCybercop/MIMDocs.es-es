@@ -1,8 +1,9 @@
 ---
-title: "Implementación de PAM, paso 7: acceso de usuarios | Microsoft Identity Manager"
+title: "Implementación de PAM, paso 7: acceso de usuario | Microsoft Docs"
 description: "Como paso final, conceda acceso temporal a un usuario con privilegios para comprobar que la implementación de Privileged Access Management se haya realizado correctamente."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
@@ -12,8 +13,8 @@ ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9b5b7460e6307ab38b1b9356a638eb0200fd97d1
-ms.openlocfilehash: 009091a65dba31de2066e45930e438442fcd89a0
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: e543453946ea70c2c7360363df87946d973322bf
 
 
 ---
@@ -102,6 +103,6 @@ Una vez que haya completado los pasos de este tutorial, habrá mostrado un escen
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -1,25 +1,25 @@
 ---
-title: "Configuración de Windows Server | Microsoft Identity Manager"
+title: "Configuración de Windows Server | Microsoft Docs"
 description: "Obtenga los pasos y los requisitos mínimos para preparar Windows Server 2012 RS de modo que funcione con MIM 2016."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 08/11/2016
 ms.topic: get-started-article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 739797502e09c2b92e35767e2c943308cd1de5c9
-ms.openlocfilehash: bdf1f4b7c5762095f4986506f9e17369dadea011
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 06d2365808858dc09d04ab37eafa9d6e3212cbcf
 
 
 ---
 
-# Configuración de un servidor de administración de identidades: Windows Server 2012 R2
+# <a name="set-up-an-identity-management-server-windows-server-2012-r2"></a>Configuración de un servidor de administración de identidades: Windows Server 2012 R2
 
 >[!div class="step-by-step"]
 [« Preparación de un dominio](preparing-domain.md)
@@ -29,9 +29,9 @@ ms.openlocfilehash: bdf1f4b7c5762095f4986506f9e17369dadea011
 > Este tutorial usa los valores y nombres de ejemplo de una empresa llamada Contoso. Reemplácelos con sus propios valores. Por ejemplo:
 > - Nombre del controlador de dominio: **mimservername**
 > - Nombre de dominio: **contoso**
-> - Contraseña: **Pass@word1**
+> - Contraseña - **Pass@word1**
 
-## Unión de Windows Server 2012 R2 al dominio
+## <a name="join-windows-server-2012-r2-to-your-domain"></a>Unión de Windows Server 2012 R2 al dominio
 
 Empiece con una máquina de Windows Server 2012 R2 con un mínimo de 8 GB de RAM. Al instalar, especifique la edición "Windows Server 2012 R2 Standard (servidor con una GUI) x64".
 
@@ -62,7 +62,7 @@ Empiece con una máquina de Windows Server 2012 R2 con un mínimo de 8 GB de RAM
     Install-WindowsFeature Web-WebServer, Net-Framework-Features,rsat-ad-powershell,Web-Mgmt-Tools,Application-Server,Windows-Identity-Foundation,Server-Media-Foundation,Xps-Viewer –includeallsubfeature -restart -source d:\sources\SxS
     ```
 
-## Configuración de la directiva de seguridad del servidor
+## <a name="configure-the-server-security-policy"></a>Configuración de la directiva de seguridad del servidor
 
 Configure la directiva de seguridad de servidor para que permita que las cuentas recién creadas se ejecuten como servicios.
 
@@ -93,7 +93,7 @@ Configure la directiva de seguridad de servidor para que permita que las cuentas
 12. Cierre la ventana Directiva de seguridad local.
 
 
-## Cambie el modo autenticación de Windows IIS.
+## <a name="change-the-iis-windows-authentication-mode"></a>Cambie el modo autenticación de Windows IIS.
 
 1.  Abra una ventana de PowerShell.
 
@@ -111,6 +111,6 @@ Configure la directiva de seguridad de servidor para que permita que las cuentas
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

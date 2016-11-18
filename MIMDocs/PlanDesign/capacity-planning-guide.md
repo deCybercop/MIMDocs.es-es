@@ -1,25 +1,25 @@
 ---
-title: "Guía de planificación de capacidad | Microsoft Identity Manager"
+title: "Guía de planeamiento de capacidad | Microsoft Docs"
 description: "Use esta guía para comprender las variables que deben considerarse antes de implementar MIM 2016, incluidos los niveles de carga y las decisiones de directivas."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 3ac5b990-1678-4996-996d-cbd84b8426b4
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: 2aeca4630f0d6f64d012e000e5dbabec618e7b1e
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 33e7d901dcd9d8cf1bcaddcfa521625060bb3dbc
 
 
 ---
 
-# Guía de planificación de capacidad
+# <a name="capacity-planning-guide"></a>Guía de planificación de capacidad
 
 Microsoft Identity Manager (MIM) le permite crear, actualizar y quitar cuentas de usuario en toda la organización. También les ofrece a los usuarios finales la capacidad de administrar sus propias características de autoservicio de cuentas. Incluso en un entorno pequeño, todas estas acciones pueden sumar rápidamente.
 
@@ -27,7 +27,7 @@ Antes de comenzar a trabajar con MIM, use esta guía, junto con los entornos de 
 
 Si aún no está familiarizado con MIM 2016 y sus componentes, infórmese sobre [Microsoft Identity Manager 2016](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016) antes de continuar.
 
-## Información general
+## <a name="overview"></a>Información general
 Existe una serie de variables que puede afectar a la capacidad y al rendimiento general de la implementación de Microsoft Identity Manager. Las formas en las que implementa físicamente los componentes de MIM (topología), así como el hardware en el que dichos componentes se ejecutan, son factores importantes para determinar el rendimiento y la capacidad que puede esperar de la implementación de MIM. La cantidad y la complejidad de los objetos de configuración de directivas de MIM pueden resultar menos obvias, pero siguen siendo factores importantes que se deben tener en cuenta al planear la capacidad. Finalmente, la escala prevista de la implementación y la carga que espera asignarle son normalmente factores más evidentes que afectan al rendimiento y capacidad.
 
 En la tabla siguiente se describen los principales factores que afectan a la capacidad y al rendimiento que se puede esperar de una implementación de MIM 2016.
@@ -41,7 +41,7 @@ En la tabla siguiente se describen los principales factores que afectan a la cap
 | Cargar | Frecuencia de uso. Por ejemplo, con qué frecuencia espera que se creen nuevos grupos o usuarios, se restablezcan contraseñas o se visite el portal en un período de tiempo determinado. Tenga en cuenta que la carga puede variar en el transcurso de una hora, un día, una semana o un año. En función del componente, podrá adaptar el diseño para cargas máximas o cargas medias. |
 
 
-## Hospedaje de componentes de Microsoft Identity Manager
+## <a name="hosting-microsoft-identity-manager-components"></a>Hospedaje de componentes de Microsoft Identity Manager
 
 Los componentes de Microsoft Identity Manager no tienen que estar ubicados en el mismo equipo. Pensar sobre estos componentes y las máquinas físicas o virtuales que los hospedarán es una parte importante del planeación de la capacidad.
 
@@ -52,7 +52,7 @@ Además, tenga en cuenta los factores externos en la configuración. Por ejemplo
 - Si usa una SAN como configuración de la base de datos del servicio MIM 2016, ¿qué otras aplicaciones comparten dicha SAN? Estas aplicaciones pueden afectar al rendimiento de bases de datos si compiten por los recursos de disco compartido en la SAN.
 
 
-## Usuarios y grupos
+## <a name="users-and-groups"></a>Usuarios y grupos
 El número de usuarios y grupos de su entorno es una consideración habitual al pensar en la escala de una implementación. Sin embargo, existen otras consideraciones pertinentes que también debe tener en cuenta para la planificación.
 
 - ¿Pueden crear grupos los usuarios? Si es así, sopese la posibilidad de calcular de qué forma afectará que los usuarios creen nuevos grupos al crecimiento de grupos del entorno.
@@ -60,7 +60,7 @@ El número de usuarios y grupos de su entorno es una consideración habitual al 
 - ¿Se implementarán grupos dinámicos? Averigüe cuántos y qué tipos de grupos dinámicos se esperan en el entorno.
 
 
-## Niveles de carga previstos
+## <a name="expected-load-levels"></a>Niveles de carga previstos
 También debe pensar en el tipo de carga que se asignará a los componentes de MIM. Esta información puede estimarse probablemente al examinar las aplicaciones actuales en el entorno. Estas son algunas de las cuestiones importantes que debe tener en cuenta:
 
 - ¿Con qué frecuencia espera que una solicitud se una a un grupo o lo abandone?
@@ -74,7 +74,7 @@ También debe pensar en el tipo de carga que se asignará a los componentes de M
 - ¿Espera grandes variaciones en los niveles de carga, de carga normal a máxima? Por ejemplo, suele haber muchos restablecimientos de contraseña después de períodos de vacaciones. Asegúrese de llevar a cabo las programaciones de sincronización y mantenimiento del sistema fuera de los picos de uso previstos. Cuando planifique la capacidad, asegúrese de tener en cuenta los períodos de carga máxima.
 
 
-## Objetos de configuración de directivas
+## <a name="policy-configuration-objects"></a>Objetos de configuración de directivas
 
 Los objetos de configuración de directivas de Microsoft Identity Manager incluyen MPR, conjuntos, flujos de trabajo y reglas de sincronización para una implementación concreta. Las implementaciones de MIM son únicas para cada cliente porque la configuración de directiva cambia para ajustarse a las necesidades de cada implementación. Estas son algunas de las consideraciones de rendimiento más importantes relacionadas con los objetos de configuración de directivas de MIM:
 
@@ -89,12 +89,12 @@ La configuración de directiva de MIM también incluye decisiones sobre el aprov
 - ¿Usará aprovisionamiento sin código? Si es así, afectará al número de entradas de reglas previstas, así como a las solicitudes asociadas y a los flujos de trabajo del sistema.
 
 
-## Consulte también
+## <a name="see-also"></a>Consulte también
 - [Consideraciones de topología a la hora de implementar MIM](topology-considerations.md)
 - Puede descargar el documento [Forefront Identity Manager (FIM) 2010 Capactity Planning Guide](http://go.microsoft.com/fwlink/?LinkId=200180) (Guía de planeación de la capacidad de Forefront Identity Manager 2010 [FIM]); en él se ofrecen más detalles sobre la compilación de prueba y los resultados de pruebas de rendimiento.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 
