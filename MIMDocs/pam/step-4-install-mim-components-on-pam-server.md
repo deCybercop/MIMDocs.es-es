@@ -1,8 +1,9 @@
 ---
-title: "Implementación de PAM, paso 4: instalación de MIM | Microsoft Identity Manager"
+title: "Implementación de PAM, paso 4: instalación de MIM | Microsoft Docs"
 description: Instale y configure el servicio y el portal de MIM en el servidor y las estaciones de trabajo de Privileged Access Management.
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 92939d32da25896d07bec61e4633f58230a78181
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 5b9653cb8de9e9fc788685ba027f84a795467cf6
 
 
 ---
@@ -192,6 +193,6 @@ En el siguiente paso se establecerá la confianza entre bosques PRIV y CORP.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

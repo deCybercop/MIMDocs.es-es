@@ -1,25 +1,25 @@
 ---
-title: "Planificación de un entorno bastión | Microsoft Identity Manager"
+title: "Planificación de un entorno bastión | Microsoft Docs"
 description: 
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 09/16/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9eefdf21d0cab3f7c488a66cbb3984d40498f4ef
-ms.openlocfilehash: fc4161f98d4367a2124e6253fe11dd1f2712d614
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: d07528fd69328647ff63e4a0f0f914af7cabfb8f
 
 
 ---
 
-# Planificación de un entorno bastión
+# <a name="planning-a-bastion-environment"></a>Planificación de un entorno bastión
 
 Agregar un entorno bastión con un bosque administrativo dedicado a una instancia de Active Directory permite que las organizaciones administren fácilmente las cuentas administrativas, estaciones de trabajo y grupos de un entorno que tiene controles de seguridad más eficaces que los del entorno de producción existente.
 
@@ -27,25 +27,25 @@ Esta arquitectura permite contar con diversos controles que no serían posibles 
 
 Se pueden utilizar técnicas adicionales al bosque administrativo dedicado. Estas técnicas incluyen restringir la exposición de las credenciales administrativas, limitar los privilegios de rol de los usuarios en ese bosque y garantizar que las tareas administrativas no se realicen en los hosts que se utilizan para las actividades de usuario estándar (por ejemplo, correo electrónico y exploración web).
 
-## Consideraciones sobre los procedimientos recomendados
+## <a name="best-practice-considerations"></a>Consideraciones sobre los procedimientos recomendados
 
 Un bosque administrativo dedicado es un bosque de Active Directory de dominio único estándar que se usa para la administración de Active Directory. Una ventaja de usar dominios y bosques administrativos es que pueden tener más medidas de seguridad que los bosques de producción debido a sus casos de uso limitados. Además, como este bosque es independiente y no confía en los bosques existentes de la organización, si se compromete la seguridad en otro bosque no se extenderá a este bosque dedicado.
 
 El diseño de un bosque administrativo tiene las siguientes consideraciones:
 
-### Ámbito limitado
+### <a name="limited-scope"></a>Ámbito limitado
 
 El valor de un bosque administrativo es el alto nivel de garantía de seguridad y una menor superficie expuesta a ataques. El bosque puede hospedar aplicaciones y funciones de administración adicionales, pero cada aumento en el ámbito aumentará la superficie del bosque y sus recursos expuesta a ataques. El objetivo es limitar las funciones del bosque para mantener una superficie expuesta a ataques mínima.
 
 Según el [modelo de niveles](tier-model-for-partitioning-administrative-privileges.md) de realizar particiones en los privilegios administrativos, las cuentas de un bosque administrativo dedicado deberían estar en un único nivel, normalmente en el nivel 0 o en el 1. Si un bosque está en el nivel 1, considere la posibilidad de restringirlo a un ámbito de aplicación determinado (por ejemplo, aplicaciones de finanzas) o a una comunidad de usuarios (por ejemplo, proveedores de TI subcontratados).
 
-### Confianza restringida
+### <a name="restricted-trust"></a>Confianza restringida
 
 El bosque *CORP* de producción debería confiar en el bosque *PRIV* administrativo, pero no al revés. Puede tratarse de una confianza de dominio o una confianza de bosque. No es necesario que el dominio del bosque administrativo confíe en los bosques y dominios administrados para poder administrar Active Directory; sin embargo, algunas aplicaciones adicionales podrían requerir una relación de confianza bidireccional, validación de la seguridad y prueba.
 
 Se debe usar la autenticación selectiva para garantizar que las cuentas en el bosque administrativo solo usan los hosts de producción adecuados. Para mantener los controladores de dominio y delegar derechos en Active Directory, normalmente se requiere otorgar el derecho "Se permite el inicio de sesión" de los controladores de dominio a las cuentas de administración designadas de nivel 0 en el bosque administrativo. Consulte [Configuring Selective Authentication Settings (Configuración de la autenticación selectiva)](http://technet.microsoft.com/library/cc816580.aspx) para obtener más información.
 
-## Mantener una separación lógica
+## <a name="maintain-logical-separation"></a>Mantener una separación lógica
 
 Con la finalidad de asegurarse de que el entorno bastión no se vea afectado por incidentes de seguridad existentes o futuros en la instancia de Active Directory de la organización, se deben usar las siguientes guías cuando se preparen los sistemas para el entorno bastión:
 
@@ -61,7 +61,7 @@ Con la finalidad de asegurarse de que el entorno bastión no se vea afectado por
 
 - Los usuarios que administrar los servidores del entorno bastión deben iniciar sesión desde estaciones de trabajo a la que los administradores del entorno existente no puedan tener acceso, de manera tal que no se filtren las credenciales correspondientes al entorno bastión.
 
-## Garantizar la disponibilidad de los servicios de administración
+## <a name="ensure-availability-of-administration-services"></a>Garantizar la disponibilidad de los servicios de administración
 
 Como la administración de las aplicaciones se transferirá al entorno bastión, tenga en cuenta cómo proporcionar la disponibilidad suficiente para cumplir los requisitos de esas aplicaciones. Las técnicas incluyen:
 
@@ -73,7 +73,7 @@ Como la administración de las aplicaciones se transferirá al entorno bastión,
 
 - Mantener una copia de seguridad de AD y SQL para cada cambio de los usuarios o las definiciones de rol en el bosque administrativo dedicado.
 
-## Configurar los permisos adecuados de Active Directory
+## <a name="configure-appropriate-active-directory-permissions"></a>Configurar los permisos adecuados de Active Directory
 
 El bosque administrativo debe estar configurado en el menor nivel de privilegio según los requisitos para la administración de Active Directory.
 
@@ -91,7 +91,7 @@ Cuando cree el entorno bastión, antes de instalar Microsoft Identity Manager, i
 
 - **Cuentas de servicio** que son necesarias para Microsoft Identity Manager, SQL Server y otro tipo de software.
 
-## Proteger los hosts
+## <a name="harden-the-hosts"></a>Proteger los hosts
 
 Todos los hosts, incluidos los controladores de dominio, los servidores y las estaciones de trabajo unidas al bosque administrativo, deben tener instalados y actualizados los sistemas operativos y Service Packs más recientes.
 
@@ -99,7 +99,7 @@ Todos los hosts, incluidos los controladores de dominio, los servidores y las es
 
 - Las actualizaciones de seguridad se deben aplicar automáticamente a los hosts del bosque administrativo. Aunque esto puede generar un riesgo de interrumpir las operaciones de mantenimiento de los controladores de dominio, permite mitigar, en gran medida, el riesgo de seguridad de las vulnerabilidades a las que no se aplicó una revisión.
 
-### Identificar hosts administrativos
+### <a name="identify-administrative-hosts"></a>Identificar hosts administrativos
 
 El riesgo de un sistema o una estación de trabajo se mide según la actividad de mayor riesgo que se realiza en estos; por ejemplo, explorar Internet, enviar y recibir correo electrónico o usar otras aplicaciones que procesan contenido desconocido o que no es de confianza.
 
@@ -113,7 +113,7 @@ Los hosts administrativos incluyen los siguientes equipos:
 
 - Servidores que hospedan aplicaciones que se deben administrar, y a los que no se puede tener acceso mediante RDP con modo de administración restringida o la comunicación remota de Windows PowerShell.
 
-### Implementar estaciones de trabajo administrativas dedicadas
+### <a name="deploy-dedicated-administrative-workstations"></a>Implementar estaciones de trabajo administrativas dedicadas
 
 Aunque sea un inconveniente, son necesarias las estaciones de trabajo protegidas e independientes dedicadas a los usuarios con credenciales administrativas de gran impacto. Es importante proporcionar un host con un nivel de seguridad que sea igual o superior al nivel de los privilegios que se han confiado a las credenciales. Considere la incorporación de las siguientes medidas para obtener una protección adicional:
 
@@ -143,13 +143,13 @@ Aunque sea un inconveniente, son necesarias las estaciones de trabajo protegidas
 
 Algunas de estas medidas pueden parecer extremas, pero las revelaciones públicas realizadas en los últimos años mostraron las funcionalidades importantes que poseen los adversarios experimentados para poner en peligro sus objetivos.
 
-## Preparar los dominios existentes que se van a administrar mediante el entorno bastión
+## <a name="prepare-existing-domains-to-be-managed-by-the-bastion-environment"></a>Preparar los dominios existentes que se van a administrar mediante el entorno bastión
 
 MIM usa cmdlets de PowerShell para establecer la confianza entre los dominios AD existentes y el bosque administrativo dedicado en el entorno bastión. Cuando se implemente el entorno bastión, y antes de que ningún usuario o grupo se convierta en JIT, los cmdlets `New-PAMTrust` y `New-PAMDomainConfiguration` actualizarán las relaciones de confianza de dominio y crearán los artefactos necesarios para AD y MIM.
 
 Cuando la topología de Active Directory existente cambia, los cmdlets `Test-PAMTrust`, `Test-PAMDomainConfiguration`, `Remove-PAMTrust` y `Remove-PAMDomainConfiguration` se pueden usar para actualizar las relaciones de confianza.
 
-## Establecer la confianza para cada bosque
+## <a name="establish-trust-for-each-forest"></a>Establecer la confianza para cada bosque
 
 El cmdlet `New-PAMTrust` se debe ejecutar una vez para cada bosque existente. Se invoca en el equipo del Servicio MIM en el dominio administrativo. Los parámetros para este comando son el nombre de dominio del dominio principal del bosque existente y la credencial de un administrador de ese dominio.
 
@@ -159,11 +159,11 @@ New-PAMTrust -SourceForest "contoso.local" -Credentials (get-credential)
 
 Después de establecer la confianza, configure cada dominio para habilitar la administración desde el entorno bastión, tal como se describe en la siguiente sección.
 
-## Habilitar la administración de cada dominio
+## <a name="enable-management-of-each-domain"></a>Habilitar la administración de cada dominio
 
 Existen siete requisitos para habilitar la administración para un dominio existente.
 
-### 1. Un grupo de seguridad en el dominio local
+### <a name="1-a-security-group-on-the-local-domain"></a>1. Un grupo de seguridad en el dominio local
 
 En el dominio existente, debe haber un grupo cuyo nombre sea el nombre de dominio de NetBIOS, seguido de tres signos de dólar, por ejemplo, *CONTOSO$$$*. El ámbito del grupo debe ser *local de dominio* y el tipo de grupo debe ser *Seguridad*. Esto es necesario para los grupos que se creen en el bosque administrativo dedicado con el mismo identificador de seguridad que los grupos de este dominio. Cree este grupo con el siguiente comando de PowerShell, que un administrador del dominio existente puede realizar y ejecutar en una estación de trabajo unida al dominio existente:
 
@@ -171,7 +171,7 @@ En el dominio existente, debe haber un grupo cuyo nombre sea el nombre de domini
 New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -SamAccountName 'CONTOSO$$$'
 ```
 
-### 2. Auditoría de aciertos y errores
+### <a name="2-success-and-failure-auditing"></a>2. Auditoría de aciertos y errores
 
 La configuración de la directiva de grupo en el controlador de dominio para auditoría debe incluir la auditoría de operaciones realizadas correctamente y operaciones erróneas para Auditar la administración de cuentas y Auditar el acceso del servidor de directorio. Esto se puede realizar con la Consola de administración de directivas de grupo, que un administrador del dominio existente puede realizar y ejecutar en una estación de trabajo unida al dominio existente:
 
@@ -201,7 +201,7 @@ La configuración de la directiva de grupo en el controlador de dominio para aud
 
 El mensaje “La actualización de la directiva de equipo se completó correctamente.” debe aparecer después de unos minutos.
 
-### 3. Permitir conexiones a la autoridad de seguridad local
+### <a name="3-allow-connections-to-the-local-security-authority"></a>3. Permitir conexiones a la autoridad de seguridad local
 
 Los controladores de dominio deben permitir conexiones de RPC sobre TCP/IP para la 	Autoridad de seguridad local (LSA) desde el entorno bastión. En versiones anteriores de Windows Server, la compatibilidad de TCP/IP en LSA debe estar habilitada en el registro:
 
@@ -209,7 +209,7 @@ Los controladores de dominio deben permitir conexiones de RPC sobre TCP/IP para 
 New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipClientSupport -PropertyType DWORD -Value 1
 ```
 
-### 4. Crear la configuración de dominio de PAM
+### <a name="4-create-the-pam-domain-configuration"></a>4. Crear la configuración de dominio de PAM
 
 El cmdlet `New-PAMDomainConfiguration` se debe ejecutar en el equipo de Servicio MIM en el dominio administrativo. Los parámetros para este comando son el nombre de dominio del dominio existente y la credencial de un administrador de ese dominio.
 
@@ -217,7 +217,7 @@ El cmdlet `New-PAMDomainConfiguration` se debe ejecutar en el equipo de Servicio
  New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials (get-credential)
 ```
 
-### 5. Conceder permisos de lectura a las cuentas
+### <a name="5-give-read-permissions-to-accounts"></a>5. Conceder permisos de lectura a las cuentas
 
 Las cuentas del bosque bastión que se usan para establecer roles (administradores que usan el cmdlet `New-PAMUser` y `New-PAMGroup` ), así como la cuenta que usa el servicio de supervisión de MIM, necesitan permisos de lectura en ese dominio.
 
@@ -239,20 +239,20 @@ Los pasos siguientes habilitan el acceso de lectura para el usuario *PRIV\admini
 
 18. Cierre Usuarios y equipos de Active Directory.
 
-### 6. Una cuenta de emergencia
+### <a name="6-a-break-glass-account"></a>6. Una cuenta de emergencia
 
 Si el objetivo del proyecto de Privileged Access Management es disminuir la cantidad de cuentas con privilegios de administrador de dominio asignados permanentemente al dominio, debe existir una cuenta *de emergencia* en el dominio, en caso de que, más adelante, se genere un problema con la relación de confianza. En cada dominio deben existir cuentas para el acceso de emergencia al bosque de producción y solo deberían tener acceso a los controladores de dominio. En el caso de las organizaciones con varios sitios, es posible que se requieran cuentas adicionales para redundancia.
 
-### 7. Actualizar los permisos en el entorno bastión
+### <a name="7-update-permissions-in-the-bastion-environment"></a>7. Actualizar los permisos en el entorno bastión
 
 Revise los permisos en el objeto *AdminSDHolder* del contenedor Sistema de ese dominio. El objeto *AdminSDHolder* tiene una lista de control de acceso (ACL) que se usa para controlar los permisos de las entidades de seguridad que son miembros de los grupos de Active Directory con privilegios integrados. Observe que si se realizaron cambios en los permisos predeterminados que pudieran afectar a los usuarios con privilegios administrativos en el dominio, debido a que esos permisos no se aplicarán a los usuarios con cuentas en el entorno bastión.
 
-## Seleccionar usuarios y grupos para su inclusión
+## <a name="select-users-and-groups-for-inclusion"></a>Seleccionar usuarios y grupos para su inclusión
 
 El próximo paso es definir los roles de PAM, mediante la asociación de los usuarios y grupos a los que deberían tener acceso. Normalmente, este será un subconjunto de los usuarios y grupos del nivel identificado como administrado en el entorno bastión. Hay más información disponible en [Defining roles for Privileged Access Management (Definición de roles para Privileged Access Management)](defining-roles-for-pam.md).
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

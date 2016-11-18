@@ -1,25 +1,25 @@
 ---
-title: MIM Certificate Manager | Microsoft Identity Manager
+title: MIM Certificate Manager | Microsoft Docs
 description: "Descubra cómo implementar la aplicación Certificate Manager para permitir a los usuarios administrar sus propios derechos de acceso."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: 1aea9543af4dd7f3eab4f01eab52d8c11b36191d
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: a2be6b5640dde5e2908dce36ea13d920a6643874
 
 
 ---
 
-# Trabajar con MIM Certificate Manager
+# <a name="working-with-the-mim-certificate-manager"></a>Trabajar con MIM Certificate Manager
 Una vez que estén en funcionamiento MIM 2016 y Certificate Manager, puede implementar la aplicación de la Tienda Windows MIM Certificate Manager para que los usuarios puedan administrar fácilmente sus certificados de software, tarjetas inteligentes físicas y tarjetas inteligentes virtuales. Los pasos para implementar la aplicación MIM CM son los siguientes:
 
 1.  Cree una plantilla de certificados.
@@ -30,7 +30,7 @@ Una vez que estén en funcionamiento MIM 2016 y Certificate Manager, puede imple
 
 4.  Implemente la aplicación mediante SCCM o Intune.
 
-## Crear una plantilla de certificado
+## <a name="create-a-certificate-template"></a>Crear una plantilla de certificado
 Una plantilla de certificado para la aplicación CM se crea como de costumbre, salvo que es necesario asegurarse de que la versión de la plantilla de certificados sea la versión 3 o una versión posterior.
 
 1.  Inicie sesión en el servidor que ejecuta AD CS (el servidor de certificados).
@@ -69,7 +69,7 @@ Una plantilla de certificado para la aplicación CM se crea como de costumbre, s
 
 16. Seleccione en la lista la nueva plantilla que creó y haga clic en **Aceptar**.
 
-## Crear una plantilla de perfil
+## <a name="create-a-profile-template"></a>Crear una plantilla de perfil
 Asegúrese de que al crear una plantilla de perfil, la establezca para crear/destruir la VSC y quitar la recolección de datos. La aplicación CM no puede controlar los datos recopilados, por lo que es importante deshabilitarla, tal como se indica a continuación.
 
 1.  Inicie sesión en el portal de CM como usuario con privilegios administrativos.
@@ -94,7 +94,7 @@ Asegúrese de que al crear una plantilla de perfil, la establezca para crear/des
 
 11. Tiene que deshabilitar elementos de recolección de datos de cada una de las directivas haciendo clic en la directiva en el panel izquierdo y marcando después la casilla situada junto a **Elemento de datos de ejemplo** y después en **Eliminar elementos de recopilación de datos**. A continuación, haga clic en **Aceptar**.
 
-## Preparar la aplicación CM para la implementación
+## <a name="prepare-the-cm-app-for-deployment"></a>Preparar la aplicación CM para la implementación
 
 1.  Ejecute en el símbolo del sistema el siguiente comando para desempaquetar la aplicación y extraer su contenido en una nueva subcarpeta denominada appx y crear una copia para que no modifique el archivo original.
 
@@ -148,7 +148,7 @@ Asegúrese de que al crear una plantilla de perfil, la establezca para crear/des
 
     -   Abra la aplicación Tarjeta inteligente Virtual. De este modo podrá encontrar más fácilmente los valores necesarios para el siguiente paso.
 
-    -   Para agregar la aplicación como cliente al servidor de AD FS y configurar CM en el servidor, en el servidor de AD FS, abra Windows PowerShell y ejecute el comando `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`
+    -   Para agregar la aplicación como cliente al servidor de AD FS y configurar CM en el servidor en el servidor de AD FS, abra Windows PowerShell y ejecute el comando `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`.
 
         El siguiente script es el script ConfigureMIimCMClientAndRelyingParty.ps1:
 
@@ -249,13 +249,13 @@ Asegúrese de que al crear una plantilla de perfil, la establezca para crear/des
 
     -   El serverFQDN solo es el nombre completo de equipo del servidor de MIMCM.
 
-    -   Para obtener ayuda con el script **ConfigureMIimCMClientAndRelyingParty.ps1**, ejecute `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`
+    -   Para obtener ayuda con el script **ConfigureMIimCMClientAndRelyingParty.ps1** , ejecute `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`.
 
-## Implementar la aplicación
+## <a name="deploy-the-app"></a>Implementar la aplicación
 Al configurar la aplicación CM, descargue el archivo MIMDMModernApp_&lt;version&gt;_AnyCPU_Test.zip desde el Centro de descarga y extraiga todo su contenido. El archivo .appx es el instalador. Puede implementarla del mismo modo que suele implementar aplicaciones de la Tienda Windows mediante [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx) o [Intune](https://technet.microsoft.com/library/dn613839.aspx) para transferir localmente la aplicación con el fin de que los usuarios puedan acceder a ella mediante el portal de empresa. De lo contrario, se colocará directamente en sus equipos.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

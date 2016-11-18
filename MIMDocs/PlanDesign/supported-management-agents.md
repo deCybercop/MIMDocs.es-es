@@ -1,25 +1,25 @@
 ---
-title: Conectores compatibles | Microsoft Identity Manager
+title: Conectores compatibles | Microsoft Docs
 description: Utilice conectores para administrar la transferencia de datos entre MIM y los directorios.
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 08/11/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 8bc2f6d2-9f53-4db6-aee6-a937ae468163
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 309011c81959971e696d70aa4ec5e1610cc8a2f0
-ms.openlocfilehash: f0842781e3730dae5548ce02a3cb247376d12dc8
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 5841f549cc7f9369943cc5b31c27005f89afcccb
 
 
 ---
 
-# Conexión a los directorios
+# <a name="connect-to-your-directories"></a>Conexión a los directorios
 
 Los conectores vinculan orígenes de datos conectados específicos a Microsoft Identity Manager (MIM). Un conector mueve los datos desde un origen de datos conectado a MIM. Si se modifican los datos de MIM, el conector también puede exportarlos al origen de datos conectado para mantenerlo sincronizado con MIM. Por lo general, hay al menos un conector para cada directorio conectado.
 
@@ -27,7 +27,7 @@ En Forefront Identity Manager, los conectores eran conocidos como agentes de adm
 
 Este artículo trata sobre los conectores incluidos en MIM, pero el conector para Extensible Connectivity 2.0 hace posible conectar con aún más orígenes de datos. Algunos asociados han creado sus propios conectores de esta manera, y una lista completa está disponible en la wiki en [FIM 2010: Management Agents from Partners](http://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-management-agents-from-partners.aspx) (FIM 2010: Agentes de administración de asociados).
 
-## Conectores compatibles en MIM 2016
+## <a name="supported-connectors-in-mim-2016"></a>Conectores compatibles en MIM 2016
 
 | Nombre | Versiones compatibles del origen de datos conectado |
 | ---- | ----------------------------------------------- |
@@ -35,7 +35,7 @@ Este artículo trata sobre los conectores incluidos en MIM, pero el conector par
 | Active Directory Lightweight Directory Services (ADLDS) | Active Directory Lightweight Directory Services (ADLDS) |
 | Lista global de direcciones (LGD) de Active Directory | Lista global de direcciones (LGD) de Active Directory: Exchange 2000, 2003, 2007, 2010, 2013 |
 | Extensible Connectivity 2.0 | Cualquier origen de datos basado en llamadas o en archivos |
-| Servicio MIM | Microsoft Identity Manager 2016 |
+| Servicio MIM | Microsoft Docs 2016 |
 | IBM DB2 Universal Database | Versiones 9.1, 9.5 o 9.7 de IBM DB2; IBM DB2 OLEDB v9.5 FP5 o v9.7 FP1 |
 | IBM Directory Server | IBM Tivoli Directory Server 6.x |
 | Novell eDirectory | Novell eDirectory versiones 8.7.3, 8.8.5 y 8.8.6 |
@@ -54,12 +54,12 @@ Este artículo trata sobre los conectores incluidos en MIM, pero el conector par
 | Archivo de texto de ancho fijo | Archivos de texto de ancho fijo |
 | Formato de intercambio de datos LDAP (LDIF) | Formato de intercambio de datos LDAP (LDIF) |
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 [Agentes de administración de FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx)
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 
