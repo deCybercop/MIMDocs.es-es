@@ -1,11 +1,11 @@
 ---
-title: "Autoservicio de renovación de tarjetas inteligentes | Microsoft Docs"
+title: "Renovación de tarjeta inteligente de autoservicio de Microsoft Identity Manager sin acceso de administrador | Microsoft Docs"
 description: "Descubra cómo inscribir tarjetas inteligentes para los usuarios que no disponen de acceso de administrador a sus equipos para que puedan usar el Administrador de certificados."
 keywords: 
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,16 +13,16 @@ ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 76d72211e1dbddb2647729c796ac19eb82a3b2c6
+ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
+ms.openlocfilehash: 89e095cff66984140cdcef3617dd0ccc3d3714d8
 
 
 ---
 
-# <a name="enroll-smart-cards-for-nonadministrators"></a>Inscripción de tarjetas inteligentes para usuarios que no son administradores
+# <a name="enroll-smart-cards-for-non-administrators"></a>Inscripción de tarjetas inteligentes para usuarios que no son administradores
 Si un usuario no es un administrador local en su equipo, no podrá inscribir una tarjeta inteligente en sus propios equipos de manera predeterminada. El siguiente procedimiento permite evitar esta limitación.
 
-## <a name="enabling-smart-card-renewal-for-nonadmins-in-mim-2016-certificate-manager"></a>Habilitar la renovación de tarjetas inteligentes para usuarios que no son administradores en el Administrador de certificados de MIM 2016
+## <a name="enabling-smart-card-renewal-for-non-admins-in-mim-2016-certificate-manager"></a>Habilitar la renovación de tarjetas inteligentes para usuarios que no son administradores en el Administrador de certificados de MIM 2016
 
 1.  **Desempaquetar el archivo appx**
 
@@ -96,6 +96,6 @@ Si un usuario no es un administrador local en su equipo, no podrá inscribir una
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Feb17_HO1-->
 
 
