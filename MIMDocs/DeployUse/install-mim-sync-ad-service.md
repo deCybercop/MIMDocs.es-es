@@ -1,11 +1,11 @@
 ---
-title: "Sincronización de AD y el servicio MIM | Microsoft Docs"
+title: "Uso de la sincronización de Microsoft Identity Manager con AD | Microsoft Docs"
 description: "Use los agentes de administración y el servicio de sincronización de MIM para sincronizar las bases de datos de Active Directory y de MIM."
 keywords: 
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 01/23/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 59e050c8ccd811586e2da8476f842b853d37f2f1
+ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
+ms.openlocfilehash: f84fbbdc8de5cfffc8570c52f8298cc69273c3ee
 
 
 ---
@@ -435,6 +435,6 @@ Siga estos pasos para ejecutar cada uno de los tres perfiles de ejecución.
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 
