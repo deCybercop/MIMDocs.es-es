@@ -1,11 +1,11 @@
 ---
-title: "¿Qué es PAM para AD DS? | Microsoft Docs"
+title: Privileged Access Management para Active Directory Domain Services | Microsoft Docs
 description: "Obtenga información sobre Privileged Access Management y descubra cómo puede ayudarle a administrar y proteger su entorno de Active Directory."
 keywords: 
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 10/25/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -15,8 +15,9 @@ ms.suite: ems
 experimental: true
 experiment_id: kgremban_images
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 4b3779f33a8bbd2ad62c88343ef3611b17fc81a2
+ms.sourcegitcommit: f0947f186b5206d06a67140706ada33a5bc0e016
+ms.openlocfilehash: cea5a2fc162870c1125b35b75376881eb15cd2e9
+ms.lasthandoff: 01/11/2017
 
 ---
 
@@ -95,9 +96,4 @@ Suponiendo que la solicitud se apruebe, el flujo de trabajo de acción se comuni
 > En cambio, el Administrador de cuentas de seguridad (SAM) evalúa en tiempo real un vínculo expirado. Aunque la adición de un miembro del grupo necesita replicarse mediante el controlador de dominio que recibe la solicitud de acceso, la eliminación de un miembro del grupo se evalúa al instante en cualquier controlador de dominio.
 
 Este flujo de trabajo está pensado específicamente para estas cuentas administrativas. Los administradores (o incluso los scripts) que solo necesitan un acceso ocasional para grupos con privilegios pueden solicitar el acceso. MIM registra la solicitud y los cambios en Active Directory, y puede verlos en el Visor de eventos o enviar los datos a las soluciones de supervisión empresarial como System Center 2012, Servicios de recopilación de auditorías (ACS) de Operations Manager u otras herramientas de terceros.
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 
