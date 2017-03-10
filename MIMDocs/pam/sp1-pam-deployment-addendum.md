@@ -1,11 +1,11 @@
 ---
 title: Anexo
-description: Preparar el dominio CORP con identidades nuevas o existentes para ser administrado por Privileged Identity Manager mediante scripts
+description: "Este es el anexo a los documentos que abarca la implementación generada por script de PAM. Trata la configuración de los dominios de PRIV y CORP, así como una configuración de un cliente para realizar la validación y la información acerca de cómo solicitar asistencia."
 keywords: 
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 09/27/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,9 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
-ms.openlocfilehash: 7f859a74d13a6741dbaf08a1641a73ae986c8343
+ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
+ms.openlocfilehash: f69fe68dc63323c0945a4902e34ea8153f938c02
+ms.lasthandoff: 01/10/2017
 
 
 ---
@@ -71,9 +72,4 @@ Continúe con el paso 8 proporcionado anteriormente.
 ## <a name="addendum-4-if-something-goes-wrong"></a>Anexo 4: Si algo va mal
 
 Todos los registros de scripts se guardan en % AppData%\MIMPAMInstall. Comprima la carpeta en un archivo zip y envíela por correo electrónico a [mim2016@microsoft.com](mailto:mim2016@microsoft.com) junto con los detalles de la operación y el error.
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

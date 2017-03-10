@@ -1,11 +1,11 @@
 ---
 title: Configurar PAM mediante scripts
-description: Preparar el dominio CORP con identidades nuevas o existentes para ser administrado por Privileged Identity Manager mediante scripts
+description: "Este artículo forma parte de la serie para la configuración de PAM mediante scripts. Abarca la modificación del archivo XML que van a utilizar los scripts de implementación de PAM."
 keywords: 
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 10/04/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,9 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
-ms.openlocfilehash: 3aca2fb513280f118e760bdbc2ba471151c41b17
+ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
+ms.openlocfilehash: bd73f43a096d58e1f7250e28b59e33f4411e88a3
+ms.lasthandoff: 01/10/2017
 
 
 ---
@@ -68,9 +69,4 @@ Antes de continuar, actualice PAMDeploymentConfig.xml y coloque la copia actuali
 
 >[!div class="step-by-step"]
 [Inicio »](sp1-step1-configuring-priv-domain.md)
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 

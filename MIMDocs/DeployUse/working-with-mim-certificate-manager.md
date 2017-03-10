@@ -1,11 +1,11 @@
 ---
-title: MIM Certificate Manager | Microsoft Docs
+title: "Implementación de la aplicación de Windows del Administrador de certificados de MIM | Microsoft Docs"
 description: "Descubra cómo implementar la aplicación Certificate Manager para permitir a los usuarios administrar sus propios derechos de acceso."
 keywords: 
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: a2be6b5640dde5e2908dce36ea13d920a6643874
+ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
+ms.openlocfilehash: d714a58796d3a86fc82ed1eb6dc29bdc45920933
 
 
 ---
@@ -256,6 +256,6 @@ Al configurar la aplicación CM, descargue el archivo MIMDMModernApp_&lt;version
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

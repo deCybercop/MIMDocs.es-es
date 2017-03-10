@@ -1,11 +1,11 @@
 ---
-title: Microsoft Identity Manager 2016 | Microsoft Docs
+title: Microsoft Identity Manager 2016 Service Pack 1 | Microsoft Docs
 description: "Comprenda el funcionamiento de MIM 2016 para crear una experiencia de administración de identidades más segura y más cómoda en la nube y en ubicaciones locales."
 keywords: 
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 09/28/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,9 @@ ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: ed477de53abbf646f47efb90e617b04184bc29a9
+ms.sourcegitcommit: f0947f186b5206d06a67140706ada33a5bc0e016
+ms.openlocfilehash: 4f293a349916ae1a55d8551ef949758cab851b74
+ms.lasthandoff: 01/11/2017
 
 
 ---
@@ -24,7 +25,7 @@ Como parte del ciclo de lanzamiento regular para el mantenimiento y actualizaci�
 
 Si encuentra problemas durante la implementación de producción de MIM SP1, póngase en contacto con el soporte técnico de Microsoft.
 
-Queremos conocer su opinión. Si tiene algún comentario o preocupación para el equipo del producto, envíenos un correo electrónico a [mim2016@microsoft.com.](mailto:mim2016@microsoft.com).
+Queremos conocer su opinión. Si tiene algún comentario o preocupación para el equipo del producto, envíenos un correo electrónico a [mim2016@microsoft.com.](mailto:mim2016@microsoft.com)
 
 
 
@@ -82,9 +83,4 @@ Debe hacer una copia de seguridad de las bases de datos MIMService y MIM Sync.
   3. Seleccione el componente de MIM que actualizar
   4. Continúe con la instalación según las indicaciones
     * Instalación del portal y el servicio de MIM: al elegir Exchange Online como cuenta de correo electrónico, escriba la dirección de correo electrónico y las credenciales de la cuenta de Exchange Online en la pantalla siguiente.
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 

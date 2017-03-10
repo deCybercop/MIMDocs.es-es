@@ -1,11 +1,11 @@
 ---
-title: "Autoservicio del restablecimiento de contraseña | Microsoft Docs"
+title: "Trabajo con el Portal de autoservicio de restablecimiento de contraseñas | Microsoft Docs"
 description: "Consulte las novedades del autoservicio de restablecimiento de contraseña en MIM 2016, incluido el funcionamiento de SSPR con la autenticación multifactor."
 keywords: 
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,13 +13,13 @@ ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 7d53579b8f0b069880aac256654506eb38060fe5
+ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
+ms.openlocfilehash: 72c773601cd722290b6e7a9d5d13458f0409cfdc
 
 
 ---
 
-# <a name="working-with-selfservice-password-reset"></a>Trabajo con el autoservicio de restablecimiento de contraseña
+# <a name="working-with-self-service-password-reset"></a>Trabajo con el autoservicio de restablecimiento de contraseña
 Microsoft Identity Manager 2016 proporciona funciones adicionales a la característica de autoservicio de restablecimiento de contraseña. Esta funcionalidad se ha mejorado con varias características importantes:
 
 -   El portal de autoservicio de restablecimiento de contraseña y la pantalla de inicio de sesión de Windows ahora permiten a los usuarios desbloquear sus cuentas sin cambiar sus contraseñas ni llamar a los administradores de soporte técnico. Normalmente, un usuario ve bloqueada su cuenta por diversos motivos legítimos, como escribir una contraseña antigua por error, usar equipos bilingües con el teclado configurado en un idioma incorrecto o intentar iniciar sesión en una estación de trabajo compartida que ya se ha abierto para la cuenta de otra persona.
@@ -28,14 +28,14 @@ Microsoft Identity Manager 2016 proporciona funciones adicionales a la caracter�
 
 -   Se ha agregado compatibilidad para el servicio Microsoft Azure Multi-Factor Authentication (MFA), que puede utilizarse con la actual puerta de contraseña SMS de un solo uso o con la nueva puerta de teléfono.
 
-## <a name="azure-for-multifactor-authentication"></a>Azure para Multi-Factor Authentication
+## <a name="azure-for-multi-factor-authentication"></a>Azure para Multi-Factor Authentication
 Microsoft Azure Multi-Factor Authentication es un servicio de autenticación que requiere que los usuarios se identifiquen en sus intentos de inicio de sesión con una aplicación móvil, una llamada de teléfono o un mensaje de texto. Está disponible para su uso con Microsoft Azure Active Directory y como un servicio para las aplicaciones empresariales en la nube y locales.
 
 Azure MFA proporciona un mecanismo de autenticación adicional que puede reforzar los procesos de autenticación existentes; por ejemplo, con el proceso que realiza MIM para la asistencia de inicio de sesión de autoservicio.
 
 Cuando se utiliza Azure MFA, los usuarios se autentican con el sistema para comprobar su identidad al intentar recuperar el acceso a sus cuentas y recursos. La autenticación se puede realizar a través de SMS o de una llamada de teléfono.   Cuanto más sólida es la autenticación, mayor será la certeza de que la persona que intenta obtener acceso es realmente quien posee esa identidad. Una vez autenticado, el usuario puede elegir una contraseña nueva para reemplazar la antigua.
 
-## <a name="prerequisites-to-set-up-selfservice-account-unlock-and-password-reset-using-mfa"></a>Requisitos previos para configurar el desbloqueo de la cuenta de autoservicio y el restablecimiento de contraseña mediante MFA
+## <a name="prerequisites-to-set-up-self-service-account-unlock-and-password-reset-using-mfa"></a>Requisitos previos para configurar el desbloqueo de la cuenta de autoservicio y el restablecimiento de contraseña mediante MFA
 En esta sección se supone que ha descargado e implementado Microsoft Identity Manager 2016, incluidos los siguientes componentes y servicios:
 
 -   Un servidor Windows Server 2008 R2 o posterior configurado como servidor de Active Directory, incluidos los servicios de dominio y el controlador de dominio de AD con un dominio designado (un dominio "corporativo").
@@ -56,12 +56,12 @@ En esta sección se supone que ha descargado e implementado Microsoft Identity M
 
 -   Los complementos y extensiones de MIM 2016 &amp;, incluido el cliente integrado de inicio de sesión de Windows para autoservicio de restablecimiento de contraseña, implementados en el servidor o en un equipo cliente distinto.
 
-## <a name="prepare-mim-to-work-with-multifactor-authentication"></a>Preparación de MIM para que funcione con la autenticación multifactor
+## <a name="prepare-mim-to-work-with-multi-factor-authentication"></a>Preparación de MIM para que funcione con la autenticación multifactor
 Configure MIM Sync para que admita la funcionalidad de restablecimiento de contraseña y desbloqueo de cuenta. Para obtener más información, consulte los artículos [Installing the FIM Add-ins nd Extensions](https://technet.microsoft.com/library/ff512688%28v=ws.10%29.aspx) (Instalación de complementos y extensiones de FIM), [Installing FIM SSPR](https://technet.microsoft.com/library/hh322891%28v=ws.10%29.aspx) (Instalación de FIM SSPR), [SSPR Authentication Gates](https://technet.microsoft.com/library/jj134288%28v=ws.10%29.aspx) (Puertas de autenticación de SSPR) y [la guía del laboratorio de pruebas de SSPR](https://technet.microsoft.com/library/hh826057%28v=ws.10%29.aspx).
 
 En la siguiente sección, configurará el proveedor de Azure MFA en Microsoft Azure Active Directory. Como parte de esto, se generará un archivo que incluye el material de autenticación que requiere MFA para poder establecer contacto con Azure MFA.  Para poder continuar, necesitará una suscripción de Azure.
 
-### <a name="register-your-multifactor-authentication-provider-in-azure"></a>Registro del proveedor de autenticación multifactor en Azure
+### <a name="register-your-multi-factor-authentication-provider-in-azure"></a>Registro del proveedor de autenticación multifactor en Azure
 
 1.  Vaya al [Portal de Azure clásico](http://manage.windowsazure.com) e inicie sesión como administrador de suscripción de Azure.
 
@@ -119,7 +119,7 @@ En la siguiente sección, configurará el proveedor de Azure MFA en Microsoft Az
 
 11. Guarde el archivo MfaSettings.xml con el mismo nombre y en la misma ubicación.
 
-#### <a name="configure-the-phone-gate-or-the-onetime-password-sms-gate"></a>Configurar la puerta de teléfono o la puerta de SMS de contraseña de un solo uso
+#### <a name="configure-the-phone-gate-or-the-one-time-password-sms-gate"></a>Configurar la puerta de teléfono o la puerta de SMS de contraseña de un solo uso
 
 1.  Inicie Internet Explorer y desplácese hasta el Portal de MIM, identifíquese como administrador de MIM y haga clic en  **Flujos de trabajo** en la barra de navegación izquierda.
 
@@ -179,7 +179,7 @@ Al instalar las extensiones y complementos de MIM en un equipo unido a un domini
 
 6.  Después, el usuario debe escribir la contraseña nueva dos veces y se restablece la contraseña.
 
-#### <a name="access-from-the-selfservice-portal"></a>Acceso desde el portal de autoservicio
+#### <a name="access-from-the-self-service-portal"></a>Acceso desde el portal de autoservicio
 
 1.  Los usuarios pueden abrir un explorador web, acceder al **Portal de restablecimiento de contraseña** , escribir su nombre de usuario y hacer clic en **Siguiente**.
 
@@ -206,6 +206,6 @@ Al instalar las extensiones y complementos de MIM en un equipo unido a un domini
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

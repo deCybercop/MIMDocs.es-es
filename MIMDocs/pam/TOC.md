@@ -10,7 +10,7 @@
 ### [Planeamiento de un entorno bastión](planning-bastion-environment.md)
 ### [Definición de roles](defining-roles-for-pam.md)
 ### [Alta disponibilidad y recuperación ante desastres](high-availability-disaster-recovery-considerations-bastion-environment.md)
-### [Requisitos de hardware y de software para SharePoint 2013](hardware-software-requirements.md)
+### [Requisitos de hardware y de software para SharePoint&2013;](hardware-software-requirements.md)
 ## [Configuración de MIM para Privileged Access Management](configuring-mim-environment-for-pam.md)
 ### [Paso 1: dominio CORP](step-1-prepare-corp-domain.md)
 ### [Paso 2: controlador de dominio PRIV](step-2-prepare-priv-domain-controller.md)
@@ -19,6 +19,7 @@
 ### [Paso 5: establecer la confianza entre PRIV y CORP](step-5-establish-trust-between-priv-corp-forests.md)
 ### [Paso 6: crear cuentas con privilegios](step-6-transition-group-to-pam.md)
 ### [Paso 7: Elevar los privilegios de acceso de un usuario](step-7-elevate-user-access.md)
+### [Deploy MIM PAM with Windows Server 2016](deploy-pam-with-windows-server-2016.md) (Implementación de MIM PAM con Windows Server 2016)
 ### [Configuración de Azure MFA](use-azure-mfa-for-activation.md)
 ## [Configurar PAM mediante scripts](sp1-pam-configure-using-scripts.md)
 ### [Paso 1: Configuración del dominio de Priv](sp1-step1-configuring-priv-domain.md)
@@ -33,6 +34,6 @@
 # [Referencia para desarrolladores](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 
