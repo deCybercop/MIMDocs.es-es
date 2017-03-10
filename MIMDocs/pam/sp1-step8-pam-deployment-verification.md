@@ -1,11 +1,11 @@
 ---
 title: "Paso 8: Comprobación de la implementación de PAM"
-description: Preparar el dominio CORP con identidades nuevas o existentes para ser administrado por Privileged Identity Manager mediante scripts
+description: "La implementación generada por script de PAM incluye scripts de comprobación que pueden ejecutar un escenario de PAM para validar si la implementación de PAM funciona según lo esperado."
 keywords: 
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 10/25/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,9 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
-ms.openlocfilehash: 7709b4df5bb196aba6abf056830bc73e024174ef
+ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
+ms.openlocfilehash: 2f4306dc50ecb869a3c917dfaf320ad80dddedd1
+ms.lasthandoff: 01/10/2017
 
 
 ---
@@ -80,9 +81,4 @@ En la ventana de PowerShell, escriba:
 >[!div class="step-by-step"]
 [«Paso 7](sp1-step7-setup-sidhistory-sidfiltering.md)
 [Anexo»](sp1-pam-deployment-addendum.md)
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 

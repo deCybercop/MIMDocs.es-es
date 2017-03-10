@@ -1,11 +1,11 @@
 ---
-title: "Actualización desde FIM 2010 R2 | Microsoft Docs"
+title: "Actualización desde FIM 2010 R2 a Microsoft Identity Manager 2016 | Microsoft Docs"
 description: "Obtenga información acerca de cómo actualizar los componentes de FIM 2010 R2 para instalar después los nuevos en MIM 2016."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: fimguy
+ms.author: billmath
 manager: femila
-ms.date: 07/21/2016
+ms.date: 02/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: ef272ffe665aa5753fa2bf02d26f2ce73efa025b
+ms.sourcegitcommit: 2d3092d7d41090e4e03b971fb62ca896cc8db282
+ms.openlocfilehash: 20e733f17d6ed590844c526888b649eb6bf5f322
 
 
 ---
@@ -200,8 +200,10 @@ Esta guía asume que ya ha configurado lo siguiente:
 
 Nota: Si las extensiones y los complementos de FIM están actualmente implementados en los equipos de los usuarios para SSPR, no configure las nuevas puertas de teléfono de MFA para el restablecimiento de contraseñas mientras no se hayan actualizado todos los complementos y extensiones de FIM a MIM 2016.  Dado que los complementos y las extensiones de FIM 2010 y de FIM 2010 R2 no reconocen las nuevas puertas, se generará un error y no podrá finalizar el restablecimiento de las contraseñas.
 
+Para obtener la guía de actualización de Microsoft Identity Manager 2016 SP1, consulte la siguiente [actualización de Microsoft Identity Manager 2016 Service Pack 1](https://blogs.technet.microsoft.com/iamsupport/2016/11/08/microsoft-identity-manager-2016-service-pack-1-update-package/)
 
 
-<!--HONumber=Nov16_HO2-->
+
+<!--HONumber=Feb17_HO2-->
 
 
