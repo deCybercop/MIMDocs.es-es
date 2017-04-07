@@ -11,9 +11,9 @@ ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 
 translationtype: Human Translation
-ms.sourcegitcommit: 90a0f144b7674bbfaf13138dfd926dbfc3c74f28
-ms.openlocfilehash: ddd707210d5cd6b618709a477d40e7771d73cfa1
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 1ff73d0bdfcbcb4ab79d0d81feca9abdc33f9213
+ms.openlocfilehash: 1e2fb9a9ae508ab601ebad1dec7acc21dc44d13e
+ms.lasthandoff: 04/04/2017
 
 
 
@@ -27,7 +27,7 @@ Una vez instalado, verá la siguiente línea nueva en Microsoft.resourcemanageme
 *    Línea 8: ``<dynamicLogging mode="true" loggingLevel="Verbose" />``
 *    Línea 266: ``</system.diagnostics> ``
 
-![Secciones resaltadas en las que se muestran las nuevas entradas del registro dinámico](/media/mim-service-dynamic-logging/screen01.png)
+![Secciones resaltadas en las que se muestran las nuevas entradas del registro dinámico](media/mim-service-dynamic-logging/screen01.png)
 
 Podrá encontrar los niveles de registro dinámico [aquí](https://msdn.microsoft.com/library/ms733025(v=vs.110).aspx#Anchor_3)
 
@@ -36,11 +36,11 @@ Podrá encontrar los niveles de registro dinámico [aquí](https://msdn.microsof
 
 Configuración del registro dinámico en la línea 266: Microsoft.ResourceManagement.Service.exe.config
 
-![Secciones resaltadas en las que se muestran líneas con las distintas áreas de registro disponibles](/media/mim-service-dynamic-logging/screen02.png)
+![Secciones resaltadas en las que se muestran líneas con las distintas áreas de registro disponibles](media/mim-service-dynamic-logging/screen02.png)
 
 De forma predeterminada, la ubicación del registro será **C:\Archivos de programa\Microsoft Forefront Identity Manager\2010\Service**. La cuenta del servicio FIM necesitará permiso de escritura en esta ubicación para generar el registro dinámico.
 
-![Ubicación de carpeta de los registros](/media/mim-service-dynamic-logging/screen03.png)
+![Ubicación de carpeta de los registros](media/mim-service-dynamic-logging/screen03.png)
 
  >[!NOTE]
  En caso de que se produzcan errores inesperados (errores de sintaxis en el archivo de configuración Microsoft.ResourceManagement.Service.exe.config u otros errores) se escribirá el mensaje de error correspondiente en el archivo Microsoft.ResourceManagement.Service.exe_Emergency.log en la siguiente ruta de acceso %TMP%, %TEMP% o %USERPROFILE% (el primero que exista).  
@@ -50,5 +50,5 @@ De forma predeterminada, la ubicación del registro será **C:\Archivos de progr
 
 Para ver el seguimiento puede utilizar la [herramienta de visor de seguimiento de servicios](https://msdn.microsoft.com//library/aa751795(v=vs.110).aspx).
 
- ![Captura de pantalla del visor de seguimiento de servicios](/media/mim-service-dynamic-logging/screen04.png)
+ ![Captura de pantalla del visor de seguimiento de servicios](media/mim-service-dynamic-logging/screen04.png)
 
