@@ -52,7 +52,7 @@ Agregue los roles Servidor Web (IIS) y Servidor de aplicaciones, las caracterís
 
 1.  Inicie sesión como administrador de dominio PRIV (PRIV\Administrador) e inicie PowerShell.
 
-2.  Escriba los siguientes comandos: Tenga en cuenta que puede que sea necesario especificar una ubicación diferente para los archivos de origen de las características de .NET Framework 3.5. Normalmente, estas características no están presentes cuando se instala Windows Server, pero están disponibles en la carpeta en paralelo (SxS) de la carpeta de orígenes de disco de instalación del sistema operativo, por ejemplo, “*d:\Sources\SxS”.
+2.  Escriba los siguientes comandos: Tenga en cuenta que puede que sea necesario especificar una ubicación diferente para los archivos de origen de las características de .NET Framework 3.5. Normalmente, estas características no están presentes cuando se instala Windows Server, pero están disponibles en la carpeta en paralelo (SxS) de la carpeta de orígenes de disco de instalación del sistema operativo, por ejemplo, “d:\Sources\SxS\”.
 
     ```
     import-module ServerManager
