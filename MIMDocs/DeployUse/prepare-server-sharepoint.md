@@ -2,10 +2,10 @@
 title: "Configuración de SharePoint para Microsoft Identity Manager 2016 | Microsoft Docs"
 description: "Instale y configure SharePoint Foundation para que pueda hospedar la página del portal de MIM."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
 ms.openlocfilehash: 2af432036033f8914d00228cd3d2d1af84f13054
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -133,9 +134,4 @@ Siga los pasos que se indican en el **Asistente para configuración de productos
 >[!div class="step-by-step"]  
 [« SQL Server 2014](prepare-server-sql2014.md)
 [Exchange Server »](prepare-server-exchange.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

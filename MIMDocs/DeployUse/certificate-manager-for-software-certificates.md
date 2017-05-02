@@ -2,10 +2,10 @@
 title: Solicitud de certificados en el Administrador de certificados con plantillas | Microsoft Docs
 description: "Descubra cómo usar el Administrador de certificados para crear y renovar certificados de software con las plantillas de perfil."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
 ms.openlocfilehash: 23cfb1134d1cbf2cf838354cb7d915084803cd41
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -38,7 +39,7 @@ Para inscribir y renovar certificados de software no necesita ser un administrad
 
     1.  En la pestaña **General** , en el campo de nombre de pantalla, escriba **Plantilla de certificado archivado**.
 
-    2.  b.  En la pestaña **Tratamiento de la solicitud** ,
+    2.  b.    En la pestaña **Tratamiento de la solicitud** ,
 
         1.  Establezca **Propósito** como Firma y cifrado.
 
@@ -95,9 +96,4 @@ Para inscribir y renovar certificados de software no necesita ser un administrad
 10. Si desea volver a emitir los certificados archivados, active las casillas a la izquierda de **Volver a emitir certificados archivados** y haga clic en **Aceptar**.
 
 11. Si usa el CM de tarjeta inteligente virtual, debe deshabilitar los elementos de recopilación de datos porque no funciona con la recopilación de datos activada. Deshabilite los elementos de recopilación de datos de cada una de las directivas haciendo clic en la directiva en el panel izquierdo, marcando después la casilla situada junto a **Elemento de datos de ejemplo** y haciendo clic después en **Eliminar elementos de recopilación de datos**. A continuación, haga clic en **Aceptar**.
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

@@ -2,8 +2,8 @@
 title: Plataformas de software compatibles | Microsoft Docs
 description: Buscar los productos y las versiones compatibles con cada uno de los componentes de MIM 2016
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 03/28/2017
 ms.topic: article

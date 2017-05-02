@@ -2,10 +2,10 @@
 title: Pasos necesarios para implementar Microsoft Identity Manager 2016 | Microsoft Docs
 description: "Obtenga la lista completa de los pasos necesarios para implementar Microsoft Identity Manager 2016, desde la preparación del entorno hasta la configuración de los portales."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/27/2017
+ms.date: 03/27/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
 ms.openlocfilehash: 804f957d5cf9f5fb09efa65944983b1d5013fff3
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -45,9 +46,4 @@ Una vez que haya configurado el dominio y el servidor, ya está listo para insta
 - [MIM Synchronization Service](install-mim-sync.md)
 - [Servicio y portal de MIM](install-mim-service-portal.md)
 - [Sincronización de las bases de datos de Active Directory y del Servicio MIM](install-mim-sync-ad-service.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
