@@ -2,10 +2,10 @@
 title: "Renovación de tarjeta inteligente de autoservicio de Microsoft Identity Manager sin acceso de administrador | Microsoft Docs"
 description: "Descubra cómo inscribir tarjetas inteligentes para los usuarios que no disponen de acceso de administrador a sus equipos para que puedan usar el Administrador de certificados."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
 ms.openlocfilehash: 89e095cff66984140cdcef3617dd0ccc3d3714d8
+ms.lasthandoff: 02/07/2017
 
 
 ---
@@ -93,9 +94,4 @@ Si un usuario no es un administrador local en su equipo, no podrá inscribir una
 7.  **Instale la aplicación CM en la cuenta sin derechos administrativos**
 
 8.  **Inicie la aplicación CM e inscriba una tarjeta inteligente virtual**
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 
