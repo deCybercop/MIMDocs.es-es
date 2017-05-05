@@ -2,10 +2,10 @@
 title: "Guía de topología para implementación | Microsoft Docs"
 description: "Conozca los componentes de MIM 2016 y reciba sugerencias acerca de cómo implementarlas en su entorno."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/21/2016
+ms.date: 03/21/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,9 @@ ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 23ef8843201790bc758e9ef6def5d77d175bfcf0
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: f7e4dc737444df70de3a8a78eb518e9e6f26aadc
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -26,7 +27,7 @@ Puede implementar los componentes de Microsoft Identity Manager (MIM) en el mism
 ## <a name="mim-components"></a>Componentes de MIM
 Al diseñar la topología de implementación, es importante saber lo que hace y cómo interactúa cada componente.
 
-- <a name="mim-portal-an-interface-for-password-resets-group-management-and-administrative-operations"></a>**Portal de MIM**: una interfaz para los restablecimientos de contraseña, la administración de grupos y las operaciones administrativas.
+- <a name="mim-portal---an-interface-for-password-resets-group-management-and-administrative-operations"></a>**Portal de MIM**: una interfaz para los restablecimientos de contraseña, la administración de grupos y las operaciones administrativas.
     -
 - **Servicio MIM**: un servicio web que implementa la funcionalidad de administración de identidades de MIM 2016.
 - **Servicio de sincronización de MIM**: sincroniza los datos con otros sistemas de identidad.
@@ -63,9 +64,4 @@ Los equipos en los que se ejecuta SQL Server y que hospedan MIM Synchronization 
 
 ## <a name="see-also"></a>Consulte también
 - Puede descargar el documento [Forefront Identity Manager (FIM) 2010 Capactity Planning Guide](http://go.microsoft.com/fwlink/?LinkId=200180) (Guía de planeación de la capacidad de Forefront Identity Manager 2010 [FIM]); en él se ofrecen más detalles sobre la compilación de prueba y los resultados de pruebas de rendimiento.
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 
