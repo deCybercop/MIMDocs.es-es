@@ -2,10 +2,10 @@
 title: "Definición de roles con privilegios para PAM | Microsoft Docs"
 description: "Decida qué roles con privilegios deben administrarse y defina la directiva de administración para cada uno."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,9 @@ ms.assetid: 1a368e8e-68e1-4f40-a279-916e605581bc
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: ae582e6aff2449aeee8b68ebe90b22b18e5a67d2
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: 807ee44c23f367c33b820251012008324bb2c005
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -144,7 +145,7 @@ La elección de las definiciones de rol dependerá del nivel de los servidores q
 
 Las siguientes secciones dan ejemplos de escenarios empresariales típicos.
 
-### <a name="tier-0-administrative-forest"></a>Nivel 0: Bosque administrativo
+### <a name="tier-0---administrative-forest"></a>Nivel 0: Bosque administrativo
 
 Los roles adecuados para las cuentas en el entorno bastión podrían incluir:
 
@@ -153,7 +154,7 @@ Los roles adecuados para las cuentas en el entorno bastión podrían incluir:
 - Usuarios que son administradores del bosque de producción.
 - Usuarios en los que se delegan los derechos administrativos delegados a las aplicaciones del bosque de producción.
 
-### <a name="tier-0-enterprise-production-forest"></a>Nivel 0: Bosque de producción empresarial
+### <a name="tier-0---enterprise-production-forest"></a>Nivel 0: Bosque de producción empresarial
 
 Los roles adecuados para administrar los recursos y las cuentas del bosque de producción de nivel 0 podrían incluir:
 
@@ -200,9 +201,4 @@ Los roles para la administración de equipos y usuarios no administrativos podr�
 - Departamento de soporte técnico.
 - Administradores de grupos de seguridad.
 - Asistencia de escritorio de la estación de trabajo
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 

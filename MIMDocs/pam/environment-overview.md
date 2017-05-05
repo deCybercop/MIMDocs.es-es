@@ -2,10 +2,10 @@
 title: "Introducción al entorno de PAM | Microsoft Docs"
 description: "Averigüe qué cantidad y configuración de máquinas virtuales se requiere para implementar correctamente Privileged Access Management."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,9 @@ ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 750ba152813b4c03c913453c42e0e503e90b883b
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: 3e6c5a70c6b9ed140a56135676bbd14a84504317
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -31,9 +32,4 @@ Las unidades donde se almacenarán las imágenes de disco de máquina virtual ne
 
 > [!NOTE]
 > La vista previa técnica del cliente (CTP) de MIM actual no es compatible con el contenido del directorio o la base de datos de la CTP anterior. Si ha estado evaluando previamente MIM para PAM u otros escenarios, cree una copia de seguridad y archive las máquinas virtuales que use para esa prueba e inicie la implementación con imágenes de máquinas virtuales nuevas que no se hayan usado previamente para escenarios MIM.
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 
