@@ -12,15 +12,17 @@ ms.technology: active-directory-domain-services
 ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 3e6c5a70c6b9ed140a56135676bbd14a84504317
-ms.lasthandoff: 05/02/2017
+ms.contentlocale: es-es
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="environment-overview"></a>Introducción al entorno
+<a id="environment-overview" class="xliff"></a>
+# Introducción al entorno
 
 Privileged Access Management funciona con máquinas virtuales (VM) con unidades independientes que están conectadas entre sí en una red compartida. Estas máquinas virtuales pueden hospedarse en Windows 8.1, Windows Server 2012 R2 o en otras plataformas de sistema operativo.
 

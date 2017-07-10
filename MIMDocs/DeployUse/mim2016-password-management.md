@@ -15,13 +15,14 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 1ef7b9816d265d17ef68fc54e010e655535dcdc8
 ms.openlocfilehash: 0a5a3f28af58dd59ab805f2836ffeb88f3508ae0
 ms.contentlocale: es-es
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
 
-# <a name="microsoft-identity-manager-2016-password-management"></a>Administración de contraseñas de Microsoft Identity Manager 2016
+<a id="microsoft-identity-manager-2016-password-management" class="xliff"></a>
+# Administración de contraseñas de Microsoft Identity Manager 2016
 
 Administrar contraseñas para varias cuentas de usuario es una de las complejidades de administrar un entorno empresarial con varios orígenes de datos. Microsoft Identity Manager 2016 (MIM) proporciona dos soluciones de administración de contraseñas:
 
@@ -43,7 +44,8 @@ Con la sincronización de contraseñas y la administración de cambios de contra
 
 -   Realizar operaciones de administración de contraseñas en tiempo real, independientemente de las operaciones de MIM.
 
-## <a name="password-extensions"></a>Extensiones de contraseña
+<a id="password-extensions" class="xliff"></a>
+## Extensiones de contraseña
 
 Los agentes de administración de los servidores de directorio admiten el cambio de contraseña y las operaciones de configuración de manera predeterminada. Para los agentes de administración de conectividad extensible, base de datos y basados en archivos, que no admiten el cambio de contraseña y las operaciones de configuración de manera predeterminada, puede crear una biblioteca de vínculos dinámicos (DLL) de extensión de contraseña .NET.
 La DLL de extensión de contraseña .NET se llama siempre que se invoque una llamada de configuración o cambio de contraseña para cualquiera de estos agentes de administración. Las opciones de extensión de contraseña están configuradas para estos agentes de administración en Synchronization Service Manager. Para obtener más información sobre la configuración de extensiones de contraseña, vea la Referencia del desarrollador de FIM.
@@ -60,7 +62,8 @@ La DLL de extensión de contraseña .NET se llama siempre que se invoque una lla
 |                                                                           | Microsoft SQL Server                                                                               |
 |                                                                           | Base de datos de Oracle                                                                                    |
 
-## <a name="password-synchronization"></a>Sincronización de contraseñas
+<a id="password-synchronization" class="xliff"></a>
+## Sincronización de contraseñas
 
 
 La sincronización de contraseñas funciona con el servicio de notificación de cambio de contraseña (PCNS) en un dominio de Active Directory, y permite los cambios de contraseña que se originan desde Active Directory para que se propaguen automáticamente en otros orígenes de datos conectados. MIM consigue esto ejecutándose como un servidor de llamada a procedimiento remoto (RPC) que capta una notificación de cambio de contraseña desde un controlador de dominio de Active Directory. Cuando la solicitud de cambio de contraseña se recibe y autentica, se procesa mediante MIM y se propaga a los agentes de administración adecuados.
@@ -86,7 +89,8 @@ Los componentes implicados en el proceso de sincronización de contraseñas son:
 -   **DLL de extensión de contraseña**: la DLL de extensión de contraseña proporciona una manera de implementar operaciones de cambio o configuración de contraseña mediante una extensión de reglas para cualquier agente de administración basado en archivos, conectividad extensible o base de datos.
     Esto se consigue creando un atributo cifrado solo para exportación denominado "export_password" que no existe realmente en el directorio conectado pero al que se puede acceder y establecer en extensiones de reglas de aprovisionamiento o puede usarse durante el flujo de atributos de exportación. Para obtener más información sobre la configuración de extensiones de contraseña, vea la [Referencia del desarrollador de FIM](https://msdn.microsoft.com/library/windows/desktop/ee652263(v=vs.100).aspx).
 
-## <a name="preparing-for-password-synchronization"></a>Preparar la sincronización de contraseñas
+<a id="preparing-for-password-synchronization" class="xliff"></a>
+## Preparar la sincronización de contraseñas
 
 Antes de que configure la sincronización de contraseñas para su entorno de MIM y Active Directory, compruebe lo siguiente:
 
@@ -110,7 +114,8 @@ Para configurar la sincronización de contraseñas:
 
 Para obtener más información sobre la configuración de la sincronización de contraseña, vea Using Password Synchronization (Usar la sincronización de contraseñas).
 
-## <a name="password-synchronization-process"></a>Proceso de sincronización de contraseñas
+<a id="password-synchronization-process" class="xliff"></a>
+## Proceso de sincronización de contraseñas
 
 El proceso de sincronizar una solicitud de cambio de contraseña desde un controlador de dominio de Active Directory en otros orígenes de datos conectados se muestra en el diagrama siguiente:
 
@@ -126,7 +131,8 @@ El proceso de sincronizar una solicitud de cambio de contraseña desde un contro
 
 6.  Mediante la información de la tabla combinada, MIM determina los agentes de administración que reciben el cambio de contraseña, y la inserta en estos.
 
-## <a name="password-synchronization-security"></a>Seguridad de sincronización de contraseñas
+<a id="password-synchronization-security" class="xliff"></a>
+## Seguridad de sincronización de contraseñas
 
 Se han tratado los siguientes problemas de seguridad de sincronización de contraseñas:
 
@@ -140,7 +146,8 @@ Se han tratado los siguientes problemas de seguridad de sincronización de contr
 
 -   Proteger las colas de contraseña: las contraseñas almacenadas en colas de contraseñas del PCNS se cifran hasta que se entregan.
 
-## <a name="password-synchronization-error-recovery-scenarios"></a>Escenarios de recuperación de errores de la sincronización de contraseñas
+<a id="password-synchronization-error-recovery-scenarios" class="xliff"></a>
+## Escenarios de recuperación de errores de la sincronización de contraseñas
 
 De manera ideal, cuando un usuario cambia una contraseña, el cambio se sincroniza sin errores. Los escenarios siguientes describen cómo MIM se recupera de los errores de sincronización comunes:
 
@@ -162,7 +169,8 @@ Algunos errores son lo suficientemente graves como para que ningún número de r
 | 6927  | Error       | Se ha producido un error en la operación de establecimiento de sincronización de contraseña porque la contraseña no cumple la directiva de contraseñas del sistema de destino.                                      |
 | 6928  | Error       | Se ha producido un error en la operación de establecimiento de sincronización de contraseña porque la extensión de la contraseña para el agente de administración de destino no está configurada para admitir operaciones de establecimiento de contraseña. |
 
-## <a name="user-based-password-change-management"></a>Administración del cambio de contraseña basado en el usuario
+<a id="user-based-password-change-management" class="xliff"></a>
+## Administración del cambio de contraseña basado en el usuario
 
 MIM proporciona dos aplicaciones web que usan el Instrumental de administración de Windows (WMI) para restablecer contraseñas. Como con la sincronización de contraseñas, activa la administración de contraseñas cuando configura el agente de administración en el Diseñador del agente de administración. Para obtener información sobre la administración de contraseñas y WMI, vea la Referencia del desarrollador de MIM.
 

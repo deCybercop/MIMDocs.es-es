@@ -12,15 +12,17 @@ ms.technology: active-directory-domain-services
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 89d9b38177b91f64e746fea583684abcecc9d7ff
-ms.lasthandoff: 05/02/2017
+ms.contentlocale: es-es
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="step-7--elevate-a-users-access"></a>Paso 7: Elevar los privilegios de acceso de un usuario
+<a id="step-7--elevate-a-users-access" class="xliff"></a>
+# Paso 7: Elevar los privilegios de acceso de un usuario
 
 >[!div class="step-by-step"]
 [« Paso 6](step-6-transition-group-to-pam.md)
@@ -28,7 +30,8 @@ ms.lasthandoff: 05/02/2017
 
 En este paso se muestra que un usuario puede solicitar acceso a un rol a través de MIM.
 
-## <a name="verify-that-jen-cannot-access-the-privileged-resource"></a>Comprobación de que Jen no acceder al recurso con privilegios
+<a id="verify-that-jen-cannot-access-the-privileged-resource" class="xliff"></a>
+## Comprobación de que Jen no acceder al recurso con privilegios
 Sin privilegios elevados, Jen no puede acceder al recurso con privilegios del bosque CORP.
 
 1. Cierre la sesión de CORPWKSTN para quitar cualquier conexión abierta almacenada en caché.
@@ -37,7 +40,8 @@ Sin privilegios elevados, Jen no puede acceder al recurso con privilegios del bo
 4. Escriba el comando `dir \\corpwkstn\corpfs`. Debería aparecer el mensaje de error **Acceso denegado**.
 5. Deje abierta la ventana de símbolo del sistema.
 
-## <a name="request-privileged-access-from-mim"></a>Solicite acceso con privilegios a MIM.
+<a id="request-privileged-access-from-mim" class="xliff"></a>
+## Solicite acceso con privilegios a MIM.
 1. En CORPWKSTN, aún como CONTOSO\Jen, escriba el siguiente comando.
 
     ```
@@ -66,7 +70,8 @@ Sin privilegios elevados, Jen no puede acceder al recurso con privilegios del bo
 
 6. Escriba la contraseña de la cuenta PRIV.Jen. Se mostrará una nueva ventana de símbolo del sistema.
 
-## <a name="validate-the-elevated-access"></a>Valide el acceso con privilegios elevados.
+<a id="validate-the-elevated-access" class="xliff"></a>
+## Valide el acceso con privilegios elevados.
 En la ventana abierta recientemente, escriba el siguiente comando:
 
 ```
@@ -76,7 +81,8 @@ dir \\corpwkstn\corpfs
 
 Si el comando dir produce un error con el mensaje **Acceso denegado**, vuelva a comprobar la relación de confianza.
 
-## <a name="activate-the-privileged-role"></a>Activación del rol con privilegios
+<a id="activate-the-privileged-role" class="xliff"></a>
+## Activación del rol con privilegios
 Para realizar la activación, solicite acceso con privilegios mediante el portal de ejemplo de PAM.
 
 1. En CORPWKSTN, asegúrese de que ha iniciado sesión como CORP\Jen.
@@ -96,7 +102,8 @@ Para realizar la activación, solicite acceso con privilegios mediante el portal
 > [!Note]
 > En este entorno también puede aprender a desarrollar aplicaciones que usan la API de REST de PAM, que se describe en [Privileged Access Management REST API Reference](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference) (Referencia de la API de REST de Privileged Access Management).
 
-## <a name="summary"></a>Resumen
+<a id="summary" class="xliff"></a>
+## Resumen
 Una vez que haya completado los pasos de este tutorial, habrá mostrado un escenario de Privileged Access Management en el que los privilegios de usuario se elevan durante un período limitado de tiempo, lo que permite al usuario acceder a recursos protegidos con una cuenta con privilegios independiente. Desde el momento en que finalice la sesión de elevación, la cuenta con privilegios no podrá acceder al recurso protegido. El administrador de PAM es quien decide qué grupos de seguridad representan roles con privilegios. Una vez que los derechos de acceso se migran al sistema de Privileged Access Management, el acceso que anteriormente era posible con la cuenta de usuario original ahora solo es posible si se inicia sesión con una cuenta con privilegios especial que se obtiene previa solicitud. Como resultado, las pertenencias a grupos para grupos con muchos privilegios están en vigor durante un período de tiempo limitado.
 
 >[!div class="step-by-step"]

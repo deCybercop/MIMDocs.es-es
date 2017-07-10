@@ -1,42 +1,84 @@
+
 # [Descripción y exploración](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
+
 # [Plan y diseño](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
+
 # [Implementación y uso](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy)
+
 # [Uso de Privileged Access Management](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)
+
 # [Referencia para desarrolladores](microsoft-identity-manager-2016-developer-reference.md)
+
 ## [Referencia para desarrolladores de Microsoft Identity Manager 2016](microsoft-identity-manager-2016-developer-reference.md)
+
 ### [Referencia de API de REST de administración de certificados](certificate-management-rest-api-reference.md)
+
 #### [Detalles de servicio de la API de REST de CM](certificate-management-rest-api-service-details.md)
+
 #### [Tutorial de inscripción de ejemplo](sample-enrollment-walkthrough.md)
+
 #### [Obtener plantillas de perfil](get-profile-templates.md)
+
 #### [Operaciones de directiva](policy-operations.md)
+
 ##### [Obtener la directiva de flujo de trabajo](get-workflow-policy.md)
+
 ##### [Obtener la directiva de tarjeta inteligente](get-smartcard-policy.md)
+
 #### [Operaciones de solicitud](request-operations.md)
+
 ##### [Crear solicitud](create-request.md)
+
 ##### [Obtener solicitud](get-request.md)
+
 ##### [Cancelar, abandonar o completar una solicitud](cancel-abandon-complete-request.md)
+
 #### [Operaciones de solicitud de certificado](certificate-request-operations.md)
+
 ##### [Obtener opciones de generación de solicitud de certificado](get-certificate-request-generation-options.md)
+
 ##### [Obtener respuestas de certificado](get-certificate-responses.md)
+
 #### [Operaciones de tarjeta inteligente](smartcard-operations.md)
+
 ##### [Asignar una tarjeta inteligente a una solicitud](assign-smartcard-to-request.md)
+
 ##### [Obtener datos de tarjeta inteligente](get-smartcard-data.md)
+
 ##### [Obtener respuesta de autenticación de tarjeta inteligente](get-smartcard-authentication-response.md)
+
 ##### [Obtener clave de administrador diversificada de tarjeta inteligente](get-smartcard-diversified-admin-key.md)
+
 ##### [Obtener PIN propuesto de tarjeta inteligente](get-smartcard-proposed-pin.md)
+
 ##### [Actualizar estado de tarjeta inteligente](update-smartcard-status.md)
+
 #### [Operaciones de perfil](profile-operations.md)
+
 ##### [Obtener datos de perfil](get-profile-data.md)
+
 ##### [Obtener operaciones de estado del perfil](get-profile-state-operations.md)
+
 #### [Operaciones de certificado](certificate-operations.md)
+
 ##### [Obtener certificados de tarjeta inteligente o de perfil](get-smartcard-profile-certificates.md)
+
 ##### [Obtener certificados de usuario](get-user-certificates.md)
+
 ### [Referencia de la API de REST de Privileged Access Management](privileged-access-management-rest-api-reference.md)
+
 #### [Detalles de servicio de la API de REST de PAM](privileged-access-management-rest-api-service-details.md)
+
 #### [Obtener roles de PAM](privileged-access-management-get-roles.md)
+
 #### [Crear solicitud de PAM](privileged-access-management-create-request.md)
+
 #### [Obtener solicitudes de PAM](privileged-access-management-get-requests.md)
+
 #### [Cerrar solicitud de PAM](privileged-access-management-close-request.md)
+
 #### [Obtener solicitudes pendientes de PAM](privileged-access-management-get-pending-requests.md)
+
 #### [Aprobar o rechazar una solicitud pendiente de PAM](privileged-access-management-approve-reject-pending-request.md)
+
 #### [Obtener la información de sesión de PAM](privileged-access-management-get-session-info.md)
