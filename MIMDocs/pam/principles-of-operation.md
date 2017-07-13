@@ -12,17 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: 6498f68f-36d3-448c-8fe6-649ad5a7f97d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 53fe79f251c3b18426f16b4007cda49e67d7b028
-ms.contentlocale: es-es
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="understand-the-components-of-pam" class="xliff"></a>
 # Descripción de los componentes de PAM
+<a id="understand-the-components-of-pam" class="xliff"></a>
 
 Privileged Access Management mantiene el acceso administrativo independiente de las cuentas de usuario diarias. Esta solución se basa en bosques en paralelo:
 
@@ -43,4 +40,3 @@ Una vez que se haya instalado y configurado, cada grupo creado mediante el proce
 Como resultado, cuando un usuario solicita la elevación mediante los cmdlets de PowerShell y se aprueba su solicitud, el Servicio MIM agregará su cuenta del bosque PRIV a un grupo del bosque PRIV. Cuando el usuario inicia sesión con su cuenta con privilegios, su token de Kerberos contendrá un identificador de seguridad (SID) idéntico al SID del grupo del bosque CORP. Puesto que el bosque CORP está configurado para confiar en el bosque PRIV, se muestra la cuenta con privilegios elevados que se usa para acceder a un recurso en el bosque CORP, para que un recurso que comprueba las pertenencias al grupo Kerberos sea miembro de los grupos de seguridad de ese recurso. Esto se proporciona a través de la autenticación entre bosques de Kerberos.
 
 Además, estas pertenencias son de tiempo limitado para que después de un intervalo preconfigurado de tiempo, la cuenta administrativa del usuario deje de formar parte del grupo en el bosque PRIV. Como resultado, dicha cuenta ya no se podrá usar para acceder a otros recursos.
-

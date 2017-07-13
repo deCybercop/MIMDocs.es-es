@@ -12,14 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
 ms.openlocfilehash: 93ae9f198d73d21ae966fe3c3b22e47435bd5608
-ms.lasthandoff: 01/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/13/2017
 ---
-# <a name="step-3-configuring-sql"></a>Paso 3: Configuración de SQL
+# Paso 3: Configuración de SQL
+<a id="step-3-configuring-sql" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Paso 2](sp1-step2-configuring-corp-domain.md)
@@ -44,4 +44,3 @@ Cuando se le solicite, proporcione la contraseña de la cuenta de servicio MIMAd
 >[!div class="step-by-step"]
 [« Paso 2](sp1-step2-configuring-corp-domain.md)
 [Paso 4 »](sp1-step4-configuring-sharepoint.md)
-

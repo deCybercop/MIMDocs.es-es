@@ -2,15 +2,14 @@
 layout: LandingPage
 title: "Documentación de Microsoft Identity Manager | Microsoft Docs"
 description: Aprenda a utilizar Microsoft Identity Manager.
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
 ms.openlocfilehash: c49fbae1892bfa0207a1615d11e600fe21d638c8
-ms.contentlocale: es-es
-ms.lasthandoff: 07/10/2017
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/13/2017
 ---
-<a id="microsoft-identity-manager-documentation" class="xliff"></a>
 # Documentación de Microsoft Identity Manager
+<a id="microsoft-identity-manager-documentation" class="xliff"></a>
 
 Microsoft Identity Manager 2016 enlaza soluciones de administración de identidades y accesos de Microsoft al puentear perfectamente varios almacenes de autenticación local, como Active Directory, LDAP, Oracle y otras aplicaciones, con Azure Active Directory. Esto proporciona experiencias coherentes para aplicaciones LOB locales y soluciones SaaS.
 
@@ -147,4 +146,3 @@ El soporte estándar para Forefront Identity Manager (FIM) finalizará el 10/10/
         </div>
     </li>
 </ul>
-

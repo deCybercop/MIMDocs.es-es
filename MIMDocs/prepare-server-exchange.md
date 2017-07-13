@@ -12,21 +12,21 @@ ms.technology: security
 ms.assetid: 34a8c16e-3bed-4e16-939b-b9fe17dd834b
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: 01ccb55d200bfd1615ae62ccd30298117c0d6275
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: ac787f2ff76b19aab815d55018d1b6f0de1f4adb
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="set-up-an-identity-management-server-exchange"></a>Configuración de un servidor de administración de identidades: Exchange
+# Configuración de un servidor de administración de identidades: Exchange
+<a id="set-up-an-identity-management-server-exchange" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« SharePoint](prepare-server-sharepoint.md)
 [MIM Synchronization Service »](install-mim-sync.md)
 
-## <a name="deploy-microsoft-exchange-server"></a>Implementar Microsoft Exchange Server
+## Implementar Microsoft Exchange Server
+<a id="deploy-microsoft-exchange-server" class="xliff"></a>
 Si desea configurar MIM para enviar y recibir correo electrónico o aprovisionar buzones, es necesario tener Exchange presente en el entorno. Si aún no tiene Exchange implementado, puede instalar una versión de prueba con fines de evaluación:
 
 1. Descargue e instale Microsoft Office 2010 Filter Packs versión 2.0 y Microsoft Office 2010 Filter Packs versión 2.0 SP1.
@@ -42,4 +42,3 @@ Si desea configurar MIM para enviar y recibir correo electrónico o aprovisionar
 >[!div class="step-by-step"]  
 [« SharePoint](prepare-server-sharepoint.md)
 [MIM Synchronization Service »](install-mim-sync.md)
-
