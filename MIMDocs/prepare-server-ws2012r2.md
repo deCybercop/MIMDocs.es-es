@@ -12,15 +12,14 @@ ms.technology: security
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: 1cb0d6cd310372ecaeff47c9cc4461ebc43b3390
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: a0241964edb21ca4bf938ae84693b9947f6e2efb
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="set-up-an-identity-management-server-windows-server-2012-r2"></a>Configuración de un servidor de administración de identidades: Windows Server 2012 R2
+# Configuración de un servidor de administración de identidades: Windows Server 2012 R2
+<a id="set-up-an-identity-management-server-windows-server-2012-r2" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Preparación de un dominio](preparing-domain.md)
@@ -32,7 +31,8 @@ ms.lasthandoff: 01/24/2017
 > - Nombre de dominio: **contoso**
 > - Contraseña - **Pass@word1**
 
-## <a name="join-windows-server-2012-r2-to-your-domain"></a>Unión de Windows Server 2012 R2 al dominio
+## Unión de Windows Server 2012 R2 al dominio
+<a id="join-windows-server-2012-r2-to-your-domain" class="xliff"></a>
 
 Empiece con una máquina de Windows Server 2012 R2 con un mínimo de 8 GB de RAM. Al instalar, especifique la edición "Windows Server 2012 R2 Standard (servidor con una GUI) x64".
 
@@ -63,7 +63,8 @@ Empiece con una máquina de Windows Server 2012 R2 con un mínimo de 8 GB de RAM
     Install-WindowsFeature Web-WebServer, Net-Framework-Features,rsat-ad-powershell,Web-Mgmt-Tools,Application-Server,Windows-Identity-Foundation,Server-Media-Foundation,Xps-Viewer –includeallsubfeature -restart -source d:\sources\SxS
     ```
 
-## <a name="configure-the-server-security-policy"></a>Configuración de la directiva de seguridad del servidor
+## Configuración de la directiva de seguridad del servidor
+<a id="configure-the-server-security-policy" class="xliff"></a>
 
 Configure la directiva de seguridad de servidor para que permita que las cuentas recién creadas se ejecuten como servicios.
 
@@ -94,7 +95,8 @@ Configure la directiva de seguridad de servidor para que permita que las cuentas
 12. Cierre la ventana Directiva de seguridad local.
 
 
-## <a name="change-the-iis-windows-authentication-mode"></a>Cambie el modo autenticación de Windows IIS.
+## Cambie el modo autenticación de Windows IIS.
+<a id="change-the-iis-windows-authentication-mode" class="xliff"></a>
 
 1.  Abra una ventana de PowerShell.
 
@@ -109,4 +111,3 @@ Configure la directiva de seguridad de servidor para que permita que las cuentas
 >[!div class="step-by-step"]  
 [« Preparación de un dominio](preparing-domain.md)
 [SQL Server 2014 »](prepare-server-sql2014.md)
-

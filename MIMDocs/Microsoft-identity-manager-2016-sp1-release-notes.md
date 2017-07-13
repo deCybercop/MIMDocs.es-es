@@ -12,16 +12,14 @@ ms.technology: security
 ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
 ms.openlocfilehash: 69d44af5eaef3665f3a55ea91f48d3658cd5e65c
-ms.contentlocale: es-es
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/13/2017
 ---
-<a id="whats-new-for-microsoft-identity-manager-2016-service-pack-1" class="xliff"></a>
-# Novedades en Microsoft Identity Manager 2016 Service Pack 1 #
+# Novedades en Microsoft Identity Manager 2016 Service Pack 1
+<a id="whats-new-for-microsoft-identity-manager-2016-service-pack-1" class="xliff"></a> #
 
 Como parte del ciclo de lanzamiento regular para el mantenimiento y actualización de Microsoft Identity Manager, nos complace anunciar [Microsoft Identity Manager (MIM) 2016 Service Pack 1 (SP1)](https://msdn.microsoft.com/subscriptions/downloads/?fileid=70212#searchTerm=&Languages=en&PageSize=10&PageIndex=0&FileId=70212). En este documento se describen las actualizaciones, las mejoras, las características y los cambios incluidos en esta versión.
 
@@ -31,11 +29,11 @@ Queremos conocer su opinión. Si tiene algún comentario o preocupación para el
 
 
 
-<a id="updates-in-this-service-pack" class="xliff"></a>
-## Actualizaciones en este Service Pack #
+## Actualizaciones en este Service Pack
+<a id="updates-in-this-service-pack" class="xliff"></a> #
 
-<a id="mim" class="xliff"></a>
 ### MIM
+<a id="mim" class="xliff"></a>
 
 - **Compatibilidad entre exploradores del portal de MIM para el autoservicio del usuario final:** en este Service Pack estamos introduciendo soporte técnico para la mayoría de los exploradores principales. Los usuarios ahora pueden obtener acceso al portal de MIM e interactuar con él para grupos de autoservicio y la administración de perfiles desde Edge, Chrome y Safari.
 
@@ -43,8 +41,8 @@ Queremos conocer su opinión. Si tiene algún comentario o preocupación para el
 
 - **Validación de formato de archivo de carga de la imagen:** MIM hora es capaz de validar el formato de archivo de imágenes cuando se cargan en el portal de MIM.
 
-<a id="privileged-access-managementpam" class="xliff"></a>
 ### Privileged Access Management (PAM)
+<a id="privileged-access-managementpam" class="xliff"></a>
 
 - **Compatibilidad con el bosque de "PRIV" (bastión) de PAM para el nivel funcional de Windows Server 2016:** El servicio MIM PAM puede configurarse en un entorno con los controladores de dominio que se ejecutan en el nivel funcional del bosque de Active Directory Domain Services de Windows Server 2016. Cuando se configura, el vale de Kerberos de un usuario estará limitado en el tiempo al tiempo restante de la activación del rol.
 
@@ -61,21 +59,21 @@ Queremos conocer su opinión. Si tiene algún comentario o preocupación para el
     Estos cmdlets se ejecutan automáticamente como parte de los scripts de las implementaciones.
 
 
-<a id="platform-support" class="xliff"></a>
 ## Compatibilidad de plataformas
+<a id="platform-support" class="xliff"></a>
 Puede encontrar información actualizada de compatibilidad con la plataforma en el documento denominado [Plataformas compatibles con MIM 2016](microsoft-identity-manager-2016-supported-platforms.md).  Entre las nuevas plataformas compatibles con este Service Pack se incluyen SQL Server 2016 y SharePoint 2016
 
-<a id="issues-fixed-in-this-release-from-mim-2016-general-availability" class="xliff"></a>
 ## Problemas corregidos en esta versión de disponibilidad general de MIM 2016
+<a id="issues-fixed-in-this-release-from-mim-2016-general-availability" class="xliff"></a>
 
-<a id="pam" class="xliff"></a>
 ### PAM
+<a id="pam" class="xliff"></a>
 - New-PAMGroup no ha creado objetos de MIM para grupos locales de dominio en el bosque de PRIV
 - New-PAMDomainConfiguration fallaría con un mensaje de error "netdom"
 - El servicio de supervisión de PAM registró advertencias para los grupos en el bosque de PRIV
 
-<a id="how-to-upgrade-to-service-pack-1" class="xliff"></a>
 ## Cómo actualizar a Service Pack 1
+<a id="how-to-upgrade-to-service-pack-1" class="xliff"></a>
 
 Los clientes que actualizan a Microsoft Identity Manager 2016 Service Pack 1 deben seguir las directrices siguientes de todos los servicios aplicables a su implementación.
 
@@ -92,4 +90,3 @@ Debe hacer una copia de seguridad de las bases de datos MIMService y MIM Sync.
   3. Seleccione el componente de MIM que actualizar
   4. Continúe con la instalación según las indicaciones
     * Instalación del portal y el servicio de MIM: al elegir Exchange Online como cuenta de correo electrónico, escriba la dirección de correo electrónico y las credenciales de la cuenta de Exchange Online en la pantalla siguiente.
-

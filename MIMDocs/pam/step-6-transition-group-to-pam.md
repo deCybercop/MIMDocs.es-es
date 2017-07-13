@@ -12,17 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: 7b689eff-3a10-4f51-97b2-cb1b4827b63c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: aeffca2c4e5467ec039c2077a88f36a652493e90
-ms.contentlocale: es-es
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="step-6--transition-a-group-to-privileged-access-management" class="xliff"></a>
 # Paso 6: Realizar la transición de un grupo a Privileged Access Management
+<a id="step-6--transition-a-group-to-privileged-access-management" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [«Paso 5 ](step-5-establish-trust-between-priv-corp-forests.md)
@@ -90,4 +87,3 @@ Si quiere demostrar que los derechos de acceso entre bosques son eficaces para l
 >[!div class="step-by-step"]
 [«Paso 5 ](step-5-establish-trust-between-priv-corp-forests.md)
 [Paso 7»](step-7-elevate-user-access.md)
-

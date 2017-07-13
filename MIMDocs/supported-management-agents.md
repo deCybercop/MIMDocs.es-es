@@ -12,15 +12,14 @@ ms.technology: security
 ms.assetid: 8bc2f6d2-9f53-4db6-aee6-a937ae468163
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: b26fe7bc56ab8229054afb1409c3652e81464a3d
-ms.lasthandoff: 05/02/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="connect-to-your-directories"></a>Conexión a los directorios
+# Conexión a los directorios
+<a id="connect-to-your-directories" class="xliff"></a>
 
 Los conectores vinculan orígenes de datos conectados específicos a Microsoft Identity Manager (MIM). Un conector mueve los datos desde un origen de datos conectado a MIM. Si se modifican los datos de MIM, el conector también puede exportarlos al origen de datos conectado para mantenerlo sincronizado con MIM. Por lo general, hay al menos un conector para cada directorio conectado.
 
@@ -28,7 +27,8 @@ En Forefront Identity Manager, los conectores eran conocidos como agentes de adm
 
 Este artículo trata sobre los conectores incluidos en MIM, pero el conector para Extensible Connectivity 2.0 hace posible conectar con aún más orígenes de datos. Algunos asociados han creado sus propios conectores de esta manera, y una lista completa está disponible en la wiki en [FIM 2010: Management Agents from Partners](http://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-management-agents-from-partners.aspx) (FIM 2010: Agentes de administración de asociados).
 
-## <a name="supported-connectors-in-mim-2016"></a>Conectores compatibles en MIM 2016
+## Conectores compatibles en MIM 2016
+<a id="supported-connectors-in-mim-2016" class="xliff"></a>
 
 | Nombre | Versiones compatibles del origen de datos conectado |
 | ---- | ----------------------------------------------- |
@@ -55,7 +55,7 @@ Este artículo trata sobre los conectores incluidos en MIM, pero el conector par
 | Archivo de texto de ancho fijo | Archivos de texto de ancho fijo |
 | Formato de intercambio de datos LDAP (LDIF) | Formato de intercambio de datos LDAP (LDIF) |
 
-## <a name="related-topics"></a>Temas relacionados
+## Temas relacionados
+<a id="related-topics" class="xliff"></a>
 
 [Agentes de administración de FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx)
-

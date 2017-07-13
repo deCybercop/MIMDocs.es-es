@@ -12,15 +12,14 @@ ms.technology: security
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: d714a58796d3a86fc82ed1eb6dc29bdc45920933
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 8a4582695d41ea605f2de4e336c3a780b2b2559f
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="working-with-the-mim-certificate-manager"></a>Trabajar con MIM Certificate Manager
+# Trabajar con MIM Certificate Manager
+<a id="working-with-the-mim-certificate-manager" class="xliff"></a>
 Una vez que estén en funcionamiento MIM 2016 y Certificate Manager, puede implementar la aplicación de la Tienda Windows MIM Certificate Manager para que los usuarios puedan administrar fácilmente sus certificados de software, tarjetas inteligentes físicas y tarjetas inteligentes virtuales. Los pasos para implementar la aplicación MIM CM son los siguientes:
 
 1.  Cree una plantilla de certificados.
@@ -31,7 +30,8 @@ Una vez que estén en funcionamiento MIM 2016 y Certificate Manager, puede imple
 
 4.  Implemente la aplicación mediante SCCM o Intune.
 
-## <a name="create-a-certificate-template"></a>Crear una plantilla de certificado
+## Crear una plantilla de certificado
+<a id="create-a-certificate-template" class="xliff"></a>
 Una plantilla de certificado para la aplicación CM se crea como de costumbre, salvo que es necesario asegurarse de que la versión de la plantilla de certificados sea la versión 3 o una versión posterior.
 
 1.  Inicie sesión en el servidor que ejecuta AD CS (el servidor de certificados).
@@ -70,7 +70,8 @@ Una plantilla de certificado para la aplicación CM se crea como de costumbre, s
 
 16. Seleccione en la lista la nueva plantilla que creó y haga clic en **Aceptar**.
 
-## <a name="create-a-profile-template"></a>Crear una plantilla de perfil
+## Crear una plantilla de perfil
+<a id="create-a-profile-template" class="xliff"></a>
 Asegúrese de que al crear una plantilla de perfil, la establezca para crear/destruir la VSC y quitar la recolección de datos. La aplicación CM no puede controlar los datos recopilados, por lo que es importante deshabilitarla, tal como se indica a continuación.
 
 1.  Inicie sesión en el portal de CM como usuario con privilegios administrativos.
@@ -95,7 +96,8 @@ Asegúrese de que al crear una plantilla de perfil, la establezca para crear/des
 
 11. Tiene que deshabilitar elementos de recolección de datos de cada una de las directivas haciendo clic en la directiva en el panel izquierdo y marcando después la casilla situada junto a **Elemento de datos de ejemplo** y después en **Eliminar elementos de recopilación de datos**. A continuación, haga clic en **Aceptar**.
 
-## <a name="prepare-the-cm-app-for-deployment"></a>Preparar la aplicación CM para la implementación
+## Preparar la aplicación CM para la implementación
+<a id="prepare-the-cm-app-for-deployment" class="xliff"></a>
 
 1.  Ejecute en el símbolo del sistema el siguiente comando para desempaquetar la aplicación y extraer su contenido en una nueva subcarpeta denominada appx y crear una copia para que no modifique el archivo original.
 
@@ -252,6 +254,6 @@ Asegúrese de que al crear una plantilla de perfil, la establezca para crear/des
 
     -   Para obtener ayuda con el script **ConfigureMIimCMClientAndRelyingParty.ps1** , ejecute `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`.
 
-## <a name="deploy-the-app"></a>Implementar la aplicación
+## Implementar la aplicación
+<a id="deploy-the-app" class="xliff"></a>
 Al configurar la aplicación CM, descargue el archivo MIMDMModernApp_&lt;version&gt;_AnyCPU_Test.zip desde el Centro de descarga y extraiga todo su contenido. El archivo .appx es el instalador. Puede implementarla del mismo modo que suele implementar aplicaciones de la Tienda Windows mediante [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx) o [Intune](https://technet.microsoft.com/library/dn613839.aspx) para transferir localmente la aplicación con el fin de que los usuarios puedan acceder a ella mediante el portal de empresa. De lo contrario, se colocará directamente en sus equipos.
-

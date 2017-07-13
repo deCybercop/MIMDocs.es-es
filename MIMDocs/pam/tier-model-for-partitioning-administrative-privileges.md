@@ -12,29 +12,26 @@ ms.technology: active-directory-domain-services
 ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 4c3b43e50403890572e77773191a821cf247269c
-ms.contentlocale: es-es
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="tier-model-for-partitioning-administrative-privileges" class="xliff"></a>
 # Modelo de niveles para el particionamiento de los privilegios administrativos
+<a id="tier-model-for-partitioning-administrative-privileges" class="xliff"></a>
 
 Con el volumen de amenazas actual, no se trata de si un atacante va a acceder a los sistemas, sino de cuándo. Esto significa que la seguridad interna es tan importante como una defensa perimetral potente. En este artículo se describe un modelo de seguridad diseñado para proteger frente a la elevación de privilegios mediante la separación de las actividades con muchos privilegios de las zonas de alto riesgo. Este modelo proporciona una buena experiencia de usuario y se ajusta a los procedimientos recomendados y a los principios de seguridad.
 
-<a id="elevation-of-privilege-in-active-directory-forests" class="xliff"></a>
 ## Elevación de privilegios en bosques de Active Directory
+<a id="elevation-of-privilege-in-active-directory-forests" class="xliff"></a>
 
 Las cuentas de usuarios, servicios o aplicaciones con privilegios administrativos permanentes en los bosques de Windows Server Active Directory (AD) plantean un nivel considerable de riesgo para la misión y el negocio de la organización. Estas cuentas suelen ser objetivo de los atacantes porque, si se ven en peligro, el atacante puede conectarse a otros servidores o aplicaciones del dominio.
 
 El modelo de niveles crea divisiones entre administradores en función de los recursos que administran. Los administradores con control sobre las estaciones de trabajo de los usuarios están separados de los que controlan aplicaciones o administran identidades de empresa. Obtenga información sobre este modelo en [Securing privileged access reference material (Protección del material de referencia de acceso con privilegios)](http://aka.ms/tiermodel).
 
-<a id="restricting-credential-exposure-with-logon-restrictions" class="xliff"></a>
 ## Restricción de la exposición de las credenciales con restricciones de inicio de sesión
+<a id="restricting-credential-exposure-with-logon-restrictions" class="xliff"></a>
 
 La disminución del riesgo de robo de credenciales de las cuentas administrativas generalmente exige reformular los procedimientos administrativos para limitar la exposición a los atacantes. Como primer paso, se recomienda que las organizaciones:
 
@@ -64,4 +61,3 @@ Las restricciones de inicio de sesión se pueden aplicar con lo siguiente:
 - Autenticación selectiva, si la cuenta está en un bosque administrativo dedicado.
 
 En el siguiente artículo, [Planificación de un entorno bastión](planning-bastion-environment.md), se explica cómo agregar un bosque administrativo dedicado para que Microsoft Identity Manager establezca las cuentas administrativas.
-

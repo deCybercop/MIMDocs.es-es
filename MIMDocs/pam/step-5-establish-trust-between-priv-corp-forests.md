@@ -12,17 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 1239ca2c0c6d376420723da01d7aa42821f5980f
-ms.contentlocale: es-es
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="step-5--establish-trust-between-priv-and-corp-forests" class="xliff"></a>
 # Paso 5: Establecer la confianza entre bosques PRIV y CORP
+<a id="step-5--establish-trust-between-priv-and-corp-forests" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Paso 4](step-4-install-mim-components-on-pam-server.md)
@@ -31,8 +28,8 @@ ms.lasthandoff: 07/10/2017
 
 En cada dominio CORP, como contoso.local, los controladores de dominio CONTOSO y PRIV deben estar enlazados mediante una relación de confianza. Esto permite a los usuarios del dominio PRIV acceder a los recursos del dominio CORP.
 
-<a id="connect-each-domain-controller-to-its-counterpart" class="xliff"></a>
 ## Conexión de cada controlador de dominio a su equivalente
+<a id="connect-each-domain-controller-to-its-counterpart" class="xliff"></a>
 
 Antes de establecer la confianza, cada controlador de dominio debe configurarse para la resolución de nombres DNS de su equivalente, en función de la dirección IP del otro controlador de dominio o servidor DNS.
 
@@ -50,8 +47,8 @@ Antes de establecer la confianza, cada controlador de dominio debe configurarse 
 
     ![Captura de pantalla de estructura de archivo de clave priv](./media/PAM_GS_DNS_Manager.png)
 
-<a id="establish-trust-on-pamsrv" class="xliff"></a>
 ## Establecimiento de la confianza en PAMSRV
+<a id="establish-trust-on-pamsrv" class="xliff"></a>
 
 En PAMSRV, establezca confianza unidireccional con cada dominio como CORPDC para que los controladores de dominio CORP confíen en el bosque PRIV.
 
@@ -73,8 +70,8 @@ En PAMSRV, establezca confianza unidireccional con cada dominio como CORPDC para
     New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials $ca
     ```
 
-<a id="give-forests-read-access-to-active-directory" class="xliff"></a>
 ## Concesión de acceso de lectura a los bosques en Active Directory
+<a id="give-forests-read-access-to-active-directory" class="xliff"></a>
 
 En cada bosque existente, habilite el acceso de lectura a AD para los administradores de PRIV y el servicio de supervisión.
 
@@ -97,8 +94,8 @@ En cada bosque existente, habilite el acceso de lectura a AD para los administra
 
     La salida también debe indicar **No está habilitado el filtrado por SID para esta confianza**. Consulte [Disable SID filter quarantining (Deshabilitar la cuarentena del filtrado por SID)](http://technet.microsoft.com/library/cc772816.aspx) para obtener más información.
 
-<a id="start-the-monitoring-and-component-services" class="xliff"></a>
 ## Inicio de los servicios de supervisión y de componentes
+<a id="start-the-monitoring-and-component-services" class="xliff"></a>
 
 1.  Inicie sesión como administrador de dominio PRIV (PRIV\Administrador) en PAMSRV.
 
@@ -116,4 +113,3 @@ En el paso siguiente se moverá un grupo a PAM.
 >[!div class="step-by-step"]
 [« Paso 4](step-4-install-mim-components-on-pam-server.md)
 [Paso 6 »](step-6-transition-group-to-pam.md)
-

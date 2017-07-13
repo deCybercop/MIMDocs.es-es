@@ -12,18 +12,18 @@ ms.technology: security
 ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
-ms.openlocfilehash: 23cfb1134d1cbf2cf838354cb7d915084803cd41
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 274039a6866c5c0fda807e4326220ecf785ca3bb
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="create-software-certificates-with-certificate-manager"></a>Creación de certificados de software con el Administrador de certificados
+# Creación de certificados de software con el Administrador de certificados
+<a id="create-software-certificates-with-certificate-manager" class="xliff"></a>
 Para inscribir y renovar certificados de software no necesita ser un administrador ni tener una tarjeta inteligente virtual. Debe saber que en algún momento se le pedirá que permita una operación de certificado, algo que es normal.
 
-## <a name="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager"></a>Creación de un plantilla de perfil de certificado de software en el Administrador de certificados de MIM 2016
+## Creación de un plantilla de perfil de certificado de software en el Administrador de certificados de MIM 2016
+<a id="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager" class="xliff"></a>
 
 1.  Cree una plantilla para el certificado que solicitará para la tarjeta inteligente virtual. Abra MMC.
 
@@ -39,7 +39,7 @@ Para inscribir y renovar certificados de software no necesita ser un administrad
 
     1.  En la pestaña **General** , en el campo de nombre de pantalla, escriba **Plantilla de certificado archivado**.
 
-    2.  b.    En la pestaña **Tratamiento de la solicitud** ,
+    2.  b.  En la pestaña **Tratamiento de la solicitud** ,
 
         1.  Establezca **Propósito** como Firma y cifrado.
 
@@ -73,7 +73,8 @@ Para inscribir y renovar certificados de software no necesita ser un administrad
 
     10. En la lista, seleccione la plantilla que acaba de crear (**Plantilla de certificado archivado**) y, a continuación, haga clic en **Aceptar**.
 
-## <a name="create-the-profile-template"></a>Crear la plantilla de perfil
+## Crear la plantilla de perfil
+<a id="create-the-profile-template" class="xliff"></a>
 
 1.  Inicie sesión en el portal de CM como usuario con privilegios administrativos.
 
@@ -96,4 +97,3 @@ Para inscribir y renovar certificados de software no necesita ser un administrad
 10. Si desea volver a emitir los certificados archivados, active las casillas a la izquierda de **Volver a emitir certificados archivados** y haga clic en **Aceptar**.
 
 11. Si usa el CM de tarjeta inteligente virtual, debe deshabilitar los elementos de recopilación de datos porque no funciona con la recopilación de datos activada. Deshabilite los elementos de recopilación de datos de cada una de las directivas haciendo clic en la directiva en el panel izquierdo, marcando después la casilla situada junto a **Elemento de datos de ejemplo** y haciendo clic después en **Eliminar elementos de recopilación de datos**. A continuación, haga clic en **Aceptar**.
-

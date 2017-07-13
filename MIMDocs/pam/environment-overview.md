@@ -12,17 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 3e6c5a70c6b9ed140a56135676bbd14a84504317
-ms.contentlocale: es-es
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="environment-overview" class="xliff"></a>
 # Introducción al entorno
+<a id="environment-overview" class="xliff"></a>
 
 Privileged Access Management funciona con máquinas virtuales (VM) con unidades independientes que están conectadas entre sí en una red compartida. Estas máquinas virtuales pueden hospedarse en Windows 8.1, Windows Server 2012 R2 o en otras plataformas de sistema operativo.
 
@@ -34,4 +31,3 @@ Las unidades donde se almacenarán las imágenes de disco de máquina virtual ne
 
 > [!NOTE]
 > La vista previa técnica del cliente (CTP) de MIM actual no es compatible con el contenido del directorio o la base de datos de la CTP anterior. Si ha estado evaluando previamente MIM para PAM u otros escenarios, cree una copia de seguridad y archive las máquinas virtuales que use para esa prueba e inicie la implementación con imágenes de máquinas virtuales nuevas que no se hayan usado previamente para escenarios MIM.
-

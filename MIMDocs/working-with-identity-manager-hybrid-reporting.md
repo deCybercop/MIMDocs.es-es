@@ -12,18 +12,17 @@ ms.technology: security
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
 ms.openlocfilehash: df842309034ad68151dd8cc4151507e7ece6626d
-ms.contentlocale: es-es
-ms.lasthandoff: 05/02/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/13/2017
 ---
+# Trabajar con la creación de informes híbrida de Identity Manager: versión preliminar pública (actualización)
+<a id="working-with-identity-manager-hybrid-reporting---public-preview-refresh" class="xliff"></a>
 
-# <a name="working-with-identity-manager-hybrid-reporting---public-preview-refresh"></a>Trabajar con la creación de informes híbrida de Identity Manager: versión preliminar pública (actualización)
-
-## <a name="available-hybrid-reports"></a>Informes híbridos disponibles
+## Informes híbridos disponibles
+<a id="available-hybrid-reports" class="xliff"></a>
 Los tres primeros informes de Microsoft Identity Manager (MIM) disponibles en Azure AD son **Actividad de restablecimiento de contraseña**, **Registro para el restablecimiento de contraseña** y **Actividad de los grupos de autoservicio**.
 
 -   El informe de Actividad de restablecimiento de contraseña muestra cada instancia en la que un usuario restableció la contraseña mediante el autoservicio de restablecimiento de contraseña (SSPR) y proporciona las puertas o **Métodos** usados para la autenticación.
@@ -40,7 +39,8 @@ Los tres primeros informes de Microsoft Identity Manager (MIM) disponibles en Az
 > Se debe desinstalar el agente híbrido anterior</br>
 > Si quiere desinstalar los informes híbridos, desinstale el agente MIMreportingAgent.msi.
 
-## <a name="prerequisites"></a>Requisitos previos
+## Requisitos previos
+<a id="prerequisites" class="xliff"></a>
 
 1.  Instale el servicio de Microsoft Identity Manager 2016 RTM o SP1 MIM.
 
@@ -48,7 +48,8 @@ Los tres primeros informes de Microsoft Identity Manager (MIM) disponibles en Az
 
 3.  Asegúrese de tener conectividad a Internet saliente desde el servidor de Microsoft Identity Manager hasta Azure.
 
-## <a name="requirements"></a>Requisitos
+## Requisitos
+<a id="requirements" class="xliff"></a>
 En la tabla siguiente se muestra una lista de los requisitos para usar la creación de informes híbrida de Microsoft Identity Manager.
 
 | Requisito | Descripción |
@@ -63,7 +64,8 @@ En la tabla siguiente se muestra una lista de los requisitos para usar la creaci
 | Admitir los siguientes sitios web si la seguridad mejorada de Internet Explorer está habilitada |Si la seguridad mejorada de IE está habilitada, los siguientes sitios web deben permitirse en el servidor donde se va a instalar el agente.</br></br><li>https://login.microsoftonline.com</li><li>https://secure.aadcdn.microsoftonline-p.com</li><li>https://login.windows.net</li><li>El servidor de federación de su organización de confianza para Azure Active Directory. Por ejemplo: https://sts.contoso.com</li> |
 </BR>
 
-## <a name="install-microsoft-identity-manager-reporting-agent-in-azure-ad"></a>Instalación del agente de informes de Microsoft Identity Manager en Azure AD
+## Instalación del agente de informes de Microsoft Identity Manager en Azure AD
+<a id="install-microsoft-identity-manager-reporting-agent-in-azure-ad" class="xliff"></a>
 Una vez que se ha instalado el agente de informes, los datos de actividad de Microsoft Identity Manager se exportan de MIM al registro de eventos de Windows. El agente de informes de MIM procesa los eventos y los carga en Azure. En Azure los eventos se analizan, descifran y filtran para los informes requeridos.
 
 1.  Instale Microsoft Identity Manager 2016.
@@ -90,7 +92,8 @@ Una vez que se ha instalado el agente de informes, los datos de actividad de Mic
 
     Puede crear datos de informes mediante el Portal de autoservicio de restablecimiento de contraseña de Microsoft Identity Manager para restablecer la contraseña de un usuario. Asegúrese de que el restablecimiento de la contraseña se completó correctamente y compruebe después que los datos se muestran en el portal de administración de Azure AD.
 
-## <a name="view-hybrid-reports-in-the-azure-portal"></a>Vista de informes híbridos en Azure Portal
+## Vista de informes híbridos en Azure Portal
+<a id="view-hybrid-reports-in-the-azure-portal" class="xliff"></a>
 
 1.  Inicie sesión en [Azure Portal](https://portal.azure.com/) con su cuenta de administrador global del inquilino.
 
@@ -105,14 +108,15 @@ Una vez que se ha instalado el agente de informes, los datos de actividad de Mic
 > [!WARNING]
 > Puede que tarden un poco en mostrarse los datos de auditoría de Microsoft Identity Manager en Azure Portal.
 
-## <a name="stop-creating-hybrid-reports"></a>Detención de la creación de informes híbridos
+## Detención de la creación de informes híbridos
+<a id="stop-creating-hybrid-reports" class="xliff"></a>
 Si quiere que se dejen de cargar datos de auditoría de informes de Microsoft Identity Manager en Azure Active Directory, desinstale el agente de informes híbridos. Mediante la herramienta **Agregar o quitar programas**, desinstale la herramienta de creación de informes híbridos de Microsoft Identity Manager.
 
-## <a name="windows-events-used-for-hybrid-reporting"></a>Eventos de Windows empleados para la creación de informes híbridos
+## Eventos de Windows empleados para la creación de informes híbridos
+<a id="windows-events-used-for-hybrid-reporting" class="xliff"></a>
 Los eventos generados por Microsoft Identity Manager se guardan en el registro de eventos de Windows y pueden verse en el Visor de eventos, en Registros de aplicaciones y servicios-&gt; **Registro de solicitudes de Identity Manager**. Cada solicitud de MIM se exporta como un evento en el Registro de eventos de Windows en la estructura de JSON. Esto se puede exportar a su SIEM.
 
 |Tipo de evento|ID|Detalles del evento|
 |--------------|------|-----------------|
 |Información de|4121|Datos de evento de MIM que incluyen todos los datos de solicitud.|
 |Información de|4137|Extensión 4121 de evento de MIM, en caso de que haya demasiados datos para un evento único. El encabezado de este evento tiene la siguiente forma: `"Request: <GUID> , message <xxx> out of <xxx>`|
-

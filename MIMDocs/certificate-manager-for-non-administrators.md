@@ -12,18 +12,18 @@ ms.technology: security
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
-ms.openlocfilehash: 89e095cff66984140cdcef3617dd0ccc3d3714d8
-ms.lasthandoff: 02/07/2017
-
-
+ms.openlocfilehash: f8de75a0027371b7ff88b90d3097adc63c02d933
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="enroll-smart-cards-for-non-administrators"></a>Inscripción de tarjetas inteligentes para usuarios que no son administradores
+# Inscripción de tarjetas inteligentes para usuarios que no son administradores
+<a id="enroll-smart-cards-for-non-administrators" class="xliff"></a>
 Si un usuario no es un administrador local en su equipo, no podrá inscribir una tarjeta inteligente en sus propios equipos de manera predeterminada. El siguiente procedimiento permite evitar esta limitación.
 
-## <a name="enabling-smart-card-renewal-for-non-admins-in-mim-2016-certificate-manager"></a>Habilitar la renovación de tarjetas inteligentes para usuarios que no son administradores en el Administrador de certificados de MIM 2016
+## Habilitar la renovación de tarjetas inteligentes para usuarios que no son administradores en el Administrador de certificados de MIM 2016
+<a id="enabling-smart-card-renewal-for-non-admins-in-mim-2016-certificate-manager" class="xliff"></a>
 
 1.  **Desempaquetar el archivo appx**
 
@@ -94,4 +94,3 @@ Si un usuario no es un administrador local en su equipo, no podrá inscribir una
 7.  **Instale la aplicación CM en la cuenta sin derechos administrativos**
 
 8.  **Inicie la aplicación CM e inscriba una tarjeta inteligente virtual**
-

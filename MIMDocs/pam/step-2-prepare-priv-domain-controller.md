@@ -12,17 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: edc15b41d4248887f4a93217f68d8125f6500585
-ms.contentlocale: es-es
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="step-2---prepare-the-first-priv-domain-controller" class="xliff"></a>
 # Paso 2: preparar el controlador de dominio PRIV
+<a id="step-2---prepare-the-first-priv-domain-controller" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Paso 1](step-1-prepare-corp-domain.md)
@@ -30,13 +27,13 @@ ms.lasthandoff: 07/10/2017
 
 En este paso se creará un nuevo dominio que proporcionará el entorno bastión para la autenticación de administrador.  Este bosque necesitará al menos un controlador de dominio y como mínimo un servidor miembro. El servidor miembro se configurará en el paso siguiente.
 
-<a id="create-a-new-privileged-access-management-domain-controller" class="xliff"></a>
 ## Creación de un nuevo controlador de dominio de Privileged Access Management
+<a id="create-a-new-privileged-access-management-domain-controller" class="xliff"></a>
 
 En esta sección se configurará una máquina virtual para que actúe como controlador de dominio de un bosque nuevo
 
-<a id="install-windows-server-2012-r2" class="xliff"></a>
 ### Instalación de Windows Server 2012 R2
+<a id="install-windows-server-2012-r2" class="xliff"></a>
 En otra máquina virtual nueva sin software instalado, instale Windows Server 2012 R2 para crear un equipo "PRIVDC".
 
 1. Seleccione la opción de instalación personalizada (y no la de actualización) de Windows Server. Cuando realice la instalación, especifique **Windows Server 2012 R2 Standard (servidor con una GUI) x64**; _no seleccione_ **Data Center ni Server Core**.
@@ -49,8 +46,8 @@ En otra máquina virtual nueva sin software instalado, instale Windows Server 20
 
 5. Una vez reiniciado el servidor, inicie sesión como administrador. Mediante el Panel de control, configure el equipo para que compruebe si hay actualizaciones y para que instale todas las actualizaciones necesarias. Esto podría precisar el reinicio del servidor.
 
-<a id="add-roles" class="xliff"></a>
 ### Incorporación de roles
+<a id="add-roles" class="xliff"></a>
 Agregue los roles Servicios de dominio de Active Directory (AD DS) y Servidor DNS.
 
 1. Inicie PowerShell como administrador.
@@ -63,8 +60,8 @@ Agregue los roles Servicios de dominio de Active Directory (AD DS) y Servidor DN
   Install-WindowsFeature AD-Domain-Services,DNS –restart –IncludeAllSubFeature -IncludeManagementTools
   ```
 
-<a id="configure-registry-settings-for-sid-history-migration" class="xliff"></a>
 ### Configuración de los valores del Registro para la migración del historial de SID
+<a id="configure-registry-settings-for-sid-history-migration" class="xliff"></a>
 
 Inicie PowerShell y escriba el siguiente comando para configurar el dominio de origen de modo que permita el acceso de llamada a procedimiento remoto (RPC) a la base de datos del administrador de cuentas de seguridad (SAM).
 
@@ -72,15 +69,15 @@ Inicie PowerShell y escriba el siguiente comando para configurar el dominio de o
 New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
 ```
 
-<a id="create-a-new-privileged-access-management-forest" class="xliff"></a>
 ## Creación de un nuevo bosque de Privileged Access Management
+<a id="create-a-new-privileged-access-management-forest" class="xliff"></a>
 
 A continuación, promueva el servidor a controlador de dominio de un bosque nuevo.
 
 En este documento, el nombre priv.contoso.local se usa como nombre de dominio del nuevo bosque.  El nombre del bosque no es crítico y no es necesario que esté subordinado a un nombre de bosque existente en la organización. Sin embargo, los nombres de NetBIOS y de dominio del bosque nuevo deben ser únicos y diferentes a los de cualquier otro dominio existente en la organización.  
 
-<a id="create-a-domain-and-forest" class="xliff"></a>
 ### Creación de un dominio y un bosque
+<a id="create-a-domain-and-forest" class="xliff"></a>
 
 1. En una ventana de PowerShell, escriba los siguientes comandos para crear el nuevo dominio.  Así también se creará una delegación DNS en un dominio superior (contoso.local) que se creó en un paso anterior.  Si piensa configurar DNS más tarde, omita los parámetros `CreateDNSDelegation -DNSDelegationCredential $ca`.
 
@@ -96,8 +93,8 @@ En este documento, el nombre priv.contoso.local se usa como nombre de dominio de
 
 Cuando se haya terminado de crear el bosque, el servidor se reiniciará automáticamente.
 
-<a id="create-user-and-service-accounts" class="xliff"></a>
 ### Creación de cuentas de usuario y servicio
+<a id="create-user-and-service-accounts" class="xliff"></a>
 Cree las cuentas de usuario y servicio para la instalación del servicio y el portal MIM. Estas cuentas se ubicarán en el contenedor Usuarios del dominio priv.contoso.local.
 
 1. Después del reinicio del servidor, inicie sesión en PRIVDC como administrador del dominio (PRIV\\Administrador).
@@ -168,8 +165,8 @@ Cree las cuentas de usuario y servicio para la instalación del servicio y el po
   Add-ADGroupMember "Domain Admins" MIMService
   ```
 
-<a id="configure-auditing-and-logon-rights" class="xliff"></a>
 ### Configuración de los derechos de auditoría e inicio de sesión
+<a id="configure-auditing-and-logon-rights" class="xliff"></a>
 
 Debe configurar la auditoría para que la configuración PAM se establezca en los bosques.  
 
@@ -218,8 +215,8 @@ Debe configurar la auditoría para que la configuración PAM se establezca en lo
   Transcurrido un minuto, se completará y se mostrará el mensaje "La actualización de la directiva de equipo se completó correctamente".
 
 
-<a id="configure-dns-name-forwarding-on-privdc" class="xliff"></a>
 ### Configuración del reenvío de nombres DNS
+<a id="configure-dns-name-forwarding-on-privdc" class="xliff"></a>
 
 Cuando use PowerShell en PRIVDC, configure el reenvío de nombres DNS para que el dominio PRIV reconozca otros bosques existentes.
 
@@ -236,8 +233,8 @@ Cuando use PowerShell en PRIVDC, configure el reenvío de nombres DNS para que e
 > [!NOTE]
 > Los otros bosques también deben ser capaces de enrutar consultas DNS del bosque PRIV a este controlador de dominio.  Si tiene varios bosques de Active Directory existentes, también debe agregar un reenviador condicional DNS a cada uno de esos bosques.
 
-<a id="configure-kerberos" class="xliff"></a>
 ### Configuración de Kerberos
+<a id="configure-kerberos" class="xliff"></a>
 
 1. Cuando use PowerShell, agregue SPN para que SharePoint, la API de REST de PAM y el servicio MIM puedan usar autenticación Kerberos.
 
@@ -251,8 +248,8 @@ Cuando use PowerShell en PRIVDC, configure el reenvío de nombres DNS para que e
 > [!NOTE]
 > En los pasos siguientes de este documento se explica cómo instalar componentes de servidor de MIM 2016 en un único equipo. Si planea agregar otro servidor para lograr una alta disponibilidad, necesitará configuración adicional de Kerberos, como se describe en [FIM 2010: Kerberos Authentication Setup (FIM 2010: configuración de autenticación de Kerberos)](http://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx).
 
-<a id="configure-delegation-to-give-mim-service-accounts-access" class="xliff"></a>
 ### Configuración de la delegación para conceder acceso a las cuentas de servicio de MIM
+<a id="configure-delegation-to-give-mim-service-accounts-access" class="xliff"></a>
 
 Realice los pasos siguientes en PRIVDC como administrador de dominio.
 
@@ -295,13 +292,13 @@ Realice los pasos siguientes en PRIVDC como administrador de dominio.
   ```
 20. Reinicie el servidor PRIVDC para que se apliquen los cambios.
 
-<a id="prepare-a-priv-workstation" class="xliff"></a>
 ## Preparación de una estación de trabajo PRIV
+<a id="prepare-a-priv-workstation" class="xliff"></a>
 
 Si aún no dispone de un equipo de estación de trabajo que se vaya a unir al dominio PRIV para realizar el mantenimiento de los recursos PRIV (como MIM), siga estas instrucciones para preparar una estación de trabajo.  
 
-<a id="install-windows-81-or-windows-10-enterprise" class="xliff"></a>
 ### Instalación de Windows 8.1 o Windows 10 Enterprise
+<a id="install-windows-81-or-windows-10-enterprise" class="xliff"></a>
 
 En otra máquina virtual nueva sin software instalado, instale Windows 8.1 Enterprise o Windows 10 Enterprise para crear un equipo *"PRIVWKSTN"*.
 
@@ -320,4 +317,3 @@ En el siguiente paso se preparará un servidor PAM.
 >[!div class="step-by-step"]
 [« Paso 1](step-1-prepare-corp-domain.md)
 [Paso 3 »](step-3-prepare-pam-server.md)
-
