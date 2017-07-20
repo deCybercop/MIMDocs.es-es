@@ -5,21 +5,20 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 01/10/2017
+ms.date: 07/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: 12c60e12dc5662ff0313e21bb9180b3709969af6
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: ae8f6a87f57c95e073b40d3cda944c71f1bf7247
+ms.sourcegitcommit: 0cb8269f07a5f419d2d1cd760d9cc78b8a1c8aa9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/14/2017
 ---
-# Scripts de implementación de MIM2016 SP1 PAM
-<a id="mim2016-sp1-pam-deployment-scripts" class="xliff"></a>
+# <a name="mim2016-sp1-pam-deployment-scripts"></a>Scripts de implementación de MIM2016 SP1 PAM
 
 En este Service Pack estamos introduciendo un conjunto de scripts de implementación para facilitar la implementación de PAM. Estos scripts están disponibles en el centro de descarga. Antes de intentar utilizar los scripts es importante que se asegure de que las suposiciones siguientes se aplican a su entorno.
 
@@ -31,6 +30,6 @@ Suposiciones importantes:
 5. Para la opción de validación, se asume que existe una máquina cliente dedicada para ejecutar este paso.
 
 >[!NOTE]
->Si surge cualquier problema con la ejecución del script, debe echar un vistazo a los registros. Todos los registros de scripts se guardan en % AppData%\MIMPAMInstall. Comprima la carpeta en un archivo zip y envíela por correo electrónico a mim2016@microsoft.com junto con los detalles de la operación y el error.
+>Si surge cualquier problema con la ejecución del script, debe echar un vistazo a los registros. Todos los registros de scripts se guardan en % AppData%\MIMPAMInstall. Comprima la carpeta en un archivo ZIP, e inclúyela, junto con los detalles de la operación y el error, en su incidencia.
 
 ¿Está listo para empezar a trabajar con scripts de implementación de PAM? Empiece en [Configurar PAM mediante scripts](./pam/sp1-pam-configure-using-scripts.md).
