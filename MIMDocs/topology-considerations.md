@@ -5,29 +5,31 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 03/21/2017
+ms.date: 07/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: f7e4dc737444df70de3a8a78eb518e9e6f26aadc
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 1695cc2df766df3c38a0e1393f6f974102f9fd36
+ms.sourcegitcommit: 0cb8269f07a5f419d2d1cd760d9cc78b8a1c8aa9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/14/2017
 ---
-# Consideraciones relativas a la topología
-<a id="topology-considerations" class="xliff"></a>
+# <a name="topology-considerations"></a>Consideraciones relativas a la topología
 Puede implementar los componentes de Microsoft Identity Manager (MIM) en el mismo servidor o entre varios servidores en diversas configuraciones. La topología que seleccione para la implementación afecta al rendimiento que se puede lograr de MIM. Este artículo presenta varias topologías de implementación que puede utilizar.
 
-## Componentes de MIM
-<a id="mim-components" class="xliff"></a>
+
+>[!NOTE]
+Estas opciones son aplicables a las implementaciones que usan exclusivamente la sincronización de MIM, el servicio MIM y el portal de MIM para la administración de identidades.  Las implementaciones que usan MIM CM, el conjunto de aplicaciones BHOLD de MIM o Privileged Access Management tienen otras opciones de implementación.
+
+
+## <a name="mim-components"></a>Componentes de MIM
 Al diseñar la topología de implementación, es importante saber lo que hace y cómo interactúa cada componente.
 
-- **Portal de MIM**: una interfaz para los restablecimientos de contraseña, la administración de grupos y las operaciones administrativas.
-<a id="mim-portal---an-interface-for-password-resets-group-management-and-administrative-operations" class="xliff"></a>
+- <a name="mim-portal---an-interface-for-password-resets-group-management-and-administrative-operations"></a>**Portal de MIM**: una interfaz para los restablecimientos de contraseña, la administración de grupos y las operaciones administrativas.
     -
 - **Servicio MIM**: un servicio web que implementa la funcionalidad de administración de identidades de MIM 2016.
 - **Servicio de sincronización de MIM**: sincroniza los datos con otros sistemas de identidad.
@@ -43,8 +45,7 @@ La siguiente tabla muestra las opciones para hospedar cada uno de los componente
 | Clúster de servidores | | | | Sí |
 
 
-## Topología de varios niveles
-<a id="multitier-topology" class="xliff"></a>
+## <a name="multitier-topology"></a>Topología de varios niveles
 La topología de varios niveles es la más utilizada. Ofrece la máxima flexibilidad. El portal de MIM, el servicio MIM y las bases de datos se dividen en niveles y se implementan en varios equipos. Esta topología aporta flexibilidad a la escalabilidad de los diferentes componentes de MIM. Por ejemplo, puede escalar el portal de MIM en horizontal agregando servidores adicionales en un clúster de equilibrio de carga de red (NLB). Del mismo modo, puede escalar el servicio MIM mediante un clúster NLB y aumentando el número de equipos (nodos) del clúster según corresponda.
 
 En la topología de varios niveles, se asigna un equipo dedicado para hospedar cada base de datos SQL (uno para el servicio MIM y otro para el servicio de sincronización de MIM). La escalabilidad del rendimiento de los equipos que hospedan las bases de datos SQL puede aumentarse agregando hardware o actualizándolo; por ejemplo, mediante la actualización de las CPU, la adición de CPU adicionales, el aumento de la capacidad de la memoria de acceso aleatorio (RAM) o la actualización de esta, o bien la actualización de las configuraciones de disco duro para incrementar el acceso de lectura y escritura y reducir la latencia.
@@ -54,8 +55,7 @@ En la topología de varios niveles, se asigna un equipo dedicado para hospedar c
 En esta configuración, el servicio de sincronización de MIM y su base de datos se hospedan en el mismo equipo. Sin embargo, debería poder lograr un rendimiento similar si existe una conexión de red dedicada de un gigabit entre el servicio de sincronización de MIM y su base de datos cuando se hospedan en equipos distintos.
 
 
-## Topología de varios niveles con diversos servicios MIM
-<a id="multitier-topology-with-multiple-mim-services" class="xliff"></a>
+## <a name="multitier-topology-with-multiple-mim-services"></a>Topología de varios niveles con diversos servicios MIM
 Sincronizar datos con sistemas externos puede llevar mucho tiempo y agregar una carga considerable para el sistema durante ese período. Si la configuración de sincronización deriva en la activación de directivas con flujos de trabajo, estas se disputarán los recursos con los flujos de trabajo de usuario final. Estos problemas pueden agravarse con flujos de trabajo de autenticación, como el restablecimiento de contraseñas, que se realizan en tiempo real mientras un usuario final espera a que finalice el proceso. Si proporciona una instancia del servicio MIM para operaciones de usuario final y un portal independiente para la sincronización de datos administrativos, podrá obtener una mejor capacidad de respuesta en las operaciones de usuario final.
 
 ![Diagrama de topología de varios niveles de diversos servicios MIM](media/MIM-topo-multitier-multiservice.png)
@@ -64,6 +64,5 @@ Igual que con la topología estándar de varios niveles, puede aumentar el rendi
 
 Los equipos en los que se ejecuta SQL Server y que hospedan MIM Synchronization Service y la base de datos del Servicio MIM influirán drásticamente en el rendimiento general de la implementación de MIM. Por lo tanto, siga las recomendaciones de la documentación de SQL Server para optimizar el rendimiento de la base de datos. Para obtener más información, consulte los siguientes documentos:
 
-## Consulte también
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Consulte también
 - Puede descargar el documento [Forefront Identity Manager (FIM) 2010 Capactity Planning Guide](http://go.microsoft.com/fwlink/?LinkId=200180) (Guía de planeación de la capacidad de Forefront Identity Manager 2010 [FIM]); en él se ofrecen más detalles sobre la compilación de prueba y los resultados de pruebas de rendimiento.
