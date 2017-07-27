@@ -18,12 +18,10 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 07/13/2017
 ---
-# Informes de auditoría de administración de identidades híbridas de Azure Active Directory: versión preliminar pública (actualización)
-<a id="hybrid-identity-management-audit-reports-in-azure-active-directory---public-previewrefresh" class="xliff"></a>
+# <a name="hybrid-identity-management-audit-reports-in-azure-active-directory---public-previewrefresh"></a>Informes de auditoría de administración de identidades híbridas de Azure Active Directory: versión preliminar pública (actualización)
 Con los informes de actividad de auditoría de Azure Active Directory (AD), puede ver un único informe para supervisar la actividad de administración de identidades que ocurre en el entorno local o en la nube. Esta característica le permite administrar todos los datos de identidad y acceso en un solo lugar, lo que ahorra tiempo y reduce los costos generales.
 
-## ¿Qué es la generación de informes híbridos de Azure Active Directory?
-<a id="what-is-azure-active-directory-hybrid-reporting" class="xliff"></a>
+## <a name="what-is-azure-active-directory-hybrid-reporting"></a>¿Qué es la generación de informes híbridos de Azure Active Directory?
 La generación de informes de auditoría híbridos ayuda a los profesionales de TI a hacer frente a desafíos comunes de los informes de administración de identidades.
 
 1. **Recopilar actividades de administración de identidades entre diferentes sistemas** Los informes híbridos le muestran la actividad de administración de identidades de Azure AD y de Identity Manager.
@@ -32,8 +30,7 @@ La generación de informes de auditoría híbridos ayuda a los profesionales de 
 
 3. **Reducir el costo de infraestructura del sistema de informes** Con la creación de informes híbridos en la nube, puede eliminar la infraestructura local de almacenamiento de datos de informes.
 
-## ¿Cómo funciona?
-<a id="how-does-it-work" class="xliff"></a>
+## <a name="how-does-it-work"></a>¿Cómo funciona?
 
 Para recopilar los datos locales, instale primero un agente de informes en el servidor de Identity Manager 2016. El agente de informes se descarga desde la página de descarga de Microsoft, a la que puede acceder desde [aquí](https://www.microsoft.com/en-us/download/details.aspx?id=55112).
 
@@ -44,7 +41,6 @@ El proceso de creación de informes híbridos sigue estos pasos:
 4. Los datos de actividad se almacenan en Azure durante un mes.
 5. Azure Portal recupera los datos de informes de auditoría y los representa como la auditoría en la hoja Informes de auditoría de Azure.
 
-## Consulte también
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Consulte también
 - Obtenga más información sobre [Working with Identity Manager Hybrid Reporting](working-with-identity-manager-hybrid-reporting.md) (Trabajar con la creación de informes híbridos de Identity Manager)
 - Obtenga más información sobre [Informes de actividad de auditoría en el portal de Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-activity-audit-logs)

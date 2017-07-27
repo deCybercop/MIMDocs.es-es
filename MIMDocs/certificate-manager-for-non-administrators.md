@@ -18,12 +18,10 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 07/13/2017
 ---
-# Inscripción de tarjetas inteligentes para usuarios que no son administradores
-<a id="enroll-smart-cards-for-non-administrators" class="xliff"></a>
+# <a name="enroll-smart-cards-for-non-administrators"></a>Inscripción de tarjetas inteligentes para usuarios que no son administradores
 Si un usuario no es un administrador local en su equipo, no podrá inscribir una tarjeta inteligente en sus propios equipos de manera predeterminada. El siguiente procedimiento permite evitar esta limitación.
 
-## Habilitar la renovación de tarjetas inteligentes para usuarios que no son administradores en el Administrador de certificados de MIM 2016
-<a id="enabling-smart-card-renewal-for-non-admins-in-mim-2016-certificate-manager" class="xliff"></a>
+## <a name="enabling-smart-card-renewal-for-non-admins-in-mim-2016-certificate-manager"></a>Habilitar la renovación de tarjetas inteligentes para usuarios que no son administradores en el Administrador de certificados de MIM 2016
 
 1.  **Desempaquetar el archivo appx**
 

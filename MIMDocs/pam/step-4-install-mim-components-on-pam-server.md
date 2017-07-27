@@ -19,8 +19,7 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 07/13/2017
 ---
-# Paso 4: Instalar componentes de MIM en un servidor y estación de trabajo PAM
-<a id="step-4--install-mim-components-on-pam-server-and-workstation" class="xliff"></a>
+# <a name="step-4--install-mim-components-on-pam-server-and-workstation"></a>Paso 4: Instalar componentes de MIM en un servidor y estación de trabajo PAM
 
 >[!div class="step-by-step"]
 [« Paso 3](step-3-prepare-pam-server.md)
@@ -34,8 +33,7 @@ En PAMSRV, inicie sesión como PRIV\Administrador para poder instalar el servici
 
 Si ha descargado MIM, descomprima el archivo de instalación de MIM en una carpeta nueva.
 
-##  Ejecute el programa de instalación del servicio y portal de MIM.
-<a id="run-the-service-and-portal-install-program" class="xliff"></a>  
+##  <a name="run-the-service-and-portal-install-program"></a>Ejecute el programa de instalación del servicio y portal de MIM.  
 
 Siga las instrucciones del instalador y complete la instalación.
 
@@ -99,8 +97,7 @@ Siga las instrucciones del instalador y complete la instalación.
 
 Una vez finalizada la instalación, el servidor se reiniciará. Compruebe a continuación que el portal de MIM está activo y permite a los usuarios ver su propio recurso de objeto en MIM.
 
-## Configuración de las reglas de directivas de administración del portal MIM
-<a id="set-up-mim-portal-management-policy-rules" class="xliff"></a>
+## <a name="set-up-mim-portal-management-policy-rules"></a>Configuración de las reglas de directivas de administración del portal MIM
 
 1. Una vez reiniciado PAMSRV, inicie sesión como PRIV\Administrador.
 
@@ -116,8 +113,7 @@ Una vez finalizada la instalación, el servidor se reiniciará. Compruebe a cont
 
 7. Seleccione esta regla de directiva de administración, desactive **La directiva está deshabilitada**, haga clic en **Aceptar** y luego en **Enviar**.
 
-## Comprobación de las conexiones del firewall
-<a id="verify-the-firewall-connections" class="xliff"></a>
+## <a name="verify-the-firewall-connections"></a>Comprobación de las conexiones del firewall
 
 El firewall debería permitir las conexiones entrantes al puerto TCP 5725, 5726, 8086 y 8090.
 
@@ -134,8 +130,7 @@ El firewall debería permitir las conexiones entrantes al puerto TCP 5725, 5726,
 8.  Compruebe que haya una red activa con el nombre priv.contoso.local como y una red de dominios.  
 9. Cierre el **Panel de control**.
 
-## Configuración de la aplicación web de ejemplo
-<a id="set-up-the-sample-web-application" class="xliff"></a>
+## <a name="set-up-the-sample-web-application"></a>Configuración de la aplicación web de ejemplo
 
 En esta sección se instalará y configurará la aplicación web de ejemplo para la API de REST de MIM PAM.
 
@@ -171,8 +166,7 @@ En esta sección se instalará y configurará la aplicación web de ejemplo para
 
 7.  (Opcional) Compruebe que el usuario puede autenticarse en la API de REST. Abra un explorador web como administrador en PAMSRV.  Vaya a la dirección URL del sitio web http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/, autentíquese en caso necesario y asegúrese de que se produzca una descarga.
 
-## Instalación de los cmdlets de solicitante de MIM PAM
-<a id="install-the-mim-pam-requestor-cmdlets" class="xliff"></a>
+## <a name="install-the-mim-pam-requestor-cmdlets"></a>Instalación de los cmdlets de solicitante de MIM PAM
 
 Instale los cmdlets de solicitante de MIM PAM en la estación de trabajo configurada en el paso 1.
 

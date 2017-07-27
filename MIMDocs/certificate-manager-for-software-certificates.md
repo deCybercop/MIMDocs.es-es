@@ -18,12 +18,10 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 07/13/2017
 ---
-# Creación de certificados de software con el Administrador de certificados
-<a id="create-software-certificates-with-certificate-manager" class="xliff"></a>
+# <a name="create-software-certificates-with-certificate-manager"></a>Creación de certificados de software con el Administrador de certificados
 Para inscribir y renovar certificados de software no necesita ser un administrador ni tener una tarjeta inteligente virtual. Debe saber que en algún momento se le pedirá que permita una operación de certificado, algo que es normal.
 
-## Creación de un plantilla de perfil de certificado de software en el Administrador de certificados de MIM 2016
-<a id="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager" class="xliff"></a>
+## <a name="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager"></a>Creación de un plantilla de perfil de certificado de software en el Administrador de certificados de MIM 2016
 
 1.  Cree una plantilla para el certificado que solicitará para la tarjeta inteligente virtual. Abra MMC.
 
@@ -73,8 +71,7 @@ Para inscribir y renovar certificados de software no necesita ser un administrad
 
     10. En la lista, seleccione la plantilla que acaba de crear (**Plantilla de certificado archivado**) y, a continuación, haga clic en **Aceptar**.
 
-## Crear la plantilla de perfil
-<a id="create-the-profile-template" class="xliff"></a>
+## <a name="create-the-profile-template"></a>Crear la plantilla de perfil
 
 1.  Inicie sesión en el portal de CM como usuario con privilegios administrativos.
 

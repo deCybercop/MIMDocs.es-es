@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 07/13/2017
 ---
-# Paso 8: Comprobación de la implementación de PAM
-<a id="step-8-pam-deployment-verification" class="xliff"></a>
+# <a name="step-8-pam-deployment-verification"></a>Paso 8: Comprobación de la implementación de PAM
 
 >[!div class="step-by-step"]
 [«Paso 7](sp1-step7-setup-sidhistory-sidfiltering.md)

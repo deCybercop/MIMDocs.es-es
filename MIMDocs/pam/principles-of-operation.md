@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 07/13/2017
 ---
-# Descripción de los componentes de PAM
-<a id="understand-the-components-of-pam" class="xliff"></a>
+# <a name="understand-the-components-of-pam"></a>Descripción de los componentes de PAM
 
 Privileged Access Management mantiene el acceso administrativo independiente de las cuentas de usuario diarias. Esta solución se basa en bosques en paralelo:
 

@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 07/13/2017
 ---
-# Paso 1: Configuración del dominio de Priv
-<a id="step-1-configuring-the-priv-domain" class="xliff"></a>
+# <a name="step-1-configuring-the-priv-domain"></a>Paso 1: Configuración del dominio de Priv
 
 >[!div class="step-by-step"]
 [Paso 2 »](sp1-step2-configuring-corp-domain.md)

@@ -18,11 +18,9 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 07/13/2017
 ---
-# Implementación del servicio de notificación de cambio de contraseña de MIM en un controlador de dominio
-<a id="deploy-the-mim-password-change-notification-service-on-a-domain-controller" class="xliff"></a>
+# <a name="deploy-the-mim-password-change-notification-service-on-a-domain-controller"></a>Implementación del servicio de notificación de cambio de contraseña de MIM en un controlador de dominio
 
-## Instalación del servicio de notificación de cambio de contraseña
-<a id="install-the-password-change-notification-service" class="xliff"></a>
+## <a name="install-the-password-change-notification-service"></a>Instalación del servicio de notificación de cambio de contraseña
 El servicio de notificación de cambio de contraseña (PCNS) es un servicio que se instala en los controladores de dominio y permite que MIM sincronice las contraseñas con otros sistemas, como un servidor de directorio de otro proveedor. Para la sincronización de contraseña, instale PCNS en cada servidor de controlador de dominio.
 
 1.  Inicie sesión como administrador de dominio en un servidor que ejecute en Windows Server con el rol de Servicios de dominio de Active Directory.
@@ -57,6 +55,5 @@ El servicio de notificación de cambio de contraseña (PCNS) es un servicio que 
 
 14. Reinicie el equipo para que surtan efecto los cambios de configuración realizados en el servicio de notificación de cambio de contraseña de MIM. Puede hacer clic en **Sí** en la ventana emergente que aparece o puede reiniciar más tarde.
 
-## Configuración del servicio de notificación de cambio de contraseña
-<a id="configuring-the-password-change-notification-service" class="xliff"></a>
+## <a name="configuring-the-password-change-notification-service"></a>Configuración del servicio de notificación de cambio de contraseña
 Cuando vuelva a conectarse al servidor de controlador de dominio como administrador de dominio, vaya a *C:\Program Files\Microsoft Password Change Notification.* Ejecute *pcnscfg.exe*.

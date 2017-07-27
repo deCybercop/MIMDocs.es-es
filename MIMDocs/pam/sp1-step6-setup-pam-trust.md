@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 07/13/2017
 ---
-# Paso 6: Configurar la confianza de PAM
-<a id="step-6-set-up-the-pam-trust" class="xliff"></a>
+# <a name="step-6-set-up-the-pam-trust"></a>Paso 6: Configurar la confianza de PAM
 
 >[!div class="step-by-step"]
 [«Paso 5](sp1-step5-configuring-pam.md)
