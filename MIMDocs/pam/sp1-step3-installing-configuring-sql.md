@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 07/13/2017
 ---
-# Paso 3: Configuración de SQL
-<a id="step-3-configuring-sql" class="xliff"></a>
+# <a name="step-3-configuring-sql"></a>Paso 3: Configuración de SQL
 
 >[!div class="step-by-step"]
 [« Paso 2](sp1-step2-configuring-corp-domain.md)

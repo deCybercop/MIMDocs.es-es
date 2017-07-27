@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 07/13/2017
 ---
-# Paso 5: Establecer la confianza entre bosques PRIV y CORP
-<a id="step-5--establish-trust-between-priv-and-corp-forests" class="xliff"></a>
+# <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Paso 5: Establecer la confianza entre bosques PRIV y CORP
 
 >[!div class="step-by-step"]
 [« Paso 4](step-4-install-mim-components-on-pam-server.md)
@@ -28,8 +27,7 @@ ms.lasthandoff: 07/13/2017
 
 En cada dominio CORP, como contoso.local, los controladores de dominio CONTOSO y PRIV deben estar enlazados mediante una relación de confianza. Esto permite a los usuarios del dominio PRIV acceder a los recursos del dominio CORP.
 
-## Conexión de cada controlador de dominio a su equivalente
-<a id="connect-each-domain-controller-to-its-counterpart" class="xliff"></a>
+## <a name="connect-each-domain-controller-to-its-counterpart"></a>Conexión de cada controlador de dominio a su equivalente
 
 Antes de establecer la confianza, cada controlador de dominio debe configurarse para la resolución de nombres DNS de su equivalente, en función de la dirección IP del otro controlador de dominio o servidor DNS.
 
@@ -47,8 +45,7 @@ Antes de establecer la confianza, cada controlador de dominio debe configurarse 
 
     ![Captura de pantalla de estructura de archivo de clave priv](./media/PAM_GS_DNS_Manager.png)
 
-## Establecimiento de la confianza en PAMSRV
-<a id="establish-trust-on-pamsrv" class="xliff"></a>
+## <a name="establish-trust-on-pamsrv"></a>Establecimiento de la confianza en PAMSRV
 
 En PAMSRV, establezca confianza unidireccional con cada dominio como CORPDC para que los controladores de dominio CORP confíen en el bosque PRIV.
 
@@ -70,8 +67,7 @@ En PAMSRV, establezca confianza unidireccional con cada dominio como CORPDC para
     New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials $ca
     ```
 
-## Concesión de acceso de lectura a los bosques en Active Directory
-<a id="give-forests-read-access-to-active-directory" class="xliff"></a>
+## <a name="give-forests-read-access-to-active-directory"></a>Concesión de acceso de lectura a los bosques en Active Directory
 
 En cada bosque existente, habilite el acceso de lectura a AD para los administradores de PRIV y el servicio de supervisión.
 
@@ -94,8 +90,7 @@ En cada bosque existente, habilite el acceso de lectura a AD para los administra
 
     La salida también debe indicar **No está habilitado el filtrado por SID para esta confianza**. Consulte [Disable SID filter quarantining (Deshabilitar la cuarentena del filtrado por SID)](http://technet.microsoft.com/library/cc772816.aspx) para obtener más información.
 
-## Inicio de los servicios de supervisión y de componentes
-<a id="start-the-monitoring-and-component-services" class="xliff"></a>
+## <a name="start-the-monitoring-and-component-services"></a>Inicio de los servicios de supervisión y de componentes
 
 1.  Inicie sesión como administrador de dominio PRIV (PRIV\Administrador) en PAMSRV.
 

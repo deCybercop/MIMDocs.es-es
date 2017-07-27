@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 07/13/2017
 ---
-# Configuración de un dominio
-<a id="set-up-a-domain" class="xliff"></a>
+# <a name="set-up-a-domain"></a>Configuración de un dominio
 
 >[!div class="step-by-step"]
 [Windows Server 2012 R2 »](prepare-server-ws2012r2.md)
@@ -28,8 +27,7 @@ Microsoft Identity Manager (MIM) funciona con el dominio de Active Directory (AD
 
 Este artículo le guiará por los pasos para preparar el dominio para que funcione con MIM.
 
-## Creación de grupos y cuentas de usuario
-<a id="create-user-accounts-and-groups" class="xliff"></a>
+## <a name="create-user-accounts-and-groups"></a>Creación de grupos y cuentas de usuario
 
 Todos los componentes de la implementación de MIM necesitan sus propias identidades en el dominio. Esto incluye los componentes de MIM, como Service y Sync, así como SharePoint y SQL.
 
