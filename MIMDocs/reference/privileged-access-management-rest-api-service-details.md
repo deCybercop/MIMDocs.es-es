@@ -47,7 +47,7 @@ La versión actual de la API es 1. La versión de API puede especificarse median
 ## <a name="security"></a>Seguridad 
 El acceso a la API requiere Autenticación integrada de Windows (IWA). Esta debe configurarse manualmente en IIS antes de instalar Microsoft Identity Manager (MIM).
 
-Se ofrece compatibilidad con HTTPS (TLS), pero debe configurarse manualmente en IIS. Para más información, consulte: **Implement Secure Sockets Layer (SSL) for the FIM Portal** (Implementación de Capa de sockets seguros [SSL] para el portal de FIM) [Step 9: Perform FIM 2010 R2 Post-Installation Tasks](Paso 9: Realización de tareas posteriores a la instalación de FIM 2010 R2) (https://technet.microsoft.com/library/hh322875(v=ws.10%29.aspx) en el documento Installing FIM 2010 R2 Test Lab Guide (Guía de laboratorio de prueba de instalación de FIM 2010 R2). 
+Se ofrece compatibilidad con HTTPS (TLS), pero debe configurarse manualmente en IIS. Para más información, consulte: **Implement Secure Sockets Layer (SSL) for the FIM Portal** (Implementación de Capa de sockets seguros [SSL] para el portal de FIM) [Step 9: Perform FIM 2010 R2 Post-Installation Tasks]\(Paso 9: Realización de tareas posteriores a la instalación de FIM 2010 R2) (https://technet.microsoft.com/library/hh322875(v=ws.10%29.aspx) en el documento Installing FIM 2010 R2 Test Lab Guide (Guía de laboratorio de prueba de instalación de FIM 2010 R2). 
 
 Puede generar un nuevo certificado de servidor SSL ejecutando el siguiente comando en el símbolo del sistema de Visual Studio:
 ```
