@@ -2,29 +2,29 @@
 title: Modelo de niveles del entorno PAM | Microsoft Docs
 description: "Obtenga información sobre el modelo de niveles que aísla el sistema según la vulnerabilidad y el riesgo."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 08/30/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 4c3b43e50403890572e77773191a821cf247269c
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: b6598857d5704accbee461366838bb8efb9b2fc0
+ms.sourcegitcommit: c049dceaf02ab8b6008fe440daae4d07b752ca2e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="tier-model-for-partitioning-administrative-privileges"></a>Modelo de niveles para el particionamiento de los privilegios administrativos
 
-Con el volumen de amenazas actual, no se trata de si un atacante va a acceder a los sistemas, sino de cuándo. Esto significa que la seguridad interna es tan importante como una defensa perimetral potente. En este artículo se describe un modelo de seguridad diseñado para proteger frente a la elevación de privilegios mediante la separación de las actividades con muchos privilegios de las zonas de alto riesgo. Este modelo proporciona una buena experiencia de usuario y se ajusta a los procedimientos recomendados y a los principios de seguridad.
+En este artículo se describe un modelo de seguridad diseñado para proteger frente a la elevación de privilegios mediante la separación de las actividades con muchos privilegios de las zonas de alto riesgo. Este modelo proporciona una buena experiencia de usuario y se ajusta a los procedimientos recomendados y a los principios de seguridad.
 
 ## <a name="elevation-of-privilege-in-active-directory-forests"></a>Elevación de privilegios en bosques de Active Directory
 
-Las cuentas de usuarios, servicios o aplicaciones con privilegios administrativos permanentes en los bosques de Windows Server Active Directory (AD) plantean un nivel considerable de riesgo para la misión y el negocio de la organización. Estas cuentas suelen ser objetivo de los atacantes porque, si se ven en peligro, el atacante puede conectarse a otros servidores o aplicaciones del dominio.
+Las cuentas de usuarios, servicios o aplicaciones con privilegios administrativos permanentes en los bosques de Windows Server Active Directory (AD) plantean un nivel considerable de riesgo para la misión y el negocio de la organización. Estas cuentas suelen ser objetivo de los atacantes porque, si se ven en peligro, el atacante tiene derechos para conectarse a otros servidores o aplicaciones del dominio.
 
 El modelo de niveles crea divisiones entre administradores en función de los recursos que administran. Los administradores con control sobre las estaciones de trabajo de los usuarios están separados de los que controlan aplicaciones o administran identidades de empresa. Obtenga información sobre este modelo en [Securing privileged access reference material (Protección del material de referencia de acceso con privilegios)](http://aka.ms/tiermodel).
 
@@ -48,13 +48,16 @@ Se deben aplicar restricciones de inicio de sesión para garantizar que las cuen
 
 Las restricciones de inicio de sesión se pueden aplicar con lo siguiente:
 
-- Restricciones de derechos de inicio de sesión de directivas de grupo, que incluyen:  
-    - Denegar el acceso a este equipo desde la red  
-    - Denegar el inicio de sesión como trabajo por lotes  
-    - Denegar el inicio de sesión como servicio  
-    - Denegar el inicio de sesión local  
+- Restricciones de derechos de inicio de sesión de directivas de grupo, que incluyen:
+    - Denegar el acceso a este equipo desde la red
+    - Denegar el inicio de sesión como trabajo por lotes
+    - Denegar el inicio de sesión como servicio
+    - Denegar el inicio de sesión local
     - Denegar el inicio de sesión mediante la configuración de Escritorio remoto  
 - Silos y directivas de autenticación, si usa Windows Server 2012 o posterior.
 - Autenticación selectiva, si la cuenta está en un bosque administrativo dedicado.
 
-En el siguiente artículo, [Planificación de un entorno bastión](planning-bastion-environment.md), se explica cómo agregar un bosque administrativo dedicado para que Microsoft Identity Manager establezca las cuentas administrativas.
+## <a name="next-steps"></a>Pasos siguientes
+
+- En el siguiente artículo, [Planificación de un entorno bastión](planning-bastion-environment.md), se explica cómo agregar un bosque administrativo dedicado para que Microsoft Identity Manager establezca las cuentas administrativas.
+- Las [estaciones de trabajo de acceso con privilegios](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations) proporcionan un sistema operativo dedicado para tareas confidenciales que están protegidas de los ataques en Internet y los vectores de amenazas.

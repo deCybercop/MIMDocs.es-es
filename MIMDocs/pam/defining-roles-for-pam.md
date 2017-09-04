@@ -2,21 +2,21 @@
 title: "Definición de roles con privilegios para PAM | Microsoft Docs"
 description: "Decida qué roles con privilegios deben administrarse y defina la directiva de administración para cada uno."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 08/31/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 1a368e8e-68e1-4f40-a279-916e605581bc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 807ee44c23f367c33b820251012008324bb2c005
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: cfd7c5bee0038740db0ad526072ec248ed9f221d
+ms.sourcegitcommit: 210195369d2ecd610569d57d0f519d683ea6a13b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/01/2017
 ---
 # <a name="define-roles-for-privileged-access-management"></a>Definir roles para Privileged Access Management
 
@@ -24,7 +24,11 @@ Con Privileged Access Management, puede asignar usuarios a los roles con privile
 
 Un enfoque sencillo para definir los roles de Privileged Access Management es compilar toda la información en una hoja de cálculo. Enumere los roles y use las columnas para identificar los permisos y los requisitos de gobierno.
 
-Los requisitos de gobierno pueden variar dependiendo de las directivas de acceso e identidad existentes o de los requisitos de cumplimiento. Los parámetros para identificar cada rol podrían incluir al propietario del rol, los usuarios candidatos que puede haber en ese rol y qué controles de autenticación, aprobación o notificación deberían estar asociados con el uso del rol.
+Los requisitos de gobierno varían dependiendo de las directivas de acceso e identidad existentes o de los requisitos de cumplimiento. Los parámetros para identificar cada rol podrían incluir:
+
+- El propietario del rol.
+- Los usuarios candidatos que pueden estar en ese rol.
+- Los controles de autenticación, aprobación o notificación que deben asociarse al uso del rol.
 
 Los permisos de rol dependen de las aplicaciones que se administran. En este artículo se usa a Active Directory como aplicación de ejemplo y divide los permisos en dos categorías:
 
@@ -38,9 +42,9 @@ Comience identificando todos los roles que quiera administrar con PAM. En la hoj
 
 Para encontrar los roles apropiados, considere cada aplicación en el ámbito de administración:
 
-- ¿La aplicación se encuentra en el nivel 0, en el nivel 1 o en el nivel 2?  
-- ¿Cuáles son los privilegios que afectan a la confidencialidad, a la integridad o a la disponibilidad de la aplicación?  
-- ¿La aplicación tiene dependencias en otros componentes del sistema, como bases de datos, infraestructura de red o de seguridad o la plataforma de virtualización o de hospedaje?
+- ¿La aplicación se encuentra en el [nivel 0, en el nivel 1 o en el nivel 2](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material)?
+- ¿Cuáles son los privilegios que afectan a la confidencialidad, a la integridad o a la disponibilidad de la aplicación?
+- ¿La aplicación tiene dependencias en otros componentes del sistema? ¿Por ejemplo, tiene dependencias en bases de datos, redes, infraestructura de seguridad, virtualización o plataforma de hospedaje?
 
 Determine cómo agrupar esas consideraciones de la aplicación. Quiere roles que tengan límites claros y que solo proporcionen los permisos suficientes para completar las tareas administrativas comunes dentro de la aplicación.
 
@@ -80,15 +84,15 @@ A medida que identifique los roles de candidato, comience a rellenar la hoja de 
 
 ## <a name="select-an-access-method"></a>Seleccionar un método de acceso
 
-Puede haber varios roles en un sistema de Privileged Access Management con los mismos permisos asignados, si distintas comunidades de usuarios tienen requisitos de control de acceso. Por ejemplo, una organización puede aplicar diferentes directivas para sus empleados a jornada completa que para los empleados de TI externos de otra organización.
+Puede haber varios roles en un sistema de administración de acceso con privilegios con los mismos permisos asignados a ellos. Esto puede suceder si distintas comunidades de usuarios tienen requisitos únicos de gobierno de acceso. Por ejemplo, una organización puede aplicar diferentes directivas para sus empleados a jornada completa que para los empleados de TI externos de otra organización.
 
-En algunos casos, es posible asignar a un usuario permanentemente a un rol, por lo que no es necesario que soliciten o activen una asignación de rol. Algunos ejemplos de escenarios de asignación permanente incluyen:
+En algunos casos, se puede asignar permanentemente un usuario a un rol. En ese caso, no es necesario solicitar o activar una asignación de rol. Algunos ejemplos de escenarios de asignación permanente incluyen:
 
 - Una cuenta de servicio administrada en un bosque existente
 
-- Una cuenta de usuario en el bosque existente, con una credencial administrada fuera de PAM (por ejemplo, una cuenta "de emergencia", donde un rol como "Mantenimiento de dominio/controlador de dominio" necesario para corregir problemas de estado de controlador de dominio y confianza se asigna permanentemente a la cuenta, con una contraseña físicamente protegida).
+- Una cuenta de usuario en el bosque existente, con una credencial administrada fuera de PAM. Esto puede ser una cuenta de emergencia. La cuenta de emergencia necesita un rol como "mantenimiento de dominio/controlador de dominio" para corregir problemas, como problemas de mantenimiento de confianza y de controlador de dominio. Como cuenta de emergencia, tendría el rol asignado permanentemente con una contraseña físicamente protegida).
 
-- Una cuenta de usuario en el bosque administrativo que se autentica con una contraseña (por ejemplo, un usuario que necesita permisos administrativos permanente las 24 horas del día, los 7 días de la semana y que inicia sesión desde un dispositivo que no admite una autenticación sólida).
+- Una cuenta de usuario en el bosque administrativo que se autentica con una contraseña. Podría tratarse de un usuario que tiene permisos administrativos permanentes y que inicia sesión desde un dispositivo que no es compatible con una autenticación segura.
 
 - Una cuenta de usuario en el bosque administrativo, con una tarjeta inteligente o una tarjeta inteligente virtual (por ejemplo, una tarjeta inteligente sin conexión, necesaria para las tareas de mantenimiento poco frecuentes).
 
@@ -96,14 +100,15 @@ En el caso de las organizaciones preocupadas por la posibilidad de robo o uso in
 
 ## <a name="delegate-active-directory-permissions"></a>Delegar permisos de Active Directory
 
-Windows Server crea automáticamente grupos predeterminados como "Administradores del dominio" cuando se crean nuevos dominios. Estos grupos simplifican la introducción y pueden ser apropiados para organizaciones más pequeñas. Sin embargo, las organizaciones más grandes o las que requieren más aislamiento de privilegios administrativos, deberían vaciar grupos como Administradores del dominio y sustituirlos por otros grupos que proporcionan permisos específicos.
+Windows Server crea automáticamente grupos predeterminados como "Administradores del dominio" cuando se crean nuevos dominios. Estos grupos simplifican la introducción y pueden ser apropiados para organizaciones más pequeñas. Las organizaciones más grandes o las que requieren más aislamiento de privilegios administrativos deberían vaciar esos grupos y sustituirlos por otros grupos que proporcionan permisos específicos.
 
-Otra limitación del grupo Administradores del dominio es que no puede tener miembros de un dominio externo. Otra limitación es que concede permisos para tres funciones independientes:  
-- Administrar el propio servicio de Active Directory  
-- Administrar los datos almacenados en Active Directory  
+Otra limitación del grupo Administradores del dominio es que no puede tener miembros de un dominio externo. Otra limitación es que concede permisos para tres funciones independientes:
+
+- Administrar el propio servicio de Active Directory
+- Administrar los datos almacenados en Active Directory
 - Habilitar el inicio de sesión remoto en los equipos unidos a un dominio.
 
-En lugar de los grupos predeterminados como Administradores del dominio, puede crear nuevos grupos de seguridad que proporcionan solo los permisos necesarios y usen MIM para proporcionar dinámicamente esas pertenencias a grupos a las cuentas de administrador.
+En lugar de los grupos predeterminados como administradores del dominio, cree nuevos grupos de seguridad que proporcionan solo los permisos necesarios. Después, debe usar MIM para proporcionar dinámicamente las cuentas de administrador con esas pertenencias a grupos.
 
 ### <a name="service-management-permissions"></a>Permisos de administración del servicio
 
@@ -111,7 +116,7 @@ En la tabla siguiente, se brindan ejemplos de permisos que podría ser pertinent
 
 | Rol | Descripción |
 | ---- | ---- |
-| Mantenimiento de dominio/controlador de dominio | Pertenencia en el grupo Dominio\Administradores que permite solucionar problemas en el sistema operativo del controlador de dominio, además de modificarlo, lo que promueve un controlador de dominio nuevo a un dominio existente en el bosque y la delegación de rol de AD.
+| Mantenimiento de dominio/controlador de dominio | La pertenencia al grupo de dominio\administradores permite solucionar problemas y modificar el sistema de operativo del controlador de dominio. Las operaciones como promocionar un nuevo controlador de dominio en un dominio existente en el bosque y en la delegación de roles de AD.
 |Administración de controladores de dominio virtuales | Administre máquinas virtuales de controlador de dominio con el software de administración de virtualización. Este privilegio se podrá otorgar a través del control total de todas las máquinas virtuales en la herramienta de administración o mediante la funcionalidad Control de acceso basado en rol (RBAC). |
 | Extender esquema | Administre el esquema, incluida la adición de nuevas definiciones de objeto, la alteración de permisos en los objetos de esquema y la alteración de los permisos predeterminados de esquema para los tipos de objeto. |
 | Crear copia de seguridad de Base de datos de Active Directory | Realice una copia de seguridad de Base de datos de Active Directory en su totalidad, incluidos todos los secretos otorgados al controlador de dominio y al dominio. |
@@ -123,7 +128,7 @@ En la tabla siguiente, se brindan ejemplos de permisos que podría ser pertinent
 
 ### <a name="data-management-permissions"></a>permisos de administración de datos
 
-En la tabla siguiente, se brindan ejemplos de permisos que podría ser pertinente incluir en los roles para administrar o usar los datos contenidos en AD.
+En la tabla siguiente, se ofrecen ejemplos de permisos que podría ser pertinente incluir en los roles para administrar o usar los datos contenidos en AD.
 
 | Rol | Descripción |
 | ---- | ---- |
@@ -139,7 +144,7 @@ En la tabla siguiente, se brindan ejemplos de permisos que podría ser pertinent
 
 ## <a name="example-role-definitions"></a>Ejemplo de definiciones de rol
 
-La elección de las definiciones de rol dependerá del nivel de los servidores que las cuentas con privilegios administran. También dependerá de la elección de las aplicaciones administradas, debido a que aplicaciones como Exchange o productos empresariales de terceros, como SAP, con frecuencia traerán sus propias definiciones de rol adicionales para la administración delegada.
+La elección de las definiciones de rol dependen del nivel de servidores que administran. También dependerá de la elección de las aplicaciones administradas. Aplicaciones como Exchange o productos empresariales de terceros, como SAP, con frecuencia traerán sus propias definiciones de rol adicionales para la administración delegada.
 
 Las siguientes secciones dan ejemplos de escenarios empresariales típicos.
 
@@ -199,3 +204,8 @@ Los roles para la administración de equipos y usuarios no administrativos podr�
 - Departamento de soporte técnico.
 - Administradores de grupos de seguridad.
 - Asistencia de escritorio de la estación de trabajo
+
+## <a name="next-steps"></a>Pasos siguientes
+
+- [Protección del material de referencia de acceso con privilegios](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material)
+- [Uso de Azure MFA para la activación](use-azure-mfa-for-activation.md)
