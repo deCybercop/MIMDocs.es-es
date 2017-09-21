@@ -2,21 +2,21 @@
 title: "Descripción de los componentes de PAM | Microsoft Docs"
 description: "Privileged Access Management comparte algunos componentes con MIM y dispone de algunos propios. Obtenga información sobre cómo funcionan conjuntamente."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 6498f68f-36d3-448c-8fe6-649ad5a7f97d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 53fe79f251c3b18426f16b4007cda49e67d7b028
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: a129088989bb977c191e9dc372fed07044314403
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="understand-the-components-of-pam"></a>Descripción de los componentes de PAM
 
@@ -27,7 +27,7 @@ Privileged Access Management mantiene el acceso administrativo independiente de 
 
 La solución MIM tal como está configurada para PAM incluye los siguientes componentes:  
 
-- **Servicio de MIM**: implementa la lógica de negocios para realizar operaciones de administración de identidades y acceso, incluidas la administración de cuentas con privilegios y de solicitudes de elevación.   
+- **Servicio de MIM**: implementa la lógica de negocios para realizar operaciones de administración de identidades y acceso, incluidas la administración de cuentas con privilegios y de solicitudes de elevación.
 - **Portal de MIM**: portal basado en SharePoint, hospedado por SharePoint 2013, que proporciona una interfaz de usuario para la configuración y la administración de administradores.
 - **Base de datos del servicio MIM**: almacenada en SQL Server 2012 o 2014, almacena metadatos y datos de identidad necesarios para el servicio MIM.
 - **Servicio de supervisión de PAM** y **Servicio de componente de PAM**: dos servicios que administran el ciclo de vida de las cuentas con privilegios y ayudan a PRIV AD en lo relativo al ciclo de vida de pertenencia a grupos.

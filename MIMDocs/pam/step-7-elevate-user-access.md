@@ -2,21 +2,21 @@
 title: "Implementación de PAM, paso 7: acceso de usuario | Microsoft Docs"
 description: "Como paso final, conceda acceso temporal a un usuario con privilegios para comprobar que la implementación de Privileged Access Management se haya realizado correctamente."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 89d9b38177b91f64e746fea583684abcecc9d7ff
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: f8ad03bc072dbf6df36a9ef737479dce60b70b8b
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-7--elevate-a-users-access"></a>Paso 7: Elevar los privilegios de acceso de un usuario
 
@@ -27,6 +27,7 @@ ms.lasthandoff: 07/13/2017
 En este paso se muestra que un usuario puede solicitar acceso a un rol a través de MIM.
 
 ## <a name="verify-that-jen-cannot-access-the-privileged-resource"></a>Comprobación de que Jen no acceder al recurso con privilegios
+
 Sin privilegios elevados, Jen no puede acceder al recurso con privilegios del bosque CORP.
 
 1. Cierre la sesión de CORPWKSTN para quitar cualquier conexión abierta almacenada en caché.
@@ -36,9 +37,10 @@ Sin privilegios elevados, Jen no puede acceder al recurso con privilegios del bo
 5. Deje abierta la ventana de símbolo del sistema.
 
 ## <a name="request-privileged-access-from-mim"></a>Solicite acceso con privilegios a MIM.
+
 1. En CORPWKSTN, aún como CONTOSO\Jen, escriba el siguiente comando.
 
-    ```
+    ```cmd
     runas /user:Priv.Jen@priv.contoso.local powershell
     ```
 
@@ -48,7 +50,7 @@ Sin privilegios elevados, Jen no puede acceder al recurso con privilegios del bo
     > [!NOTE]
     > Después de ejecutar estos comandos, todos los pasos siguientes están sujetos a limitación temporal.
 
-    ```
+    ```PowerShell
     Import-module MIMPAM
     $r = Get-PAMRoleForRequest | ? { $_.DisplayName –eq "CorpAdmins" }
     New-PAMRequest –role $r
@@ -58,7 +60,7 @@ Sin privilegios elevados, Jen no puede acceder al recurso con privilegios del bo
 4. Una vez completado, cierre la ventana de PowerShell.
 5. En la ventana Comandos de DOS, escriba el siguiente comando:
 
-    ```
+    ```cmd
     runas /user:Priv.Jen@priv.contoso.local powershell
     ```
 
@@ -67,7 +69,7 @@ Sin privilegios elevados, Jen no puede acceder al recurso con privilegios del bo
 ## <a name="validate-the-elevated-access"></a>Valide el acceso con privilegios elevados.
 En la ventana abierta recientemente, escriba el siguiente comando:
 
-```
+```cmd
 whoami /groups
 dir \\corpwkstn\corpfs
 ```
@@ -75,12 +77,13 @@ dir \\corpwkstn\corpfs
 Si el comando dir produce un error con el mensaje **Acceso denegado**, vuelva a comprobar la relación de confianza.
 
 ## <a name="activate-the-privileged-role"></a>Activación del rol con privilegios
+
 Para realizar la activación, solicite acceso con privilegios mediante el portal de ejemplo de PAM.
 
 1. En CORPWKSTN, asegúrese de que ha iniciado sesión como CORP\Jen.
 2. En la ventana de símbolo del sistema de DOS, escriba el siguiente comando.
 
-    ```
+    ```cmd
     runas /user:Priv.Jen@priv.contoso.local "c:\program files\Internet Explorer\iexplore.exe"
     ```
 
@@ -95,6 +98,7 @@ Para realizar la activación, solicite acceso con privilegios mediante el portal
 > En este entorno también puede aprender a desarrollar aplicaciones que usan la API de REST de PAM, que se describe en [Privileged Access Management REST API Reference](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference) (Referencia de la API de REST de Privileged Access Management).
 
 ## <a name="summary"></a>Resumen
+
 Una vez que haya completado los pasos de este tutorial, habrá mostrado un escenario de Privileged Access Management en el que los privilegios de usuario se elevan durante un período limitado de tiempo, lo que permite al usuario acceder a recursos protegidos con una cuenta con privilegios independiente. Desde el momento en que finalice la sesión de elevación, la cuenta con privilegios no podrá acceder al recurso protegido. El administrador de PAM es quien decide qué grupos de seguridad representan roles con privilegios. Una vez que los derechos de acceso se migran al sistema de Privileged Access Management, el acceso que anteriormente era posible con la cuenta de usuario original ahora solo es posible si se inicia sesión con una cuenta con privilegios especial que se obtiene previa solicitud. Como resultado, las pertenencias a grupos para grupos con muchos privilegios están en vigor durante un período de tiempo limitado.
 
 >[!div class="step-by-step"]
