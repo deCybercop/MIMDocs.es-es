@@ -2,27 +2,26 @@
 title: "Implementación de PAM, paso 1: dominio CORP | Microsoft Docs"
 description: Prepare el dominio CORP con identidades nuevas o existentes para ser administrado por Privileged Identity Manager.
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 1164e7efb70d911497b08248b68f8d929bc6d3fb
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: d14d2f40972686305abea2426e20f4c13e3e267b
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-1---prepare-the-host-and-the-corp-domain"></a>Paso 1: preparar el host y el dominio CORP
 
 >[!div class="step-by-step"]
 [Paso 2 »](step-2-prepare-priv-domain-controller.md)
-
 
 En este paso se realizará la preparación para hospedar el entorno bastión. En caso necesario, también se creará un controlador de dominio y una estación de trabajo miembro en un dominio y un bosque (el bosque *CORP*) nuevos con identidades que administrará el entorno bastión. Este bosque CORP simula un bosque existente con recursos que se van a administrar. Este documento incluye un recurso de ejemplo que se va a proteger, un recurso compartido de archivos.
 
@@ -57,7 +56,7 @@ En esta sección se agregarán Servicios de dominio de Active Directory (AD DS),
 
 2. Escriba los siguientes comandos:
 
-  ```
+  ```PowoerShell
   import-module ServerManager
 
   Add-WindowsFeature AD-Domain-Services,DNS,FS-FileServer –restart –IncludeAllSubFeature -IncludeManagementTools
@@ -81,7 +80,7 @@ Inicie sesión en un controlador de dominio como administrador de dominio y real
 
 2. Escriba los comandos siguientes, pero sustituya "CONTOSO" por el nombre NetBIOS del dominio.
 
-  ```
+  ```PowerShell
   import-module activedirectory
 
   New-ADGroup –name 'CONTOSO$$$' –GroupCategory Security –GroupScope DomainLocal –SamAccountName 'CONTOSO$$$'
@@ -102,7 +101,7 @@ Ahora se va a crear un grupo de seguridad denominado *CorpAdmins* y un usuario d
 
 2. Escriba los siguientes comandos: Reemplace la contraseña "Pass@word1" por una cadena de contraseña diferente.
 
-  ```
+  ```PowerShell
   import-module activedirectory
 
   New-ADGroup –name CorpAdmins –GroupCategory Security –GroupScope Global –SamAccountName CorpAdmins
@@ -140,7 +139,7 @@ Inicie sesión en un controlador de dominio como administrador de dominio y real
 
 8. Aplique la configuración de auditoría al iniciar una ventana de PowerShell y escribir:
 
-  ```
+  ```cmd
   gpupdate /force /target:computer
   ```
 
@@ -154,7 +153,7 @@ En esta sección se configurarán los valores del Registro necesarios para la mi
 
 2. Escriba los siguientes comandos para configurar el dominio de origen para permitir el acceso de la llamada a procedimiento remoto (RPC) a la base de datos del administrador de cuentas de seguridad (SAM).
 
-  ```
+  ```PowerShell
   New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
 
   Restart-Computer
@@ -193,7 +192,7 @@ Se necesita un recurso para ilustrar el control de acceso basado en grupos de se
 
 4. Escriba los siguientes comandos:
 
-  ```
+  ```PowerShell
   mkdir c:\corpfs
 
   New-SMBShare –Name corpfs –Path c:\corpfs –ChangeAccess CorpAdmins

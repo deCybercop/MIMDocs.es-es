@@ -2,28 +2,27 @@
 title: "Implementación de PAM, paso 5: vínculo de bosque | Microsoft Docs"
 description: Establezca la confianza entre los bosques PRIV y CORP para que los usuarios con privilegios en PRIV puedan seguir teniendo acceso a los recursos de CORP.
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 1239ca2c0c6d376420723da01d7aa42821f5980f
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 6d57b09508d4c0834619be0281fb373d9d3d361e
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Paso 5: Establecer la confianza entre bosques PRIV y CORP
 
 >[!div class="step-by-step"]
 [« Paso 4](step-4-install-mim-components-on-pam-server.md)
 [Paso 6 »](step-6-transition-group-to-pam.md)
-
 
 En cada dominio CORP, como contoso.local, los controladores de dominio CONTOSO y PRIV deben estar enlazados mediante una relación de confianza. Esto permite a los usuarios del dominio PRIV acceder a los recursos del dominio CORP.
 
@@ -36,7 +35,7 @@ Antes de establecer la confianza, cada controlador de dominio debe configurarse 
 
 2.  Asegúrese de que todos los controladores de dominio CORP existentes puedan enrutar nombres al bosque PRIV. Inicie PowerShell en cada controlador de dominio situado fuera del bosque PRIV, como CORPDC, y escriba el siguiente comando:
 
-    ```
+    ```cmd
     nslookup -qt=ns priv.contoso.local.
     ```
     Compruebe que la salida indica un registro nameserver para el dominio PRIV con la dirección IP correcta.
@@ -55,14 +54,14 @@ En PAMSRV, establezca confianza unidireccional con cada dominio como CORPDC para
 
 3.  Escriba los siguientes comandos de PowerShell para cada bosque existente. Cuando se le pida, escriba la credencial del administrador de dominio CORP (CONTOSO\Administrador).
 
-    ```
+    ```PowerShell
     $ca = get-credential
     New-PAMTrust -SourceForest "contoso.local" -Credentials $ca
     ```
 
 4.  Escriba los siguientes comandos de PowerShell para cada dominio de los bosques existentes. Cuando se le pida, escriba la credencial del administrador de dominio CORP (CONTOSO\Administrador).
 
-    ```
+    ```PowerShell
     $ca = get-credential
     New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials $ca
     ```
@@ -80,9 +79,9 @@ En cada bosque existente, habilite el acceso de lectura a AD para los administra
 7.  En la lista de tareas comunes, seleccione **Leer toda la información del usuario** y haga clic en **Siguiente** y en **Finalizar**.  
 8.  Cierre Usuarios y equipos de Active Directory.
 
-9.  Abra una ventana de PowerShell.  
-10.  Use `netdom` para asegurarse de que el historial de SID está habilitado y el filtrado por SID deshabilitado. Tipo:  
-    ```
+9.  Abra una ventana de PowerShell.
+10.  Use `netdom` para asegurarse de que el historial de SID está habilitado y el filtrado por SID deshabilitado. Tipo:
+    ```cmd
     netdom trust contoso.local /quarantine /domain priv.contoso.local
     netdom trust /enablesidhistory:yes /domain priv.contoso.local
     ```
@@ -98,7 +97,7 @@ En cada bosque existente, habilite el acceso de lectura a AD para los administra
 
 3.  Escriba los siguientes comandos de PowerShell.
 
-    ```
+    ```cmd
     net start "PAM Component service"
     net start "PAM Monitoring service"
     ```

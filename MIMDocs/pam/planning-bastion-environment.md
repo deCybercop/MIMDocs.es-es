@@ -2,21 +2,21 @@
 title: "Planificación de un entorno bastión | Microsoft Docs"
 description: 
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/16/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 402c690b514dce62024f13014c1491433fbd8816
-ms.sourcegitcommit: a0e206fd67245f02d94d5f6c9d606970117dd8ed
+ms.openlocfilehash: 16ad83ab9a0fbe2b93428cf318b5ef138e2f3783
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="planning-a-bastion-environment"></a>Planificación de un entorno bastión
 
@@ -166,7 +166,7 @@ Existen siete requisitos para habilitar la administración para un dominio exist
 
 En el dominio existente, debe haber un grupo cuyo nombre sea el nombre de dominio de NetBIOS, seguido de tres signos de dólar, por ejemplo, *CONTOSO$$$*. El ámbito del grupo debe ser *local de dominio* y el tipo de grupo debe ser *Seguridad*. Esto es necesario para los grupos que se creen en el bosque administrativo dedicado con el mismo identificador de seguridad que los grupos de este dominio. Cree este grupo con el siguiente comando de PowerShell, que un administrador del dominio existente puede realizar y ejecutar en una estación de trabajo unida al dominio existente:
 
-```
+```PowerShell
 New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -SamAccountName 'CONTOSO$$$'
 ```
 
@@ -194,7 +194,7 @@ La configuración de la directiva de grupo en el controlador de dominio para aud
 
 7. Cierre la ventana del Editor de administración de directivas de grupo y la de Administración de directivas de grupo. A continuación, para aplicar la configuración de auditoría, inicie una ventana de PowerShell y escriba:
 
-    ```
+    ```cmd
     gpupdate /force /target:computer
     ```
 
@@ -204,7 +204,7 @@ El mensaje “La actualización de la directiva de equipo se completó correctam
 
 Los controladores de dominio deben permitir conexiones de RPC sobre TCP/IP para la 	Autoridad de seguridad local (LSA) desde el entorno bastión. En versiones anteriores de Windows Server, la compatibilidad de TCP/IP en LSA debe estar habilitada en el registro:
 
-```
+```PowerShell
 New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipClientSupport -PropertyType DWORD -Value 1
 ```
 
@@ -212,7 +212,7 @@ New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipC
 
 El cmdlet `New-PAMDomainConfiguration` se debe ejecutar en el equipo de Servicio MIM en el dominio administrativo. Los parámetros para este comando son el nombre de dominio del dominio existente y la credencial de un administrador de ese dominio.
 
-```
+```PowerShell
  New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials (get-credential)
 ```
 
