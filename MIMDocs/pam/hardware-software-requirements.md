@@ -2,43 +2,46 @@
 title: Requisitos de software de PAM | Microsoft Docs
 description: "Vea los requisitos de hardware y software necesarios para una correcta implementación de Privileged Access Management."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/06/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 82a9085c-9667-4b3b-8079-657eab1d1e58
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 2985215821db843d2f90d8a34250a8ca6a84b592
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 2ff6fd997dc5bc7e4a4949520e978ae2d8283d4b
+ms.sourcegitcommit: f29f02fa8437fa55e86afd7b0b99a36d2306b96b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="hardware-and-software-requirements"></a>Requisitos de hardware y de software para SharePoint 2013
 
 Privileged Access Management no tiene ningún requisito de hardware aparte de los que puedan tener las plataformas de software subyacente. Asegúrese de tener suficiente memoria o espacio en disco y conectividad de red.
 
-En este artículo se proporcionan los requisitos mínimos para una implementación básica. No está pensado para demostrar el rendimiento, la escalabilidad o la alta disponibilidad y no representa una topología de implementación recomendada para grandes empresas o entornos de producción.
+>[!IMPORTANT]
+En este artículo se proporcionan los requisitos mínimos para una implementación básica. No está pensado para demostrar rendimiento, escalabilidad o alta disponibilidad. No representa una topología de implementación recomendada para grandes empresas o entornos de producción.
 
 ## <a name="installing-from-software-packages"></a>Instalación con paquetes de software
 
-El software siguiente puede descargarse desde TechNet Evaluation Center o MSDN:  
+El software siguiente puede descargarse desde TechNet Evaluation Center o MSDN:
+
 - Microsoft Identity Manager 2016
   - Servicio y portal: contiene el programa instalador para el servicio MIM y el portal de MIM y para el escenario PAM.
   - Complementos y extensiones: contiene el programa de instalación para los cmdlets de PowerShell del solicitante.
 
-Puede descargar el siguiente software de GitHub:  
-- PAMSamplePortal: contiene la aplicación web de ejemplo para la API de REST.
+Puede descargar el siguiente software de GitHub:
+
+- [PAMSamplePortal](https://github.com/Azure/identity-management-samples): contiene la aplicación web de ejemplo para la API de REST.
 
 ## <a name="required-software"></a>Software requerido
 
-- Windows Server 2012 R2  
-- Windows 8.1 Enterprise o Windows 10 Enterprise  
-- SQL Server 2012 Service Pack 1 o SQL Server 2014  
+- Windows Server 2012 R2
+- Windows 10 Enterprise
+- SQL Server 2012 Service Pack 1 o SQL Server 2014
 
 ## <a name="evaluation-software"></a>Software de evaluación
 
@@ -46,9 +49,8 @@ Si no tiene licencias para Windows, SQL Server o Windows Server, puede descargar
 
 ### <a name="technet-evaluation-center"></a>TechNet Evaluation Center
 
-- [Windows Server 2012 R2](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012-r2)  
-- [Windows 8.1 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-8-1-enterprise)  
-- [Windows 10 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-10-enterprise)  
+- [Windows Server 2012 R2](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012-r2)
+- [Windows 10 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-10-enterprise)
 
 ### <a name="microsoft-download-center"></a>Centro de descarga de Microsoft
 
@@ -59,15 +61,19 @@ Si no tiene licencias para Windows, SQL Server o Windows Server, puede descargar
 
 Para cada componente de PAM, consulte los requisitos del sistema de los productos de software.
 
-Para CORPDC:  
+Para CORPDC:
+
 - [Windows Server 2012 R2](https://technet.microsoft.com/library/dn303418.aspx) o versiones anteriores
 
-Para CORPWKSTN:  
-- [Windows 8.1](http://windows.microsoft.com/windows-8/system-requirements)
+Para CORPWKSTN:
 
-Para PRIVDC:  
+- [Windows 10](https://technet.microsoft.com/windows/dn798752.aspx)
+
+Para PRIVDC:
+
 - [Windows Server 2012 R2](https://technet.microsoft.com/library/dn303418.aspx)
 
 Para PAMSRV:
-- [Windows Server 2012 R2](https://technet.microsoft.com/library/dn303418.aspx)  
+
+- [Windows Server 2012 R2](https://technet.microsoft.com/library/dn303418.aspx)
 - [SQL Server 2012](https://msdn.microsoft.com/library/ms143506(sql.110).aspx) o [SQL Server 2014](https://msdn.microsoft.com/en-us/library/ms143506(v=sql.120).aspx)
