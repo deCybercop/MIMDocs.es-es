@@ -5,7 +5,7 @@ keywords:
 author: fimguy
 ms.author: fimguy
 manager: femila
-ms.date: 07/13/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,11 +13,11 @@ ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: mwahl
 ms.suite: ems
 ms.custom: mim
-ms.openlocfilehash: f2b2bb2c9144e8624bf2a7780093f3d4e553747f
-ms.sourcegitcommit: 0cb8269f07a5f419d2d1cd760d9cc78b8a1c8aa9
+ms.openlocfilehash: 36de40afac0c612bb8233f2cdbc53d97c96d8db1
+ms.sourcegitcommit: f29f02fa8437fa55e86afd7b0b99a36d2306b96b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="supported-platforms-for-mim-2016"></a>Plataformas compatibles con MIM 2016
 
@@ -28,7 +28,7 @@ En esta tabla se describen las plataformas compatibles y la versión para cada c
 |-------------------|--------------|-------------|
 | **Sincronización de MIM** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2<br/>Windows Server 2016 * |
 | | Base de datos de sincronización de MIM | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
-| | Active Directory para aprovisionamiento de usuario, PCNS y sincronización de la LGD (opcional)|Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
+| | Active Directory para aprovisionamiento de usuarios, PCNS y sincronización de la LGD (opcional)|Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Exchange para aprovisionamiento de buzones de correo y sincronización de la LGD (opcional)|Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1<br/>Exchange Server 2016 * |
 | | Entorno de desarrollo (opcional) | Visual Studio 2012<br/>Visual Studio 2013 <br/> Visual Studio 2015 <br/> Visual Studio 2017 * |
 | | Sistema adicional conectado (opcional) | Servicios de dominio de Active Directory<br/>Active Directory<br/>Lightweight Directory Services<br/>SQL Server 2008 o posterior<br/>SharePoint Server 2013<br/> SharePoint Server 2016 * <br/> Otros productos de terceros |
@@ -51,7 +51,8 @@ En esta tabla se describen las plataformas compatibles y la versión para cada c
 | | Entidad de certificación | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Base de datos de MIM CM | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
 | **MIM Certificate Management** (aplicación) | Windows | Windows 8<br/>Windows 8.1<br/>Windows 10 |
-| **MIM Certificate Management** (cliente y cliente en masa) | Windows | Windows 7 |
+| **MIM Certificate Management** (cliente en masa) | Windows | Windows 7 |
+| **MIM Certificate Management** (tarjeta inteligente cliente basada en ActiveX) | Windows | Windows 7 </br> Windows 8 </br> Windows 8.1 </br> Windows 10 |
 | **Conjunto de aplicaciones BHOLD de MIM** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Base de datos de BHOLD | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2 <br/> SQL Server 2014 * <br/> SQL Server 2016 * |
 | | Servidor de correo (opcional) | Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * |
