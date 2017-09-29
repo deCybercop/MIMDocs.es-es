@@ -52,7 +52,7 @@
 ### [Paso 5: establecer la confianza entre PRIV y CORP](./pam/step-5-establish-trust-between-priv-corp-forests.md)
 ### [Paso 6: crear cuentas con privilegios](./pam/step-6-transition-group-to-pam.md)
 ### [Paso 7: Elevar los privilegios de acceso de un usuario](./pam/step-7-elevate-user-access.md)
-### [Deploy MIM PAM with Windows Server 2016 (Implementación de MIM PAM con Windows Server 2016)](./pam/deploy-pam-with-windows-server-2016.md)
+### [Deploy MIM PAM with Windows Server 2016](./pam/deploy-pam-with-windows-server-2016.md) (Implementación de MIM PAM con Windows Server 2016)
 ### [Configuración de Azure MFA](./pam/use-azure-mfa-for-activation.md)
 ## [Configurar PAM mediante scripts](./pam/sp1-pam-configure-using-scripts.md)
 ### [Paso 1: Configuración del dominio de Priv](./pam/sp1-step1-configuring-priv-domain.md)
@@ -65,23 +65,23 @@
 ### [Paso 8: Comprobación de la implementación de PAM](./pam/sp1-step8-pam-deployment-verification.md)
 ### [Anexo](./pam/sp1-pam-deployment-addendum.md)
 # Administrar la infraestructura
-## [Best Practice Analyzer for Identity Manager (Analizador de procedimientos recomendados de Identity Manager)](https://technet.microsoft.com/library/jj203402)
-## [Password Change Notification Service (Servicio de notificación de cambio de contraseña)](https://technet.microsoft.com/library/e27c0bc6-c808-4fdb-9e59-58feeb419308)
+## [Best Practice Analyzer for Identity Manager](https://technet.microsoft.com/library/jj203402) (Analizador de procedimientos recomendados de Identity Manager)
+## [Password Change Notification Service](https://technet.microsoft.com/library/e27c0bc6-c808-4fdb-9e59-58feeb419308) (Servicio de notificación de cambio de contraseña)
 ## Administración de certificados
-### [CLMUtil Command-Line Tool (Herramienta de línea de comandos CLMUtil)](https://technet.microsoft.com/library/cc720647)
+### [CLMUtil Command-Line Tool](https://technet.microsoft.com/library/cc720647) (Herramienta de línea de comandos CLMUtil)
 ### [Configuration Profile Templates (Plantillas de perfiles de configuración)](https://technet.microsoft.com/library/cc708656)
 ### [Using the certificate management website (Uso del sitio web de administración de certificados)](https://technet.microsoft.com/library/cc720560)
 ### [Managing Smart Card Applications (Administración de aplicaciones de tarjetas inteligentes)](https://technet.microsoft.com/library/cc708681)
-### [Backup and Restore (Copia de seguridad y restauración)](https://technet.microsoft.com/library/dd883245)
+### [Backup and Restore](https://technet.microsoft.com/library/dd883245) (Copia de seguridad y restauración)
 ## Autoservicio de restablecimiento de contraseña
-### [Programmatic User Registration (Registro de usuarios mediante programación)](https://technet.microsoft.com/library/jj134294)
+### [Programmatic User Registration](https://technet.microsoft.com/library/jj134294) (Registro de usuarios mediante programación)
 ### [Personalizaciones del portal](./reference/mim-portal-customizations.md)
 ## Servicio y portal
 ### [Kerberos](https://technet.microsoft.com/library/jj134299)
 ### [Registro dinámico del servicio MIM SP1 (4.4.1436.0)](./infrastructure/mim-service-dynamic-logging.md)
-### [Export Performance Guide (Guía de rendimiento de la exportación)](https://technet.microsoft.com/library/hh322883)
+### [Export Performance Guide](https://technet.microsoft.com/library/hh322883) (Guía de rendimiento de la exportación)
 ## Generación de informes
-### [Reporting Custom Reports and Extensibility (Informes personalizados y extensibilidad)](https://technet.microsoft.com/library/jj133861)
+### [Reporting Custom Reports and Extensibility](https://technet.microsoft.com/library/jj133861) (Informes personalizados y extensibilidad)
 ## [Microsoft Identity Software: Public Release build versions (Software de Microsoft Identity: compilaciones de versiones públicas)](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)
 # [Referencia](./reference/microsoft-identity-manager-2016-developer-reference.md)
 ## Referencia para desarrolladores
@@ -125,6 +125,7 @@
 #### [Aprobar o rechazar una solicitud pendiente de PAM](./reference/privileged-access-management-approve-reject-pending-request.md)
 #### [Obtener la información de sesión de PAM](./reference/privileged-access-management-get-session-info.md)
 ## Referencia técnica
+### [Terminología de Microsoft Identity Manager 2016 SP1](./reference/mim-2016-sp1-terms.md)
 ### [Resource Control Display Configuration XML Reference (Referencia de XML de la configuración de la visualización de control de recursos)](./reference/rcd-configuration-xml-reference.md)
 ### [Códigos de error de ejecución del agente de administración](./reference/maerrorcodes.md)
 ### [Referencia de función para Microsoft Identity Manager 2016](./reference/mim2016-functions-reference.md)
