@@ -5,7 +5,7 @@ keywords:
 author: fimguy
 ms.author: fimguy
 manager: femila
-ms.date: 08/11/2017
+ms.date: 10/5/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,11 +13,11 @@ ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: mwahl
 ms.suite: ems
 ms.custom: mim
-ms.openlocfilehash: 36de40afac0c612bb8233f2cdbc53d97c96d8db1
-ms.sourcegitcommit: f29f02fa8437fa55e86afd7b0b99a36d2306b96b
+ms.openlocfilehash: dd93c5bd4439aa6a485e1fcd6eaff970f07249b3
+ms.sourcegitcommit: ce027818d34f170b7bd216337751c646e0eb8ced
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="supported-platforms-for-mim-2016"></a>Plataformas compatibles con MIM 2016
 
@@ -32,14 +32,15 @@ En esta tabla se describen las plataformas compatibles y la versión para cada c
 | | Exchange para aprovisionamiento de buzones de correo y sincronización de la LGD (opcional)|Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1<br/>Exchange Server 2016 * |
 | | Entorno de desarrollo (opcional) | Visual Studio 2012<br/>Visual Studio 2013 <br/> Visual Studio 2015 <br/> Visual Studio 2017 * |
 | | Sistema adicional conectado (opcional) | Servicios de dominio de Active Directory<br/>Active Directory<br/>Lightweight Directory Services<br/>SQL Server 2008 o posterior<br/>SharePoint Server 2013<br/> SharePoint Server 2016 * <br/> Otros productos de terceros |
-| **Servicio y portal de MIM** | Windows Server | Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
-| | Active Directory para el bosque PAM del entorno bastión | Windows Server 2012 R2 <br/> Windows Server 2016 * |
-| | Active Directory para bosques existentes del escenario PAM | Windows Server 2008 <br/> Windows Server 2008 R2 * <br/> Windows Server 2012 * <br/> Windows Server 2012 R2 * <br/> Windows Server 2016 * |
-| | Base datos de Servicio MIM | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
+| **Servicio y portal de MIM** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
+| |Escenario PAM:  Windows Server | Windows Server 2012 R2 <br/> Windows Server 2016 * |
+| |Escenario PAM: Active Directory para el bosque PAM del entorno bastión | Windows Server 2012 R2 <br/> Windows Server 2016 * |
+| |Escenario PAM: Active Directory para bosques existentes del escenario PAM (CORP) | Windows Server 2008 <br/> Windows Server 2008 R2 * <br/> Windows Server 2012 * <br/> Windows Server 2012 R2 * <br/> Windows Server 2016 * |
+| | Base datos de Servicio MIM | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 |
 | | SharePoint | SharePoint Foundation 2010<br/>SharePoint Foundation 2013 SP1 <br/> SharePoint 2016 * |
 | | Servidor de correo para correos electrónicos de administración de grupo y aprobación del Servicio MIM (opcional) | Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * (solo notificaciones) |
-| | Explorador | Todos los exploradores principales * |
-| **Informes de Servicio MIM** | Windows Server | Windows Server 2012 <br/> Windows Server 2016 * |
+| | Explorador | Todos los exploradores principales * (limitado Dispositivos móviles)|
+| **Informes de Servicio MIM** | Windows Server |  Windows Server 2008 R2 SP1<br/>Windows Server 2012 <br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Almacenamiento de datos | System Center 2012 Service Manager <br/> System Center 2012 R2 Service Manager </br> System Center 2016 Service Manager * (con 4.4.1459)<br/> [Compatibilidad de versión de SQL Server para System Center 2016](https://docs.microsoft.com/system-center/scsm/upgrade-to-sm-2016)
  |
 | **Portales de registro y restablecimiento de contraseñas de MIM** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
