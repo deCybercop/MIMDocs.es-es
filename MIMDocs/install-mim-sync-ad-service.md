@@ -63,7 +63,7 @@ Al configurar un agente de administración de MIM, debe especificar una cuenta d
 
     -   Nombre de usuario: mimma
 
-    -   Contraseña: Pass@word
+    -   Contraseña: Pass@word 
 
     -   Dominio: contoso
 
