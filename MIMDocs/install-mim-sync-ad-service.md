@@ -63,7 +63,7 @@ Al configurar un agente de administración de MIM, debe especificar una cuenta d
 
     -   Nombre de usuario: mimma
 
-    -   Contraseña: Pass@word
+    -   Contraseña: Pass@word 
 
     -   Dominio: contoso
 
@@ -431,5 +431,3 @@ Siga estos pasos para ejecutar cada uno de los tres perfiles de ejecución.
 
 >[!div class="step-by-step"]
 [« Servicio y portal de MIM](install-mim-service-portal.md)
-
-<!--aaa-->
