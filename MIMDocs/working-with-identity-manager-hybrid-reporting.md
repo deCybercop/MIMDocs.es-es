@@ -3,20 +3,20 @@ title: "Trabajo con la creación de informes híbridos en Azure mediante MIM 201
 description: "Descubra cómo combinar datos locales y en la nube en informes híbridos en Azure, y cómo administrar y ver estos informes."
 keywords: 
 author: fimguy
-ms.author: billmath
-manager: femila
-ms.date: 04/28/2017
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 10/12/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: df842309034ad68151dd8cc4151507e7ece6626d
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: cf8395583dcfcc2a84237bad80b6a4ca40ce166c
+ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="working-with-identity-manager-hybrid-reporting---public-preview-refresh"></a>Trabajar con la creación de informes híbrida de Identity Manager: versión preliminar pública (actualización)
 
