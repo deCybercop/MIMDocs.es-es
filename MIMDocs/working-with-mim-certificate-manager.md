@@ -3,50 +3,54 @@ title: "Implementación de la aplicación de Windows del Administrador de certif
 description: "Descubra cómo implementar la aplicación Certificate Manager para permitir a los usuarios administrar sus propios derechos de acceso."
 keywords: 
 author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/23/2017
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 10/16/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 8a4582695d41ea605f2de4e336c3a780b2b2559f
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: e472d7cdc07aa19464aa1f18447d8c5dc7d0f0ba
+ms.sourcegitcommit: 1e0626a366a41d610e6a117cdf684241eb65ec63
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 10/17/2017
 ---
-# <a name="working-with-the-mim-certificate-manager"></a>Trabajar con MIM Certificate Manager
-Una vez que estén en funcionamiento MIM 2016 y Certificate Manager, puede implementar la aplicación de la Tienda Windows MIM Certificate Manager para que los usuarios puedan administrar fácilmente sus certificados de software, tarjetas inteligentes físicas y tarjetas inteligentes virtuales. Los pasos para implementar la aplicación MIM CM son los siguientes:
+# <a name="mim-certificate-manager-windows-store-application-deployment"></a>Implementación de la aplicación Tienda Windows del Administrador de certificados de MIM
 
-1.  Cree una plantilla de certificados.
+Una vez que tenga MIM 2016 y el Administrador de certificados listos, puede implementar la aplicación Tienda Windows del Administrador de certificados de MIM. La aplicación Tienda Windows permite que los usuarios administren sus tarjetas inteligentes físicas, virtuales y sus certificados de software. Los pasos para implementar la aplicación MIM CM son los siguientes:
 
-2.  Cree una plantilla de perfil.
+1. Cree una plantilla de certificados.
 
-3.  Prepare la aplicación.
+2. Cree una plantilla de perfil.
 
-4.  Implemente la aplicación mediante SCCM o Intune.
+3. Prepare la aplicación.
+
+4. Implemente la aplicación mediante SCCM o Intune.
 
 ## <a name="create-a-certificate-template"></a>Crear una plantilla de certificado
+
 Una plantilla de certificado para la aplicación CM se crea como de costumbre, salvo que es necesario asegurarse de que la versión de la plantilla de certificados sea la versión 3 o una versión posterior.
 
-1.  Inicie sesión en el servidor que ejecuta AD CS (el servidor de certificados).
+1. Inicie sesión en el servidor que ejecuta AD CS (el servidor de certificados).
 
-2.  Abra MMC.
+2. Abra MMC.
 
-3.  Haga clic en **Archivo &gt; Agregar o quitar complemento**.
+3. Haga clic en **Archivo &gt; Agregar o quitar complemento**.
 
-4.  En la lista Complementos disponibles, haga clic en **Plantillas de certificado** y después en **Agregar**.
+4. En la lista Complementos disponibles, haga clic en **Plantillas de certificado** y después en **Agregar**.
 
-5.  Ahora verá **Plantillas de certificado** bajo **Raíz de consola** en MMC. Haga doble clic sobre esa opción para ver todas las plantillas de certificado disponibles.
+5. Ahora verá **Plantillas de certificado** bajo **Raíz de consola** en MMC. Haga doble clic sobre esa opción para ver todas las plantillas de certificado disponibles.
 
-6.  Haga clic con el botón derecho en la plantilla **Inicio de sesión de tarjeta inteligente** y en **Plantilla duplicada**.
+6. Haga clic con el botón derecho en la plantilla **Inicio de sesión de tarjeta inteligente** y en **Plantilla duplicada**.
 
-7.  En la pestaña Compatibilidad, bajo Entidad de certificación, seleccione Windows Server 2008 y bajo Destinatario del certificado, seleccione Windows 8.1/Windows Server 2012 R2.
-    Este paso es fundamental, ya que se asegura de que la versión de la plantilla de certificado sea la versión 3 (o posterior), puesto que la versión 3 es la única que funciona con la aplicación del administrador de certificados. Dado que la versión se establece cuando se crea y guarda por primera vez la plantilla de certificado, si no la creó de este modo, no hay forma alguna de cambiarla por la versión correcta y deberá crear una nueva antes de continuar.
+7. En la pestaña Compatibilidad, en Entidad de certificación, seleccione Windows Server 2008. En Destinatario del certificado, seleccione Windows 8.1 o Windows Server 2012 R2. La versión de la plantilla de versión se configura la primera vez que crea y guarda la plantilla de certificado. Si no ha creado la plantilla de certificado de este modo, no hay ningún método para modificarla con la versión correcta.
 
+    >[!NOTE]
+    Este paso es fundamental, ya que permite garantizar que la versión de la plantilla de certificado sea la versión 3 (o posterior). Solo las plantillas de la versión 3 funcionan con la aplicación Administrador de certificados.
+    
 8.  En la pestaña **General** , escriba en el campo **Nombre para mostrar** el nombre que quiere que aparezca en la interfaz de usuario de la aplicación, como **Inicio de sesión de tarjeta inteligente virtual**.
 
 9. En la pestaña **Tratamiento de la solicitud**, establezca el **Propósito** en **Firma y cifrado**; en **Hacer lo siguiente**, seleccione **Preguntar al usuario durante la inscripción**.
@@ -69,11 +73,12 @@ Una plantilla de certificado para la aplicación CM se crea como de costumbre, s
 16. Seleccione en la lista la nueva plantilla que creó y haga clic en **Aceptar**.
 
 ## <a name="create-a-profile-template"></a>Crear una plantilla de perfil
+
 Asegúrese de que al crear una plantilla de perfil, la establezca para crear/destruir la VSC y quitar la recolección de datos. La aplicación CM no puede controlar los datos recopilados, por lo que es importante deshabilitarla, tal como se indica a continuación.
 
 1.  Inicie sesión en el portal de CM como usuario con privilegios administrativos.
 
-2.  Vaya a Administración &gt; Administrar plantillas de perfil y asegúrese de que la casilla situada junto a Plantilla del perfil de inicio de sesión de la tarjeta inteligente de ejemplo de MIM CM esté activada. A continuación haga clic en Copiar una plantilla de perfil seleccionada.
+2.  Vaya a Administración &gt; Administrar plantillas de perfil. Asegúrese de que esté marcada la casilla situada junto a **Plantilla del perfil de inicio de sesión de la tarjeta inteligente de ejemplo de MIM CM** y, después, haga clic en Copiar una plantilla de perfil seleccionada.
 
 3.  Escriba el nombre de la plantilla de perfil y haga clic en **Aceptar**.
 
@@ -91,32 +96,33 @@ Asegúrese de que al crear una plantilla de perfil, la establezca para crear/des
 
 10. En el panel izquierdo, haga clic en **Directiva de renovación &gt; Cambiar configuración general**. Seleccione **Volver a usar la tarjeta al renovar** y haga clic en **Aceptar**.
 
-11. Tiene que deshabilitar elementos de recolección de datos de cada una de las directivas haciendo clic en la directiva en el panel izquierdo y marcando después la casilla situada junto a **Elemento de datos de ejemplo** y después en **Eliminar elementos de recopilación de datos**. A continuación, haga clic en **Aceptar**.
+11. Tendrá que deshabilitar los elementos de recopilación de datos de cada directiva. Para ello, haga clic en la directiva del panel izquierdo. A continuación, debe marcar la casilla junto a **Elemento de datos de ejemplo**, hacer clic en **Eliminar elementos de recopilación de datos** y, luego, en **Aceptar**.
 
 ## <a name="prepare-the-cm-app-for-deployment"></a>Preparar la aplicación CM para la implementación
 
-1.  Ejecute en el símbolo del sistema el siguiente comando para desempaquetar la aplicación y extraer su contenido en una nueva subcarpeta denominada appx y crear una copia para que no modifique el archivo original.
+1. En el símbolo del sistema, ejecute el comando siguiente para desempaquetar la aplicación. El comando extraerá el contenido en una nueva subcarpeta denominada appx y creará una copia para que no modifique el archivo original.
 
-    ```
+    ```cmd
     makeappx unpack /l /p <app package name>.appx /d ./appx
     ren <app package name>.appx <app package name>.appx.original
     cd appx
     ```
 
-2.  En la carpeta appx, cambie el nombre del archivo llamado CustomDataExample.xml por Custom.data.
+2. En la carpeta appx, cambie el nombre del archivo llamado CustomDataExample.xml por Custom.data.
 
-3.  Abra el archivo Custom.data y modifique los parámetros en la medida que sea necesario.
+3. Abra el archivo Custom.data y modifique los parámetros en la medida que sea necesario.
 
     |||
     |-|-|
     |MIMCM URL|Nombre de dominio completo (FQDN) del portal que usó para configurar CM. Por ejemplo, https://mimcmServerAddress/certificatemanagement|
-    |ADFS URL|Si va a usar AD FS, inserte su URL de AD FS. Por ejemplo, https://adfsServerSame/adfs|
+    |ADFS URL|Si va a usar AD FS, inserte su URL de AD FS. Por ejemplo, https://adfsServerSame/adfs </br> Si no usa AD FS, configure esta opción con una cadena vacía.  Por ejemplo: ```<ADFS URL=""/>``` |
     |PrivacyUrl|Puede incluir una dirección URL a una página web que en la que se explique qué hacer con los detalles de usuario recopilados para la inscripción de certificado.|
     |SupportMail|Puede incluir una dirección de correo electrónico para problemas de soporte técnico.|
     |LobComplianceEnable|Puede establecer este parámetro en true o false. Está establecido en true de manera predeterminada.|
     |MinimumPinLength|Está establecido en 6 de manera predeterminada.|
     |NonAdmin|Puede establecer este parámetro en true o false. Está establecido en false de manera predeterminada. Solo debe cambiar el valor si quiere que puedan inscribir y renovar certificados usuarios que no sean administradores en sus equipos.|
-
+>[!IMPORTANT]
+Debe especificarse un valor para la URL de ADFS. Si no se especifica ningún valor, la aplicación moderna mostrará un error la primera vez que se use.
 4.  Guarde el archivo y salga del editor.
 
 5.  Al firmar el paquete, se crea un archivo de firma, por lo que debe eliminar el archivo de firma original, denominado AppxSignature.p7x.
@@ -131,13 +137,13 @@ Asegúrese de que al crear una plantilla de perfil, la establezca para crear/des
 
 10. En el símbolo del sistema, ejecute el siguiente comando para volver a empaquetar y firmar el archivo .appx.
 
-    ```
+    ```cmd
     cd ..
     makeappx pack /l /d .\appx /p <app package name>.appx
     ```
     Donde app package name es el mismo nombre que usó al crear la copia.
 
-    ```
+    ```cmd
     signtool sign /f <path\>mysign.pfx /p <pfx password> /fd "sha256" <app package name>.ap
     px
     ```
@@ -145,13 +151,13 @@ Asegúrese de que al crear una plantilla de perfil, la establezca para crear/des
 
 11. Para trabajar con la autenticación de AD FS:
 
-    -   Abra la aplicación Tarjeta inteligente Virtual. De este modo podrá encontrar más fácilmente los valores necesarios para el siguiente paso.
+    -  Abra la aplicación Tarjeta inteligente Virtual. De este modo podrá encontrar más fácilmente los valores necesarios para el siguiente paso.
 
-    -   Para agregar la aplicación como cliente al servidor de AD FS y configurar CM en el servidor en el servidor de AD FS, abra Windows PowerShell y ejecute el comando `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`.
+    -  Para agregar la aplicación como cliente al servidor de AD FS y configurar CM en el servidor en el servidor de AD FS, abra Windows PowerShell y ejecute el comando `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`.
 
         El siguiente script es el script ConfigureMIimCMClientAndRelyingParty.ps1:
 
-        ```
+       ```PowerShell
         # HELP
 
         <#
@@ -242,13 +248,22 @@ Asegúrese de que al crear una plantilla de perfil, la establezca para crear/des
         Write-Host "RP Trust for MIM CM Service has been created"
         ```
 
-    -   Actualice los valores de redirectUri y serverFQDN.
+    - Actualice los valores de redirectUri y serverFQDN.
 
-    -   Para encontrar la redirectUri, en la aplicación Tarjeta inteligente virtual abra el panel de configuración de la aplicación y haga clic en **Configuración**. La URI de redirección debería aparecer bajo la barra de direcciones del servidor de AD FS. La URI solo aparecerá si se ha configurado una dirección de servidor de ADFS.
+    - Para encontrar la redirectUri, en la aplicación Tarjeta inteligente virtual abra el panel de configuración de la aplicación y haga clic en **Configuración**. La URI de redirección debería aparecer bajo la barra de direcciones del servidor de AD FS. La URI solo aparecerá si se ha configurado una dirección de servidor de ADFS.
 
-    -   El serverFQDN solo es el nombre completo de equipo del servidor de MIMCM.
+    - El serverFQDN solo es el nombre completo de equipo del servidor de MIMCM.
 
-    -   Para obtener ayuda con el script **ConfigureMIimCMClientAndRelyingParty.ps1** , ejecute `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`.
+    - Para obtener ayuda con el script **ConfigureMIimCMClientAndRelyingParty.ps1**, ejecute lo siguiente: </br> 
+    ```Powershell
+     get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1
+    ```
 
 ## <a name="deploy-the-app"></a>Implementar la aplicación
+
 Al configurar la aplicación CM, descargue el archivo MIMDMModernApp_&lt;version&gt;_AnyCPU_Test.zip desde el Centro de descarga y extraiga todo su contenido. El archivo .appx es el instalador. Puede implementarla del mismo modo que suele implementar aplicaciones de la Tienda Windows mediante [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx) o [Intune](https://technet.microsoft.com/library/dn613839.aspx) para transferir localmente la aplicación con el fin de que los usuarios puedan acceder a ella mediante el portal de empresa. De lo contrario, se colocará directamente en sus equipos.
+
+## <a name="next-steps"></a>Pasos siguientes
+
+- [Configuration Profile Templates](https://technet.microsoft.com/library/cc708656) (Plantillas de perfiles de configuración)
+- [Managing Smart Card Applications](https://technet.microsoft.com/library/cc708681) (Administración de aplicaciones de tarjetas inteligentes)
