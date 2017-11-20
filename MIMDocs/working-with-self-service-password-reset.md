@@ -12,12 +12,15 @@ ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: c6786ea653f178b25ea3da4fbd3b01d21b79c622
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: 90c773c30b0ab23ad29ca1a215745bf59b188764
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/14/2017
 ---
+>[!IMPORTANT]
+Debido al anuncio de desuso del kit de desarrollo de software de Azure Multi-Factor Authentication, el SDK de Azure MFA se admitirá para los clientes existentes hasta la fecha de retirada, el 1 de octubre de 2018. Los clientes nuevos y actuales ya no podrán descargar el SDK a través del Portal de Azure clásico. En su lugar, para realizar la descarga, debe ponerse en contacto con el servicio de atención al cliente de Azure para recibir el paquete de credenciales de servicio generado para MFA. <br> El equipo de desarrollo de Microsoft está planeando los cambios de MFA mediante la integración con el SDK del servidor MFA. Se incluirá en la próxima revisión a principios de 2018.
+
 # <a name="working-with-self-service-password-reset"></a>Trabajo con el autoservicio de restablecimiento de contraseña
 Microsoft Identity Manager 2016 proporciona funciones adicionales a la característica de autoservicio de restablecimiento de contraseña. Esta funcionalidad se ha mejorado con varias características importantes:
 
@@ -82,7 +85,7 @@ En la siguiente sección, configurará el proveedor de Azure MFA en Microsoft Az
 
 7.  En el panel izquierdo de la ventana nueva, haga clic en **Configuración**, en **Configurar**.
 
-8.  En **Alerta de fraude**, desactive **Bloquear al usuario al notificarse fraudes** . Esto se hace para evitar que se bloquee todo el servicio.
+8.  En **Alerta de fraude**, desactive **Bloquear al usuario al notificarse fraudes. Esto se hace para evitar que se bloquee todo el servicio.
 
 9. En la ventana **Azure Multi-Factor Authentication** que aparece, haga clic en **SDK** , bajo **Descargas** en el menú de la izquierda.
 
@@ -136,7 +139,7 @@ Ahora los usuarios de su organización podrán registrase para restablecer su co
 
 #### <a name="register-users-for-password-reset"></a>Registrar usuarios para restablecer la contraseña
 
-1.  El usuario debería iniciar un navegador web y desplazarse hasta el Portal de registro de restablecimiento de contraseñas de MIM.  (Normalmente este portal se configurará con la autenticación de Windows).  En el portal, deberán proporcionar su nombre de usuario y la contraseña de nuevo para confirmar su identidad.
+1.  El usuario debe iniciar un navegador web y desplazarse hasta el Portal de registro de restablecimiento de contraseña de MIM.  (Normalmente este portal se configurará con la autenticación de Windows).  En el portal, deberán proporcionar su nombre de usuario y la contraseña de nuevo para confirmar su identidad.
 
     Deben visitar el portal de registro de contraseñas y autenticarse con su nombre de usuario y contraseña.
 
@@ -165,7 +168,7 @@ Al instalar las extensiones y complementos de MIM en un equipo unido a un domini
 
 2.  El usuario será dirigido a la autenticación. Si se ha configurado MFA, el usuario recibirá una llamada telefónica.
 
-3.  Lo que sucede en segundo plano es que Azure MFA hace llamada de teléfono al número que proporcionó el usuario cuando se registró en el servicio.
+3.  Lo que sucede en segundo plano es que Azure MFA realiza una llamada de teléfono al número que proporcionó el usuario cuando se registró en el servicio.
 
 4.  Cuando el usuario responde al teléfono, se le pide que pulse la tecla almohadilla # en el teléfono. A continuación, el usuario hace clic en **Siguiente** en el portal.
 
@@ -182,7 +185,7 @@ Al instalar las extensiones y complementos de MIM en un equipo unido a un domini
 
 1.  Los usuarios pueden abrir un explorador web, acceder al **Portal de restablecimiento de contraseña** , escribir su nombre de usuario y hacer clic en **Siguiente**.
 
-    Si se ha configurado MFA, el usuario recibirá una llamada telefónica. Lo que sucede en segundo plano es que Azure MFA hace llamada de teléfono al número que proporcionó el usuario cuando se registró en el servicio.
+    Si se ha configurado MFA, el usuario recibirá una llamada telefónica. Lo que sucede en segundo plano es que Azure MFA realiza una llamada de teléfono al número que proporcionó el usuario cuando se registró en el servicio.
 
     Cuando el usuario responde al teléfono, se le pide que presione la tecla almohadilla # en el teléfono. A continuación, el usuario hace clic en **Siguiente** en el portal.
 
