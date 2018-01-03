@@ -65,7 +65,7 @@
 ### [Paso 8: Comprobación de la implementación de PAM](./pam/sp1-step8-pam-deployment-verification.md)
 ### [Anexo](./pam/sp1-pam-deployment-addendum.md)
 # Administrar la infraestructura
-## [Best Practice Analyzer for Identity Manager](https://technet.microsoft.com/library/jj203402) (Analizador de procedimientos recomendados de Identity Manager)
+## [Best Practice Analyzer for Identity Manager (Analizador de procedimientos recomendados de Identity Manager)](https://technet.microsoft.com/library/jj203402)
 ## [Password Change Notification Service](https://technet.microsoft.com/library/e27c0bc6-c808-4fdb-9e59-58feeb419308) (Servicio de notificación de cambio de contraseña)
 ## Administración de certificados
 ### [CLMUtil Command-Line Tool](https://technet.microsoft.com/library/cc720647) (Herramienta de línea de comandos CLMUtil)
@@ -74,7 +74,7 @@
 ### [Managing Smart Card Applications (Administración de aplicaciones de tarjetas inteligentes)](https://technet.microsoft.com/library/cc708681)
 ### [Backup and Restore](https://technet.microsoft.com/library/dd883245) (Copia de seguridad y restauración)
 ## Autoservicio de restablecimiento de contraseña
-### [Programmatic User Registration](https://technet.microsoft.com/library/jj134294) (Registro de usuarios mediante programación)
+### [Programmatic User Registration (Registro de usuarios mediante programación)](https://technet.microsoft.com/library/jj134294)
 ### [Personalizaciones del portal](./reference/mim-portal-customizations.md)
 ## Servicio y portal
 ### [Kerberos](https://technet.microsoft.com/library/jj134299)
@@ -93,6 +93,7 @@
 #### [Guía de flujo de trabajo del conector de servicio web para REST de prueba](./reference/microsoft-identity-manager-2016-ma-ws-restgeneric.md)
 #### [App Service para una muestra de REST para el conector de servicio web](./reference/microsoft-identity-manager-2016-ma-ws-restsample.md)
 #### [Opciones de configuración del conector de servicio web](./reference/microsoft-identity-manager-2016-ma-ws-maconfig.md)
+#### [Importación del conector de servicios web](./reference/microsoft-identity-manager-2016-ma-ws-import.md)
 ### BHOLD
 #### [Referencia para desarrolladores de BHOLD](./reference/mim2016-bhold-developer-reference.md) 
 ### [Referencia de API de REST de administración de certificados](./reference/certificate-management-rest-api-reference.md)
