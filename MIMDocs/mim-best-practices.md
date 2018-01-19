@@ -5,17 +5,17 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 11/15/2017
+ms.date: 01/05/2018
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: 7f56882bf005de6c888997c1bf6a9e2feaea410c
-ms.sourcegitcommit: 42253562ac2f9ed689e9db9d0c470213b7926883
+ms.openlocfilehash: bb967bfb43218384044e324c270d3d6b35d33afe
+ms.sourcegitcommit: b4513f0f72ac6efd5c2610863f4e3e8c8e65c860
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-identity-manager-2016-best-practices"></a>Procedimientos recomendados de Microsoft Identity Manager 2016
 
@@ -371,7 +371,7 @@ Para obtener una configuración de rendimiento óptimo:
 
 -   Desactive la indexación de SharePoint en el sitio del Portal de MIM. Para obtener más información, vea la sección Deshabilitar la indexación de SharePoint de este documento.
 
-## <a name="feature-specific-best-practices--i-want-to-remove-this-and-collapse-this-section-and-just-have-the-specific-features-at-header-2-level-versus-3"></a>Procedimientos recomendados de características específicas (Quiero quitar esto y contraer esta sección y tener solo las características específicas en el encabezado de nivel 2 en lugar del 3)
+## <a name="feature-specific-best-practices"></a>Procedimientos recomendados específicos para las características 
 
 
 ### <a name="request-management"></a>Administración de solicitudes
