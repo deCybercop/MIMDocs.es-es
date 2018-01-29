@@ -1,22 +1,19 @@
 ---
 title: "Implementación de PAM, paso 7: acceso de usuario | Microsoft Docs"
 description: "Como paso final, conceda acceso temporal a un usuario con privilegios para comprobar que la implementación de Privileged Access Management se haya realizado correctamente."
-keywords: 
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 09/13/2017
+ms.date: 01/17/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
-ms.reviewer: mwahl
-ms.suite: ems
-ms.openlocfilehash: f8ad03bc072dbf6df36a9ef737479dce60b70b8b
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.openlocfilehash: 2d92be315547da1c352c0e60732f9aeecf0c2d90
+ms.sourcegitcommit: 3d8a2493eae1218bfdb75a399ffa4adc8c2a8fdf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="step-7--elevate-a-users-access"></a>Paso 7: Elevar los privilegios de acceso de un usuario
 
@@ -38,7 +35,12 @@ Sin privilegios elevados, Jen no puede acceder al recurso con privilegios del bo
 
 ## <a name="request-privileged-access-from-mim"></a>Solicite acceso con privilegios a MIM.
 
-1. En CORPWKSTN, aún como CONTOSO\Jen, escriba el siguiente comando.
+> [!NOTE]
+> Se recomienda que la estación de trabajo sea una estación de trabajo con privilegios.  Para más información, vea [Estaciones de trabajo con privilegios de acceso](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations).
+
+1. En PRIVWKSTN, inicie sesión como PRIV\priv.jen.
+2. Haga clic en **Inicio**, **Ejecutar** y escriba **PowerShell.exe**.
+3. Escriba el siguiente comando:
 
     ```cmd
     runas /user:Priv.Jen@priv.contoso.local powershell

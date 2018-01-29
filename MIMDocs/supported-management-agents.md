@@ -5,18 +5,18 @@ keywords:
 author: fimguy
 ms.author: fimguy
 manager: bhu
-ms.date: 09/26/2017
+ms.date: 1/24/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 8bc2f6d2-9f53-4db6-aee6-a937ae468163
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: 99e98f3f9cb5e68fde0e3018856bf613c082325d
-ms.sourcegitcommit: ba4cd133f7b49752c5470c9fc46e7e302cc99b49
+ms.openlocfilehash: 1e100a686f009d1a2290d7965fe36eea819148be
+ms.sourcegitcommit: fab9f21eea15d2024f11a59fc9e43db15bd215c7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="connect-to-your-directories"></a>Conexión a los directorios
 
@@ -28,13 +28,13 @@ En este artículo se tratan los conectores compatibles incluidos en MIM, pero el
 
 ## <a name="supported-connectors-in-mim-2016-sp1"></a>Conectores compatibles en MIM 2016 SP1
 
-| Nombre | Versiones compatibles del origen de datos conectado |
+| Nombre | Versiones compatibles del origen de datos conectado y vínculos técnicos |
 | ---- | ----------------------------------------------- |
 | Servicios de dominio de Active Directory | Active Directory 2012, 2016 |
 | Active Directory Lightweight Directory Services (ADLDS) | Active Directory Lightweight Directory Services (ADLDS) |
 | Lista global de direcciones (LGD) de Active Directory | Lista global de direcciones (LGD) de Active Directory: Exchange 2013, 2016 |
 | Extensible Connectivity 2.0 | Cualquier origen de datos basado en llamadas o en archivos |
-| Servicio de FIM | La versión del agente de administración de servicios de FIM (servicio de sincronización) debe ser la misma que la de Forefront Identity Manager Service. |
+| Servicio de FIM | La versión del agente de administración de servicios de FIM (servicio de sincronización) debe ser la misma que la del "servicio Forefront Identity Manager". |
 | IBM DB2 Universal Database | Versión 9.5 o 9.7 de IBM DB2; versión 9.5 de IBM DB2 OLEDB FP5 o 9.7 FP1 |
 | IBM Directory Server | IBM Tivoli Directory Server 6.x |
 | Novell eDirectory | Novell eDirectory versiones 8.7.3, 8.8.5 y 8.8.6 |
@@ -43,10 +43,11 @@ En este artículo se tratan los conectores compatibles incluidos en MIM, pero el
 | Oracle (anteriormente Sun y Netscape) Directory Servers | Sun Directory Server 6.x, 7.x y Oracle 11 |
 | [Conector de Windows PowerShell para FIM 2010 R2](https://msdn.microsoft.com/en-us/library/dn640417.aspx) | Windows PowerShell 2.0 o posterior |
 | [Conector Microsoft Azure Active Directory para FIM 2010 R2](https://msdn.microsoft.com/en-us/library/dn511001.aspx) | Microsoft AzureActive Directory |
-| [Conector LDAP genérico para FIM 2010 R2](https://msdn.microsoft.com/en-us/library/dn510997.aspx) | Servidor LDAP v3 (compatible con RFC 4510) |
+| [Conector LDAP genérico para FIM 2010 R2](https://msdn.microsoft.com/en-us/library/dn510997.aspx) | [Servidor LDAP v3 (compatible con RFC 4510)](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericldap) |
+| [Conector SQL genérico para FIM 2010 R2 / MIM](https://msdn.microsoft.com/en-us/library/dn510997.aspx) | [El conector es compatible con todos los controladores ODBC de 64 bits](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericsql) |
 | [Conector para Lotus Domino](https://msdn.microsoft.com/en-us/library/hh859750.aspx) | Versión 8.5.x de Lotus Notes |
 | [SharePoint Services Connector UPA](https://msdn.microsoft.com/en-us/library/dn511003.aspx) | SharePoint server 2013 o 2016 con la aplicación de servicio de perfiles de usuario (UPA) |
-| [Conector para servicios web](https://www.microsoft.com/en-us/download/details.aspx?id=51495) | SAP ECC 5.0 o 6.0; Oracle PeopleSoft 9.1; Oracle eBusiness 12.1 |
+| [Conector para servicios web](https://www.microsoft.com/en-us/download/details.aspx?id=51495) | [SAP ECC 5.0 o 6.0; Oracle PeopleSoft 9.1; Oracle eBusiness 12.1](https://docs.microsoft.com/en-us/microsoft-identity-manager/reference/microsoft-identity-manager-2016-ma-ws) |
 | [Archivo de texto de par atributo-valor](https://technet.microsoft.com/en-us/library/cc708644(v=ws.10).aspx) | Archivos de texto de par atributo-valor |
 | [Archivo de texto delimitado](https://technet.microsoft.com/en-us/library/cc720612(v=ws.10).aspx) | Archivos de texto delimitado |
 | [Lenguaje de marcado de servicios de directorio (DSML)](https://technet.microsoft.com/en-us/library/cc720660(v=ws.10).aspx) | Lenguaje de marcado de servicios de directorio (DSML) 2.0 |
