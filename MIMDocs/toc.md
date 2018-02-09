@@ -11,6 +11,7 @@
 ## [Topología de implementación](topology-considerations.md)
 ## [Planeamiento de la implementación de PAM](./pam/environment-overview.md)
 # [Implementación y uso](microsoft-identity-manager-deploy.md)
+## [Características en desuso](microsoft-identity-manager-2016-deprecated-features.md)
 ## [Primera implementación](microsoft-identity-manager-deploy.md)
 ### [Configuración de dominio](preparing-domain.md)
 ### [Configuración del servidor: Windows Server](prepare-server-ws2012r2.md)
