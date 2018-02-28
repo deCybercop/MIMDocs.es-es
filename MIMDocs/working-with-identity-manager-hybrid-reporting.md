@@ -3,22 +3,21 @@ title: "Trabajo con informes híbridos en Azure con Identity Manager 2016 | Micr
 description: "Descubra cómo combinar datos locales y en la nube en informes híbridos en Azure, y cómo administrar y ver estos informes."
 keywords: 
 author: fimguy
-ms.author: barclayn
+ms.author: davidste
 manager: mbaldwin
-ms.date: 10/12/2017
+ms.date: 2/20/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
-ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: a96d79d6773a72c813d0cd76de26ea40d28769e1
-ms.sourcegitcommit: 3d8a2493eae1218bfdb75a399ffa4adc8c2a8fdf
+ms.openlocfilehash: e135cc5066220765d97568b3a1e1b984a876b2a2
+ms.sourcegitcommit: b4a39928c5fa1d7718046563c0809bcbf11d833d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/20/2018
 ---
-# <a name="work-with-hybrid-reporting-in-identity-manager-public-preview-refresh"></a>Trabajo con informes híbridos en la versión preliminar pública de Identity Manager (actualización)
+# <a name="work-with-hybrid-reporting-in-identity-manager"></a>Trabajo con informes híbridos en Identity Manager
 
 En este artículo se explica cómo combinar datos locales y en la nube en informes híbridos en Azure, y cómo administrar y ver estos informes.
 
@@ -42,7 +41,7 @@ Los tres primeros informes de Microsoft Identity Manager disponibles en Azure Ac
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* Identity Manager 2016 RTM o el servicio SP1 Identity Manager.
+* Servicio Identity Manager de Identity Manager 2016 SP1, compilación recomendada [4.4.1749.0](https://support.microsoft.com/en-us/help/4050936/hotfix-rollup-package-build-4-4-1749-0-for-microsoft-identity-manager).
 
 * Un inquilino de Azure AD Premium con un administrador con licencia en el directorio.
 
