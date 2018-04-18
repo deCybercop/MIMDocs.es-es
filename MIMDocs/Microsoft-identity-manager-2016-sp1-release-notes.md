@@ -1,7 +1,7 @@
 ---
 title: Microsoft Identity Manager 2016 Service Pack 1 | Microsoft Docs
-description: "Comprenda el funcionamiento de MIM 2016 para crear una experiencia de administración de identidades más segura y más cómoda en la nube y en ubicaciones locales."
-keywords: 
+description: Comprenda el funcionamiento de MIM 2016 para crear una experiencia de administración de identidades más segura y más cómoda en la nube y en ubicaciones locales.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -32,7 +32,7 @@ Queremos conocer su opinión. Si tiene algún comentario o preocupación para el
 
 ### <a name="mim"></a>MIM
 
-- **Compatibilidad entre exploradores del portal de MIM para el autoservicio del usuario final:** en este Service Pack estamos introduciendo soporte técnico para la mayoría de los exploradores principales. Los usuarios ahora pueden obtener acceso al portal de MIM e interactuar con él para grupos de autoservicio y la administración de perfiles desde Edge, Chrome y Safari.
+- **Compatibilidad entre exploradores del portal de MIM para el autoservicio del usuario final:** en este Service Pack estamos introduciendo soporte técnico para la mayoría de los exploradores principales. Los usuarios ahora pueden obtener acceso al portal de MIM e interactuar con él para grupos de autoservicio y la administración de perfiles desde Microsoft Edge, Chrome y Safari.
 
 - **Compatibilidad con el servicio de MIM para Exchange Online:** el servicio MIM lleva mucho tiempo admitiendo el envío y la recepción de correos electrónicos para las notificaciones y aprobaciones. Antes de SP1 MIM, solo se admite Exchange Server o SMTP. Con Service Pack 1, el servicio MIM puede enviar y recibir solicitudes, así como las notificaciones de correo electrónico con una cuenta en línea de Office 365 Exchange.
 
