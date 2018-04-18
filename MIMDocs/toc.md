@@ -144,3 +144,4 @@
 ## Historial de versiones
 ### [Historial de versiones de MIM](./reference/version-history.md)
 ### [Historial de versiones de BHOLD](./reference/version-bhold-history.md)
+### [Historial de versiones de conectores](./reference/microsoft-identity-manager-2016-connector-version-history.md)
