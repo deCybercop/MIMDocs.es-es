@@ -1,7 +1,7 @@
 ---
-title: "Deploy MIM Privileged Access Management with Windows Server 2016 (Implementación de Privileged Access Management de MIM con Windows Server 2016) | Microsoft Docs"
-description: "Obtenga información sobre cómo implementar Privileged Access Management con Server 2016"
-keywords: 
+title: Deploy MIM Privileged Access Management with Windows Server 2016 (Implementación de Privileged Access Management de MIM con Windows Server 2016) | Microsoft Docs
+description: Obtenga información sobre cómo implementar Privileged Access Management con Server 2016
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -9,12 +9,12 @@ ms.date: 08/18/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
-ms.assetid: 
-ms.openlocfilehash: 8827a8b6d49672a7860c9265efac5f0881a2c018
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.assetid: ''
+ms.openlocfilehash: 6088afccec45d1353233a32828353149bcf24740
+ms.sourcegitcommit: 48f89d555c0ac7caa97d149ee42e0b9ef6ccc5f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="deploy-mim-pam-with-windows-server-2016"></a>Deploy MIM PAM with Windows Server 2016 (Implementación de MIM PAM con Windows Server 2016)
 
@@ -130,13 +130,13 @@ Realice la instalación como se describe en la [guía de introducción](privileg
     -   Después de establecer la confianza, inicie sesión en PRIVDC como PRIV\\administrador, inicie PowerShell y escriba los siguientes comandos:
   ```
     netdom trust contoso.local /domain:priv.contoso.local /enablesidhistory:yes
-     /usero:contoso\\administrator /passwordo:Pass\@word1
+     /usero:contoso\administrator /passwordo:Pass@word1
 
      netdom trust contoso.local /domain:priv.contoso.local /quarantine:no
-     /usero:contoso\\administrator /passwordo:Pass\@word1  
+     /usero:contoso\administrator /passwordo:Pass@word1  
 
      netdom trust contoso.local /domain:priv.contoso.local /enablepimtrust:yes
-     /usero:contoso\\administrator /passwordo:Pass\@word1
+     /usero:contoso\administrator /passwordo:Pass@word1
   ```
 
 -   El elemento n.º 5 (comprobación de confianza) no **se requiere si ambos dominios CORP y PRIV están en el nivel funcional del dominio de Windows Server 2016**.
