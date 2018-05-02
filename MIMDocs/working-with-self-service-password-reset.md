@@ -1,7 +1,7 @@
 ---
-title: "Trabajo con el Portal de autoservicio de restablecimiento de contraseñas | Microsoft Docs"
-description: "Consulte las novedades del autoservicio de restablecimiento de contraseña en MIM 2016, incluido el funcionamiento de SSPR con la autenticación multifactor."
-keywords: 
+title: Trabajo con el Portal de autoservicio de restablecimiento de contraseñas | Microsoft Docs
+description: Consulte las novedades del autoservicio de restablecimiento de contraseña en MIM 2016, incluido el funcionamiento de SSPR con la autenticación multifactor.
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 0463a91275f3e181a66eb460c167bb9a2008f444
-ms.sourcegitcommit: 27a23142393bbb0f66a3d533d89a5a8366a29e41
+ms.openlocfilehash: 18c3e4ea623b4b092bbd9236c5fa1b2a63af0486
+ms.sourcegitcommit: 637988684768c994398b5725eb142e16e4b03bb3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/26/2018
 ---
 >[!IMPORTANT]
 Debido al anuncio de desuso del kit de desarrollo de software de Azure Multi-Factor Authentication, Se admitirá el SDK de Azure MFA para los clientes existentes hasta la fecha de retirada, el 14 de noviembre de 2018. Los clientes nuevos y actuales ya no podrán descargar el SDK a través del Portal de Azure clásico. En su lugar, para realizar la descarga, debe ponerse en contacto con el servicio de atención al cliente de Azure para recibir el paquete de credenciales de servicio generado para MFA. <br> El equipo de desarrollo de Microsoft está planeando los cambios de MFA mediante la integración con el SDK del servidor MFA. Se incluirá en la próxima revisión a principios de 2018.
@@ -65,9 +65,9 @@ En la siguiente sección, configurará el proveedor de Azure MFA en Microsoft Az
 
 ### <a name="register-your-multi-factor-authentication-provider-in-azure"></a>Registro del proveedor de autenticación multifactor en Azure
 
-1.  Vaya al [Portal de Azure clásico](http://manage.windowsazure.com) e inicie sesión como administrador de suscripción de Azure.
+1.  Cree un [proveedor de MFA](https://docs.microsoft.com/en-us/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
 
-2.  En la esquina inferior izquierda, haga clic en **Nuevo**.
+2. Abra un caso de soporte técnico y solicite el SDK directo para ASP.net 2.0 C#. El SDK solo se proporcionará a los usuarios actuales de MIM con MFA porque el SDK directo ha quedado en desuso. Los nuevos clientes deben adoptar la próxima versión de MIM que se integre con el servidor MFA.
 
 3.  Haga clic en **Servicios de aplicaciones &gt; Active Directory &gt; Proveedor de autenticación multifactor &gt; Creación rápida**.
 
