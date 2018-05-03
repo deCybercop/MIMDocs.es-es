@@ -1,7 +1,7 @@
 ---
-title: "Uso de la sincronización de Microsoft Identity Manager con AD | Microsoft Docs"
-description: "Use los agentes de administración y el servicio de sincronización de MIM para sincronizar las bases de datos de Active Directory y de MIM."
-keywords: 
+title: Uso de la sincronización de Microsoft Identity Manager con AD | Microsoft Docs
+description: Use los agentes de administración y el servicio de sincronización de MIM para sincronizar las bases de datos de Active Directory y de MIM.
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 31cc9a61bbcb309dae4ee4d09654432d08bf1e28
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: 736d933f2c62d440abafdab27f82b3b1ba0f9a06
+ms.sourcegitcommit: 48f89d555c0ac7caa97d149ee42e0b9ef6ccc5f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>Instalación de MIM 2016: sincronizar Active Directory y el servicio MIM
 
@@ -43,7 +43,7 @@ Al configurar un agente de administración de MIM, debe especificar una cuenta d
 
 1.  Abra el Synchronization Service Manager.
 
-2.  Para abrir el Asistente para creación de agentes de administración, cambie a la página **Acciones de administración** y haga clic en **Crear** en el menú **Acciones**.
+2.  Para abrir el Asistente para creación de agentes de administración, cambie a la página **Agentes de administración** y, en el menú **Acciones**, haga clic en **Crear** .
 
 3.  En la página **Create Management Agent** (Crear agente de administración), proporcione la siguiente configuración y después haga clic en **Siguiente**.
 

@@ -1,7 +1,7 @@
 ---
-title: "Implementación del administrador de certificados de Microsoft Identity Manager | Microsoft Docs"
+title: Implementación del administrador de certificados de Microsoft Identity Manager | Microsoft Docs
 description: Instalar el administrador de certificados de Microsoft Identity Manager 2016
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -9,12 +9,12 @@ ms.date: 09/19/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: 2473ef1c3d6fc5350d60d81bd508296a33343f01
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.assetid: ''
+ms.openlocfilehash: 3c2246ec21ad73cf025daec5c56295ec57838bb2
+ms.sourcegitcommit: 3502d636687e442f7d436ee56218b9b95f5056cf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploying-microsoft-identity-manager-certificate-manager-2016-mim-cm"></a>Implementación del administrador de certificados de Microsoft Identity Manager 2016 (MIM CM)
 
@@ -471,9 +471,9 @@ Estas cuentas se crearon anteriormente. Asegúrese de que se repiten los procedi
 
 18. Cierre todas las ventanas abiertas.
 
-19. Agregue https://cm.contoso.com/certificatemanagement a la zona de intranet local en el explorador.
+19. Agregue https://cm.contoso.com/certificatemanagement a la zona de intranet local del explorador.
 
-20. Visite el sitio desde el servidor CORPCM https://cm.contoso.com/certificatemanagement.  
+20. Visite el sitio del servidor CORPCM https://cm.contoso.com/certificatemanagement.  
 
     ![](media/mim-cm-deploy/image035.png)
 
@@ -572,9 +572,9 @@ En este paso, se instalarán y configurarán los módulos de CA de FIM CM en la 
 
 6. En el cuadro de diálogo **Propiedades de contoso-CORPCA-CA**, haga clic en **Aceptar**.
 
-7. Haga clic con el botón derecho en **CORPCA-contoso-CA***,* seleccione **Todas las tareas** y, después, haga clic en **Detener servicio**. Espere hasta que Servicios de certificados de Active Directory se detenga.
+7. Haga clic con el botón derecho en **contoso-CORPCA-CA****, seleccione **Todas las tareas** y luego haga clic en **Detener servicio**. Espere hasta que Servicios de certificados de Active Directory se detenga.
 
-8. Haga clic con el botón derecho en **contoso-CORPCA-CA***,* seleccione **Todas las tareas** y, después, haga clic en **Iniciar servicio**.
+8. Haga clic con el botón derecho en **contoso-CORPCA-CA****, seleccione **Todas las tareas** y luego haga clic en **Iniciar servicio**.
 
 9. Minimice la consola **Entidad de certificación**.
 
@@ -644,11 +644,11 @@ En este paso, se instalarán y configurarán los módulos de CA de FIM CM en la 
 
 - En el cuadro de diálogo **Propiedades de contoso-CORPCA-CA**, haga clic en **Aceptar**.
 
-- Haga clic con el botón derecho en **contoso-CORPCA-CA***,* seleccione **Todas las tareas** y, después, haga clic en **Detener servicio**.
+- Haga clic con el botón derecho en **contoso-CORPCA-CA****, seleccione **Todas las tareas** y luego haga clic en **Detener servicio**.
 
 - Espere hasta que Servicios de certificados de Active Directory se detenga.
 
-- Haga clic con el botón derecho en **contoso-CORPCA-CA***,* seleccione **Todas las tareas** y, después, haga clic en **Iniciar servicio**.
+- Haga clic con el botón derecho en **contoso-CORPCA-CA****, seleccione **Todas las tareas** y luego haga clic en **Iniciar servicio**.
 
 - Cierre la consola **Entidad de certificación**.
 
@@ -663,19 +663,19 @@ En este paso, se instalarán y configurarán los módulos de CA de FIM CM en la 
 
   - Configurar permisos en el punto de conexión de servicio (SCP). **\<sin script\>**
 
-        -   Asegúrese de que está conectado al servidor virtual **CORPDC**.
+     -   Asegúrese de que está conectado al servidor virtual **CORPDC**.
 
-        -   Inicie sesión como **contoso\\corpadmin**.
+     -   Inicie sesión como **contoso\\corpadmin**.
 
-        -   Desde **Herramientas administrativas**, abra **Usuarios y equipos de Active Directory**.
+     -   En **Herramientas administrativas**, abra **Usuarios y equipos de Active Directory**.
 
-        -   En **Usuarios y equipos de Active Directory**, en el menú **Ver**, asegúrese de que la opción **Características avanzadas** está seleccionada.
+     -   En **Usuarios y equipos de Active Directory**, en el menú **Ver**, asegúrese de que la opción **Características avanzadas** está habilitada.
 
-        -   En el árbol de consola, expanda **Contoso.com** \| **System** \| **Microsoft** \| **Certificate Lifecycle Manager** y, después, haga clic en **CORPCM**.
+     -   En el árbol de consola, expanda **Contoso.com** \| **System** \| **Microsoft** \| **Certificate Lifecycle Manager** y luego haga clic en **CORPCM**.
 
-        -   Haga clic con el botón derecho en **CORPCM** y, después, haga clic en **Propiedades**.
+     -   Haga clic con el botón derecho en **CORPCM** y, después, haga clic en **Propiedades**.
 
-        -   En el cuadro de diálogo **Propiedades de CORPCM**, en la pestaña **Seguridad**, agregue los grupos siguientes con los permisos correspondientes:
+     -   En la pestaña **Seguridad** del cuadro de diálogo **Propiedades de CORPCM**, agregue los grupos siguientes con los permisos correspondientes:
 
     | Group          | Permisos                                                                                                                                                         |
     |----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -765,155 +765,100 @@ En este paso, se instalarán y configurarán los módulos de CA de FIM CM en la 
 
 ![](media/mim-cm-deploy/image021.png)
 
-"""import-module activedirectory $adace = @{ "OID" = "AD:\\CN=OID,CN=Public Key Services,CN=Services,CN=Configuration,DC=contoso,DC=com"; "CT" = "AD:\\CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=contoso,DC=com"; "PT" = "AD:\\CN=Profile Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=contoso,DC=com" } $adace.GetEnumerator() | **Foreach-Object** { $acl = **Get-Acl** *-RutaDeAcceso* $_.Value $sid=(**Get-ADGroup** "MIMCM-Managers").SID $p = **New-Object** System.Security.Principal.SecurityIdentifier($sid)
-##<a name="httpsmsdnmicrosoftcomen-uslibrarysystemdirectoryservicesactivedirectorysecurityinheritancevvs110aspx"></a>https://msdn.microsoft.com/es-es/library/system.directoryservices.activedirectorysecurityinheritance(v=vs.110).aspx
-$ace = **New-Object** System.DirectoryServices.ActiveDirectoryAccessRule ($p,[System.DirectoryServices.ActiveDirectoryRights]"GenericAll",[System.Security.AccessControl.AccessControlType]::Allow, [DirectoryServices.ActiveDirectorySecurityInheritance]::All) $acl.AddAccessRule($ace) **Set-Acl** *-RutaDeAcceso* $_.Value *-AclObject* $acl }
+```
+import-module activedirectory
+$adace = @{
+"OID" = "AD:\\CN=OID,CN=Public Key Services,CN=Services,CN=Configuration,DC=contoso,DC=com";
+"CT" = "AD:\\CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=contoso,DC=com";
+"PT" = "AD:\\CN=Profile Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=contoso,DC=com"
+}
+$adace.GetEnumerator() | **Foreach-Object** {
+$acl = **Get-Acl** *-Path* $_.Value
+$sid=(**Get-ADGroup** "MIMCM-Managers").SID
+$p = **New-Object** System.Security.Principal.SecurityIdentifier($sid)
+##https://msdn.microsoft.com/en-us/library/system.directoryservices.activedirectorysecurityinheritance(v=vs.110).aspx
+$ace = **New-Object** System.DirectoryServices.ActiveDirectoryAccessRule
+($p,[System.DirectoryServices.ActiveDirectoryRights]"GenericAll",[System.Security.AccessControl.AccessControlType]::Allow,
+[DirectoryServices.ActiveDirectorySecurityInheritance]::All)
+$acl.AddAccessRule($ace)
+**Set-Acl** *-Path* $_.Value *-AclObject* $acl
+}
 ```
 
-**Scripts: Delegating permissions on the existing certificate templates.**
+**Scripts: Delegación de permisos en las plantillas de certificado existentes.**  
 
-![](media/mim-cm-deploy/image039.png)
+![](media/mim-cm-deploy/image039.png)  
 
-dsacls "CN=Administrator,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=Administrator,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=CA,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=CA,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=CAExchange,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=CAExchange,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=CEPEncryption,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=CEPEncryption,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=ClientAuth,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=ClientAuth,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=CodeSigning,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=CodeSigning,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=CrossCA,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=CrossCA,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=CTLSigning,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=CTLSigning,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=DirectoryEmailReplication,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=DirectoryEmailReplication,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=DomainController,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=DomainController,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=DomainControllerAuthentication,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=DomainControllerAuthentication,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=EFS,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=EFS,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=EFSRecovery,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=EFSRecovery,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=EnrollmentAgent,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=EnrollmentAgent,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=EnrollmentAgentOffline,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=EnrollmentAgentOffline,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=ExchangeUser,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=ExchangeUser,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=ExchangeUserSignature,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=ExchangeUserSignature,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=FIMCMSigning,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=FIMCMSigning,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=FIMCMEnrollmentAgent,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=FIMCMEnrollmentAgent,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=FIMCMKeyRecoveryAgent,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=FIMCMKeyRecoveryAgent,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=IPSecIntermediateOffline,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=IPSecIntermediateOffline,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=IPSecIntermediateOnline,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=IPSecIntermediateOnline,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=KerberosAuthentication,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=KerberosAuthentication,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=KeyRecoveryAgent,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=KeyRecoveryAgent,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=Machine,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=Machine,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=MachineEnrollmentAgent,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=MachineEnrollmentAgent,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=OCSPResponseSigning,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=OCSPResponseSigning,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=OfflineRouter,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=OfflineRouter,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=RASAndIASServer,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=RASAndIASServer,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=SmartCardLogon,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=SmartCardLogon,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=SmartCardUser,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=SmartCardUser,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=SubCA,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=SubCA,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=User,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=User,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=UserSignature,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=UserSignature,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=WebServer,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=WebServer,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=Workstation,CN=Certificate Templates,CN=Public Key
-Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
-Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=Workstation,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
