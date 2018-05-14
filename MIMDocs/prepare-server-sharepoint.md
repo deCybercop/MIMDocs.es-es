@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: eceb1ed31b0212970d5cf0eae0bc8d96aa087ff5
-ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
+ms.openlocfilehash: 6922c3c2f66b6dbb0b0751420be9dd778206a3cf
+ms.sourcegitcommit: 8316fa41f06f137dba0739a8700910116b5575d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Configuración de un servidor de administración de identidades: SharePoint
 
@@ -68,14 +68,15 @@ Siga los pasos que se indican en el **Asistente para configuración de productos
 1. En la pestaña **Conectar a una granja de servidores** , cambie para crear una nueva granja de servidores.
 
 2. Especifique este servidor como servidor de bases de datos, por ejemplo, **corpsql** para la base de datos de configuración y *Contoso\SharePoint* como la cuenta de acceso a la base de datos que se usará en SharePoint.
-    a. En el Asistente para configuración, se recomienda seleccionar [MinRole](https://docs.microsoft.com/en-us/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) como tipo de **Front-end**.
 3. Cree una contraseña para la frase de contraseña de seguridad de la granja de servidores.
 
-4. Cuando el Asistente para la configuración complete la tarea de configuración 10 de 10, haga clic en Finalizar y se abrirá un explorador web.
+4. En el Asistente para configuración, se recomienda seleccionar [MinRole](https://docs.microsoft.com/en-us/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) como tipo de **Front-end**.
 
-5. En la ventana emergente de Internet Explorer, autentíquese como *Contoso\miminstall* (o la cuenta de administrador equivalente) para continuar.
+5. Cuando el asistente para la configuración complete la última tarea de configuración (10 de 10), haga clic en Finalizar y se abrirá un explorador web.
 
-6. En el Asistente Web (dentro de la aplicación web), haga clic en **Cancelar/Omitir**.
+6. Si en la ventana emergente de Internet Explorer se le solicita que lo haga, autentíquese como *Contoso\miminstall* (o la cuenta de administrador equivalente) para continuar.
+
+7. En el Asistente Web (dentro de la aplicación web), haga clic en **Cancelar/Omitir**.
 
 
 ## <a name="prepare-sharepoint-to-host-the-mim-portal"></a>Preparación de SharePoint para hospedar el portal de MIM
@@ -94,14 +95,13 @@ Siga los pasos que se indican en el **Asistente para configuración de productos
     > [!NOTE]
     > Aparecerá un mensaje de advertencia que indicará que se está usando el método de autenticación clásico de Windows y el comando final puede tardar varios minutos en responder. Cuando se complete, el resultado indicará la dirección URL del nuevo portal. Mantenga abierta la ventana de la **Consola de administración de SharePoint 2016** para consultarla más tarde.
 
-2. Inicie el Shell de administración de SharePoint 2013 y ejecute el siguiente script de PowerShell para crear una **colección de sitios de SharePoint** asociada a esa aplicación web.
+2. Inicie el Shell de administración de SharePoint 2016 y ejecute el siguiente script de PowerShell para crear una **colección de sitios de SharePoint** asociada a esa aplicación web.
 
   ```
     $t = Get-SPWebTemplate -compatibilityLevel 15 -Identity "STS#1"
     $w = Get-SPWebApplication http://mim.contoso.com/
     New-SPSite -Url $w.Url -Template $t -OwnerAlias contoso\miminstall -CompatibilityLevel 15 -Name "MIM Portal"
     $s = SpSite($w.Url)
-    $s.AllowSelfServiceUpgrade = $false
     $s.CompatibilityLevel
   ```
 
@@ -119,7 +119,7 @@ Siga los pasos que se indican en el **Asistente para configuración de productos
 
 4. En el servidor de administración de identidades, abra una nueva pestaña de explorador web, vaya a http://mim.contoso.com/ e inicie sesión con *contoso\miminstall*.  Se mostrará un sitio de SharePoint vacío denominado *Portal de MIM* .
 
-    ![Imagen del portal de MIM en http://mim.contoso.com/](media/MIM-DeploySP1.png)
+    ![Imagen del portal de MIM en http://mim.contoso.com/](media/prepare-server-sharepoint/MIM_DeploySP1new.png)
 
 5. Copie la dirección URL; a continuación, abra **Opciones de Internet** en Internet Explorer, vaya a la pestaña **Seguridad**, seleccione **Intranet local** y haga clic en **Sitios**.
 
