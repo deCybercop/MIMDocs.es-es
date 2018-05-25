@@ -58,7 +58,7 @@ Empiece con una máquina de Windows Server 2016 con entre 8 y 12 GB de memoria R
 
     ![Imagen de las características de PowerShell](media/MIM-DeployWS2.png)
 
-7. En PowerShell, escriba los siguientes comandos. Tenga en cuenta que puede que sea necesario especificar una ubicación diferente para los archivos de origen de las características de **.NET Framework** 3.5. Normalmente, estas características no están presentes cuando se instala Windows Server, pero están disponibles en la carpeta en paralelo (SxS) de la carpeta de orígenes de disco de instalación del sistema operativo, por ejemplo, “*d:\Sources\SxS\*”.
+7. En PowerShell, escriba los siguientes comandos. Tenga en cuenta que puede que sea necesario especificar una ubicación diferente para los archivos de origen de las características de **.NET Framework** 3.5. Normalmente, estas características no están presentes cuando se instala Windows Server, pero están disponibles en la carpeta en paralelo (SxS) de la carpeta de orígenes de disco de instalación del sistema operativo, por ejemplo, “\*d:\Sources\SxS\*”.
 
     ```
     import-module ServerManager
