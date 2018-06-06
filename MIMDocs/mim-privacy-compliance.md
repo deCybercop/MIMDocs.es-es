@@ -16,6 +16,7 @@ ms.sourcegitcommit: 66db63fe2813130764e52381f4f9c8e549d77d39
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34449691"
 ---
 # <a name="microsoft-identity-manager-data-handling"></a>Control de datos de Microsoft Identity Manager 
 
@@ -150,7 +151,7 @@ Se recomienda que para el servicio y el portal mantenga la configuración predet
 
 ### <a name="bhold"></a>BHOLD
 
-Bhold, al igual que la mayoría de los sistemas conectados al servicio de sincronización, se puede configurar para eliminarse una vez que el objeto de origen, como recursos humanos, se quita. Esto se configura en el agente de administración. y se controla mediante las reglas de eliminación de objetos tal y como se describe en las características de servicios de sincronización.
+Bhold, al igual que la mayoría de los sistemas conectados al servicio de sincronización, se puede configurar para eliminarse una vez que el objeto de origen, como recursos humanos, se quita. Esto se configura en el agente de administración y se controla mediante las reglas de eliminación de objetos tal y como se describe en las características de servicios de sincronización.
 
 Otra opción es quitar el objeto de usuario directamente desde la interfaz de usuario de Core de BHOLD. Según la configuración, esto podría funcionar correctamente, pero tenga en cuenta que la lógica de aprovisionamiento podría volver a crear este usuario si no se elimina en el origen.
 ![mim-privacy-compliance-bholdr.PNG](media/mim-privacy-compliance/mim-privacy-compliance-bholdr.PNG)
