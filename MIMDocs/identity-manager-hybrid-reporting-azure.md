@@ -1,7 +1,7 @@
 ---
-title: "¿Qué son los informes híbridos de Azure AD? | Microsoft Docs"
-description: "Los informes de actividad de auditoría híbridos de Azure Active Directory permiten ver los eventos auditados tanto en el entorno local como en la nube."
-keywords: 
+title: ¿Qué son los informes híbridos de Azure AD? | Microsoft Docs
+description: Los informes de actividad de auditoría híbridos de Azure Active Directory permiten ver los eventos auditados tanto en el entorno local como en la nube.
+keywords: ''
 author: davidste
 ms.author: davidste
 manager: bhu
@@ -16,6 +16,7 @@ ms.sourcegitcommit: b4a39928c5fa1d7718046563c0809bcbf11d833d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/20/2018
+ms.locfileid: "29370385"
 ---
 # <a name="hybrid-identity-management-audit-reporting-in-azure-active-directory"></a>Informes de auditoría de administración de identidades híbridas de Azure Active Directory
 Con los informes de actividad de auditoría de Azure Active Directory (Azure AD), puede supervisar la actividad de administración de identidades en el entorno local o en la nube. Con la administración de todos los datos de acceso e identidades en un único informe, puede ahorrar tiempo y reducir los costos generales.

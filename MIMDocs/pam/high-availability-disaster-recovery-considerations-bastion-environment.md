@@ -1,7 +1,7 @@
 ---
-title: "Recuperación ante desastres de PAM | Microsoft Docs"
-description: "Obtenga información sobre cómo configurar Privileged Access Management para alta disponibilidad y recuperación ante desastres."
-keywords: 
+title: Recuperación ante desastres de PAM | Microsoft Docs
+description: Obtenga información sobre cómo configurar Privileged Access Management para alta disponibilidad y recuperación ante desastres.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/14/2017
+ms.locfileid: "22052321"
 ---
 # <a name="high-availability-and-disaster-recovery-considerations-for-the-bastion-environment"></a>Consideraciones de alta disponibilidad y recuperación ante desastres para el entorno bastión
 

@@ -6,6 +6,7 @@
 ## [Creación de informes híbridos en ​Azure](identity-manager-hybrid-reporting-azure.md)
 # [Plan y diseño](microsoft-identity-manager-2016-supported-platforms.md)
 ## [Plataformas compatibles](microsoft-identity-manager-2016-supported-platforms.md)
+## [Idiomas admitidos](microsoft-identity-manager-2016-language-support.md)
 ## [Conexión a los directorios](supported-management-agents.md)
 ## [Planeamiento de capacidad](capacity-planning-guide.md)
 ## [Topología de implementación](topology-considerations.md)

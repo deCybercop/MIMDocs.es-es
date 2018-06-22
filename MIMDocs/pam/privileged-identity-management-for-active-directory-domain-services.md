@@ -1,7 +1,7 @@
 ---
 title: Privileged Access Management para Active Directory Domain Services | Microsoft Docs
-description: "Obtenga información sobre Privileged Access Management y descubra cómo puede ayudarle a administrar y proteger su entorno de Active Directory."
-keywords: 
+description: Obtenga información sobre Privileged Access Management y descubra cómo puede ayudarle a administrar y proteger su entorno de Active Directory.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: c049dceaf02ab8b6008fe440daae4d07b752ca2e
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/31/2017
+ms.locfileid: "21942721"
 ---
 # <a name="privileged-access-management-for-active-directory-domain-services"></a>Privileged Access Management para los Servicios de dominio de Active Directory
 

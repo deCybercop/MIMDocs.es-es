@@ -1,7 +1,7 @@
 ---
-title: "¿Qué es PAM para AD DS? | Microsoft Docs"
+title: ¿Qué es PAM para AD DS? | Microsoft Docs
 description: Privileged Access Management (PAM) ayuda a las organizaciones a restringir el acceso con privilegios en un entorno existente de Active Directory.
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/14/2017
+ms.locfileid: "22052406"
 ---
 # <a name="privileged-access-management-for-active-directory-domain-services"></a>Privileged Access Management para los Servicios de dominio de Active Directory
 

@@ -1,7 +1,7 @@
 ---
 title: Modelo de niveles del entorno PAM | Microsoft Docs
-description: "Obtenga información sobre el modelo de niveles que aísla el sistema según la vulnerabilidad y el riesgo."
-keywords: 
+description: Obtenga información sobre el modelo de niveles que aísla el sistema según la vulnerabilidad y el riesgo.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: c049dceaf02ab8b6008fe440daae4d07b752ca2e
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/31/2017
+ms.locfileid: "21942738"
 ---
 # <a name="tier-model-for-partitioning-administrative-privileges"></a>Modelo de niveles para el particionamiento de los privilegios administrativos
 

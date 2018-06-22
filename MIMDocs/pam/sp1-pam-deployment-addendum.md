@@ -1,7 +1,7 @@
 ---
 title: Anexo
-description: "Este es el anexo a los documentos que abarca la implementación generada por script de PAM. Trata la configuración de los dominios de PRIV y CORP, así como una configuración de un cliente para realizar la validación y la información acerca de cómo solicitar asistencia."
-keywords: 
+description: Este es el anexo a los documentos que abarca la implementación generada por script de PAM. Trata la configuración de los dominios de PRIV y CORP, así como una configuración de un cliente para realizar la validación y la información acerca de cómo solicitar asistencia.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,13 +10,14 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: 010fcac1d512775ed5c84031a42a4c5836cff34f
 ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/19/2017
+ms.locfileid: "20896961"
 ---
 # <a name="pam-deployment-scripts-addendum"></a>Anexo de scripts de implementación de PAM:
 
