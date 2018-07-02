@@ -1,7 +1,7 @@
 ---
 title: Requisitos de software de PAM | Microsoft Docs
-description: "Vea los requisitos de hardware y software necesarios para una correcta implementación de Privileged Access Management."
-keywords: 
+description: Vea los requisitos de hardware y software necesarios para una correcta implementación de Privileged Access Management.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -12,18 +12,19 @@ ms.technology: active-directory-domain-services
 ms.assetid: 82a9085c-9667-4b3b-8079-657eab1d1e58
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 2ff6fd997dc5bc7e4a4949520e978ae2d8283d4b
-ms.sourcegitcommit: f29f02fa8437fa55e86afd7b0b99a36d2306b96b
+ms.openlocfilehash: c53d8cc815f792d1a1246a7434350f1cfb087844
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36288969"
 ---
 # <a name="hardware-and-software-requirements"></a>Requisitos de hardware y de software para SharePoint 2013
 
 Privileged Access Management no tiene ningún requisito de hardware aparte de los que puedan tener las plataformas de software subyacente. Asegúrese de tener suficiente memoria o espacio en disco y conectividad de red.
 
->[!IMPORTANT]
-En este artículo se proporcionan los requisitos mínimos para una implementación básica. No está pensado para demostrar rendimiento, escalabilidad o alta disponibilidad. No representa una topología de implementación recomendada para grandes empresas o entornos de producción.
+> [!IMPORTANT]
+> En este artículo se proporcionan los requisitos mínimos para una implementación básica. No está pensado para demostrar rendimiento, escalabilidad o alta disponibilidad. No representa una topología de implementación recomendada para grandes empresas o entornos de producción.
 
 ## <a name="installing-from-software-packages"></a>Instalación con paquetes de software
 
@@ -39,7 +40,7 @@ Puede descargar el siguiente software de GitHub:
 
 ## <a name="required-software"></a>Software requerido
 
-- Windows Server 2012 R2
+- Windows Server 2012 R2
 - Windows 10 Enterprise
 - SQL Server 2012 Service Pack 1 o SQL Server 2014
 
@@ -76,4 +77,4 @@ Para PRIVDC:
 Para PAMSRV:
 
 - [Windows Server 2012 R2](https://technet.microsoft.com/library/dn303418.aspx)
-- [SQL Server 2012](https://msdn.microsoft.com/library/ms143506(sql.110).aspx) o [SQL Server 2014](https://msdn.microsoft.com/en-us/library/ms143506(v=sql.120).aspx)
+- [SQL Server 2012](https://msdn.microsoft.com/library/ms143506(sql.110).aspx) o [SQL Server 2014](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx)

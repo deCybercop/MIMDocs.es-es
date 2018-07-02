@@ -11,19 +11,20 @@ ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: 50f7b135ce0d5a46ea08068a7658b229759d2b50
-ms.sourcegitcommit: 24bb3e82f55971696bdefa6c240f1a27f856e110
+ms.openlocfilehash: a4239f1d69d8a43d70dd38af16e9ef8be62bd33c
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36288918"
 ---
 # <a name="deprecated-features"></a>Características en desuso
 
 En este artículo se describen las características en desuso de Microsoft Identity Manager 2016 SP1. Si la característica todavía está presente en Microsoft Identity Manager, implica que sigue recibiendo soporte. No se recomienda el uso de características en nuevas implementaciones, ya que es posible que se quiten en próximas versiones.  En el caso de los desarrolladores, no se recomienda el uso de características en desuso en ninguna aplicación ni solución nueva.
 
->[!NOTE]
-Las características y funcionalidades quitadas en Microsoft Identity Manager SP1 están marcadas con dos asteriscos (**). <br>
-Para obtener más información sobre soporte, consulte el [ciclo de vida de Microsoft Identity Manager](https://support.microsoft.com/en-us/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010).
+> [!NOTE]
+> Las características y funcionalidades quitadas en Microsoft Identity Manager SP1 están marcadas con dos asteriscos (**). <br>
+> Para obtener más información sobre soporte, consulte el [ciclo de vida de Microsoft Identity Manager](https://support.microsoft.com/en-us/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010).
 
 
 ## <a name="bhold"></a>BHOLD 
@@ -31,6 +32,7 @@ Para obtener más información sobre soporte, consulte el [ciclo de vida de Micr
 Microsoft no recomienda a los clientes que inicien nuevas implementaciones de los componentes del conjunto de aplicaciones Microsoft BHOLD. Las implementaciones existentes de BHOLD seguirán recibiendo soporte. Ahora, Azure AD proporciona [revisiones de acceso](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-azure-ad-controls-access-reviews-overview), que reemplazan algunas de las características de campaña de atestación de BHOLD.
 
 ## <a name="certificate-management"></a>Administración de certificados 
+
 | **Categoría**                | **Característica en desuso**              | **Reemplazo y comentario**           |
 |-----------------------------|-------------------------------------|----------------------------------------------|
 | Agentes de administración | **FIM Certificate Management | El agente FIM Certificate Management se ha quitado en MIM 2016.                                                             |
@@ -53,8 +55,8 @@ Microsoft no recomienda a los clientes que inicien nuevas implementaciones de lo
 | Agentes de administración           | Configuración del nombre para mostrar de la partición    | Esta característica no se reemplazará. Esta opción solo se usaba para proporcionar un nombre alternativo para una partición en las interfaces de WMI.                                                                                                                                                                       |
 | Perfiles de ejecución                | Perfiles combinados                   | Se quitarán los perfiles combinados importación diferencial/sincronización, importación completa/sincronización diferencial e importación completa/sincronización. En su lugar debe usar perfiles de ejecución con dos pasos. 
 
->[!NOTE]
-Solo debe mantener los perfiles de ejecución combinados en entornos en los que el rendimiento se vaya a ver afectado por un gran número de desconectores existentes.
+> [!NOTE]
+> Solo debe mantener los perfiles de ejecución combinados en entornos en los que el rendimiento se vaya a ver afectado por un gran número de desconectores existentes.
 
 
 | **Categoría**                | **Característica en desuso**              | **Reemplazo y comentario**           |

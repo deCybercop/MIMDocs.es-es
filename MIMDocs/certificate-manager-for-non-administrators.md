@@ -1,7 +1,7 @@
 ---
-title: "Renovación de tarjeta inteligente de autoservicio de Microsoft Identity Manager sin acceso de administrador | Microsoft Docs"
-description: "Descubra cómo inscribir tarjetas inteligentes para los usuarios que no disponen de acceso de administrador a sus equipos para que puedan usar el Administrador de certificados."
-keywords: 
+title: Renovación de tarjeta inteligente de autoservicio de Microsoft Identity Manager sin acceso de administrador | Microsoft Docs
+description: Descubra cómo inscribir tarjetas inteligentes para los usuarios que no disponen de acceso de administrador a sus equipos para que puedan usar el Administrador de certificados.
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -13,10 +13,11 @@ ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 39becb555d2efe17e60789453dbaf448c90a8b60
-ms.sourcegitcommit: 362475d4018e74e5a17ba574ccaec47a2caebaff
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289169"
 ---
 # <a name="enroll-smart-cards-for-non-administrators"></a>Inscripción de tarjetas inteligentes para usuarios que no son administradores
 Si un usuario no es un administrador local en su equipo, no podrá inscribir una tarjeta inteligente en sus propios equipos de manera predeterminada. El siguiente procedimiento permite evitar esta limitación.

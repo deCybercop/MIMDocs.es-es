@@ -1,7 +1,7 @@
 ---
 title: Solicitud de certificados en el Administrador de certificados con plantillas | Microsoft Docs
-description: "Descubra cómo usar el Administrador de certificados para crear y renovar certificados de software con las plantillas de perfil."
-keywords: 
+description: Descubra cómo usar el Administrador de certificados para crear y renovar certificados de software con las plantillas de perfil.
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -13,10 +13,11 @@ ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: aebf5af709f4f775ce13be49d8f9075a94e864a2
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290329"
 ---
 # <a name="create-software-certificates-with-certificate-manager"></a>Creación de certificados de software con el Administrador de certificados
 Para inscribir y renovar certificados de software no necesita ser un administrador ni tener una tarjeta inteligente virtual. Debe saber que en algún momento se le pedirá que permita una operación de certificado, algo que es normal.
@@ -65,7 +66,7 @@ Para inscribir y renovar certificados de software no necesita ser un administrad
 
     7.  Seleccione **Archivo** y haga clic en **Agregar o quitar complemento** para agregar el complemento Entidad de certificación a la consola MMC. Cuando se le pregunte qué equipo quiere administrar, seleccione **Equipo local**.
 
-    8.  En el panel izquierdo de MMC, expanda **Entidad de certificación (local)**y después expanda su Entidad de certificación en la lista Entidad de certificación.
+    8.  En el panel izquierdo de MMC, expanda **Entidad de certificación (local)** y después expanda su Entidad de certificación en la lista Entidad de certificación.
 
     9. Haga clic con el botón derecho en **Plantillas de certificado**, en **Nueva** y, a continuación, en la **Plantilla de certificado** para emitirla.
 

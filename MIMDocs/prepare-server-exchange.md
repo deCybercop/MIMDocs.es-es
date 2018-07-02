@@ -1,7 +1,7 @@
 ---
-title: "Configuración de Exchange para MIM para el correo electrónico y la creación de buzones | Microsoft Docs"
-description: "Como paso opcional, implemente Exchange Server para permitir que MIM 2016 envíe correos y cree buzones de correo."
-keywords: 
+title: Configuración de Exchange para MIM para el correo electrónico y la creación de buzones | Microsoft Docs
+description: Como paso opcional, implemente Exchange Server para permitir que MIM 2016 envíe correos y cree buzones de correo.
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -12,17 +12,18 @@ ms.technology: security
 ms.assetid: 34a8c16e-3bed-4e16-939b-b9fe17dd834b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: cdb425938f7458f74cf06b76d33f557d6a38beeb
-ms.sourcegitcommit: 362475d4018e74e5a17ba574ccaec47a2caebaff
+ms.openlocfilehash: c5fb54c870d750cdf675dd91c1b27dc9bed7d963
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289081"
 ---
 # <a name="set-up-an-identity-management-server-exchange"></a>Configuración de un servidor de administración de identidades: Exchange
 
->[!div class="step-by-step"]
-[« SharePoint](prepare-server-sharepoint.md)
-[MIM Synchronization Service »](install-mim-sync.md)
+> [!div class="step-by-step"]
+> [« SharePoint](prepare-server-sharepoint.md)
+> [MIM Synchronization Service »](install-mim-sync.md)
 
 ## <a name="deploy-microsoft-exchange-server"></a>Implementar Microsoft Exchange Server
 Si desea configurar MIM para enviar y recibir correo electrónico o aprovisionar buzones, es necesario tener Exchange presente en el entorno. Si aún no tiene Exchange implementado, puede instalar una versión de prueba con fines de evaluación:
@@ -37,6 +38,6 @@ Si desea configurar MIM para enviar y recibir correo electrónico o aprovisionar
 
 3. Descargue e instale la [versión de prueba de 180 días de MS Exchange Server 2013](http://www.microsoft.com/evalcenter/evaluate-exchange-server-2013).
 
->[!div class="step-by-step"]  
-[« SharePoint](prepare-server-sharepoint.md)
-[MIM Synchronization Service »](install-mim-sync.md)
+> [!div class="step-by-step"]  
+> [« SharePoint](prepare-server-sharepoint.md)
+> [MIM Synchronization Service »](install-mim-sync.md)

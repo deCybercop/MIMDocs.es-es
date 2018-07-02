@@ -1,7 +1,7 @@
 ---
-title: "Paso 7: Configuración del filtrado de SID/historial de SID"
-description: "Este es el paso 7 de la configuración de Privileged Identity Manager mediante scripts. Este paso trata cómo configurar el filtrado de SID y el historial de SID."
-keywords: 
+title: 'Paso 7: Configuración del filtrado de SID/historial de SID'
+description: Este es el paso 7 de la configuración de Privileged Identity Manager mediante scripts. Este paso trata cómo configurar el filtrado de SID y el historial de SID.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,19 +10,20 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: e3d8578e9d58ccc2f3dc3bb4ff437d124bf15291
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: d2512690ce648767157a7417e5b41095c970b8eb
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289115"
 ---
 # <a name="step-7-set-up-sid-historysid-filtering"></a>Paso 7: Configuración del filtrado de SID/historial de SID
 
->[!div class="step-by-step"]
-[«Paso 6](sp1-step6-setup-pam-trust.md)
-[paso 8»](sp1-step8-pam-deployment-verification.md)
+> [!div class="step-by-step"]
+> [«Paso 6](sp1-step6-setup-pam-trust.md)
+> [paso 8»](sp1-step8-pam-deployment-verification.md)
 
 **Esto no es necesario para un único entorno de PRIV** Inicio de sesión de PAMServer con la cuenta MIMAdmin.
 
@@ -38,6 +39,6 @@ Para el filtrado de SID: <br/></br>
 Para el historial de SID: </br></br>
 "Habilitando historial de SID para esta confianza" o "El historial de SID ya está habilitado para esta confianza".
 
->[!div class="step-by-step"]
-[«Paso 6](sp1-step6-setup-pam-trust.md)
-[paso 8»](sp1-step8-pam-deployment-verification.md)
+> [!div class="step-by-step"]
+> [«Paso 6](sp1-step6-setup-pam-trust.md)
+> [paso 8»](sp1-step8-pam-deployment-verification.md)

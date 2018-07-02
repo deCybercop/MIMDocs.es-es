@@ -12,18 +12,19 @@ ms.technology: security
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 6922c3c2f66b6dbb0b0751420be9dd778206a3cf
-ms.sourcegitcommit: 8316fa41f06f137dba0739a8700910116b5575d8
+ms.openlocfilehash: f69648e7e4229ca7c8de895cdf10ccb2c5f368e2
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289540"
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Configuración de un servidor de administración de identidades: SharePoint
 
->[!div class="step-by-step"]
-[«SQL Server 2016](prepare-server-sql2016.md)
-[Exchange Server»](prepare-server-exchange.md)
-
+> [!div class="step-by-step"]
+> [«SQL Server 2016](prepare-server-sql2016.md)
+> [Exchange Server»](prepare-server-exchange.md)
+> 
 > [!NOTE]
 > Este tutorial usa los valores y nombres de ejemplo de una empresa llamada Contoso. Reemplácelos con sus propios valores. Por ejemplo:
 > - Nombre del controlador de dominio: **corpdc**
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/04/2018
 > - Nombre de servidor del servicio MIM: **corpservice**
 > - Nombre del servidor de sincronización de MIM: **corpsync**
 > - Nombre de SQL Server: **corpsql**
-> - Contraseña - **Pass@word1**
+> - Contraseña - <strong>Pass@word1</strong>
 
 
 ## <a name="install-sharepoint-2016"></a>Instale **SharePoint 2016**.
@@ -97,25 +98,25 @@ Siga los pasos que se indican en el **Asistente para configuración de productos
 
 2. Inicie el Shell de administración de SharePoint 2016 y ejecute el siguiente script de PowerShell para crear una **colección de sitios de SharePoint** asociada a esa aplicación web.
 
-  ```
+   ```
     $t = Get-SPWebTemplate -compatibilityLevel 15 -Identity "STS#1"
     $w = Get-SPWebApplication http://mim.contoso.com/
     New-SPSite -Url $w.Url -Template $t -OwnerAlias contoso\miminstall -CompatibilityLevel 15 -Name "MIM Portal"
     $s = SpSite($w.Url)
     $s.CompatibilityLevel
-  ```
+   ```
 
-  > [!NOTE]
-  > Compruebe que el resultado de la variable *CompatibilityLevel* es "15". Si el resultado no es "15", la colección de sitios no se creó para la versión correcta de la experiencia. Elimine la colección de sitios y vuelva a crearla.
+   > [!NOTE]
+   > Compruebe que el resultado de la variable *CompatibilityLevel* es "15". Si el resultado no es "15", la colección de sitios no se creó para la versión correcta de la experiencia. Elimine la colección de sitios y vuelva a crearla.
 
 3. Deshabilite el **estado de vista del lado servidor** y la tarea "Trabajo de análisis de mantenimiento (Cada hora, Temporizador de Microsoft SharePoint Foundation, Todos los servidores)" de SharePoint ejecutando los siguientes comandos de PowerShell en la **Consola de administración de SharePoint 2016**:
 
-  ```
-  $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
-  $contentService.ViewStateOnServer = $false;
-  $contentService.Update();
-  Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
-  ```
+   ```
+   $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
+   $contentService.ViewStateOnServer = $false;
+   $contentService.Update();
+   Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
+   ```
 
 4. En el servidor de administración de identidades, abra una nueva pestaña de explorador web, vaya a http://mim.contoso.com/ e inicie sesión con *contoso\miminstall*.  Se mostrará un sitio de SharePoint vacío denominado *Portal de MIM* .
 
@@ -129,6 +130,6 @@ Siga los pasos que se indican en el **Asistente para configuración de productos
 
 7. Abra el programa **Herramientas administrativas**, vaya a **Servicios**, busque el servicio de administración de SharePoint e inícielo si aún no se está ejecutando.
 
->[!div class="step-by-step"]  
-[«SQL Server 2016](prepare-server-sql2016.md)
-[Exchange Server»](prepare-server-exchange.md)
+> [!div class="step-by-step"]  
+> [«SQL Server 2016](prepare-server-sql2016.md)
+> [Exchange Server»](prepare-server-exchange.md)

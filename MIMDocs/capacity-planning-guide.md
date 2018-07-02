@@ -1,7 +1,7 @@
 ---
-title: "Guía de planeamiento de capacidad | Microsoft Docs"
-description: "Use esta guía para comprender las variables que deben considerarse antes de implementar MIM 2016, incluidos los niveles de carga y las decisiones de directivas."
-keywords: 
+title: Guía de planeamiento de capacidad | Microsoft Docs
+description: Use esta guía para comprender las variables que deben considerarse antes de implementar MIM 2016, incluidos los niveles de carga y las decisiones de directivas.
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -13,10 +13,11 @@ ms.assetid: 3ac5b990-1678-4996-996d-cbd84b8426b4
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 32cdf03ffa0d0d282a6277af766f97e93e3a3f3a
-ms.sourcegitcommit: 06add1a636720f74bc0c0f25b4100b19f1bd31da
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289020"
 ---
 # <a name="capacity-planning-guide"></a>Guía de planificación de capacidad
 
@@ -26,7 +27,7 @@ Antes de comenzar a trabajar con MIM, use esta guía, junto con los entornos de 
 
 Si aún no está familiarizado con MIM 2016 y sus componentes, infórmese sobre [Microsoft Identity Manager 2016](microsoft-identity-manager-2016.md) antes de continuar.
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 Existe una serie de factores que puede afectar a la capacidad y al rendimiento general de la implementación de Microsoft Identity Manager:
 

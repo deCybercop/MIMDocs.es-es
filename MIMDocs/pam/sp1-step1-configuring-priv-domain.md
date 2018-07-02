@@ -1,7 +1,7 @@
 ---
-title: "Paso 1: Configuración del dominio de Priv"
+title: 'Paso 1: Configuración del dominio de Priv'
 description: Preparar el dominio CORP con identidades nuevas o existentes para ser administrado por Privileged Identity Manager mediante scripts
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,21 +10,22 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 40822bb7702cf3d7ac23ecd6e98ac392f2d3a480
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: e5be140e7ffea7b0c7cacbc1c82d3b2883804203
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290312"
 ---
 # <a name="step-1-configuring-the-priv-domain"></a>Paso 1: Configuración del dominio de Priv
 
->[!div class="step-by-step"]
-[Paso 2 »](sp1-step2-configuring-corp-domain.md)
+> [!div class="step-by-step"]
+> [Paso 2 »](sp1-step2-configuring-corp-domain.md)
 
 1. Iniciar sesión en el PRIVDC como administrador
-  * Si se trata de un entorno de solo PRIV, inicie sesión en el CORPDC
+   * Si se trata de un entorno de solo PRIV, inicie sesión en el CORPDC
 2. Ejecutar PowerShell como administrador
 3. cd $env:SYSTEMDRIVE\PAM
 4. .\PAMDeployment.ps1
@@ -41,5 +42,5 @@ Para los niveles funcionales debajo de Windows Server 2016, descarte la adverten
 Copie SIDs.txt que se genera en $env: SYSTEMDRIVE\PAM a la carpeta similar en el CORPDC. Esto es necesario para que CORPDC configure los permisos para los usuarios de PRIV lean las propiedades de usuario de CORP.
 Una vez completado el script, se le solicitará que reinicie el equipo para que surtan efecto los cambios.
 
->[!div class="step-by-step"]
-[Paso 2 »](sp1-step2-configuring-corp-domain.md)
+> [!div class="step-by-step"]
+> [Paso 2 »](sp1-step2-configuring-corp-domain.md)

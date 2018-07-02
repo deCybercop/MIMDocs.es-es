@@ -1,7 +1,7 @@
 ---
-title: "Administración de contraseñas de Microsoft Identity Manager 2016 | Microsoft Docs"
-description: 
-keywords: 
+title: Administración de contraseñas de Microsoft Identity Manager 2016 | Microsoft Docs
+description: ''
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -10,12 +10,13 @@ ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: 156551f4083c71ee7059e817213751393db5833e
-ms.sourcegitcommit: 5ba5d916c0ca1e5aa501592af0cef714bfdc8afe
+ms.assetid: ''
+ms.openlocfilehash: 86b8b9bdf5c6441d0708cd874742fa48b65177fa
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289370"
 ---
 # <a name="microsoft-identity-manager-2016-password-management"></a>Administración de contraseñas de Microsoft Identity Manager 2016
 
@@ -61,8 +62,8 @@ La DLL de extensión de contraseña .NET se llama siempre que se invoque una lla
 
 La sincronización de contraseñas funciona con el servicio de notificación de cambio de contraseña (PCNS) en un dominio de Active Directory, y permite los cambios de contraseña que se originan desde Active Directory para que se propaguen automáticamente en otros orígenes de datos conectados. MIM consigue esto ejecutándose como un servidor de llamada a procedimiento remoto (RPC) que capta una notificación de cambio de contraseña desde un controlador de dominio de Active Directory. Cuando la solicitud de cambio de contraseña se recibe y autentica, se procesa mediante MIM y se propaga a los agentes de administración adecuados.
 
->[!IMPORTANT]
-MIM no admite la sincronización de contraseñas bidireccional. Configurar la sincronización de contraseñas bidireccional puede crear un bucle, que consumirá los recursos del servidor y tendrá un posible efecto negativo tanto en Active Directory como en MIM.
+> [!IMPORTANT]
+> MIM no admite la sincronización de contraseñas bidireccional. Configurar la sincronización de contraseñas bidireccional puede crear un bucle, que consumirá los recursos del servidor y tendrá un posible efecto negativo tanto en Active Directory como en MIM.
 
 El PCNS se ejecuta en cada controlador de dominio de Active Directory. Los sistemas que reciben las notificaciones de contraseña se conocen como destinos. Su servidor de MIM debe configurarse como un destino de PCNS en Active Directory antes de que se envíen las notificaciones de contraseña. La configuración PCNS debe definir un grupo de inclusión y, opcionalmente, un grupo de exclusión. Estos grupos se usan para restringir el flujo de contraseñas confidenciales desde el dominio. Por ejemplo, para enviar contraseñas a todos los usuarios, pero no enviar contraseñas administrativas, puede decidir usar Usuarios del dominio como el grupo de inclusión y Admins. del dominio como el grupo de exclusión. Para obtener más información sobre la configuración del servicio de notificación de cambio de contraseña, vea [Using Password Synchronization](https://technet.microsoft.com/library/jj590288(v=ws.10).aspx) (Usar la sincronización de contraseñas).
 

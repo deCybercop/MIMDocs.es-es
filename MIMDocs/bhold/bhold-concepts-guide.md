@@ -1,19 +1,20 @@
 ---
-title: "Guía de los conceptos de Microsoft BHOLD Suite | Microsoft Docs"
-description: "Comience a utilizar los componentes de MIM 2016 instalando y configurando el servicio de sincronización."
-keywords: 
+title: Guía de los conceptos de Microsoft BHOLD Suite | Microsoft Docs
+description: Comience a utilizar los componentes de MIM 2016 instalando y configurando el servicio de sincronización.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
 ms.date: 09/14/2017
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: 0d814dd27fe53ee7cfc46eac24ec577b05f78e52
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.assetid: ''
+ms.openlocfilehash: 521025de3dc16a9bda02aed8287faeb3449192c1
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290074"
 ---
 # <a name="microsoft-bhold-suite-concepts-guide"></a>Guía de los conceptos de Microsoft BHOLD Suite
 
@@ -56,8 +57,8 @@ Con el conjunto de aplicaciones de BHOLD, puede especificar y organizar los role
 
 Las unidades organizativas (OrgUnits) son el medio principal para organizar a los usuarios en el modelo de roles de BHOLD. Cada usuario debe pertenecer al menos a una OrgUnit. (De hecho, cuando se quita un usuario de la última unidad organizativa de BHOLD, el registro de datos del usuario se elimina de la base de datos de BHOLD).
 
->[!Important]
-Las unidades organizativas del modelo de roles de BHOLD no deben confundirse con las unidades organizativas de Active Directory Domain Services (AD DS). Por lo general, la estructura de unidades organizativas en BHOLD se basa en la organización y las directivas de la empresa, no en los requisitos de la infraestructura de red.
+> [!Important]
+> Las unidades organizativas del modelo de roles de BHOLD no deben confundirse con las unidades organizativas de Active Directory Domain Services (AD DS). Por lo general, la estructura de unidades organizativas en BHOLD se basa en la organización y las directivas de la empresa, no en los requisitos de la infraestructura de red.
 
 Aunque no es necesario, en la mayoría de los casos las unidades organizativas se estructuran en BHOLD para representar la estructura jerárquica de la organización, similar a la siguiente:
 
@@ -127,8 +128,8 @@ El primer paso para usar el generador de modelos de BHOLD consiste en importar e
 - Roles propuestos que están vinculados a una unidad organizativa pero que deben activarse para usuarios específicos.
 - Roles de propiedad que conceden a un usuario el control de unidades organizativas y roles para los que no se especificó un propietario en los archivos importados.
 
->[!Important]
-Al cargar los archivos, active la casilla **Retain Existing Model** (Conservar modelo existente) únicamente en entornos de prueba. En entornos de producción, debe usar el generador de modelos para crear el modelo de roles inicial. No se puede usar para modificar un modelo de roles existente en la base de datos de BHOLD.
+> [!Important]
+> Al cargar los archivos, active la casilla **Retain Existing Model** (Conservar modelo existente) únicamente en entornos de prueba. En entornos de producción, debe usar el generador de modelos para crear el modelo de roles inicial. No se puede usar para modificar un modelo de roles existente en la base de datos de BHOLD.
 
 Después de que el generador de modelos crea estos roles en el modelo de roles, puede exportarlo a la base de datos de BHOLD en forma de archivo XML.
 
@@ -252,8 +253,8 @@ Los filtros de reglas pueden ser de tres tipos y usar operadores específicos de
   - **Solo puede tener alguno y Solo puede tener todos**
   - **Exclusivamente tiene alguno y Exclusivamente tiene todos**
 
->[!Note]
-Los filtros restrictivos pueden usar los operadores indicados para probar una clave con un conjunto de varios valores.
+> [!Note]
+> Los filtros restrictivos pueden usar los operadores indicados para probar una clave con un conjunto de varios valores.
 
 Por ejemplo, si quisiera probar la implementación de una directiva de segregación de tareas (SoD) que indica que ningún usuario que tenga el permiso Solicitar pago también pueda tener el permiso Aprobar pago, podría crear una regla similar a la siguiente:
 
@@ -328,7 +329,7 @@ Al crear un informe, el asistente le ayudará a proporcionar los parámetros sig
 
 En cada fase del asistente, puede obtener una vista previa del informe tal y como se ha definido hasta el momento y guardarlo si no tiene que especificar parámetros adicionales. También puede retroceder a pasos anteriores para cambiar los parámetros que especificó anteriormente en el asistente.
 
-## <a name="access-management-connector"></a>Conector de administración de acceso
+## <a name="access-management-connector"></a>Access Management Connector
 
 El módulo Conector de administración de acceso del conjunto de aplicaciones de BHOLD admite la sincronización inicial y continua de datos en BHOLD. El conector de administración de acceso funciona con el servicio de sincronización de FIM para mover datos entre la base de datos principal de BHOLD, el metaverso de MIM y aplicaciones de destino y almacenes de identidades.
 

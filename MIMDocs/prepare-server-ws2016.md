@@ -12,18 +12,19 @@ ms.technology: security
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 7c77ed0ceb541b9b00ebb9954ce65a53f0f44442
-ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
+ms.openlocfilehash: bfc79d27f015ee3d57c33c26ecae0f5b8ff38370
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289496"
 ---
 # <a name="set-up-an-identity-management-servers-windows-server-2016"></a>Configuración de un servidor de administración de identidades: Windows Server 2016
 
->[!div class="step-by-step"]
-[«Preparación de un dominio](preparing-domain.md)
-[SQL Server 2016»](prepare-server-sql2016.md)
-
+> [!div class="step-by-step"]
+> [«Preparación de un dominio](preparing-domain.md)
+> [SQL Server 2016»](prepare-server-sql2016.md)
+> 
 > [!NOTE]
 > Este tutorial usa los valores y nombres de ejemplo de una empresa llamada Contoso. Reemplácelos con sus propios valores. Por ejemplo:
 > - Nombre del controlador de dominio: **corpdc**
@@ -31,7 +32,7 @@ ms.lasthandoff: 04/27/2018
 > - Nombre de servidor del servicio MIM: **corpservice**
 > - Nombre del servidor de sincronización de MIM: **corpsync**
 > - Nombre de SQL Server: **corpsql**
-> - Contraseña - **Pass@word1**
+> - Contraseña - <strong>Pass@word1</strong>
 
 ## <a name="join-windows-server-2016-to-your-domain"></a>Unión de Windows Server 2016 al dominio
 
@@ -112,6 +113,6 @@ Configure la directiva de seguridad de servidor para que permita que las cuentas
     iisreset /START
     ```
 
->[!div class="step-by-step"]  
-[«Preparación de un dominio](preparing-domain.md)
-[SQL Server 2016»](prepare-server-sql2016.md)
+> [!div class="step-by-step"]  
+> [«Preparación de un dominio](preparing-domain.md)
+> [SQL Server 2016»](prepare-server-sql2016.md)

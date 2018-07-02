@@ -1,7 +1,7 @@
 ---
-title: "Implementación de PAM, paso 5: vínculo de bosque | Microsoft Docs"
+title: 'Implementación de PAM, paso 5: vínculo de bosque | Microsoft Docs'
 description: Establezca la confianza entre los bosques PRIV y CORP para que los usuarios con privilegios en PRIV puedan seguir teniendo acceso a los recursos de CORP.
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -12,17 +12,18 @@ ms.technology: active-directory-domain-services
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: ba4b94c1f0f0879436e370a7f2f041c720bd1f60
-ms.sourcegitcommit: 362475d4018e74e5a17ba574ccaec47a2caebaff
+ms.openlocfilehash: df4294ca6dbc98ec684e690d3ce66765d27cc359
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289098"
 ---
 # <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Paso 5: Establecer la confianza entre bosques PRIV y CORP
 
->[!div class="step-by-step"]
-[« Paso 4](step-4-install-mim-components-on-pam-server.md)
-[Paso 6 »](step-6-transition-group-to-pam.md)
+> [!div class="step-by-step"]
+> [« Paso 4](step-4-install-mim-components-on-pam-server.md)
+> [Paso 6 »](step-6-transition-group-to-pam.md)
 
 En cada dominio CORP, como contoso.local, los controladores de dominio CONTOSO y PRIV deben estar enlazados mediante una relación de confianza. Esto permite a los usuarios del dominio PRIV acceder a los recursos del dominio CORP.
 
@@ -70,17 +71,17 @@ En PAMSRV, establezca confianza unidireccional con cada dominio como CORPDC para
 
 En cada bosque existente, habilite el acceso de lectura a AD para los administradores de PRIV y el servicio de supervisión.
 
-1.  Inicie sesión en el controlador de dominio de bosque CORP existente, (CORPDC), como administrador de dominio del dominio de nivel superior de ese bosque (Contoso\Administrador).  
-2.  Inicie **Usuarios y equipos de Active Directory**.  
-3.  Haga clic con el botón derecho en el dominio **contoso.local** y seleccione **Delegar control**.  
-4.  En la pestaña Usuarios y grupos seleccionados, haga clic en **Agregar**.  
-5.  En la ventana Seleccionar usuarios, equipos o grupos, haga clic en **Ubicaciones** y cambie la ubicación a *priv.contoso.local*.  En el nombre de objeto, escriba *Admins. del dominio* y haga clic en **Comprobar nombres**. Cuando aparezca una ventana emergente, escriba el nombre de usuario *priv\administrador* y su contraseña.  
-6.  Después de Admins. del dominio, agregue "*; MIMMonitor*". Una vez que los nombres **Admins. del dominio** y **MIMMonitor** estén subrayados, haga clic en **Aceptar** y luego en **Siguiente**.  
-7.  En la lista de tareas comunes, seleccione **Leer toda la información del usuario** y haga clic en **Siguiente** y en **Finalizar**.  
-8.  Cierre Usuarios y equipos de Active Directory.
+1. Inicie sesión en el controlador de dominio de bosque CORP existente, (CORPDC), como administrador de dominio del dominio de nivel superior de ese bosque (Contoso\Administrador).  
+2. Inicie **Usuarios y equipos de Active Directory**.  
+3. Haga clic con el botón derecho en el dominio **contoso.local** y seleccione **Delegar control**.  
+4. En la pestaña Usuarios y grupos seleccionados, haga clic en **Agregar**.  
+5. En la ventana Seleccionar usuarios, equipos o grupos, haga clic en **Ubicaciones** y cambie la ubicación a *priv.contoso.local*.  En el nombre de objeto, escriba *Admins. del dominio* y haga clic en **Comprobar nombres**. Cuando aparezca una ventana emergente, escriba el nombre de usuario *priv\administrador* y su contraseña.  
+6. Después de Admins. del dominio, agregue "*; MIMMonitor*". Una vez que los nombres **Admins. del dominio** y **MIMMonitor** estén subrayados, haga clic en **Aceptar** y luego en **Siguiente**.  
+7. En la lista de tareas comunes, seleccione **Leer toda la información del usuario** y haga clic en **Siguiente** y en **Finalizar**.  
+8. Cierre Usuarios y equipos de Active Directory.
 
-9.  Abra una ventana de PowerShell.
-10.  Use `netdom` para asegurarse de que el historial de SID está habilitado y el filtrado por SID deshabilitado. Tipo:
+9. Abra una ventana de PowerShell.
+10. Use `netdom` para asegurarse de que el historial de SID está habilitado y el filtrado por SID deshabilitado. Tipo:
     ```cmd
     netdom trust contoso.local /quarantine:no /domain priv.contoso.local
     netdom trust /enablesidhistory:yes /domain priv.contoso.local
@@ -104,6 +105,6 @@ En cada bosque existente, habilite el acceso de lectura a AD para los administra
 
 En el paso siguiente se moverá un grupo a PAM.
 
->[!div class="step-by-step"]
-[« Paso 4](step-4-install-mim-components-on-pam-server.md)
-[Paso 6 »](step-6-transition-group-to-pam.md)
+> [!div class="step-by-step"]
+> [« Paso 4](step-4-install-mim-components-on-pam-server.md)
+> [Paso 6 »](step-6-transition-group-to-pam.md)

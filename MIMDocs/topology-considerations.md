@@ -1,7 +1,7 @@
 ---
-title: "Guía de topología para implementación | Microsoft Docs"
-description: "Conozca los componentes de MIM 2016 y reciba sugerencias acerca de cómo implementarlas en su entorno."
-keywords: 
+title: Guía de topología para implementación | Microsoft Docs
+description: Conozca los componentes de MIM 2016 y reciba sugerencias acerca de cómo implementarlas en su entorno.
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -12,18 +12,19 @@ ms.technology: security
 ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: e257a2e64225a4bc545d8a9384167819412e939b
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: f67068709cf9910fa04110fce75623fd2f94ca4a
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289819"
 ---
 # <a name="topology-considerations"></a>Consideraciones relativas a la topología
 Puede implementar los componentes de Microsoft Identity Manager (MIM) en el mismo servidor o entre varios servidores en diversas configuraciones. La topología que seleccione para la implementación afecta al rendimiento que se puede lograr de MIM. Este artículo presenta varias topologías de implementación que puede utilizar.
 
 
->[!NOTE]
-Estas opciones son aplicables a las implementaciones que usan exclusivamente la sincronización de MIM, el servicio MIM y el portal de MIM para la administración de identidades.  Las implementaciones que usan MIM CM, el conjunto de aplicaciones BHOLD de MIM o Privileged Access Management tienen otras opciones de implementación.
+> [!NOTE]
+> Estas opciones son aplicables a las implementaciones que usan exclusivamente la sincronización de MIM, el servicio MIM y el portal de MIM para la administración de identidades.  Las implementaciones que usan MIM CM, el conjunto de aplicaciones BHOLD de MIM o Privileged Access Management tienen otras opciones de implementación.
 
 
 ## <a name="mim-components"></a>Componentes de MIM
@@ -64,5 +65,5 @@ Igual que con la topología estándar de varios niveles, puede aumentar el rendi
 
 Los equipos en los que se ejecuta SQL Server y que hospedan MIM Synchronization Service y la base de datos del Servicio MIM influirán drásticamente en el rendimiento general de la implementación de MIM. Por lo tanto, siga las recomendaciones de la documentación de SQL Server para optimizar el rendimiento de la base de datos. Para obtener más información, consulte los siguientes documentos:
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 - Puede descargar el documento [Forefront Identity Manager (FIM) 2010 Capactity Planning Guide](http://go.microsoft.com/fwlink/?LinkId=200180) (Guía de planeación de la capacidad de Forefront Identity Manager 2010 [FIM]); en él se ofrecen más detalles sobre la compilación de prueba y los resultados de pruebas de rendimiento.

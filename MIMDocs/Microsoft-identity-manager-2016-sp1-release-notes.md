@@ -12,11 +12,12 @@ ms.technology: security
 ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 98d21076801bbe60b7a2d2d5b7e1c41d4bce1b4a
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: 9b12f8bebf44847d76e94fe083266b1b32b608a9
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290295"
 ---
 # <a name="whats-new-for-microsoft-identity-manager-2016-service-pack-1"></a>Novedades en Microsoft Identity Manager 2016 Service Pack 1 #
 
@@ -32,7 +33,7 @@ Queremos conocer su opinión. Si tiene algún comentario o preocupación para el
 
 ### <a name="mim"></a>MIM
 
-- **Compatibilidad entre exploradores del portal de MIM para el autoservicio del usuario final:** en este Service Pack estamos introduciendo soporte técnico para la mayoría de los exploradores principales. Los usuarios ahora pueden obtener acceso al portal de MIM e interactuar con él para grupos de autoservicio y la administración de perfiles desde Microsoft Edge, Chrome y Safari.
+- **Compatibilidad entre exploradores del portal de MIM para el autoservicio del usuario final:** en este Service Pack estamos introduciendo soporte técnico para la mayoría de los exploradores principales. Los usuarios ahora pueden obtener acceso al portal de MIM e interactuar con él para grupos de autoservicio y la administración de perfiles desde Edge, Chrome y Safari.
 
 - **Compatibilidad con el servicio de MIM para Exchange Online:** el servicio MIM lleva mucho tiempo admitiendo el envío y la recepción de correos electrónicos para las notificaciones y aprobaciones. Antes de SP1 MIM, solo se admite Exchange Server o SMTP. Con Service Pack 1, el servicio MIM puede enviar y recibir solicitudes, así como las notificaciones de correo electrónico con una cuenta en línea de Office 365 Exchange.
 
@@ -42,8 +43,8 @@ Queremos conocer su opinión. Si tiene algún comentario o preocupación para el
 
 - **Compatibilidad con el bosque de "PRIV" (bastión) de PAM para el nivel funcional de Windows Server 2016:** El servicio MIM PAM puede configurarse en un entorno con los controladores de dominio que se ejecutan en el nivel funcional del bosque de Active Directory Domain Services de Windows Server 2016. Cuando se configura, el vale de Kerberos de un usuario estará limitado en el tiempo al tiempo restante de la activación del rol.
 
-    >[!Note]
-    Si opta por mantener el nivel funcional del bosque de Windows Server 2012 R2 en el dominio de CORP, se recomienda instalar [2919442 KB](https://support.microsoft.com/en-us/kb/2919442) y [KB 2919355](https://support.microsoft.com/en-us/kb/2919355) en el controlador de dominio de CORP.
+  > [!Note]
+  >   Si opta por mantener el nivel funcional del bosque de Windows Server 2012 R2 en el dominio de CORP, se recomienda instalar [2919442 KB](https://support.microsoft.com/en-us/kb/2919442) y [KB 2919355](https://support.microsoft.com/en-us/kb/2919355) en el controlador de dominio de CORP.
 
 - **Elevación de cuentas con privilegios exclusivos para el bosque de "PRIV" (bastión):** ahora, los administradores pueden informar al servicio de MIM de grupos y usuarios exclusivos para el bosque de "PRIV". Esto permite a estos usuarios y grupos incluirse en los roles de PAM.  Pueden, a continuación, activarse para un rol y asignar una pertenencia a grupos en el bosque de "PRIV".
 
@@ -51,8 +52,8 @@ Queremos conocer su opinión. Si tiene algún comentario o preocupación para el
 
 - **Cmdlets de PAM para la configuración del silo de directivas de autenticación:** Service pack 1 introduce nuevos cmdlets para reforzar la seguridad de su bosque bastión. Estos cmdlets crean automáticamente un silo de directivas de autenticación vinculado a una plantilla de directiva de autenticación.
 
-    >[!Note]
-    Estos cmdlets se ejecutan automáticamente como parte de los scripts de las implementaciones.
+  > [!Note]
+  >   Estos cmdlets se ejecutan automáticamente como parte de los scripts de las implementaciones.
 
 
 ## <a name="platform-support"></a>Compatibilidad de plataformas
@@ -77,8 +78,8 @@ Antes de comenzar
 Debe actualizar el motor de sincronización de MIM antes de actualizar el portal y el servicio de MIM.
 Debe hacer una copia de seguridad de las bases de datos MIMService y MIM Sync.
 
-  1. Desinstale el componente de Microsoft Identity Manager que va a actualizar
-  2. Una vez completada la desinstalación, abra la página inicial de los medios de instalación "FIMSplash.htm"
-  3. Seleccione el componente de MIM que actualizar
-  4. Continúe con la instalación según las indicaciones
-    * Instalación del portal y el servicio de MIM: al elegir Exchange Online como cuenta de correo electrónico, escriba la dirección de correo electrónico y las credenciales de la cuenta de Exchange Online en la pantalla siguiente.
+1. Desinstale el componente de Microsoft Identity Manager que va a actualizar
+2. Una vez completada la desinstalación, abra la página inicial de los medios de instalación "FIMSplash.htm"
+3. Seleccione el componente de MIM que actualizar
+4. Continúe con la instalación según las indicaciones
+   * Instalación del portal y el servicio de MIM: al elegir Exchange Online como cuenta de correo electrónico, escriba la dirección de correo electrónico y las credenciales de la cuenta de Exchange Online en la pantalla siguiente.
