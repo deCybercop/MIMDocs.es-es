@@ -1,7 +1,7 @@
 ---
-title: "Implementación de PAM, paso 3: servidor de PAM | Microsoft Docs"
-description: "Prepare un servidor de PAM que hospede tanto SQL como SharePoint para la implementación de Privileged Access Management."
-keywords: 
+title: 'Implementación de PAM, paso 3: servidor de PAM | Microsoft Docs'
+description: Prepare un servidor de PAM que hospede tanto SQL como SharePoint para la implementación de Privileged Access Management.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -13,17 +13,18 @@ ms.assetid: 68ec2145-6faa-485e-b79f-2b0c4ce9eff7
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: fd52a191a0592441131249451011c4e2f026ea48
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.openlocfilehash: 3eb79847baed69ef53a27e09443ff9bf4647b347
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289921"
 ---
 # <a name="step-3--prepare-a-pam-server"></a>Paso 3: Preparar un servidor de PAM
 
->[!div class="step-by-step"]
-[« Paso 2](step-2-prepare-priv-domain-controller.md)
-[Paso 4 »](step-4-install-mim-components-on-pam-server.md)
+> [!div class="step-by-step"]
+> [« Paso 2](step-2-prepare-priv-domain-controller.md)
+> [Paso 4 »](step-4-install-mim-components-on-pam-server.md)
 
 ## <a name="install-windows-server-2012-r2"></a>Instalación de Windows Server 2012 R2
 
@@ -93,13 +94,13 @@ Hay dos formas de cambiar la configuración de IIS para permitir que las aplicac
 
 Si quiere usar PowerShell:
 
-1.  Haga clic con el botón derecho en PowerShell y seleccione **Ejecutar como administrador**.
-2.  Detenga IIS y desbloquee la configuración de host de aplicación con estos comandos
-    ```CMD
-    iisreset /STOP
-    C:\Windows\System32\inetsrv\appcmd.exe unlock config /section:windowsAuthentication -commit:apphost
-    iisreset /START
-    ```
+1. Haga clic con el botón derecho en PowerShell y seleccione **Ejecutar como administrador**.
+2. Detenga IIS y desbloquee la configuración de host de aplicación con estos comandos
+   ```CMD
+   iisreset /STOP
+   C:\Windows\System32\inetsrv\appcmd.exe unlock config /section:windowsAuthentication -commit:apphost
+   iisreset /START
+   ```
 
 Si quiere usar un editor de texto como el Bloc de notas:
 
@@ -215,6 +216,6 @@ Mediante **Servicios** (que se encuentra en Herramientas administrativas), inici
 
 En el paso 4, se iniciará la instalación de los componentes de MIM en el servidor PAM.
 
->[!div class="step-by-step"]
-[« Paso 2](step-2-prepare-priv-domain-controller.md)
-[Paso 4 »](step-4-install-mim-components-on-pam-server.md)
+> [!div class="step-by-step"]
+> [« Paso 2](step-2-prepare-priv-domain-controller.md)
+> [Paso 4 »](step-4-install-mim-components-on-pam-server.md)

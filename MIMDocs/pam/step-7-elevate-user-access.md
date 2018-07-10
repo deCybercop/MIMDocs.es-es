@@ -1,6 +1,6 @@
 ---
-title: "Implementación de PAM, paso 7: acceso de usuario | Microsoft Docs"
-description: "Como paso final, conceda acceso temporal a un usuario con privilegios para comprobar que la implementación de Privileged Access Management se haya realizado correctamente."
+title: 'Implementación de PAM, paso 7: acceso de usuario | Microsoft Docs'
+description: Como paso final, conceda acceso temporal a un usuario con privilegios para comprobar que la implementación de Privileged Access Management se haya realizado correctamente.
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -9,16 +9,17 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
-ms.openlocfilehash: 2d92be315547da1c352c0e60732f9aeecf0c2d90
-ms.sourcegitcommit: 3d8a2493eae1218bfdb75a399ffa4adc8c2a8fdf
+ms.openlocfilehash: 9515d17767a75b349b0d3150fb90c136c478baa2
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289853"
 ---
 # <a name="step-7--elevate-a-users-access"></a>Paso 7: Elevar los privilegios de acceso de un usuario
 
->[!div class="step-by-step"]
-[« Paso 6](step-6-transition-group-to-pam.md)
+> [!div class="step-by-step"]
+> [« Paso 6](step-6-transition-group-to-pam.md)
 
 
 En este paso se muestra que un usuario puede solicitar acceso a un rol a través de MIM.
@@ -103,5 +104,5 @@ Para realizar la activación, solicite acceso con privilegios mediante el portal
 
 Una vez que haya completado los pasos de este tutorial, habrá mostrado un escenario de Privileged Access Management en el que los privilegios de usuario se elevan durante un período limitado de tiempo, lo que permite al usuario acceder a recursos protegidos con una cuenta con privilegios independiente. Desde el momento en que finalice la sesión de elevación, la cuenta con privilegios no podrá acceder al recurso protegido. El administrador de PAM es quien decide qué grupos de seguridad representan roles con privilegios. Una vez que los derechos de acceso se migran al sistema de Privileged Access Management, el acceso que anteriormente era posible con la cuenta de usuario original ahora solo es posible si se inicia sesión con una cuenta con privilegios especial que se obtiene previa solicitud. Como resultado, las pertenencias a grupos para grupos con muchos privilegios están en vigor durante un período de tiempo limitado.
 
->[!div class="step-by-step"]
-[« Paso 6](step-6-transition-group-to-pam.md)
+> [!div class="step-by-step"]
+> [« Paso 6](step-6-transition-group-to-pam.md)

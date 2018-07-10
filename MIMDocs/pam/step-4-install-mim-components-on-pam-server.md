@@ -1,7 +1,7 @@
 ---
-title: "Implementación de PAM, paso 4: instalación de MIM | Microsoft Docs"
+title: 'Implementación de PAM, paso 4: instalación de MIM | Microsoft Docs'
 description: Instale y configure el servicio y el portal de MIM en el servidor y las estaciones de trabajo de Privileged Access Management.
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: barclayn
@@ -13,17 +13,18 @@ ms.assetid: ef605496-7ed7-40f4-9475-5e4db4857b4f
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: b69dfc39da63ec523fb09a58661b5f8367e6042c
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.openlocfilehash: 81fe10b8fbf8ada08983c4bf3c58f85215cf1d66
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290040"
 ---
 # <a name="step-4--install-mim-components-on-pam-server-and-workstation"></a>Paso 4: Instalar componentes de MIM en un servidor y estación de trabajo PAM
 
->[!div class="step-by-step"]
-[« Paso 3](step-3-prepare-pam-server.md)
-[Paso 5 »](step-5-establish-trust-between-priv-corp-forests.md)
+> [!div class="step-by-step"]
+> [« Paso 3](step-3-prepare-pam-server.md)
+> [Paso 5 »](step-5-establish-trust-between-priv-corp-forests.md)
 
 En PAMSRV, inicie sesión como PRIV\Administrador para poder instalar el servicio y el portal de MIM y la aplicación web de ejemplo de portal.
 
@@ -36,30 +37,30 @@ Si ha descargado MIM, descomprima el archivo de instalación de MIM en una carpe
 
 Siga las instrucciones del instalador y complete la instalación.
 
-1.  Al seleccionar las características de los componentes, incluya el servicio MIM (con Privileged Access Management, pero no informes MIM) y el portal MIM  
+1. Al seleccionar las características de los componentes, incluya el servicio MIM (con Privileged Access Management, pero no informes MIM) y el portal MIM  
 
-    ![Captura de pantalla de configuración personalizada](./media/PAM_GS_MIM_2015_Service_Portal.png)
+   ![Captura de pantalla de configuración personalizada](./media/PAM_GS_MIM_2015_Service_Portal.png)
 
-2.  Al configurar los servicios comunes y la conexión a la base de datos MIM, especifique **Crear una nueva base de datos**.
+2. Al configurar los servicios comunes y la conexión a la base de datos MIM, especifique **Crear una nueva base de datos**.
 
-    > [!NOTE]
-    > Si instala el servicio MIM varias veces para lograr una alta disponibilidad, especifique **Usar base de datos existente** para todas las instalaciones posteriores.
+   > [!NOTE]
+   > Si instala el servicio MIM varias veces para lograr una alta disponibilidad, especifique **Usar base de datos existente** para todas las instalaciones posteriores.
 
-3.  Al configurar una conexión de servidor de correo, establezca el servidor de correo en el nombre de host de un servidor Exchange o SMTP para el entorno CORP (use corpdc.contoso.local si no tiene ningún servidor de correo) y desactive las casillas **Usar SSL** y **El servidor de correo electrónico es Exchange Server 2007 o Exchange Server 2010**.
+3. Al configurar una conexión de servidor de correo, establezca el servidor de correo en el nombre de host de un servidor Exchange o SMTP para el entorno CORP (use corpdc.contoso.local si no tiene ningún servidor de correo) y desactive las casillas **Usar SSL** y **El servidor de correo electrónico es Exchange Server 2007 o Exchange Server 2010**.
 
-4.  Seleccione generar un nuevo certificado autofirmado.
+4. Seleccione generar un nuevo certificado autofirmado.
 
-5.  Establezca las credenciales de cuenta siguientes:
-    - Nombre de la cuenta de servicio: *MIMService*  
-    - Contraseña de la cuenta de servicio: *Pass@word1* (o la contraseña que creó en el paso 2)  
-    - Dominio de la cuenta de servicio: *PRIV*  
-    - Cuenta de servicio de correo electrónico: *MIMService@priv.contoso.local*  
+5. Establezca las credenciales de cuenta siguientes:
+   - Nombre de la cuenta de servicio: *MIMService*  
+   - Contraseña de la cuenta de servicio: <em>Pass@word1</em> (o la contraseña que creó en el paso 2)  
+   - Dominio de la cuenta de servicio: *PRIV*  
+   - Cuenta de servicio de correo electrónico: <em>MIMService@priv.contoso.local</em>  
 
-6.  Acepte los valores predeterminados para el nombre de host del servidor de sincronización y especifique la cuenta del agente de administración de MIM como *PRIV\MIMMA*. Aparecerá un mensaje advirtiendo de que el servicio de sincronización de MIM no existe. Esto está bien, ya que el servicio de sincronización de MIM no se usa en este escenario.
+6. Acepte los valores predeterminados para el nombre de host del servidor de sincronización y especifique la cuenta del agente de administración de MIM como *PRIV\MIMMA*. Aparecerá un mensaje advirtiendo de que el servicio de sincronización de MIM no existe. Esto está bien, ya que el servicio de sincronización de MIM no se usa en este escenario.
 
-7.  Establezca *PAMSRV* como dirección del servidor del servicio MIM.
+7. Establezca *PAMSRV* como dirección del servidor del servicio MIM.
 
-8.  Establezca *http://pamsrv.priv.contoso.local:82* como dirección URL de la colección de sitios de SharePoint.
+8. Defina *http://pamsrv.priv.contoso.local:82* como dirección URL de la colección de sitios de SharePoint.
 
 9. Deje en blanco la dirección URL del portal de registro.
 
@@ -67,11 +68,11 @@ Siga las instrucciones del instalador y complete la instalación.
 
 11. Deje vacío el nombre de host de la API de REST de PAM y establezca *8086* como número de puerto.
 
-  ![Captura de pantalla de información de enlace de la API de REST de PAM](./media/PAM_GS_MIM_2015_Service_Portal_configure_application_pool.png)
+    ![Captura de pantalla de información de enlace de la API de REST de PAM](./media/PAM_GS_MIM_2015_Service_Portal_configure_application_pool.png)
 
 12. Configure la cuenta de la API de REST de MIM PAM para usar la misma cuenta que SharePoint (ya que el portal MIM se encuentra en este servidor):
     - Nombre de la cuenta del grupo de aplicaciones: *SharePoint*  
-    - Contraseña de la cuenta del grupo de aplicaciones: *Pass@word1* (o la contraseña que creó en el paso 2)  
+    - Contraseña de la cuenta del grupo de aplicaciones: <em>Pass@word1</em> (o la contraseña que creó en el paso 2)  
     - Dominio de la cuenta del grupo de aplicaciones: *PRIV*  
 
     ![Captura de pantalla de credenciales de cuenta de grupo de aplicaciones](./media/PAM_GS_Configure_Component_Service.png)
@@ -80,17 +81,17 @@ Siga las instrucciones del instalador y complete la instalación.
 
 13. Configure el servicio de componente MIM PAM:
     - Nombre de la cuenta de servicio: *MIMComponent*
-    - Contraseña de la cuenta de servicio: *Pass@word1* (o la contraseña que creó en el paso 2)  
+    - Contraseña de la cuenta de servicio: <em>Pass@word1</em> (o la contraseña que creó en el paso 2)  
     - Dominio de la cuenta de servicio: *PRIV*
 
-  ![Captura de pantalla de credenciales de cuenta de servicio de componente PAM](./media/PAM_GS_Configure_MIM_PAM_component_service.png)
+    ![Captura de pantalla de credenciales de cuenta de servicio de componente PAM](./media/PAM_GS_Configure_MIM_PAM_component_service.png)
 
 14. Configure el servicio de supervisión de PAM:
     - Nombre de la cuenta de servicio: *MIMMonitor*  
-    - Contraseña de la cuenta de servicio: *Pass@word1* (o la contraseña que creó en el paso 2)  
+    - Contraseña de la cuenta de servicio: <em>Pass@word1</em> (o la contraseña que creó en el paso 2)  
     - Dominio de la cuenta de servicio: *PRIV*  
 
-  ![Captura de pantalla de credenciales de cuenta de servicio de supervisión de PAM](./media/PAM_GS_Configur_PAM_Monitoring_service.png)
+    ![Captura de pantalla de credenciales de cuenta de servicio de supervisión de PAM](./media/PAM_GS_Configur_PAM_Monitoring_service.png)
 
 15. En la página Escribir la información para el portal de contraseñas de MIM, deje las casillas sin activar y continúe. Haga clic en **Siguiente** para continuar con la instalación.
 
@@ -100,7 +101,7 @@ Una vez finalizada la instalación, el servidor se reiniciará. Compruebe a cont
 
 1. Una vez reiniciado PAMSRV, inicie sesión como PRIV\Administrador.
 
-2. Inicie Internet Explorer y conéctese al portal MIM en http://pamsrv.priv.contoso.local:82/identitymanagement. Puede haber una breve demora la primera vez que se busca esta página.
+2. Inicie Internet Explorer y conéctese al portal de MIM en http://pamsrv.priv.contoso.local:82/identitymanagement. Puede haber una breve demora la primera vez que se busca esta página.
 
 3. Si fuese necesario, inicie sesión como PRIV\Administrador en Internet Explorer.
 
@@ -133,37 +134,37 @@ El firewall debería permitir las conexiones entrantes al puerto TCP 5725, 5726,
 
 En esta sección se instalará y configurará la aplicación web de ejemplo para la API de REST de MIM PAM.
 
-1.  Desde el archivo de la aplicación web de ejemplo, descargue los [ejemplos de Identity Management](https://github.com/Azure/identity-management-samples) como un archivo zip.
+1. Desde el archivo de la aplicación web de ejemplo, descargue los [ejemplos de Identity Management](https://github.com/Azure/identity-management-samples) como un archivo zip.
 
 2. Extraiga el contenido de la carpeta **identity-management-samples-master\Privileged-Access-Management-Portal\src** en una nueva carpeta **C:\Archivos de programa\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal**.
 
-3.  Cree un nuevo sitio web en IIS con el nombre de sitio Portal de ejemplo de Privileged Access Management MIM, la ruta de acceso física C:\Archivos de programa\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal y el puerto 8090.  Puede hacerlo mediante el siguiente comando de PowerShell:
+3. Cree un nuevo sitio web en IIS con el nombre de sitio Portal de ejemplo de Privileged Access Management MIM, la ruta de acceso física C:\Archivos de programa\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal y el puerto 8090.  Puede hacerlo mediante el siguiente comando de PowerShell:
 
-  ```PowerShell
-  New-WebSite -Name "MIM Privileged Access Management Example Portal" -Port 8090   -PhysicalPath "C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\"
-  ```
+   ```PowerShell
+   New-WebSite -Name "MIM Privileged Access Management Example Portal" -Port 8090   -PhysicalPath "C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\"
+   ```
 
-4.  Configure la aplicación web de ejemplo de modo que pueda redirigir a los usuarios a la API de REST de MIM PAM. Con un editor de texto como el Bloc de notas, edite el archivo **C:\Archivos de programa\Microsoft Forefront Identity Manager\2010\Privileged Access Management REST API\web.config**. En la sección **<system.webServer>**, agregue las siguientes líneas:
+4. Configure la aplicación web de ejemplo de modo que pueda redirigir a los usuarios a la API de REST de MIM PAM. Con un editor de texto como el Bloc de notas, edite el archivo **C:\Archivos de programa\Microsoft Forefront Identity Manager\2010\Privileged Access Management REST API\web.config**. En la sección **<system.webServer>**, agregue las siguientes líneas:
 
-  ```XML
-  <httpProtocol>
-    <customHeaders>
-      <add name="Access-Control-Allow-Credentials" value="true"  />
-      <add name="Access-Control-Allow-Headers" value="content-type" />
-      <add name="Access-Control-Allow-Origin" value="http://pamsrv:8090" />  
-    </customHeaders>
-  </httpProtocol>
-  ```
+   ```XML
+   <httpProtocol>
+   <customHeaders>
+     <add name="Access-Control-Allow-Credentials" value="true"  />
+     <add name="Access-Control-Allow-Headers" value="content-type" />
+     <add name="Access-Control-Allow-Origin" value="http://pamsrv:8090" />  
+   </customHeaders>
+   </httpProtocol>
+   ```
 
-5.  Configure la aplicación web de ejemplo. Con un editor de texto como el Bloc de notas, edite el archivo **C:\Archivos de programa\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\js\utils.js**. Establezca el valor de **pamRespApiUrl** en *http://pamsrv.priv.contoso.local:8086/api/pamresources/*.
+5. Configure la aplicación web de ejemplo. Con un editor de texto como el Bloc de notas, edite el archivo **C:\Archivos de programa\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\js\utils.js**. Establezca el valor de **pamRespApiUrl** en *http://pamsrv.priv.contoso.local:8086/api/pamresources/*.
 
-6.  Reinicie IIS con el siguiente comando para que estos cambios surtan efecto.
+6. Reinicie IIS con el siguiente comando para que estos cambios surtan efecto.
 
-  ```cmd
-  iisreset
-  ```
+   ```cmd
+   iisreset
+   ```
 
-7.  (Opcional) Compruebe que el usuario puede autenticarse en la API de REST. Abra un explorador web como administrador en PAMSRV.  Vaya a la dirección URL del sitio web http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/, autentíquese en caso necesario y asegúrese de que se produzca una descarga.
+7. (Opcional) Compruebe que el usuario puede autenticarse en la API de REST. Abra un explorador web como administrador en PAMSRV.  Navegue hasta la dirección URL del sitio web http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/, autentíquese,si es necesario, y asegúrese de que se produzca una descarga.
 
 ## <a name="install-the-mim-pam-requestor-cmdlets"></a>Instalación de los cmdlets de solicitante de MIM PAM
 
@@ -185,6 +186,6 @@ Una vez finalizada la instalación, reinicie CORPWKSTN para completar el registr
 
 En el siguiente paso se establecerá la confianza entre bosques PRIV y CORP.
 
->[!div class="step-by-step"]
-[« Paso 3](step-3-prepare-pam-server.md)
-[Paso 5 »](step-5-establish-trust-between-priv-corp-forests.md)
+> [!div class="step-by-step"]
+> [« Paso 3](step-3-prepare-pam-server.md)
+> [Paso 5 »](step-5-establish-trust-between-priv-corp-forests.md)

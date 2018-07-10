@@ -3,25 +3,26 @@ title: Trabajo con el Portal de autoservicio de restablecimiento de contraseñas
 description: Consulte las novedades del autoservicio de restablecimiento de contraseña en MIM 2016, incluido el funcionamiento de SSPR con la autenticación multifactor.
 keywords: ''
 author: billmath
-ms.author: barclayn
-manager: mbaldwin
-ms.date: 10/12/2017
+ms.author: billmath
+manager: mtillman
+ms.reviewer: davidste
+ms.date: 06/26/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.reviewer: mwahl
-ms.suite: ems
-ms.openlocfilehash: 18c3e4ea623b4b092bbd9236c5fa1b2a63af0486
-ms.sourcegitcommit: 637988684768c994398b5725eb142e16e4b03bb3
+ms.openlocfilehash: b1b30b744a5f735512f31d98184a561ce3f9b047
+ms.sourcegitcommit: 03617b441135a55b664e0d81cce4d17541bee93b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36963382"
 ---
->[!IMPORTANT]
-Debido al anuncio de desuso del kit de desarrollo de software de Azure Multi-Factor Authentication, Se admitirá el SDK de Azure MFA para los clientes existentes hasta la fecha de retirada, el 14 de noviembre de 2018. Los clientes nuevos y actuales ya no podrán descargar el SDK a través del Portal de Azure clásico. En su lugar, para realizar la descarga, debe ponerse en contacto con el servicio de atención al cliente de Azure para recibir el paquete de credenciales de servicio generado para MFA. <br> El equipo de desarrollo de Microsoft está planeando los cambios de MFA mediante la integración con el SDK del servidor MFA. Se incluirá en la próxima revisión a principios de 2018.
-
 # <a name="working-with-self-service-password-reset"></a>Trabajo con el autoservicio de restablecimiento de contraseña
+
+> [!IMPORTANT]
+> Debido al anuncio de desuso del kit de desarrollo de software de Azure Multi-Factor Authentication, Se admitirá el SDK de Azure MFA para los clientes existentes hasta la fecha de retirada, el 14 de noviembre de 2018. Los clientes nuevos y actuales ya no podrán descargar el SDK a través del Portal de Azure clásico. En su lugar, para realizar la descarga, debe ponerse en contacto con el servicio de atención al cliente de Azure para recibir el paquete de credenciales de servicio generado para MFA. <br> El equipo de desarrollo de Microsoft está trabajando en los cambios de MFA mediante la integración del SDK del servidor MFA.  Se incluirá en una próxima revisión; vea el [historial de versiones](/reference/version-history.md) para consultar los anuncios.
+
 Microsoft Identity Manager 2016 proporciona funciones adicionales a la característica de autoservicio de restablecimiento de contraseña. Esta funcionalidad se ha mejorado con varias características importantes:
 
 -   El portal de autoservicio de restablecimiento de contraseña y la pantalla de inicio de sesión de Windows ahora permiten a los usuarios desbloquear sus cuentas sin cambiar sus contraseñas ni llamar a los administradores de soporte técnico. Normalmente, un usuario ve bloqueada su cuenta por diversos motivos legítimos, como escribir una contraseña antigua por error, usar equipos bilingües con el teclado configurado en un idioma incorrecto o intentar iniciar sesión en una estación de trabajo compartida que ya se ha abierto para la cuenta de otra persona.
@@ -56,16 +57,16 @@ En esta sección se supone que ha descargado e implementado Microsoft Identity M
 
     -   Configurar reglas de sincronización en el portal de MIM que permitan la sincronización de datos de usuario y faciliten las actividades de sincronización del servicio MIM.
 
--   Los complementos y extensiones de MIM 2016 &amp;, incluido el cliente integrado de inicio de sesión de Windows para autoservicio de restablecimiento de contraseña, implementados en el servidor o en un equipo cliente distinto.
+-   Los complementos y extensiones de MIM 2016, incluido el cliente integrado de inicio de sesión de Windows para autoservicio de restablecimiento de contraseña, implementados en el servidor o en un equipo cliente distinto.
 
 ## <a name="prepare-mim-to-work-with-multi-factor-authentication"></a>Preparación de MIM para que funcione con la autenticación multifactor
 Configure MIM Sync para que admita la funcionalidad de restablecimiento de contraseña y desbloqueo de cuenta. Para obtener más información, consulte los artículos [Installing the FIM Add-ins nd Extensions](https://technet.microsoft.com/library/ff512688%28v=ws.10%29.aspx) (Instalación de complementos y extensiones de FIM), [Installing FIM SSPR](https://technet.microsoft.com/library/hh322891%28v=ws.10%29.aspx) (Instalación de FIM SSPR), [SSPR Authentication Gates](https://technet.microsoft.com/library/jj134288%28v=ws.10%29.aspx) (Puertas de autenticación de SSPR) y [la guía del laboratorio de pruebas de SSPR](https://technet.microsoft.com/library/hh826057%28v=ws.10%29.aspx).
 
-En la siguiente sección, configurará el proveedor de Azure MFA en Microsoft Azure Active Directory. Como parte de esto, se generará un archivo que incluye el material de autenticación que requiere MFA para poder establecer contacto con Azure MFA.  Para poder continuar, necesitará una suscripción de Azure.
+En la siguiente sección, configurará el proveedor de Azure MFA en Microsoft Azure Active Directory. Se generará un archivo que incluye el material de autenticación requerido por MFA para poder establecer contacto con Azure MFA.  Para poder continuar, necesitará una suscripción de Azure.
 
 ### <a name="register-your-multi-factor-authentication-provider-in-azure"></a>Registro del proveedor de autenticación multifactor en Azure
 
-1.  Cree un [proveedor de MFA](https://docs.microsoft.com/en-us/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
+1.  Cree un [proveedor de MFA](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
 
 2. Abra un caso de soporte técnico y solicite el SDK directo para ASP.net 2.0 C#. El SDK solo se proporcionará a los usuarios actuales de MIM con MFA porque el SDK directo ha quedado en desuso. Los nuevos clientes deben adoptar la próxima versión de MIM que se integre con el servidor MFA.
 
@@ -85,7 +86,7 @@ En la siguiente sección, configurará el proveedor de Azure MFA en Microsoft Az
 
 7.  En el panel izquierdo de la ventana nueva, haga clic en **Configuración**, en **Configurar**.
 
-8.  En **Alerta de fraude**, desactive **Bloquear al usuario al notificarse fraudes. Esto se hace para evitar que se bloquee todo el servicio.
+8.  En **Alerta de fraude**, desactive **Bloquear al usuario al notificarse fraudes. La casilla se desactiva para evitar que se bloquee todo el servicio.
 
 9. En la ventana **Azure Multi-Factor Authentication** que aparece, haga clic en **SDK** , bajo **Descargas** en el menú de la izquierda.
 
@@ -117,13 +118,13 @@ En la siguiente sección, configurará el proveedor de Azure MFA en Microsoft Az
 
 9. En el elemento `<username>` , escriba cualquier nombre de usuario.
 
-10. En el elemento `<DefaultCountryCode>` escriba su código de país predeterminado. En el caso de que se registren números de teléfono de usuarios sin código de país, este es el código de país que se aplicará. En el caso de que el usuario tenga un código de país internacional, este se debe incluir en el número de teléfono registrado.
+10. En el elemento `<DefaultCountryCode>` escriba su código de país predeterminado. En los casos en que se registren números de teléfono de usuarios sin código de país, los usuarios obtendrán este código. En el caso de que el usuario tenga un código de país internacional, este se debe incluir en el número de teléfono registrado.
 
 11. Guarde el archivo MfaSettings.xml con el mismo nombre y en la misma ubicación.
 
 #### <a name="configure-the-phone-gate-or-the-one-time-password-sms-gate"></a>Configurar la puerta de teléfono o la puerta de SMS de contraseña de un solo uso
 
-1.  Inicie Internet Explorer y desplácese hasta el Portal de MIM, identifíquese como administrador de MIM y haga clic en  **Flujos de trabajo** en la barra de navegación izquierda.
+1.  Inicie Internet Explorer y desplácese hasta el Portal de MIM, identifíquese como administrador de MIM y haga clic en **Flujos de trabajo** en la barra de navegación izquierda.
 
     ![Imagen de navegación del portal de MIM](media/MIM-SSPR-workflow.jpg)
 

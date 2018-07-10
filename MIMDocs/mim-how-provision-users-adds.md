@@ -1,7 +1,7 @@
 ---
 title: Microsoft Identity Manager 2016 | Microsoft Docs
 description: Proceso para crear usuarios en ADDS con Microsoft Identity Manager 2016
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -9,12 +9,13 @@ ms.date: 08/18/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: 171aa1a2e19ea9f78f9fadbc7368404702095d71
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.assetid: ''
+ms.openlocfilehash: a12a8436d70b3ae866df0f615e10a3d76f791168
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290108"
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>Procedimiento para aprovisionar usuarios en AD DS
 
@@ -87,8 +88,8 @@ En la siguiente ilustración se plasma el entorno necesario.
 
 Todos los componentes se pueden ejecutar en un solo equipo.
 
->[!NOTE]
-Para más información sobre cómo configurar MIM, vea la [guía de instalación de FIM](http://go.microsoft.com/FWLink/p/?LinkId=165845).
+> [!NOTE]
+> Para más información sobre cómo configurar MIM, vea la [guía de instalación de FIM](http://go.microsoft.com/FWLink/p/?LinkId=165845).
 
 ## <a name="scenario-components-list"></a>Lista de componentes del escenario
 
@@ -99,7 +100,7 @@ En la siguiente tabla se enumeran los componentes que conforman el escenario des
 |----------------------------------------|------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
 | ![Cuentas de usuario](media/how-provision-users-adds/image006.jpg)   | Cuentas de usuario                      | &#183; **ADMA:** cuenta de usuario de Active Directory con derechos suficientes para conectarse a AD DS.<br/> &#183; **FIMMA:** cuenta de usuario de Active Directory con derechos suficientes para conectarse a MIM.
                                                                  |
-| ![Agentes de administración y perfiles de ejecución](media/how-provision-users-adds/image007.jpg)  | Agentes de administración y perfiles de ejecución | &#183; **ADMA de Fabrikam:** agente de administración que intercambia datos con AD DS. <br/> &#183; FIMMA de Fabrikam: agente de administración que intercambia datos con MIM.                                                                                 |
+| ![Agentes de administración y perfiles de ejecución](media/how-provision-users-adds/image007.jpg)  | Agentes de administración y perfiles de ejecución | & #183; **ADMA de Fabrikam:** agente de administración que intercambia datos con AD DS. <br/> &#183; FIMMA de Fabrikam: agente de administración que intercambia datos con MIM.                                                                                 |
 | ![Reglas de sincronización](media/how-provision-users-adds/image008.jpg)  | Reglas de sincronización              | Regla de sincronización saliente de grupo de Fabrikam: regla de sincronización saliente que aprovisiona usuarios en AD DS.                                     |
 | ![Establece](media/how-provision-users-adds/image009.jpg)   | Establece                               | Todos los contratistas: conjunto con pertenencia dinámica en todos los objetos cuyo valor del atributo EmployeeType sea Contractor.                                |
 | ![Flujos de trabajo](media/how-provision-users-adds/image010.jpg)  | Flujos de trabajo                          | Flujo de trabajo de aprovisionamiento de AD: flujo de trabajo para incluir el usuario de MIM en el ámbito de la regla de sincronización saliente de AD.                                |
@@ -160,8 +161,8 @@ Para crear un usuario en AD DS, es necesario que se conozca el DN del objeto. Ap
 
 En AD DS, sigue siendo normal que los usuarios usen el atributo sAMAccountName para iniciar sesión en el servicio de directorio. Si no especifica un valor en este atributo, el servicio de directorio generará un valor aleatorio. El problema es que estos valores aleatorios no son descriptivos, motivo por el que es habitual que una exportación en AD DS contenga una versión descriptiva de este atributo. Para que un usuario pueda iniciar sesión en AD DS, también es preciso incluir en la lógica de exportación una contraseña creada con el atributo unicodePwd.
 
->[!Note]                                
-Asegúrese de que el valor especificado en unicodePwd cumple las directivas de contraseña del AD DS de destino.
+> [!Note]
+> Asegúrese de que el valor especificado en unicodePwd cumple las directivas de contraseña del AD DS de destino.
 
 Al establecer la contraseña de una cuenta de AD DS, debe crear también una cuenta como cuenta habilitada. Para ello, establezca el atributo userAccountControl. Para más información sobre el atributo userAccountControl, vea [Using FIM to Enable or Disable Accounts in Active Directory](http://go.microsoft.com/FWLink/p/?LinkId=189658) (Uso de FIM para habilitar o deshabilitar cuentas en Active Directory).
 
@@ -180,8 +181,8 @@ Para más información, vea los siguientes temas de la Ayuda:
 - Using the Management Agent for Active Directory (Uso del agente de administración de Active Directory)
 - Configurar particiones de directorio
 
->[!Note]
-Asegúrese de que tiene configurada una regla de flujo de importación de atributos relativa al atributo ExpectedRulesList.
+> [!Note]
+> Asegúrese de que tiene configurada una regla de flujo de importación de atributos relativa al atributo ExpectedRulesList.
 
 ### <a name="step-4-create-the-fabrikam-fimma-management-agent"></a>Paso 4: Crear el agente de administración FIMMA de Fabrikam
 
@@ -194,7 +195,7 @@ En la tabla siguiente se enumeran las opciones específicas de escenario más im
 | Página Diseñador del agente de administración | Configuración |
 |------------|------------------------------------|
 | Crear agente de administración | 1. **Agente de administración para:** agente de administración del Servicio FIM <br/> 2. **Nombre:** FIMMA de Fabrikam |
-| Conectar a base de datos     | Utilice la siguiente configuración: <br/> &#183; **Servidor:** localhost <br/> &#183; **Base de datos:** FIMService <br/> &#183; **Dirección base del Servicio FIM:** http://localhost:5725 <br/> <br/> Proporcione información sobre la cuenta que ha creado en relación con este agente de administración. |
+| Conectar a base de datos     | Utilice la siguiente configuración: <br/> &#183; **Servidor:** localhost <br/> &#183; **Base de datos:** FIMService <br/> &#183; **Dirección base del servicio MIM:**  http://localhost:5725 <br/> <br/> Proporcione información sobre la cuenta que ha creado en relación con este agente de administración. |
 | Seleccionar tipos de objeto                                     | Aparte de los tipos de objeto ya seleccionados, seleccione **Person**.   |
 | Configurar asignaciones de tipos de objeto                          | Además de las asignaciones de tipos de objeto ya existentes, agregue una asignación del **Tipo de objeto de origen de datos: Person** al Tipo de objeto del **metaverso** Person. |
 | Configurar el flujo de atributos                                | Además de las asignaciones de flujo de atributos ya existentes, agregue estas otras: <br/><br/> ![Flujo de atributo](media/how-provision-users-adds/image018.jpg) |
@@ -211,8 +212,8 @@ Para más información, vea los siguientes temas de la Ayuda:
 
 -   Configurar particiones de directorio
 
->[!NOTE]
- Asegúrese de que tiene configurada una regla de flujo de importación de atributos relativa al atributo ExpectedRulesList.
+> [!NOTE]
+>  Asegúrese de que tiene configurada una regla de flujo de importación de atributos relativa al atributo ExpectedRulesList.
 
 ### <a name="step-5-create-the-run-profiles"></a>Paso 5: Crear los perfiles de ejecución
 
@@ -226,12 +227,12 @@ En la siguiente tabla se enumeran los perfiles de ejecución que debe crear para
 Cree perfiles de ejecución para cada agente de administración según la tabla anterior.
 
 
->[!Note]
-Para más información, vea el tema sobre cómo crear un perfil de ejecución de agente de administración en la Ayuda de MIM.                                                                                                                  
-
-
->[!Important]
- Confirme que el aprovisionamiento está habilitado en el entorno. Para ello, puede ejecutar el script del tema sobre cómo usar Windows PowerShell para habilitar el aprovisionamiento (http://go.microsoft.com/FWLink/p/?LinkId=189660).
+> [!Note]
+> Para más información, vea el tema sobre cómo crear un perfil de ejecución de agente de administración en la Ayuda de MIM.                                                                                                                  
+> 
+> 
+> [!Important]
+>  Confirme que el aprovisionamiento está habilitado en el entorno. Para ello, puede ejecutar el script del tema sobre cómo usar Windows PowerShell para habilitar el aprovisionamiento (http://go.microsoft.com/FWLink/p/?LinkId=189660)).
 
 
 ## <a name="configuring-the-fim-service"></a>Configuración del Servicio MIM
@@ -293,8 +294,8 @@ En las siguientes tablas se muestra la configuración de la regla de sincronizac
 
 
 
- >[!NOTE]
- Importante: Confirme que la opción Solo flujo inicial está seleccionada en el flujo de atributo que tiene el DN como destino.                                                                          
+> [!NOTE]
+>  Importante: Confirme que la opción Solo flujo inicial está seleccionada en el flujo de atributo que tiene el DN como destino.                                                                          
 
 ### <a name="step-7-create-the-workflow"></a>Paso 7: Crear el flujo de trabajo
 
@@ -365,8 +366,8 @@ En la siguiente tabla se enumeran los perfiles de ejecución que forman parte de
 
 
 
->[!NOTE]
-Debe comprobar que la regla de sincronización saliente está correctamente proyectada hacia el metaverso.
+> [!NOTE]
+> Debe comprobar que la regla de sincronización saliente está correctamente proyectada hacia el metaverso.
 
 ## <a name="testing-the-configuration"></a>Comprobación de la configuración
 
@@ -490,8 +491,8 @@ En FIM, para que una operación de exportación se complete, tras cada ejecució
 
 Ejecute los perfiles de ejecución según las instrucciones de esta sección.
 
->[!IMPORTANT]
-Cada perfil de ejecución debe realizarse sin errores.
+> [!IMPORTANT]
+> Cada perfil de ejecución debe realizarse sin errores.
 
 ### <a name="step-14-verify-the-provisioned-user-in-ad-ds"></a>Paso 14: Comprobar el usuario aprovisionado en AD DS
 
@@ -512,7 +513,7 @@ Para saber cómo quitar estos objetos del entorno de prueba, vea [A Method to Re
 En un escenario típico de sincronización que incluya AD DS como destino de la sincronización, MIM no es autoritativo en todos los atributos de un objeto. Así, por ejemplo, cuando se usa FIM para administrar los objetos de usuario en AD DS, al menos el dominio y los atributos objectSID deben provenir del agente de administración de AD DS.
 Los atributos de nombre de cuenta, de dominio y objectSID son necesarios si quiere que los usuarios puedan iniciar sesión en el Portal de FIM. Para rellenar estos atributos de AD DS, es preciso que haya una regla de sincronización entrante adicional para el espacio conector de AD DS. Cuando se administran objetos cuyos valores de atributo proceden de varios orígenes, hay que configurar correctamente la precedencia del flujo de atributos. Si la precedencia del flujo de atributos no está configurada correctamente, el motor de sincronización impide que se rellenen los valores de atributo. Encontrará más información sobre la precedencia del flujo de atributos en el artículo [About Attribute Flow Precedence](http://go.microsoft.com/FWLink/p/?LinkId=189675) (Acerca de la precedencia del flujo de atributos).
 
-<a name="see-also"></a>Véase también
+<a name="see-also"></a>Consulte también
 =========
 
 <a name="other-resources"></a>Otros recursos
