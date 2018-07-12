@@ -2,27 +2,25 @@
 title: Uso de Azure MFA para la activación de PAM | Microsoft Docs
 description: Configure Azure MFA como segunda capa de seguridad si sus usuarios activan roles en Privileged Access Management.
 keywords: ''
-author: barclayn
-ms.author: fimguy
-manager: mbaldwin
-ms.date: 11/14/2017
+author: billmath
+ms.author: billmath
+ms.reviewer: fimguy
+manager: mtillman
+ms.date: 07/06/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
-ms.reviewer: mwahl
-ms.suite: ems
-ms.openlocfilehash: 30e683a0bd13d911f73eca19c847a2c9cd10f36d
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: ad47de279dd18239ff55d89c1b717ccafe16374f
+ms.sourcegitcommit: 0b6cb02d1d6e0d821b00c17090622ba354252188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289836"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37895510"
 ---
 # <a name="using-azure-mfa-for-activation"></a>Uso de Azure MFA para la activación
 > [!IMPORTANT]
-> Debido al anuncio de desuso del kit de desarrollo de software de Azure Multi-Factor Authentication, Se admitirá el SDK de Azure MFA para los clientes existentes hasta la fecha de retirada, el 14 de noviembre de 2018. Los clientes nuevos y actuales ya no podrán descargar el SDK a través del Portal de Azure clásico. En su lugar, para realizar la descarga, debe ponerse en contacto con el servicio de atención al cliente de Azure para recibir el paquete de credenciales de servicio generado para MFA. <br> El equipo de desarrollo de Microsoft está planeando los cambios de MFA mediante la integración con el SDK del servidor MFA. Se incluirá en la próxima revisión a principios de 2018.
-
+> Debido al anuncio de desuso del kit de desarrollo de software de Azure Multi-Factor Authentication, Se admitirá el SDK de Azure MFA para los clientes existentes hasta la fecha de retirada, el 14 de noviembre de 2018. Los clientes nuevos y actuales ya no podrán descargar el SDK a través del Portal de Azure clásico. En su lugar, para realizar la descarga, debe ponerse en contacto con el servicio de atención al cliente de Azure para recibir el paquete de credenciales de servicio generado para MFA. <br> El equipo de desarrollo de Microsoft está trabajando en los cambios de MFA mediante la integración del SDK del servidor MFA.  Se incluirá en una próxima revisión; vea el [historial de versiones](/reference/version-history.md) para consultar los anuncios. 
 
 
 Al configurar un rol de PAM, puede decidir cómo autorizar a los usuarios que solicitan activar el rol. Las opciones que implementa la actividad de autorización de PAM son:
