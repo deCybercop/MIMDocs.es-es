@@ -8,12 +8,12 @@ ms.date: 06/27/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.openlocfilehash: 090e82cac6c734beb9767e2d2e6230320e44c26f
-ms.sourcegitcommit: c6cb2556bb9f2256b959a3c95db7ca5bbfc2b437
+ms.openlocfilehash: ca1dacdd32a025bc08c00bde6088d85d6444be99
+ms.sourcegitcommit: 8b2623f6247621098d386cbe84e10b5b5373abfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37065149"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39149920"
 ---
 # <a name="conversion-of-mim-specific-services-to-gmsa"></a>Conversión de servicios específicos de MIM a gMSA
 
@@ -61,7 +61,7 @@ Primer paso en el controlador de dominio de Windows
 ## <a name="synchronization-service"></a>Servicio de sincronización
 -----------------------
 
-1.  El primer paso crea una llamada de grupo “MIMSync_Servers” y agrega todos los servidores de sincronización a este grupo.
+1.  Cree un grupo llamado “MIMSync_Servers” y agregue todos los servidores de sincronización a este grupo.
 
 ![](media/a4dc3f6c0cb1f715ba690744f54dce5c.png)
 
