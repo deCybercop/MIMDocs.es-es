@@ -1,37 +1,48 @@
 ---
-title: Trabajo con el Portal de autoservicio de restablecimiento de contraseñas | Microsoft Docs
+title: Trabajar con el Autoservicio de restablecimiento de contraseña | Microsoft Docs
 description: Consulte las novedades del autoservicio de restablecimiento de contraseña en MIM 2016, incluido el funcionamiento de SSPR con la autenticación multifactor.
 keywords: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.reviewer: davidste
-ms.date: 06/26/2018
+ms.date: 08/30/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: b1b30b744a5f735512f31d98184a561ce3f9b047
-ms.sourcegitcommit: 03617b441135a55b664e0d81cce4d17541bee93b
+ms.openlocfilehash: a7314aaf559836fb77b32ae191527917c4854417
+ms.sourcegitcommit: acb2c61831cb634278acc439d6d9496ff51a6a54
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36963382"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43694629"
 ---
-# <a name="working-with-self-service-password-reset"></a>Trabajo con el autoservicio de restablecimiento de contraseña
+# <a name="self-service-password-reset-deployment-options"></a>Opciones de implementación del Autoservicio de restablecimiento de contraseña
 
-> [!IMPORTANT]
-> Debido al anuncio de desuso del kit de desarrollo de software de Azure Multi-Factor Authentication, Se admitirá el SDK de Azure MFA para los clientes existentes hasta la fecha de retirada, el 14 de noviembre de 2018. Los clientes nuevos y actuales ya no podrán descargar el SDK a través del Portal de Azure clásico. En su lugar, para realizar la descarga, debe ponerse en contacto con el servicio de atención al cliente de Azure para recibir el paquete de credenciales de servicio generado para MFA. <br> El equipo de desarrollo de Microsoft está trabajando en los cambios de MFA mediante la integración del SDK del servidor MFA.  Se incluirá en una próxima revisión; vea el [historial de versiones](/reference/version-history.md) para consultar los anuncios.
+Para los clientes nuevos que tienen [licencia de Azure Active Directory Premium](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-licensing), se recomienda usar el [Autoservicio de restablecimiento de contraseña de Azure AD](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-howitworks.md) para proporcionar la experiencia del usuario final.  El Autoservicio de restablecimiento de contraseña de Azure AD proporciona tanto una experiencia web como una experiencia integrada en Windows para que un usuario restablezca su propia contraseña, y admite muchas de las funciones de MIM, incluido el correo electrónico alternativo y las puertas de preguntas y respuestas.  Al implementar el Autoservicio de restablecimiento de contraseña de Azure AD, Azure AD Connect admite la [escritura no simultánea de las nuevas contraseñas en AD DS](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-writeback.md) y puede usarse el [Servicio de notificación de cambio de contraseña](deploying-mim-password-change-notification-service-on-domain-controller.md) de MIM para reenviar las contraseñas a otros sistemas, como el servidor de directorios de otro proveedor.  Para implementar MIM para [la administración de contraseñas](infrastructure/mim2016-password-management.md) no es necesario implementar el servicio MIM ni los portales de registro o de autoservicio de restablecimiento de contraseña.  En su lugar, puede seguir estos pasos:
 
-Microsoft Identity Manager 2016 proporciona funciones adicionales a la característica de autoservicio de restablecimiento de contraseña. Esta funcionalidad se ha mejorado con varias características importantes:
+- Primero, si tiene que enviar contraseñas a directorios distintos de Azure AD y AD DS, implemente la sincronización de MIM con conectores para servicios de dominio de Active Directory y cualquier sistema de destino adicional, configure MIM para la [administración de contraseñas](infrastructure/mim2016-password-management.md) e implemente el [servicio de notificación de cambio de contraseña](deploying-mim-password-change-notification-service-on-domain-controller.md).
+- Después, si tiene que enviar contraseñas a directorios distintos de Azure AD, configure Azure AD Connect para [escribir de manera no simultánea las nuevas contraseñas en AD DS](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-writeback.md).
+- Si lo desea, [registre previamente los usuarios](https://docs.microsoft.com/azure/active-directory/authentication/howto-sspr-authenticationdata.md).
+- Por último, [despliegue el Autoservicio de restablecimiento de contraseña de Azure AD en los usuarios finales](https://docs.microsoft.com/azure/active-directory/authentication/howto-sspr-deployment.md).
 
--   El portal de autoservicio de restablecimiento de contraseña y la pantalla de inicio de sesión de Windows ahora permiten a los usuarios desbloquear sus cuentas sin cambiar sus contraseñas ni llamar a los administradores de soporte técnico. Normalmente, un usuario ve bloqueada su cuenta por diversos motivos legítimos, como escribir una contraseña antigua por error, usar equipos bilingües con el teclado configurado en un idioma incorrecto o intentar iniciar sesión en una estación de trabajo compartida que ya se ha abierto para la cuenta de otra persona.
+Para los clientes existentes que ya habían implementado Forefront Identity Manager (FIM) para el Autoservicio de restablecimiento de contraseña y tienen licencia para Azure Active Directory Premium, se recomienda planear la transición al Autoservicio de restablecimiento de contraseña de Azure AD.  Puede realizar la transición de los usuarios finales al Autoservicio de restablecimiento de contraseña de Azure AD sin necesidad de registrarlos previamente, tan solo [sincronizando o configurando a través de PowerShell una dirección de correo electrónico alternativa o un número de teléfono móvil](https://docs.microsoft.com/azure/active-directory/authentication/howto-sspr-authenticationdata.md). Una vez que los usuarios están registrados en el Autoservicio de restablecimiento de contraseña de Azure AD, puede retirar el portal de restablecimiento de contraseña de FIM.
 
--   Se ha agregado una nueva puerta de autenticación, la puerta de teléfono, que permite la autenticación del usuario mediante una llamada de teléfono.
+Para los clientes que aún no han implementado el Autoservicio de restablecimiento de contraseña de Azure AD para sus usuarios, MIM también proporciona portales de autoservicio de restablecimiento de contraseña.  Comparado con FIM, MIM 2016 incluye los siguientes cambios:
 
--   Se ha agregado compatibilidad para el servicio Microsoft Azure Multi-Factor Authentication (MFA), que puede utilizarse con la actual puerta de contraseña SMS de un solo uso o con la nueva puerta de teléfono.
+- El portal de Autoservicio de restablecimiento de contraseña de MIM y la pantalla de inicio de sesión de Windows permiten a los usuarios desbloquear sus cuentas sin cambiar sus contraseñas.
+- Se ha agregado una nueva puerta de autenticación a MIM, la puerta de teléfono. Esto permite que los usuarios se autentiquen a través de una llamada de teléfono en el Servicio Microsoft Azure Multi-Factor Authentication (MFA).
 
-## <a name="azure-for-multi-factor-authentication"></a>Azure para Multi-Factor Authentication
+Las compilaciones de versiones de MIM 2016 hasta la versión 4.5.26.0 dependían de que el cliente descargara el Kit de desarrollo de software de Microsoft Azure Multi-factor Authentication (SDK de Azure MFA).  Este SDK está en desuso y el SDK de Azure MFA se admitirá para los clientes existentes solo hasta la fecha de retirada, el 14 de noviembre de 2018. Hasta entonces, los clientes deben ponerse en contacto con el soporte al cliente de Azure para recibir su paquete de credenciales del servicio MFA generado, ya que no podrán descargar el SDK de Azure MFA. 
+
+#### <a name="new-update-current-azure-mfa-configuration-to-azure-multi-factor-authentication-server"></a>¡NUEVO! Actualizar la configuración actual de Azure MFA al Servidor Azure Multi-Factor Authentication
+
+En este [artículo](working-with-mfaserver-for-mim.md) se describe cómo actualizar la implementación del portal de autoservicio de restablecimiento de contraseña de MIM y la configuración de PAM mediante el Servidor Microsoft Azure Multi-Factor Authentication para la autenticación multifactor.
+
+## <a name="deploying-mim-self-service-password-reset-portal-using-azure-mfa-for-multi-factor-authentication"></a>Implementar el portal de autoservicio de restablecimiento de contraseña de MIM mediante Azure MFA para la autenticación multifactor
+
+En la siguiente sección se describe cómo implementar el portal de autoservicio de restablecimiento de contraseña de MIM mediante Azure MFA para la autenticación multifactor.  Estos pasos solo son necesarios para los clientes que no usen el autoservicio de restablecimiento de contraseña de Azure AD para sus usuarios.
+
 Microsoft Azure Multi-Factor Authentication es un servicio de autenticación que requiere que los usuarios se identifiquen en sus intentos de inicio de sesión con una aplicación móvil, una llamada de teléfono o un mensaje de texto. Está disponible para su uso con Microsoft Azure Active Directory y como un servicio para las aplicaciones empresariales en la nube y locales.
 
 Azure MFA proporciona un mecanismo de autenticación adicional que puede reforzar los procesos de autenticación existentes; por ejemplo, con el proceso que realiza MIM para la asistencia de inicio de sesión de autoservicio.
@@ -39,7 +50,8 @@ Azure MFA proporciona un mecanismo de autenticación adicional que puede reforza
 Cuando se utiliza Azure MFA, los usuarios se autentican con el sistema para comprobar su identidad al intentar recuperar el acceso a sus cuentas y recursos. La autenticación se puede realizar a través de SMS o de una llamada de teléfono.   Cuanto más sólida es la autenticación, mayor será la certeza de que la persona que intenta obtener acceso es realmente quien posee esa identidad. Una vez autenticado, el usuario puede elegir una contraseña nueva para reemplazar la antigua.
 
 ## <a name="prerequisites-to-set-up-self-service-account-unlock-and-password-reset-using-mfa"></a>Requisitos previos para configurar el desbloqueo de la cuenta de autoservicio y el restablecimiento de contraseña mediante MFA
-En esta sección se supone que ha descargado e implementado Microsoft Identity Manager 2016, incluidos los siguientes componentes y servicios:
+
+En esta sección se supone que ha descargado y completado la implementación de los [componentes Sincronización de MIM, Servicio MIM y Portal de MIM](microsoft-identity-manager-deploy.md) de Microsoft Identity Manager 2016, incluidos los siguientes componentes y servicios:
 
 -   Un servidor Windows Server 2008 R2 o posterior configurado como servidor de Active Directory, incluidos los servicios de dominio y el controlador de dominio de AD con un dominio designado (un dominio "corporativo").
 
@@ -57,44 +69,22 @@ En esta sección se supone que ha descargado e implementado Microsoft Identity M
 
     -   Configurar reglas de sincronización en el portal de MIM que permitan la sincronización de datos de usuario y faciliten las actividades de sincronización del servicio MIM.
 
--   Los complementos y extensiones de MIM 2016, incluido el cliente integrado de inicio de sesión de Windows para autoservicio de restablecimiento de contraseña, implementados en el servidor o en un equipo cliente distinto.
+-   Los complementos y extensiones de MIM 2016 &amp;, incluido el cliente integrado de inicio de sesión de Windows para autoservicio de restablecimiento de contraseña, implementados en el servidor o en un equipo cliente distinto.
+
+Para este escenario es necesario tener las CAL de MIM para los usuarios, así como la suscripción para Azure MFA.
 
 ## <a name="prepare-mim-to-work-with-multi-factor-authentication"></a>Preparación de MIM para que funcione con la autenticación multifactor
 Configure MIM Sync para que admita la funcionalidad de restablecimiento de contraseña y desbloqueo de cuenta. Para obtener más información, consulte los artículos [Installing the FIM Add-ins nd Extensions](https://technet.microsoft.com/library/ff512688%28v=ws.10%29.aspx) (Instalación de complementos y extensiones de FIM), [Installing FIM SSPR](https://technet.microsoft.com/library/hh322891%28v=ws.10%29.aspx) (Instalación de FIM SSPR), [SSPR Authentication Gates](https://technet.microsoft.com/library/jj134288%28v=ws.10%29.aspx) (Puertas de autenticación de SSPR) y [la guía del laboratorio de pruebas de SSPR](https://technet.microsoft.com/library/hh826057%28v=ws.10%29.aspx).
 
-En la siguiente sección, configurará el proveedor de Azure MFA en Microsoft Azure Active Directory. Se generará un archivo que incluye el material de autenticación requerido por MFA para poder establecer contacto con Azure MFA.  Para poder continuar, necesitará una suscripción de Azure.
+En la siguiente sección, configurará el proveedor de Azure MFA en Microsoft Azure Active Directory. Como parte de esto, se generará un archivo que incluye el material de autenticación que requiere MFA para poder establecer contacto con Azure MFA.  Para poder continuar, necesitará una suscripción de Azure.
 
 ### <a name="register-your-multi-factor-authentication-provider-in-azure"></a>Registro del proveedor de autenticación multifactor en Azure
 
-1.  Cree un [proveedor de MFA](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
+1.  Cree un [proveedor de MFA](https://docs.microsoft.com/en-us/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider.md).
 
 2. Abra un caso de soporte técnico y solicite el SDK directo para ASP.net 2.0 C#. El SDK solo se proporcionará a los usuarios actuales de MIM con MFA porque el SDK directo ha quedado en desuso. Los nuevos clientes deben adoptar la próxima versión de MIM que se integre con el servidor MFA.
 
-3.  Haga clic en **Servicios de aplicaciones &gt; Active Directory &gt; Proveedor de autenticación multifactor &gt; Creación rápida**.
-
-![Imagen del proveedor de MFA de creación rápida de Azure Portal](media/MIM-SSPR-Azureportal.png)
-
-4.  En el campo **Nombre**, escriba **SSPRMFA** y haga clic en **Crear**.
-
-![Imagen de MFA del portal de Azure](media/MIM-SSPR-Azureportal-2.png)
-
-5.  Haga clic en **Active Directory** en el menú del Portal de Azure clásico y, a continuación, en la pestaña **Proveedores de autenticación multifactor**.
-
-6.  Haga clic en **SSPRMFA** y, a continuación, haga clic en **Administrar** , en la parte inferior de la pantalla.
-
-    ![Icono de administración del portal de Azure](media/MIM-SSPR-ManageButton.png)
-
-7.  En el panel izquierdo de la ventana nueva, haga clic en **Configuración**, en **Configurar**.
-
-8.  En **Alerta de fraude**, desactive **Bloquear al usuario al notificarse fraudes. La casilla se desactiva para evitar que se bloquee todo el servicio.
-
-9. En la ventana **Azure Multi-Factor Authentication** que aparece, haga clic en **SDK** , bajo **Descargas** en el menú de la izquierda.
-
-10. Haga clic en el vínculo **Descargar** en la columna ZIP del archivo con lenguaje **SDK para ASP.net 2.0 C#**.
-
-    ![Imagen de archivo zip de descarga de Azure MFA](media/MIM-SSPR-Azure-MFA.png)
-
-11. Copie el archivo ZIP resultante en cada sistema donde esté instalado el servicio de MIM.  Tenga en cuenta que el archivo ZIP contiene el material de claves que se usa para autenticar el servicio de Azure MFA.
+3. Copie el archivo ZIP resultante en cada sistema donde esté instalado el servicio de MIM.  Tenga en cuenta que el archivo ZIP contiene el material de claves que se usa para autenticar el servicio de Azure MFA.
 
 ### <a name="update-the-configuration-file"></a>Actualizar el archivo de configuración
 
@@ -118,13 +108,13 @@ En la siguiente sección, configurará el proveedor de Azure MFA en Microsoft Az
 
 9. En el elemento `<username>` , escriba cualquier nombre de usuario.
 
-10. En el elemento `<DefaultCountryCode>` escriba su código de país predeterminado. En los casos en que se registren números de teléfono de usuarios sin código de país, los usuarios obtendrán este código. En el caso de que el usuario tenga un código de país internacional, este se debe incluir en el número de teléfono registrado.
+10. En el elemento `<DefaultCountryCode>` escriba su código de país predeterminado. En el caso de que se registren números de teléfono de usuarios sin código de país, este es el código de país que se aplicará. En el caso de que el usuario tenga un código de país internacional, este se debe incluir en el número de teléfono registrado.
 
 11. Guarde el archivo MfaSettings.xml con el mismo nombre y en la misma ubicación.
 
 #### <a name="configure-the-phone-gate-or-the-one-time-password-sms-gate"></a>Configurar la puerta de teléfono o la puerta de SMS de contraseña de un solo uso
 
-1.  Inicie Internet Explorer y desplácese hasta el Portal de MIM, identifíquese como administrador de MIM y haga clic en **Flujos de trabajo** en la barra de navegación izquierda.
+1.  Inicie Internet Explorer y desplácese hasta el Portal de MIM, identifíquese como administrador de MIM y haga clic en  **Flujos de trabajo** en la barra de navegación izquierda.
 
     ![Imagen de navegación del portal de MIM](media/MIM-SSPR-workflow.jpg)
 
@@ -140,7 +130,7 @@ Ahora los usuarios de su organización podrán registrase para restablecer su co
 
 #### <a name="register-users-for-password-reset"></a>Registrar usuarios para restablecer la contraseña
 
-1.  El usuario debe iniciar un navegador web y desplazarse hasta el Portal de registro de restablecimiento de contraseña de MIM.  (Normalmente este portal se configurará con la autenticación de Windows).  En el portal, deberán proporcionar su nombre de usuario y la contraseña de nuevo para confirmar su identidad.
+1.  El usuario debería iniciar un navegador web y desplazarse hasta el Portal de registro de restablecimiento de contraseñas de MIM.  (Normalmente este portal se configurará con la autenticación de Windows).  En el portal, deberán proporcionar su nombre de usuario y la contraseña de nuevo para confirmar su identidad.
 
     Deben visitar el portal de registro de contraseñas y autenticarse con su nombre de usuario y contraseña.
 
@@ -169,7 +159,7 @@ Al instalar las extensiones y complementos de MIM en un equipo unido a un domini
 
 2.  El usuario será dirigido a la autenticación. Si se ha configurado MFA, el usuario recibirá una llamada telefónica.
 
-3.  Lo que sucede en segundo plano es que Azure MFA realiza una llamada de teléfono al número que proporcionó el usuario cuando se registró en el servicio.
+3.  Lo que sucede en segundo plano es que Azure MFA hace llamada de teléfono al número que proporcionó el usuario cuando se registró en el servicio.
 
 4.  Cuando el usuario responde al teléfono, se le pide que pulse la tecla almohadilla # en el teléfono. A continuación, el usuario hace clic en **Siguiente** en el portal.
 
@@ -186,7 +176,7 @@ Al instalar las extensiones y complementos de MIM en un equipo unido a un domini
 
 1.  Los usuarios pueden abrir un explorador web, acceder al **Portal de restablecimiento de contraseña** , escribir su nombre de usuario y hacer clic en **Siguiente**.
 
-    Si se ha configurado MFA, el usuario recibirá una llamada telefónica. Lo que sucede en segundo plano es que Azure MFA realiza una llamada de teléfono al número que proporcionó el usuario cuando se registró en el servicio.
+    Si se ha configurado MFA, el usuario recibirá una llamada telefónica. Lo que sucede en segundo plano es que Azure MFA hace llamada de teléfono al número que proporcionó el usuario cuando se registró en el servicio.
 
     Cuando el usuario responde al teléfono, se le pide que presione la tecla almohadilla # en el teléfono. A continuación, el usuario hace clic en **Siguiente** en el portal.
 
@@ -201,8 +191,7 @@ Al instalar las extensiones y complementos de MIM en un equipo unido a un domini
 
 4.  Cuando la autenticación es correcta, el usuario tiene dos opciones: mantener la contraseña actual o establecer una contraseña nueva.
 
-5.  ![Imagen de cuenta desbloqueada correctamente de MIM](media/MIM-SSPR-account-unlock.JPG)
+5.  ![imagen de cuenta de MIM
+6.  desbloqueada correctamente](media/MIM-SSPR-account-unlock.JPG)
 
 6.  Si el usuario decide restablecer su contraseña, tendrá que escribir una contraseña nueva dos veces y hacer clic en **Siguiente** para cambiar la contraseña.
-
-    ![Imagen de restablecimiento de contraseña del Asistente para inicio de sesión de MIM](media/MIM-SSPR-PR1.JPG)

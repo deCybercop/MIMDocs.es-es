@@ -10,12 +10,12 @@ ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
-ms.openlocfilehash: 834343243dfeefa8d1874414fa369751288fd64d
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: bb0287b894786d13398819b04bdb089f0f36b33e
+ms.sourcegitcommit: acb2c61831cb634278acc439d6d9496ff51a6a54
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36288877"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43694646"
 ---
 # <a name="supported-languages"></a>Idiomas compatibles
 
@@ -26,7 +26,7 @@ En este artículo se describen los idiomas admitidos y la asignación de actuali
 El paquete de idioma del portal y servicio de MIM de Microsoft admite los 33 idiomas siguientes.  
 
 > [!NOTE]
-> En la compilación [4.4.1642.0](https://support.microsoft.com/en-us/help/4021562/hotfix-rollup-package-build-4-4-1642-0-is-available-for-microsoft) se agregó una clave del Registro denominada "OverrideDefaultUILocale" al paquete de idioma de extensiones y complementos de MIM que intentará asignar todos los idiomas similares al idioma que se admite. Por ejemplo, si el idioma de visualización de Windows es ES-CL (español de Chile), o cualquiera ES-**, intentará asignar ese idioma al idioma ES-ES (español de España).
+> En la compilación [4.4.1642.0](https://support.microsoft.com/en-us/help/4021562/hotfix-rollup-package-build-4-4-1642-0-is-available-for-microsoft) se agregó una clave del Registro denominada "OverrideDefaultUILocale" al paquete de idioma de extensiones y complementos de MIM que intentará asignar todos los idiomas similares al idioma que se admite. Por ejemplo, si el idioma de visualización de Windows es ES-CL (español de Chile), o cualquiera ES-\*, intentará asignar ese idioma al idioma ES-ES (español de España).
 
 > [!IMPORTANT]
 > El texto del portal y e¡l complemento de SSPR se localizarán, pero no las preguntas sin trabajo adicional. Debe crear flujos de trabajo de autenticación (y MPR y conjuntos de acompañamiento para establecerlos como destino) a las preguntas de destino en cada idioma a la ubicación de destino.
