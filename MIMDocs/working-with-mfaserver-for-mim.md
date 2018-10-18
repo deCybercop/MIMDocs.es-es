@@ -2,20 +2,19 @@
 title: Usar el SDK del Servidor Microsoft Azure Multi-factor Authentication para escenarios de activar PAM o SSPR | Microsoft Docs
 description: Configure el SDK del Servidor Azure Multi-Factor Authentication como una segunda capa de seguridad cuando los usuarios activen roles en Privileged Access Management y en el Autoservicio de restablecimiento de contraseña.
 keywords: ''
-author: fimguy
+author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 09/02/2018
 ms.topic: article
-ms.service: microsoft-identity-manager
-ms.technology: security
+ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 7191e445688cc9e3c5c02b9c6852c869a28a937a
-ms.sourcegitcommit: ad0690bd57e3d056397108bf1c8417965d69a32c
+ms.openlocfilehash: b92a217dd86d9e4de177ebec9ecec7c76222d7b1
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43772685"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358285"
 ---
 # <a name="use-azure-multi-factor-authentication-server-to-activate-pam-or-sspr"></a>Usar el SDK del Servidor Azure Multi-factor Authentication para escenarios de activar PAM o SSPR
 En el siguiente documento se describe cómo configurar el servidor Azure MFA como una segunda capa de seguridad cuando los usuarios activan roles en Priviledge Access Management o en el Autoservicio de restablecimiento de contraseña.

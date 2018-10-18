@@ -2,20 +2,19 @@
 title: Instalación de BHOLD SP1 | Microsoft Docs
 description: Documentación de la instalación de BHOLD SP1
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/11/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
-ms.technology: security
+ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 11cde4e3b2779f9c32d9849a47713acf5f120b3c
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: d5edf4c16f32c401db32abb9bab1fa7e9e23e4a5
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289703"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358508"
 ---
 # <a name="microsoft-bhold-suite-sp1-60-installation-guide"></a>Guía de instalación de Microsoft BHOLD Suite SP1 (6.0)
 

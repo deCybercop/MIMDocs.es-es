@@ -4,18 +4,17 @@ author: fimguy
 description: El conector de Microsoft Identity Manager para Microsoft Graph permite la administración del ciclo de vida de cuentas de AD de usuarios externos. En este escenario, una organización tiene invitados en su directorio de Azure AD y quiere conceder acceso a esos invitados a aplicaciones basadas en Kerberos o en autenticación integrada de Windows local
 keywords: ''
 ms.author: billmath
-manager: bhu
+manager: mtillman
 ms.date: 10/02/2018
 ms.topic: article
-ms.service: microsoft-identity-manager
-ms.technology: security
+ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 09052bc9f5cecd0a599e9a93ee43cc44ce435671
-ms.sourcegitcommit: 032b3cdd8a88b1ccfb30c0070f216020feee6293
+ms.openlocfilehash: 2e376bcc88518b911f93ce9cd4ab920eb428815b
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48045656"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358659"
 ---
 <a name="microsoft-identity-manager-connector-for-microsoft-graph"></a>Conector de Microsoft Identity Manager para Microsoft Graph
 =======================================================================================
