@@ -101,9 +101,9 @@ Todos los componentes de la implementación de MIM necesitan sus propias identid
     ```
 5.  Durante la instalación, es necesario agregar los siguientes registros "A" de DNS para la adecuada resolución de los nombres.
 
-- mim.contoso.com Point to corpservice physical ip address
-- passwordreset.contoso.com Point to corpservice physical ip address
-- passwordregistration.contoso.com Point to corpservice physical ip address
+- mim.contoso.com punto a la dirección ip física de corpservice
+- passwordreset.contoso.com punto a la dirección ip física de corpservice
+- passwordregistration.contoso.com punto a la dirección ip física de corpservice
 
 > [!div class="step-by-step"]
 > [Windows Server 2016»](prepare-server-ws2016.md)
