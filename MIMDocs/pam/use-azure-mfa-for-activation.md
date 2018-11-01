@@ -9,14 +9,13 @@ manager: mtillman
 ms.date: 07/06/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
-ms.openlocfilehash: 10c8d4246122daa507d79a3f2e26e945c6ab5709
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 9cb1e37f966db5c663694aaccd71f2b4c799dd4b
+ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49333731"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50379946"
 ---
 # <a name="using-azure-mfa-for-activation"></a>Uso de Azure MFA para la activación
 > [!IMPORTANT]
@@ -43,7 +42,7 @@ Para usar Azure MFA con MIM, necesita:
 
 ## <a name="creating-an-azure-mfa-provider"></a>Creación de un proveedor de Azure MFA
 
-En esta sección, vamos a configurar el proveedor de Azure MFA en Microsoft Azure Active Directory.  Si ya usa Azure MFA, tanto de forma independiente como configurado con Azure Active Directory Premium, vaya a la sección siguiente.
+En esta sección, vamos a configurar el proveedor de Azure MFA en Microsoft Azure Active Directory.  Si ya usa Azure MFA, tanto de forma independiente como configurado con Azure Active Directory Premium, vaya a la sección siguiente.
 
 1.  Abra un explorador web y conéctese al [portal clásico de Azure](https://manage.windowsazure.com) como administrador de suscripciones de Azure.
 
@@ -71,7 +70,7 @@ A continuación, se generará un archivo que incluye el material de autenticaci�
 
 ![Captura de pantalla de la descarga de un SDK de Multi-Factor Authentication](media/PAM-Azure-MFA-Activation-Image-1.png)
 
-7.  Copie el archivo ZIP resultante en cada sistema donde esté instalado el servicio de MIM. 
+7.  Copie el archivo ZIP resultante en cada sistema donde esté instalado el servicio de MIM. 
 
 >[!NOTE]
 > El archivo ZIP contiene material de claves que se usa para autenticar el servicio Azure MFA.

@@ -2,22 +2,21 @@
 title: Definición de roles con privilegios para PAM | Microsoft Docs
 description: Decida qué roles con privilegios deben administrarse y defina la directiva de administración para cada uno.
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 08/31/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
 ms.assetid: 1a368e8e-68e1-4f40-a279-916e605581bc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 1e3b0d6cd29de0a58c330df064d907b1876dba3b
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 38a9fc174c037e5d7c3ea17b46dcf9f6ea924822
+ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49334319"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50380024"
 ---
 # <a name="define-roles-for-privileged-access-management"></a>Definir roles para Privileged Access Management
 
