@@ -7,12 +7,12 @@ manager: mtillman
 ms.date: 06/27/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: d3c0b6677c42d4f14d4f6255a2a661d3ef23661d
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 63f2509d35355a8fe3a59b173756257298079a92
+ms.sourcegitcommit: 6374aa4f7d58b7218626d36d0fc2dc4b38cb8332
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358302"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237237"
 ---
 # <a name="conversion-of-mim-specific-services-to-gmsa"></a>Conversión de servicios específicos de MIM a gMSA
 
@@ -82,9 +82,9 @@ Primer paso en el controlador de dominio de Windows
 
     -   En el servidor en que está instalado el servicio de sincronización, localice la herramienta de administración de claves del servicio de sincronización.
 
-    -   De forma predeterminada, la opción** Exportar conjunto de claves** ya está seleccionada.
+    -   De forma predeterminada, la opción **Exportar conjunto de claves**  ya está seleccionada.
 
-    -   Haga clic en **Siguiente**.
+    -   Haga clic en **Siguiente**.
 
     -   Ahora se le pedirá que escriba la información de la cuenta de sincronización existente.
 
@@ -96,13 +96,13 @@ Primer paso en el controlador de dominio de Windows
 
         -   Dominio: dominio del que forma parte la cuenta del servicio de sincronización.
 
-    -   Haga clic en **Siguiente**.
+    -   Haga clic en  **Siguiente**.
 
     -   Si escribió algo incorrectamente, recibirá el siguiente error:
 
     -   Ahora que ha escrito correctamente la información de la cuenta, se le presentará una opción para cambiar el destino (ubicación del archivo de exportación) de la clave de cifrado de copia de seguridad.
 
-        -   La ubicación predeterminada del archivo de exportación es **C:\\Windows\\system32**\\miiskeys-1.bin.
+        -   La ubicación predeterminada del archivo de exportación es  **C:\\Windows\\system32**\\miiskeys-1.bin.
 
 4. Instale Microsoft Identity Manager SP1 Synchronization Service, compilación 4.4.1302.0. Puede encontrarse en el centro de descarga de licencias por volumen o en el sitio de descargas de MSDN. Una vez completada la instalación, asegúrese de guardar el conjunto de claves miiskeys.bin.
 
@@ -152,7 +152,7 @@ Primer paso en el controlador de dominio de Windows
 
 ![](media/0201f0281325c80eb70f91cbf0ac4d5b.jpg)
 
-3.  **NOTA**.  Es un problema conocido que los servicios que usan cuentas administradas se bloquean después de reiniciar el servidor debido a que el servicio de distribución de claves de Microsoft no se inicia después de reiniciar Windows. No se pudo iniciar el servicio y tampoco se pudo reiniciar Windows. El problema es reproducible al menos en Windows Server 2012 R2. Para dar una solución alternativa a este problema, ejecute el comando 
+3.  **NOTA**.  Es un problema conocido que los servicios que usan cuentas administradas se bloquean después de reiniciar el servidor debido a que el servicio de distribución de claves de Microsoft no se inicia después de reiniciar Windows. No se pudo iniciar el servicio y tampoco se pudo reiniciar Windows. El problema es reproducible al menos en Windows Server 2012 R2. Para dar una solución alternativa a este problema, ejecute el comando 
 
 -   **sc triggerinfo kdssvc start/networkon**
 
