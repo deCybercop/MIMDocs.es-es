@@ -1,4 +1,4 @@
-# [Descripción y exploración](microsoft-identity-manager-2016.md)
+# [Información general](microsoft-identity-manager-2016.md)
 ## [¿Qué es MIM 2016?](microsoft-identity-manager-2016.md)
 ## [Novedades de Service Pack 1](Microsoft-identity-manager-2016-sp1-release-notes.md)
 ### [Scripts de implementación de MIM2016 SP1 PAM](sp1-deployment-scripts.md)
@@ -83,7 +83,7 @@
 ### [Kerberos](https://technet.microsoft.com/library/jj134299)
 ### [Registro dinámico del servicio MIM SP1 (4.4.1436.0)](./infrastructure/mim-service-dynamic-logging.md)
 ### [Export Performance Guide](https://technet.microsoft.com/library/hh322883) (Guía de rendimiento de la exportación)
-## Generación de informes
+## Informes
 ### [Reporting Custom Reports and Extensibility](https://technet.microsoft.com/library/jj133861) (Informes personalizados y extensibilidad)
 ## [Microsoft Identity Software: Public Release build versions (Software de Microsoft Identity: compilaciones de versiones públicas)](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)
 # [Referencia](./reference/microsoft-identity-manager-2016-developer-reference.md)
