@@ -9,18 +9,18 @@ ms.date: 11/05/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.technology: security
-ms.openlocfilehash: b25819d864f773578ba8aa52217c7b27536b7327
-ms.sourcegitcommit: f73a83f424d7e32b0119e870bc0020c061e966f7
+ms.openlocfilehash: 67064d930935f0091c14c64bf271dd0e1ded6bb4
+ms.sourcegitcommit: 3b514aba69af203f176b40cdb7c2a51c477c944a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265272"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51718224"
 ---
 # <a name="microsoft-identity-manager-2016-news-and-updates"></a>Noticias y actualizaciones de Microsoft Identity Manager 2016
 
 Microsoft Identity Manager (MIM) 2016 se basa en las funcionalidades de administración de identidades y acceso de Forefront Identity Manager. Al igual que su predecesor, MIM le ayuda a administrar usuarios, credenciales, directivas y acceso en la organización.  Además, MIM 2016 proporciona una experiencia híbrida, capacidades de administración de acceso con privilegios y compatibilidad con nuevas plataformas.
 
-La versión actual bajo soporte técnico estándar es MIM 2016 Service Pack 1 (SP1).  Esta versión de agosto de 2017 incluía actualizaciones para el portal de MIM, el escenario de PAM y agregaba compatibilidad con nuevas plataformas.  Los clientes que ejecutan versiones de FIM o MIM anteriores a MIM 2016 SP1 deben actualizar a MIM 2016 SP1 o una revisión posterior.  Obtenga más información sobre cómo [actualizar a MIM 2016 SP1](microsoft-identity-manager-2016-sp1-release-notes.md).
+La versión actual bajo soporte técnico estándar es MIM 2016 Service Pack 1 (SP1).  Esta versión de agosto de 2017 incluía actualizaciones para el portal de MIM, el escenario de PAM y agregaba compatibilidad con nuevas plataformas.  Los clientes que ejecutan versiones de FIM o MIM anteriores a MIM 2016 SP1 deben actualizar a MIM 2016 SP1 o una revisión posterior.  Obtenga más información sobre cómo [actualizar a MIM 2016 SP1](./reference/version-history.md).
 
 ## <a name="updates-since-mim-2016-sp1"></a>Actualizaciones desde MIM 2016 SP1
 
