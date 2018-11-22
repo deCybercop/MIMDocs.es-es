@@ -11,14 +11,14 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 49e549913a5fd87528df2205b8d5b0a83f3d2b24
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: a0fa1e837fd73872043748ee73f19a29d1d1412f
+ms.sourcegitcommit: 3b514aba69af203f176b40cdb7c2a51c477c944a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358251"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51718341"
 ---
-# <a name="set-up-an-identity-management-servers-windows-server-2016"></a>Configuración de un servidor de administración de identidades: Windows Server 2016
+# <a name="set-up-an-identity-management-server-windows-server-2016"></a>Configuración de un servidor de administración de identidades: Windows Server 2016
 
 > [!div class="step-by-step"]
 > [«Preparación de un dominio](preparing-domain.md)
@@ -39,9 +39,9 @@ Empiece con una máquina de Windows Server 2016 con entre 8 y 12 GB de memoria R
 
 1. Inicie sesión en el nuevo equipo como su administrador.
 
-2. Mediante el Panel de control, asigne al equipo una dirección IP estática en la red. Configure esa interfaz de red para enviar consultas DNS a la dirección IP del controlador de dominio del paso anterior y establezca **CORPSERVICE** como nombre del equipo.  Esto requerirá el reinicio del servidor.
+2. Mediante el Panel de control, asigne al equipo una dirección IP estática en la red. Configure esa interfaz de red para enviar consultas DNS a la dirección IP del controlador de dominio del paso anterior y establezca **CORPSERVICE** como nombre del equipo.  Esta operación requerirá el reinicio del servidor.
 
-3. Abra el Panel de control y una el equipo al dominio que configuró en el último paso, *contoso.com*.  Ello significa proporcionar el nombre de usuario y las credenciales de un administrador de dominio como *Contoso\Administrador*.  Cuando aparezca el mensaje de bienvenida, cierre el cuadro de diálogo y vuelva a reiniciar este servidor.
+3. Abra el Panel de control y una el equipo al dominio que configuró en el último paso, *contoso.com*.  Esta operación incluye la proporción del nombre de usuario y las credenciales de un administrador de dominio como *Contoso\Administrador*.  Cuando aparezca el mensaje de bienvenida, cierre el cuadro de diálogo y vuelva a reiniciar este servidor.
 
 4. Inicie sesión en el equipo *CORPSERVICE* con una cuenta de dominio con el administrador de máquina local *Contoso\MIMINSTALL*.
 
@@ -69,13 +69,13 @@ Empiece con una máquina de Windows Server 2016 con entre 8 y 12 GB de memoria R
 
 Configure la directiva de seguridad de servidor para que permita que las cuentas recién creadas se ejecuten como servicios.
 > [!NOTE] 
-> Según el servidor único de configuración (todo en uno) o el servidor distribuido, solo debe agregar usuarios o grupos en función del rol de la máquina miembro, por ejemplo, servidor de sincronización. 
+> Según la configuración, el servidor único (todo en uno) o los servidores distribuidos que debe agregar, en función del rol de la máquina miembro, por ejemplo, servidor de sincronización. 
 
 1. Inicie el programa Directiva de seguridad local.
 
 2. Vaya a **Directivas locales > Asignación de derechos de usuario**.
 
-3. En el panel de detalles haga clic con el botón secundario en **Iniciar sesión como servicio**y seleccione **Propiedades**.
+3. En el panel de detalles haga clic con el botón derecho en **Iniciar sesión como servicio** y seleccione **Propiedades**.
 
     ![Imagen de la directiva de seguridad local](media/MIM-DeployWS3.png)
 
@@ -83,9 +83,9 @@ Configure la directiva de seguridad de servidor para que permita que las cuentas
 
 5. Haga clic en **Aceptar** para cerrar la ventana **Propiedades de Iniciar sesión como servicio**.
 
-6.  En el panel de detalles, haga clic con el botón derecho en **Deny access to this computer from the network** (Denegar acceso a este equipo desde la red) y seleccione **Propiedades**.
+6.  En el panel de detalles, haga clic con el botón derecho en **Denegar acceso a este equipo desde la red** y seleccione **Propiedades**.>
 
-[!NOTE] Si se separan los servidores de roles, este paso interrumpirá parte de la funcionalidad, como la característica SSPR.
+[!NOTE] La separación de los servidores de roles hará que algunas funcionalidades, como SSPR, dejen de funcionar.
 
 7. Haga clic en **Agregar usuario o grupo** y escriba `contoso\MIMSync; contoso\MIMService` en el cuadro de texto; a continuación, haga clic en **Aceptar**.
 
