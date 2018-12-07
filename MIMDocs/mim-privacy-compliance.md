@@ -5,21 +5,23 @@ keywords: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 05/22/2018
+ms.date: 12/02/2018
 ms.topic: get-started-article
 ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.suite: ems
-ms.openlocfilehash: 4102ffc450b993faaa62da66bb25f242b7e39280
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: f75eb69360852c9f629b60d4900638c8b51e068a
+ms.sourcegitcommit: 9e420840815adb133ac014a8694de9af4d307815
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358727"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52825797"
 ---
 # <a name="microsoft-identity-manager-data-handling"></a>Control de datos de Microsoft Identity Manager 
 
-En este artículo se proporcionarán instrucciones sobre cómo la organización puede poner en práctica o implementar decisiones de operaciones de búsqueda, eliminación, actualización e informe en muchos orígenes de datos conectados. Antes de decidir el enfoque de eliminación o actualización, es fundamental comprender el diseño y la configuración actuales del sistema de administración de identidades (MIM). A continuación se muestran algunos escenarios que los clientes deberán tener en cuenta y responder a las siguientes preguntas: 
+En este artículo se le proporcionarán instrucciones acerca de cómo las organizaciones toman decisiones que se pueden aplicar a muchos orígenes de datos conectados.  Esto puede conseguirse mediante la operaciones de búsqueda, eliminación, actualización e informe.  Antes de decidir el enfoque de eliminación o actualización, es fundamental comprender el diseño y la configuración actuales del sistema de administración de identidades (MIM). 
+
+A continuación se muestran algunos escenarios que los clientes deberán tener en cuenta y responder a las siguientes preguntas: 
 
 - ¿Qué datos necesita para la administración de identidades para ayudar con el proceso empresarial?
 - ¿Dónde se van a almacenar los datos actuales en MIM?
