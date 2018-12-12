@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 535c80fa2ff1b6250ae9a3f340cb514e58f390a9
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: fc70a0edb610fcb862d85902dd5e611e65f6e689
+ms.sourcegitcommit: 9e420840815adb133ac014a8694de9af4d307815
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358625"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52825814"
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>Instalación de MIM 2016: servicio y portal de MIM
 
@@ -68,11 +68,11 @@ Si no ha configurado el paquete de instalación de MIM en el último paso, vuelv
 
 12. Especifique *CORPIDM* (nombre de este equipo) como dirección del servidor de servicio MIM para el portal de MIM.
 
-13. Especifique *http://mim.contoso.com* como dirección URL de la colección de sitios de SharePoint.
+13. Especifique `*http://mim.contoso.com*` como dirección URL de la colección de sitios de SharePoint.
 
-14. Especifique *http://passwordregistration.contoso.com*  como el puerto 80 de la dirección URL de registro de contraseña; se recomienda actualizarlo más adelante a 443 con el certificado SSL.
+14. Especifique `*http://passwordregistration.contoso.com*` como el puerto 80 de la dirección URL de registro de contraseña; se recomienda actualizarlo más adelante a 443 con el certificado SSL.
 
-15. Especifique *http://passwordreset.contoso.com* como el puerto 80 de dirección URL de restablecimiento de contraseña; se recomienda actualizarlo más adelante a 443 con el certificado SSL.
+15. Especifique `*http://passwordreset.contoso.com*` como el puerto 80 de dirección URL de restablecimiento de contraseña; se recomienda actualizarlo más adelante a 443 con el certificado SSL.
 
 16. Seleccione la casilla para abrir los puertos 5725 y 5726 en el firewall y la casilla para conceder acceso al Portal de MIM a todos los usuarios autenticados.
 

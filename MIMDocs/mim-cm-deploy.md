@@ -9,12 +9,12 @@ ms.date: 09/19/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 01c5c8357c8cb0424bd38b61836919f5c2c3e96a
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 7ab76d386d8633de8919167c6b8f26b5137323e5
+ms.sourcegitcommit: 9e420840815adb133ac014a8694de9af4d307815
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358880"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52825848"
 ---
 # <a name="deploying-microsoft-identity-manager-certificate-manager-2016-mim-cm"></a>Implementación del administrador de certificados de Microsoft Identity Manager 2016 (MIM CM)
 
@@ -499,9 +499,9 @@ Antes de iniciar sesión en CORPCM, agregue MIMINSTALL al grupo **administradore
 
 18. Cierre todas las ventanas abiertas.
 
-19. Agregue https://cm.contoso.com/certificatemanagement a la zona de intranet local del explorador.
+19. Agregue `https://cm.contoso.com/certificatemanagement` a la zona de intranet local del explorador.
 
-20. Visite el sitio del servidor CORPCM https://cm.contoso.com/certificatemanagement.  
+20. Visite el sitio del servidor CORPCM `https://cm.contoso.com/certificatemanagement`.  
 
     ![diagrama](media/mim-cm-deploy/image035.png)
 
