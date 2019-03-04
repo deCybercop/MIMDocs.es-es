@@ -1,5 +1,5 @@
 ---
-title: Microsoft Identity Manager 2016 | Microsoft Docs
+title: Aprovisionamiento de usuarios de Microsoft Identity Manager 2016 en Active Directory | Microsoft Docs
 description: Proceso para crear usuarios en ADDS con Microsoft Identity Manager 2016
 keywords: ''
 author: billmath
@@ -9,12 +9,12 @@ ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 88473df88271937b07450df409353c0b3ca08684
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 5e259df617c5a95fcd54f49c9cbb70f9cd0c36a4
+ms.sourcegitcommit: 486f860f0951413aed335138eb6ad4ce6c50ed4d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358795"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852670"
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>Procedimiento para aprovisionar usuarios en AD DS
 
@@ -169,8 +169,8 @@ En la siguiente tabla se enumeran las opciones específicas de escenario más im
 
 | Página Diseñador del agente de administración                          | Configuración                                                  |
 |---------------------------------------------------------|----------------------------------------------------------------|
-| Crear agente de administración                                 | 1. **Agente de administración de:** AD DS  <br/> 2.  **Nombre:** ADMA de Fabrikam |
-| Conectarse al bosque de Active Directory                      | 1. **Seleccionar particiones de directorio:** “DC=Fabrikam,DC=com”   <br/>   2. Haga clic en **Contenedores** para abrir el cuadro de diálogo **Seleccionar contenedores** y asegúrese de que **MIMObjects** es la única unidad organizativa que está seleccionada.        |
+| Crear agente de administración                                 | 1. **Agente de administración para:** AD DS  <br/> 2.  **Nombre:** ADMA de Fabrikam |
+| Conectarse al bosque de Active Directory                      | 1. **Seleccionar las particiones de directorio:** “DC=Fabrikam,DC=com”   <br/>   2. Haga clic en **Contenedores** para abrir el cuadro de diálogo **Seleccionar contenedores** y asegúrese de que **MIMObjects** es la única unidad organizativa que está seleccionada.        |
 | Seleccionar tipos de objeto                                     | Aparte de los tipos de objeto ya seleccionados, seleccione **user**. |
 | Seleccionar atributos                                       | 1. Haga clic en **Mostrar todo**. <br/>   2. Seleccione los siguientes atributos: <br/> &nbsp;&nbsp;&nbsp;&#176; **displayName** <br/> &nbsp;&nbsp;&nbsp;&#176; **givenName** <br/> &nbsp;&nbsp;&nbsp;&#176; **sn** <br/> &nbsp;&nbsp;&nbsp;&#176 **SamAccountName** <br/> &nbsp;&nbsp;&nbsp;&#176; **unicodePwd** <br/> &nbsp;&nbsp;&nbsp;&#176; **userAccountControl**     
 
@@ -193,7 +193,7 @@ En la tabla siguiente se enumeran las opciones específicas de escenario más im
 
 | Página Diseñador del agente de administración | Configuración |
 |------------|------------------------------------|
-| Crear agente de administración | 1. **Agente de administración para:** agente de administración del Servicio FIM <br/> 2. **Nombre:** FIMMA de Fabrikam |
+| Crear agente de administración | 1. **Agente de administración para:** Agente de administración del Servicio FIM <br/> 2. **Nombre:** FIMMA de Fabrikam |
 | Conectar a base de datos     | Utilice la siguiente configuración: <br/> &#183; **Servidor:** localhost <br/> &#183; **Base de datos:** FIMService <br/> &#183; **Dirección base del servicio MIM:**  http://localhost:5725 <br/> <br/> Proporcione información sobre la cuenta que ha creado en relación con este agente de administración. |
 | Seleccionar tipos de objeto                                     | Aparte de los tipos de objeto ya seleccionados, seleccione **Person**.   |
 | Configurar asignaciones de tipos de objeto                          | Además de las asignaciones de tipos de objeto ya existentes, agregue una asignación del **Tipo de objeto de origen de datos: Person** al Tipo de objeto del **metaverso** Person. |

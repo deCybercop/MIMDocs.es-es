@@ -11,14 +11,14 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 1bc313a66776778fe3617969645076a6d2d10418
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: cec04cf430ba38ec40b61e4aad68fd8447d13c99
+ms.sourcegitcommit: 4f0b2883922bcb8fbef6b4284c35c6ca62c11565
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49357843"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56952186"
 ---
-# <a name="install-mim-2016-mim-synchronization-service"></a>Instalación de MIM 2016: servicio de sincronización de MIM
+# <a name="install-mim-2016-mim-synchronization-service"></a>Instalación de MIM 2016: MIM Synchronization Service
 
 > [!div class="step-by-step"]
 > [« Exchange Server](prepare-server-exchange.md)
@@ -37,7 +37,7 @@ Antes de instalar los componentes de Microsoft Identity Manager 2016, configure 
 
 1. Inicie sesión con *contoso\miminstall* en el servidor que usa como servidor de sincronización de administración de identidades **corpsync**.
 
-2. Desempaquete el paquete de instalación de MIM o monte el DVD con la imagen de MIM.
+2. Desempaquete el paquete de instalación de MIM o monte el DVD con la imagen de MIM.  Si no tiene este DVD, consulte [Microsoft Identity Manager licensing and downloads](microsoft-identity-manager-licensing.md) (Administración de licencias y descargas de Microsoft Identity Manager).
 
 ## <a name="install-mim-2016-sp1-synchronization-service"></a>Instalación del servicio de sincronización de MIM 2016 SP1
 
@@ -57,9 +57,9 @@ Antes de instalar los componentes de Microsoft Identity Manager 2016, configure 
 
 6. En la pantalla de configuración de la base de datos del servicio de sincronización, seleccione:
 
-   1.  Para la ubicación del servidor SQL Server: **una máquina remota** denominada **corpsql.contoso.com**.
+   1.  El SQL Server se encuentra en: **Un equipo remoto** llamado **corpsql.contoso.com**.
 
-   2.  Para la instancia de SQL Server: **la instancia predeterminada**.
+   2.  La instancia de SQL Server es: **La instancia predeterminada**
 
    ![Imagen de conexión de base de datos](media/install-mim-sync/MIM_Install3.png)
 

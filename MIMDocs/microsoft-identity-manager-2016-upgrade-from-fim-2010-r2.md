@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 07998c20fcdc325cd33d8f9ee3d06c9c8572b654
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 36b5e97675d5900bf3b5348ad4857827c426e60e
+ms.sourcegitcommit: 4f0b2883922bcb8fbef6b4284c35c6ca62c11565
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358680"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56952169"
 ---
 # <a name="upgrade-from-forefront-identity-manager-2010-r2"></a>Actualización desde Forefront Identity Manager 2010 R2
 
@@ -41,7 +41,7 @@ Esta guía asume que ya ha configurado lo siguiente:
 
 2.  Inicie sesión como Contoso\Administrador en cada uno de los servidores que tengan instalados los componentes de FIM 2010 R2; por ejemplo, *CORPIDM*. En este ejemplo de implementación, los se necesitan derechos administrativos para actualizar FIM 2010 R2 a **MIM**.
 
-3.  Descargue o desempaquete el software de MIM.
+3.  Descargue o desempaquete el software de MIM.  Si no tiene este software, consulte [Microsoft Identity Manager licensing and downloads](microsoft-identity-manager-licensing.md) (Administración de licencias y descargas de Microsoft Identity Manager).
 
 ## <a name="upgrade-the-synchronization-service"></a>Actualización del servicio de sincronización
 
