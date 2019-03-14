@@ -22,9 +22,9 @@ ms.locfileid: "50380024"
 
 Con Privileged Access Management, puede asignar usuarios a los roles con privilegios que pueden activar según sea necesario para un acceso Just-In-Time. Estos roles se definen manualmente y se establecen en el entorno bastión. Este artículo le guiará a través del proceso para decidir qué roles administrar mediante PAM y cómo definirlos con los permisos y restricciones adecuados.
 
-Un enfoque sencillo para definir los roles de Privileged Access Management es compilar toda la información en una hoja de cálculo. Enumere los roles y use las columnas para identificar los permisos y los requisitos de gobierno.
+Un enfoque sencillo para definir los roles de Privileged Access Management es compilar toda la información en una hoja de cálculo. Enumere los roles y use las columnas para identificar los permisos y los requisitos de gobernanza.
 
-Los requisitos de gobierno varían dependiendo de las directivas de acceso e identidad existentes o de los requisitos de cumplimiento. Los parámetros para identificar cada rol podrían incluir:
+Los requisitos de gobernanza varían dependiendo de las directivas de acceso e identidad existentes o de los requisitos de cumplimiento. Los parámetros para identificar cada rol podrían incluir:
 
 - El propietario del rol.
 - Los usuarios candidatos que pueden estar en ese rol.
@@ -60,11 +60,11 @@ Otras consideraciones en la evaluación de los permisos para incluir un rol son:
 
 - ¿Es posible separar la administración y auditoría, de manera que un usuario en un rol administrativo no pueda borrar los registros de auditoría de sus acciones?
 
-## <a name="establish-role-governance-requirements"></a>Establecer los requisitos de gobierno de rol
+## <a name="establish-role-governance-requirements"></a>Establecer los requisitos de gobernanza de rol
 
 A medida que identifique los roles de candidato, comience a rellenar la hoja de cálculo. Cree columnas para los requisitos pertinentes de su organización. Algunos de los requisitos que se deben considerar son:
 
-- ¿Quién es el propietario de rol que sería responsable de la definición de rol, elegir los permisos y mantener la configuración de gobierno del rol?
+- ¿Quién es el propietario de rol que sería responsable de la definición de rol, elegir los permisos y mantener la configuración de gobernanza del rol?
 
 - ¿Quiénes son los titulares (usuarios) del rol que realizarán las tareas u obligaciones del rol?
 
@@ -84,7 +84,7 @@ A medida que identifique los roles de candidato, comience a rellenar la hoja de 
 
 ## <a name="select-an-access-method"></a>Seleccionar un método de acceso
 
-Puede haber varios roles en un sistema de administración de acceso con privilegios con los mismos permisos asignados a ellos. Esto puede suceder si distintas comunidades de usuarios tienen requisitos únicos de gobierno de acceso. Por ejemplo, una organización puede aplicar diferentes directivas para sus empleados a jornada completa que para los empleados de TI externos de otra organización.
+Puede haber varios roles en un sistema de administración de acceso con privilegios con los mismos permisos asignados a ellos. Esto puede suceder si distintas comunidades de usuarios tienen requisitos únicos de gobernanza de acceso. Por ejemplo, una organización puede aplicar diferentes directivas para sus empleados a jornada completa que para los empleados de TI externos de otra organización.
 
 En algunos casos, se puede asignar permanentemente un usuario a un rol. En ese caso, no es necesario solicitar o activar una asignación de rol. Algunos ejemplos de escenarios de asignación permanente incluyen:
 
