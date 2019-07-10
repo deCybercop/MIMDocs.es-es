@@ -10,16 +10,16 @@ ms.date: 07/06/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
-ms.openlocfilehash: 9cb1e37f966db5c663694aaccd71f2b4c799dd4b
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.openlocfilehash: 72dd1d3cf34e28567fa672b747a04347b150797e
+ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379946"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690782"
 ---
 # <a name="using-azure-mfa-for-activation"></a>Uso de Azure MFA para la activación
 > [!IMPORTANT]
-> Debido al anuncio de desuso del kit de desarrollo de software de Azure Multi-Factor Authentication, Se admitirá el SDK de Azure MFA para los clientes existentes hasta la fecha de retirada, el 14 de noviembre de 2018. Los clientes nuevos y actuales ya no podrán descargar el SDK a través del Portal de Azure clásico. En su lugar, para realizar la descarga, debe ponerse en contacto con el servicio de atención al cliente de Azure para recibir el paquete de credenciales de servicio generado para MFA. <br> El equipo de desarrollo de Microsoft está trabajando en los cambios de MFA mediante la integración del SDK del servidor MFA.  Se incluirá en una próxima revisión; vea el [historial de versiones](/reference/version-history.md) para consultar los anuncios. 
+> Debido al anuncio de desuso del kit de desarrollo de software de Azure Multi-Factor Authentication, Se admitirá el SDK de Azure MFA para los clientes existentes hasta la fecha de retirada, el 14 de noviembre de 2018. Los clientes nuevos y actuales ya no podrán descargar el SDK a través del Portal de Azure clásico. En su lugar, para realizar la descarga, debe ponerse en contacto con el servicio de atención al cliente de Azure para recibir el paquete de credenciales de servicio generado para MFA. <br> El equipo de desarrollo de Microsoft está trabajando en los cambios de MFA mediante la integración del SDK del servidor MFA.  Se incluirá en una próxima revisión; vea el [historial de versiones](../reference/version-history.md) para consultar los anuncios. 
 
 
 Al configurar un rol de PAM, puede decidir cómo autorizar a los usuarios que solicitan activar el rol. Las opciones que implementa la actividad de autorización de PAM son:
@@ -66,7 +66,7 @@ A continuación, se generará un archivo que incluye el material de autenticaci�
 
 5.  En la ventana **Azure Multi-Factor Authentication** , haga clic en **SDK** bajo **Descargas**.
 
-6.  Haga clic en el vínculo **Descargar** de la columna ZIP del archivo con lenguaje **SDK para ASP.net 2.0 C\#**.
+6.  Haga clic en el vínculo **Descargar** de la columna ZIP del archivo con lenguaje **SDK para ASP.net 2.0 C\#** .
 
 ![Captura de pantalla de la descarga de un SDK de Multi-Factor Authentication](media/PAM-Azure-MFA-Activation-Image-1.png)
 
@@ -93,11 +93,11 @@ A continuación, se generará un archivo que incluye el material de autenticaci�
 
 7. Copie los valores de los parámetros LICENSE\_KEY, GROUP\_KEY, CERT\_PASSWORD del archivo pf\_auth.cs en los elementos xml correspondientes del archivo MfaSettings.xml.
 
-8. En el elemento XML **<CertFilePath>**, especifique el nombre completo de la ruta de acceso del archivo cert\_key.p12 extraído anteriormente.
+8. En el elemento XML **<CertFilePath>** , especifique el nombre completo de la ruta de acceso del archivo cert\_key.p12 extraído anteriormente.
 
-9. En el elemento **<username>**, escriba cualquier nombre de usuario.
+9. En el elemento **<username>** , escriba cualquier nombre de usuario.
 
-10. En el elemento **<DefaultCountryCode>**, escriba el código de país para llamar a los usuarios, por ejemplo, 1 para los Estados Unidos y Canadá. Este valor se utiliza en caso de que los usuarios se registren con números de teléfono que no tengan código de país. Si el número de teléfono de un usuario tiene un código de país internacional distinto del configurado para la organización, ese código de país debe incluirse en el número de teléfono que se va a registrar.
+10. En el elemento **<DefaultCountryCode>** , escriba el código de país para llamar a los usuarios, por ejemplo, 1 para los Estados Unidos y Canadá. Este valor se utiliza en caso de que los usuarios se registren con números de teléfono que no tengan código de país. Si el número de teléfono de un usuario tiene un código de país internacional distinto del configurado para la organización, ese código de país debe incluirse en el número de teléfono que se va a registrar.
 
 11. Guarde y sobrescriba el archivo **MfaSettings.xml** en la carpeta del servicio MIM ```C:\Program Files\Microsoft Forefront Identity Manager\2010\\Service```.
 
