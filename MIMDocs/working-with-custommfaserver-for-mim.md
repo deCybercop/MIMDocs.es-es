@@ -9,12 +9,12 @@ manager: mtillman
 ms.date: 09/04/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 750947d04f540e2c8317861c5826c2145deba1fd
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 7fb111520f94541672fc56d0fd2ee95bfcd3a49e
+ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358415"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690744"
 ---
 # <a name="use-a-custom-multi-factor-authentication-provider-via-an-api-during-pam-role-activation-or-in-sspr"></a>Usar un proveedor personalizado de Multi-Factor Authentication a través de una API durante la activación de roles de PAM o en SSPR
 
@@ -32,12 +32,12 @@ En este artículo se describe cómo usar MIM con un proveedor personalizado de M
 Para usar una API del proveedor personalizado de Multi-Factor Authentication con MIM, necesita:
 
 - Números de teléfono de todos los usuarios candidatos.
-- Revisión [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) o posterior de MIM; consulte el [historial de versiones](/reference/version-history.md) para ver los anuncios.
+- Revisión [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) o posterior de MIM; consulte el [historial de versiones](reference/version-history.md) para ver los anuncios.
 - Servicio MIM configurado para SSPR o PAM.
 
 ## <a name="approach-using-custom-multi-factor-authentication-code"></a>Método mediante el código de autenticación multifactor personalizada
 
-### <a name="step-1-ensure-mim-service-is-at-version-452020-or-later"></a>Paso 1: Asegurarse de que la versión del servicio MIM es 4.5.202.0 o posterior
+### <a name="step-1-ensure-mim-service-is-at-version-452020-or-later"></a>Paso 1: Asegurarse de que la versión del servicio MIM es la 4.5.202.0 o una posterior
 
 Descargue e instale la revisión [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) de MIM (o una versión posterior).
 
@@ -45,7 +45,7 @@ Descargue e instale la revisión [4.5.202.0](https://www.microsoft.com/download/
 
 El archivo DLL debe incluir una clase que implemente tres métodos:
 
-- `InitiateCall`: el servicio MIM invocará este método. El servicio pasa el identificador de solicitud y el número de teléfono como parámetros.  El método debe devolver un valor `PhoneCallStatus` de `Pending`, `Success` o `Failed`.
+- `InitiateCall`: servicio MIM invocará este método. El servicio pasa el identificador de solicitud y el número de teléfono como parámetros.  El método debe devolver un valor `PhoneCallStatus` de `Pending`, `Success` o `Failed`.
 - `GetCallStatus`: si una llamada anterior a `initiateCall` devolvió `Pending`, el servicio MIM invocará este método. Este método también devuelve el valor `PhoneCallStatus` de `Pending`, `Success` o `Failed`.
 - `GetFailureMessage`: si una llamada anterior a `InitiateCall` o `GetCallStatus` devolvió `Failed`, el servicio MIM invocará este método. Este método devuelve un mensaje de diagnóstico.
 

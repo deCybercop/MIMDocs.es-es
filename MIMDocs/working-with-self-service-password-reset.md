@@ -5,27 +5,27 @@ keywords: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 08/30/2018
+ms.date: 05/11/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 3a86569a8de77f4cf4d5aeafe0cd01dab40232b3
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 90452391170114270765e9a7fe08e98eea0747e4
+ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358473"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690700"
 ---
 # <a name="self-service-password-reset-deployment-options"></a>Opciones de implementación del Autoservicio de restablecimiento de contraseña
 
-Para los clientes nuevos que tienen [licencia de Azure Active Directory Premium](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-licensing), se recomienda usar el [Autoservicio de restablecimiento de contraseña de Azure AD](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-howitworks.md) para proporcionar la experiencia del usuario final.  El Autoservicio de restablecimiento de contraseña de Azure AD proporciona tanto una experiencia web como una experiencia integrada en Windows para que un usuario restablezca su propia contraseña, y admite muchas de las funciones de MIM, incluido el correo electrónico alternativo y las puertas de preguntas y respuestas.  Al implementar el Autoservicio de restablecimiento de contraseña de Azure AD, Azure AD Connect admite la [escritura no simultánea de las nuevas contraseñas en AD DS](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-writeback.md) y puede usarse el [Servicio de notificación de cambio de contraseña](deploying-mim-password-change-notification-service-on-domain-controller.md) de MIM para reenviar las contraseñas a otros sistemas, como el servidor de directorios de otro proveedor.  Para implementar MIM para [la administración de contraseñas](infrastructure/mim2016-password-management.md) no es necesario implementar el servicio MIM ni los portales de registro o de autoservicio de restablecimiento de contraseña.  En su lugar, puede seguir estos pasos:
+Para los clientes nuevos que tienen [licencia de Azure Active Directory Premium](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-licensing), se recomienda usar el [Autoservicio de restablecimiento de contraseña de Azure AD](/azure/active-directory/authentication/concept-sspr-howitworks) para proporcionar la experiencia del usuario final.  El Autoservicio de restablecimiento de contraseña de Azure AD proporciona tanto una experiencia web como una experiencia integrada en Windows para que un usuario restablezca su propia contraseña, y admite muchas de las funciones de MIM, incluido el correo electrónico alternativo y las puertas de preguntas y respuestas.  Al implementar el Autoservicio de restablecimiento de contraseña de Azure AD, Azure AD Connect admite la [escritura no simultánea de las nuevas contraseñas en AD DS](/azure/active-directory/authentication/concept-sspr-writeback) y puede usarse el [Servicio de notificación de cambio de contraseña](deploying-mim-password-change-notification-service-on-domain-controller.md) de MIM para reenviar las contraseñas a otros sistemas, como el servidor de directorios de otro proveedor.  Para implementar MIM para [la administración de contraseñas](infrastructure/mim2016-password-management.md) no es necesario implementar el servicio MIM ni los portales de registro o de autoservicio de restablecimiento de contraseña.  En su lugar, puede seguir estos pasos:
 
 - Primero, si tiene que enviar contraseñas a directorios distintos de Azure AD y AD DS, implemente la sincronización de MIM con conectores para servicios de dominio de Active Directory y cualquier sistema de destino adicional, configure MIM para la [administración de contraseñas](infrastructure/mim2016-password-management.md) e implemente el [servicio de notificación de cambio de contraseña](deploying-mim-password-change-notification-service-on-domain-controller.md).
-- Después, si tiene que enviar contraseñas a directorios distintos de Azure AD, configure Azure AD Connect para [escribir de manera no simultánea las nuevas contraseñas en AD DS](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-writeback.md).
-- Si lo desea, [registre previamente los usuarios](https://docs.microsoft.com/azure/active-directory/authentication/howto-sspr-authenticationdata.md).
-- Por último, [despliegue el Autoservicio de restablecimiento de contraseña de Azure AD en los usuarios finales](https://docs.microsoft.com/azure/active-directory/authentication/howto-sspr-deployment.md).
+- Después, si tiene que enviar contraseñas a directorios distintos de Azure AD, configure Azure AD Connect para [escribir de manera no simultánea las nuevas contraseñas en AD DS](/azure/active-directory/authentication/concept-sspr-writeback).
+- Si lo desea, [registre previamente los usuarios](/azure/active-directory/authentication/howto-sspr-authenticationdata).
+- Por último, [despliegue el Autoservicio de restablecimiento de contraseña de Azure AD en los usuarios finales](/azure/active-directory/authentication/howto-sspr-deployment).
 
-Para los clientes existentes que ya habían implementado Forefront Identity Manager (FIM) para el Autoservicio de restablecimiento de contraseña y tienen licencia para Azure Active Directory Premium, se recomienda planear la transición al Autoservicio de restablecimiento de contraseña de Azure AD.  Puede realizar la transición de los usuarios finales al Autoservicio de restablecimiento de contraseña de Azure AD sin necesidad de registrarlos previamente, tan solo [sincronizando o configurando a través de PowerShell una dirección de correo electrónico alternativa o un número de teléfono móvil](https://docs.microsoft.com/azure/active-directory/authentication/howto-sspr-authenticationdata.md). Una vez que los usuarios están registrados en el Autoservicio de restablecimiento de contraseña de Azure AD, puede retirar el portal de restablecimiento de contraseña de FIM.
+Para los clientes existentes que ya habían implementado Forefront Identity Manager (FIM) para el Autoservicio de restablecimiento de contraseña y tienen licencia para Azure Active Directory Premium, se recomienda planear la transición al Autoservicio de restablecimiento de contraseña de Azure AD.  Puede realizar la transición de los usuarios finales al Autoservicio de restablecimiento de contraseña de Azure AD sin necesidad de registrarlos previamente, tan solo [sincronizando o configurando a través de PowerShell una dirección de correo electrónico alternativa o un número de teléfono móvil](/azure/active-directory/authentication/howto-sspr-authenticationdata). Una vez que los usuarios están registrados en el Autoservicio de restablecimiento de contraseña de Azure AD, puede retirar el portal de restablecimiento de contraseña de FIM.
 
 Para los clientes que aún no han implementado el Autoservicio de restablecimiento de contraseña de Azure AD para sus usuarios, MIM también proporciona portales de autoservicio de restablecimiento de contraseña.  Comparado con FIM, MIM 2016 incluye los siguientes cambios:
 
@@ -79,7 +79,7 @@ En la siguiente sección, configurará el proveedor de Azure MFA en Microsoft Az
 
 ### <a name="register-your-multi-factor-authentication-provider-in-azure"></a>Registro del proveedor de autenticación multifactor en Azure
 
-1.  Cree un [proveedor de MFA](https://docs.microsoft.com/en-us/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider.md).
+1.  Cree un [proveedor de MFA](/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
 
 2. Abra un caso de soporte técnico y solicite el SDK directo para ASP.net 2.0 C#. El SDK solo se proporcionará a los usuarios actuales de MIM con MFA porque el SDK directo ha quedado en desuso. Los nuevos clientes deben adoptar la próxima versión de MIM que se integre con el servidor MFA.
 
@@ -125,6 +125,8 @@ En la siguiente sección, configurará el proveedor de Azure MFA en Microsoft Az
 
 4.  Seleccione **Puerta de teléfono** o **Puerta de SMS para contraseña de un solo uso**, haga clic en **Seleccionar** y, a continuación, en **Aceptar**.
 
+Nota: Si usa el servidor Azure MFA u otro proveedor que genere la contraseña de un solo uso, asegúrese de que el campo de longitud configurado anteriormente tiene la misma longitud que el generado por el proveedor de MFA.  Esta longitud debe ser de seis en el caso del servidor Azure MFA.  El servidor Azure MFA también genera su propio texto de mensaje, por lo que el mensaje de texto SMS se omite.
+
 Ahora los usuarios de su organización podrán registrase para restablecer su contraseña.  Durante este proceso, deberán especificar su número de teléfono del trabajo o el número de teléfono móvil para que el sistema sepa cómo llamarlos (o enviarles mensajes SMS).
 
 #### <a name="register-users-for-password-reset"></a>Registrar usuarios para restablecer la contraseña
@@ -148,7 +150,7 @@ Al instalar las extensiones y complementos de MIM en un equipo unido a un domini
 
 #### <a name="windows-desktop-login-integrated-password-reset"></a>Restablecer la contraseña integrada de inicio de sesión de escritorio de Windows
 
-1.  Si el usuario escribe una contraseña incorrecta varias veces en la pantalla de inicio de sesión, tendrá la opción de hacer clic en **¿Tiene problemas para iniciar sesión?**. .
+1.  Si el usuario escribe una contraseña incorrecta varias veces en la pantalla de inicio de sesión, tendrá la opción de hacer clic en **¿Tiene problemas para iniciar sesión?** . .
 
     ![Imagen de la pantalla de inicio de sesión](media/MIM-SSPR-problemsloggingin.JPG)
 

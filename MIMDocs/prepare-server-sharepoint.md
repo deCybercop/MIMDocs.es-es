@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 466f5eb7d4aee27336948e15f96087d6ba898170
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 5beee58388c12abbe8e3245ff610d3528b03786a
+ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358642"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690763"
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Configuración de un servidor de administración de identidades: SharePoint
 
@@ -70,7 +70,7 @@ Siga los pasos que se indican en el **Asistente para configuración de productos
 2. Especifique este servidor como servidor de bases de datos, por ejemplo, **corpsql** para la base de datos de configuración y *Contoso\SharePoint* como la cuenta de acceso a la base de datos que se usará en SharePoint.
 3. Cree una contraseña para la frase de contraseña de seguridad de la granja de servidores.
 
-4. En el Asistente para configuración, se recomienda seleccionar [MinRole](https://docs.microsoft.com/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) como tipo de **Front-end**.
+4. En el Asistente para configuración, se recomienda seleccionar [MinRole](/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server) como tipo de **Front-end**.
 
 5. Cuando el asistente para la configuración complete la última tarea de configuración (10 de 10), haga clic en Finalizar y se abrirá un explorador web.
 

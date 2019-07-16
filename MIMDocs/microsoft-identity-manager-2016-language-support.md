@@ -9,12 +9,12 @@ ms.date: 05/23/2018
 ms.topic: get-started-article
 ms.prod: microsoft-identity-manager
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
-ms.openlocfilehash: 61d5f4ec20f5e29d1846a6822bec9669b364760f
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 2d843dcd5285d02a67955e763769a16f1a535abb
+ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358710"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690730"
 ---
 # <a name="supported-languages"></a>Idiomas compatibles
 
@@ -30,7 +30,7 @@ El paquete de idioma del portal y servicio de MIM de Microsoft admite los 33 idi
 > [!IMPORTANT]
 > El texto del portal y e¡l complemento de SSPR se localizarán, pero no las preguntas sin trabajo adicional. Debe crear flujos de trabajo de autenticación (y MPR y conjuntos de acompañamiento para establecerlos como destino) a las preguntas de destino en cada idioma a la ubicación de destino.
 
-|       Language        | FIM(4.3.x.x)/MIM(4.4.xx) | MIM(4.5.x.x) |
+|       Lenguajes        | FIM(4.3.x.x)/MIM(4.4.xx) | MIM(4.5.x.x) |
 |-----------------------|--------------------------|--------------|
 |       Búlgaro       |          bg-BG           |      bg      |
 | Chino (simplificado)  |          zh-CN           |   zh-hans    |
@@ -69,7 +69,7 @@ El paquete de idioma del portal y servicio de MIM de Microsoft admite los 33 idi
 ## <a name="certificate-management"></a>Administración de certificados 
 Microsoft Certificate Management admite los nueve idiomas siguientes. 
 
-|Language|FIM(4.3.x.x)/MIM(4.4.xx)|Nuevo MIM(4.5.x.x)
+|Lenguajes|FIM(4.3.x.x)/MIM(4.4.xx)|Nuevo MIM(4.5.x.x)
 |-----|-----|-----|-----|
 |Chino (simplificado)|zh-CN|zh-hans|
 |Chino (Taiwán)|zh-TW|zh-hant|
@@ -84,7 +84,7 @@ Microsoft Certificate Management admite los nueve idiomas siguientes.
 ## <a name="certificate-management-modern-application"></a>Aplicación moderna Certificate Management  
 La aplicación moderna Microsoft Certificate Management admite los nueve idiomas siguientes. 
 
-|Language | [1.0.225.104](https://www.microsoft.com/en-us/download/details.aspx?id=54954) | |
+|Lenguajes | [1.0.225.104](https://www.microsoft.com/en-us/download/details.aspx?id=54954) | |
 |-----|-----|-----|-----|
 |Neerlandés|nl-NL|nl|
 |Chino (simplificado)|zh-CN|zh-hans|
@@ -112,4 +112,4 @@ La aplicación moderna Microsoft Certificate Management admite los nueve idiomas
 ## <a name="next-steps"></a>Pasos siguientes
 
 - [Primera implementación](microsoft-identity-manager-deploy.md)
-- [Historial de versiones](/reference/version-history.md)
+- [Historial de versiones](reference/version-history.md)
