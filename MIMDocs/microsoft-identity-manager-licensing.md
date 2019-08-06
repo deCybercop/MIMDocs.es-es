@@ -3,21 +3,20 @@ title: Administración de licencias y descargas de Microsoft Identity Manager | 
 description: En este artículo se describen los enfoques para la administración de licencias de Microsoft Identity Manager (MIM) 2016, con indicaciones a los puntos de descarga del software.
 keywords: ''
 author: markwahl-msft
-ms.author: markwahl-msft
+ms.author: mwahl
 manager: femila
 ms.date: 02/25/2019
 ms.topic: article
-ms.service: microsoft-identity-manager
-ms.technology: security
+ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.reviewer: billmath
 ms.suite: ems
-ms.openlocfilehash: 7c5ab987801c63dca2457025442a35560dca3b86
-ms.sourcegitcommit: 225fca802d6b59bdc98d50020b297eb6393f70eb
+ms.openlocfilehash: f8c2ec9c0fbdf797acca4a699fec6d358b63f5c8
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2019
-ms.locfileid: "64518741"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701434"
 ---
 # <a name="microsoft-identity-manager-2016-licensing-and-downloads"></a>Administración de licencias y descargas de Microsoft Identity Manager 2016
 
