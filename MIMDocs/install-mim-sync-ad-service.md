@@ -6,19 +6,19 @@ author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 10/12/2017
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 75935513ccb4ec3ebc089f9c5aad1d1624789a13
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 69698721b0fbabc78cf5bb4c1032ab8fc2613772
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358829"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701194"
 ---
-# <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>Instalación de MIM 2016: sincronizar Active Directory y el servicio MIM
+# <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>Instalación de MIM 2016: Sincronización de Active Directory y del servicio MIM
 
 > [!div class="step-by-step"]
 > [« Servicio y portal de MIM](install-mim-service-portal.md)
@@ -47,7 +47,7 @@ Al configurar un agente de administración de MIM, debe especificar una cuenta d
 
 3.  En la página **Create Management Agent** (Crear agente de administración), proporcione la siguiente configuración y después haga clic en **Siguiente**.
 
-    -   Agente de administración para: Agente de administración del Servicio FIM
+    -   Agente de administración para: Agente de administración del servicio FIM
 
     -   Nombre: MIMMA
 

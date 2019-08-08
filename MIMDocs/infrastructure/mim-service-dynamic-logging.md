@@ -6,12 +6,13 @@ ms.author: billmath
 manager: mtillman
 ms.date: 10/29/2018
 ms.topic: article
-ms.openlocfilehash: e5d8bcc640ad77b71a515b13bcb3bcf6985654f5
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.prod: microsoft-identity-manager
+ms.openlocfilehash: 90ef2ab63be3914d1d48c7319821177e7e62f9e0
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50380092"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701294"
 ---
 # <a name="mim-sp1-4414360--service-dynamic-logging"></a>Registro dinámico del servicio MIM SP1 (4.4.1436.0)
 
@@ -50,7 +51,7 @@ Para ver el seguimiento puede utilizar la [herramienta de visor de seguimiento d
 
 # <a name="updates-build-45xx-or-greater"></a>Actualizaciones: compilación 4.5.x.x o posterior
 
-En la compilación 4.5.x.x se ha revisado la característica de registro para especificar que el nivel de registro predeterminado es **"Advertencia"**. El servicio escribe mensajes en dos archivos (antes de la extensión se agregan los índices "00" y "01"). Los archivos se guardan en el directorio “C:\Archivos de programa\Microsoft Forefront Identity Manager\2010\Service”. Cuando el archivo excede el tamaño máximo, el servicio empieza a escribir en otro archivo. Si existe otro archivo, se sobrescribirá. El tamaño máximo predeterminado del archivo es de 1 GB. Para cambiar el tamaño máximo predeterminado, es necesario agregar el parámetro **"maxOutputFileSizeKB"** con el valor de tamaño máximo de archivo en KB en el agente de escucha (consulte el ejemplo siguiente) y, después, reiniciar el servicio MIM. Cuando se inicia el servicio, anexa los registros en el archivo más reciente (si se supera el límite de espacio, se sobrescribe el archivo más antiguo). 
+En la compilación 4.5.x.x se ha revisado la característica de registro para especificar que el nivel de registro predeterminado es **"Advertencia"** . El servicio escribe mensajes en dos archivos (antes de la extensión se agregan los índices "00" y "01"). Los archivos se guardan en el directorio “C:\Archivos de programa\Microsoft Forefront Identity Manager\2010\Service”. Cuando el archivo excede el tamaño máximo, el servicio empieza a escribir en otro archivo. Si existe otro archivo, se sobrescribirá. El tamaño máximo predeterminado del archivo es de 1 GB. Para cambiar el tamaño máximo predeterminado, es necesario agregar el parámetro **"maxOutputFileSizeKB"** con el valor de tamaño máximo de archivo en KB en el agente de escucha (consulte el ejemplo siguiente) y, después, reiniciar el servicio MIM. Cuando se inicia el servicio, anexa los registros en el archivo más reciente (si se supera el límite de espacio, se sobrescribe el archivo más antiguo). 
 
 > [!NOTE] 
 > Como el servicio comprueba el tamaño de archivo antes de que se sobrescriba el mensaje, el tamaño de archivo puede ser mayor que el tamaño máximo establecido para un mensaje. De forma predeterminada, el tamaño de los registros puede ser aproximadamente de 6 GB (tres >agentes de escucha con dos archivos para el tamaño de 1 GB).
