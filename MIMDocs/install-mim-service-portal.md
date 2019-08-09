@@ -6,19 +6,19 @@ author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 04/30/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: fc70a0edb610fcb862d85902dd5e611e65f6e689
-ms.sourcegitcommit: 9e420840815adb133ac014a8694de9af4d307815
+ms.openlocfilehash: ca2a9a4a646387b044e3a504c19eae904b2a6be1
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52825814"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701284"
 ---
-# <a name="install-mim-2016-mim-service-and-portal"></a>Instalación de MIM 2016: servicio y portal de MIM
+# <a name="install-mim-2016-mim-service-and-portal"></a>Instalación de MIM 2016: Servicio y portal de MIM
 
 > [!div class="step-by-step"]
 > [« MIM Synchronization Service](install-mim-sync.md)
@@ -68,11 +68,11 @@ Si no ha configurado el paquete de instalación de MIM en el último paso, vuelv
 
 12. Especifique *CORPIDM* (nombre de este equipo) como dirección del servidor de servicio MIM para el portal de MIM.
 
-13. Especifique `*http://mim.contoso.com*` como dirección URL de la colección de sitios de SharePoint.
+13. Especifique `* http://mim.contoso.com*` como dirección URL de la colección de sitios de SharePoint.
 
-14. Especifique `*http://passwordregistration.contoso.com*` como el puerto 80 de la dirección URL de registro de contraseña; se recomienda actualizarlo más adelante a 443 con el certificado SSL.
+14. Especifique `* http://passwordregistration.contoso.com*` como el puerto 80 de la dirección URL de registro de contraseña; se recomienda actualizarlo más adelante a 443 con el certificado SSL.
 
-15. Especifique `*http://passwordreset.contoso.com*` como el puerto 80 de dirección URL de restablecimiento de contraseña; se recomienda actualizarlo más adelante a 443 con el certificado SSL.
+15. Especifique `* http://passwordreset.contoso.com*` como el puerto 80 de dirección URL de restablecimiento de contraseña; se recomienda actualizarlo más adelante a 443 con el certificado SSL.
 
 16. Seleccione la casilla para abrir los puertos 5725 y 5726 en el firewall y la casilla para conceder acceso al Portal de MIM a todos los usuarios autenticados.
 
@@ -106,7 +106,7 @@ Cuando todas las definiciones de preinstalación estén listas, haga clic en **I
 
 Una vez finalizada la instalación, compruebe que el Portal de MIM esté activo.
 
-1. Inicie Internet Explorer y conéctese al portal de MIM en *http://mim.contoso.com/identitymanagement*. Tenga en cuenta que puede haber un breve retraso la primera vez que se visite esta página.
+1. Inicie Internet Explorer y conéctese al portal de MIM en *http://mim.contoso.com/identitymanagement* . Tenga en cuenta que puede haber un breve retraso la primera vez que se visite esta página.
 
     - Si fuese necesario, autentíquese como *contoso\miminstall* en Internet Explorer.
 
@@ -116,7 +116,7 @@ Una vez finalizada la instalación, compruebe que el Portal de MIM esté activo.
 
     1.  Mediante Internet Explorer, en **Portal de MIM**, haga clic en **Reglas de directiva de administración**.
 
-    2.  Busque la regla de directiva de administración **User management: Users can read attributes of their own** (Administración de usuarios: los usuarios pueden leer sus propios atributos).
+    2.  Busque la regla de directivas de administración **Administración de usuarios: los usuarios pueden leer sus propios atributos**.
 
     3.  Seleccione esta regla de directiva de administración; desactive la opción **La directiva está deshabilitada**.
 
@@ -143,7 +143,7 @@ Una vez finalizada la instalación, compruebe que el Portal de MIM esté activo.
     7.  Cierre el **Panel de control**.
 
 > [!NOTE]
-> Opcional: en este momento puede instalar extensiones y complementos de MIM.
+> Opcional: Ahora puede instalar complementos y extensiones de MIM.
 > 
 > [!div class="step-by-step"]  
 > [« MIM Synchronization Service](install-mim-sync.md)
